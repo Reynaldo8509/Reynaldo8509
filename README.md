@@ -1,16 +1,21 @@
-## Hi there 👋
+# 🛡️ Reynaldo Rodriguez | IT Specialist & Aspiring SOC Analyst
 
-<!--
-**Reynaldo8509/Reynaldo8509** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Passionate IT professional with over 10 years of experience in network administration, server management, and system infrastructure. Currently pivoting into Cybersecurity with a focus on Blue Team operations, incident response, and threat intelligence.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🚀 Professional Summary
+- 🔭 **Currently working on:** Enhancing my Home Lab for SIEM log monitoring and traffic analysis.
+- 🌱 **Learning:** Preparing for CompTIA Security+ and Network+.
+- 🛡️ **Focus:** System hardening, IDS/IPS, and vulnerability assessment.
+- 💬 **Ask me about:** Windows/Linux Administration, Zentyal Server, and Network Security.
+
+### 🛠️ Tech Stack & Certifications
+- **Cybersecurity:** Junior Cybersecurity Analyst & Ethical Hacker (Cisco Certified).
+- **Infrastructure:** Windows & Linux Server Administration, DNS, DHCP, Firewalls.
+- **Cloud & Identity:** Microsoft Entra ID, Azure Fundamentals, Microsoft Defender.
+- **Automation:** Python Scripting for data analysis and security tasks.
+
+---
+### 📫 Connect with me
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/reynaldo8509/)
