@@ -1,57 +1,51 @@
-# SOC Operations Lab
+# Architecture
 
-Hands-on Security Operations Center (SOC) lab designed to simulate real-world detection, monitoring, and incident response scenarios.
-
----
-
-## 🎯 Objective
-
-Build practical, job-ready skills for a SOC Analyst (Tier 1 / Tier 2) role through:
-
-- SIEM monitoring (Wazuh)
-- Endpoint telemetry (Sysmon)
-- Log analysis (Windows Events)
-- Threat detection & response
-- MITRE ATT&CK mapping
+This SOC lab simulates a real-world Security Operations Center environment.
 
 ---
 
-## 🧱 Lab Architecture
+## 🧱 Components
 
-- **Wazuh Manager** (SIEM)
-- **Windows 10 Endpoint** (Sysmon + Wazuh Agent)
-- **Kali Linux** (Attack simulation)
+- **Wazuh Manager (SIEM)**
+  - Centralized log collection
+  - Alert generation
+  - Correlation engine
 
----
+- **Windows 10 Endpoint**
+  - Sysmon installed for detailed telemetry
+  - Wazuh Agent for log forwarding
 
-## 🔍 SOC Workflow Simulated
-
-1. Log ingestion
-2. Alert generation
-3. Triage (Tier 1)
-4. Investigation (Tier 2)
-5. Incident response
+- **Kali Linux**
+  - Used to simulate attacks (brute force, enumeration, exploitation)
 
 ---
 
-## ⚙️ Technologies
+## 🔄 Data Flow
 
-- Wazuh SIEM
-- Sysmon
-- Windows Event Logs
-- Kali Linux
-- MITRE ATT&CK
-
----
-
-## 🚨 Detection Use Cases
-
-- Brute force attacks
-- Privilege escalation
-- Suspicious PowerShell activity
-- Malware execution
-- Lateral movement
+1. Events generated on Windows (Sysmon + Event Logs)
+2. Logs collected by Wazuh Agent
+3. Forwarded to Wazuh Manager
+4. Correlation rules applied
+5. Alerts generated in SIEM
+6. Analyst performs triage and investigation
 
 ---
 
-## 📁 Repository Structure
+## 🎯 Security Monitoring Goals
+
+- Detect brute force attempts
+- Identify privilege escalation
+- Monitor suspicious PowerShell activity
+- Detect malware execution
+
+---
+
+## 🧠 SOC Perspective
+
+This lab replicates a Tier 1 / Tier 2 SOC workflow:
+
+- Log ingestion
+- Alert monitoring
+- Triage
+- Investigation
+- Incident response
