@@ -12,6 +12,7 @@ Detect and investigate repeated authentication failures to identify potential un
 
 ---
 
+
 ## 📊 Log Source
 
 - Windows Security Event Logs
