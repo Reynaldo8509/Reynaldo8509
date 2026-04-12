@@ -4,6 +4,7 @@ This SOC lab simulates a real-world Security Operations Center environment.
 
 ---
 
+
 ## 🧱 Components
 
 - **Wazuh Manager (SIEM)**
