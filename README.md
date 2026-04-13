@@ -28,7 +28,25 @@ real-world threat detection, log analysis, and incident response workflows.
 | Kali Linux | Attack Simulation | 2024.x |
 | VirtualBox | Hypervisor | 7.x |
 
----
+```
+[Kali Linux - Attacker]
+        │
+        │  Simulated attacks (brute force, enumeration)
+        ▼
+[Windows 10 Endpoint]
+  - Sysmon (telemetry)
+  - Wazuh Agent (log forwarding)
+        │
+        │  Logs forwarded via Wazuh Agent
+        ▼
+[Wazuh Manager - SIEM]
+  - Log collection & correlation
+  - Alert generation
+  - Rule-based detection engine
+        │
+        ▼
+[SOC Analyst - Investigation & Response]
+```
 
 ## 📁 Repository Structure
 
