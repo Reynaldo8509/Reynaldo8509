@@ -14,24 +14,25 @@ real-world threat detection, log analysis, and incident response workflows.
 
 ---
 
-## 🏗️ Lab Architecture
-```
+## Lab Architecture
+
+```text
 [Kali Linux - Attacker]
-        │
-        │  Simulated attacks (brute force, enumeration)
-        ▼
+│
+│ Simulated attacks (brute force, enumeration)
+▼
 [Windows 10 Endpoint]
-  - Sysmon (telemetry)
-  - Wazuh Agent (log forwarding)
-        │
-        │  Logs forwarded via Wazuh Agent
-        ▼
+- Sysmon (telemetry)
+- Wazuh Agent (log forwarding)
+│
+│ Logs forwarded via Wazuh Agent
+▼
 [Wazuh Manager - SIEM]
-  - Log collection & correlation
-  - Alert generation
-  - Rule-based detection engine
-        │
-        ▼
+- Log collection & correlation
+- Alert generation
+- Rule-based detection engine
+│
+▼
 [SOC Analyst - Investigation & Response]
 ```
 
