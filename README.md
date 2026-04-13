@@ -15,19 +15,6 @@ real-world threat detection, log analysis, and incident response workflows.
 ---
 
 ## 🏗️ Lab Architecture
-
----
-
-## 🧰 Tools & Technologies
-
-| Tool | Role | Version |
-|------|------|---------|
-| Wazuh | SIEM / XDR | 4.x |
-| Sysmon | Endpoint Telemetry | 15.x |
-| Windows 10 | Target Endpoint | Enterprise |
-| Kali Linux | Attack Simulation | 2024.x |
-| VirtualBox | Hypervisor | 7.x |
-
 ```
 [Kali Linux - Attacker]
         │
@@ -47,6 +34,22 @@ real-world threat detection, log analysis, and incident response workflows.
         ▼
 [SOC Analyst - Investigation & Response]
 ```
+
+
+
+
+---
+
+## 🧰 Tools & Technologies
+
+| Tool | Role | Version |
+|------|------|---------|
+| Wazuh | SIEM / XDR | 4.x |
+| Sysmon | Endpoint Telemetry | 15.x |
+| Windows 10 | Target Endpoint | Enterprise |
+| Kali Linux | Attack Simulation | 2024.x |
+| VirtualBox | Hypervisor | 7.x |
+
 
 ## 📁 Repository Structure
 
