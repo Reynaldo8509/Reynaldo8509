@@ -1,22 +1,21 @@
 # 🛡️ SOC Home Lab — Threat Detection & Incident Response
 
-A hands-on Security Operations Center (SOC) lab environment built to simulate 
-real-world threat detection, log analysis, and incident response workflows.
+A hands-on Security Operations Center (SOC) lab environment built to simulate real-world threat detection, log analysis, and incident response workflows.
 
 ---
 
 ## 🎯 Objectives
 
-- Simulate Blue Team operations in a controlled environment
-- Practice alert triage, investigation, and incident response (Tier 1 / Tier 2)
-- Build detection rules based on real attack techniques (MITRE ATT&CK)
-- Develop hands-on experience with enterprise-grade security tools
+* Simulate Blue Team operations in a controlled environment
+* Practice alert triage, investigation, and incident response (Tier 1 / Tier 2)
+* Build detection rules based on real attack techniques (MITRE ATT&CK)
+* Develop hands-on experience with enterprise-grade security tools
 
 ---
 
-## Lab Architecture
+## 🏗️ Lab Architecture
 
-```text
+```
 [Kali Linux - Attacker]
 │
 │ Simulated attacks (brute force, enumeration)
@@ -25,91 +24,99 @@ real-world threat detection, log analysis, and incident response workflows.
 - Sysmon (telemetry)
 - Wazuh Agent (log forwarding)
 │
-│ Logs forwarded via Wazuh Agent
 ▼
 [Wazuh Manager - SIEM]
 - Log collection & correlation
 - Alert generation
-- Rule-based detection engine
 │
 ▼
-[SOC Analyst - Investigation & Response]
+[SOC Analyst]
 ```
-
-
-
 
 ---
 
 ## 🧰 Tools & Technologies
 
-| Tool | Role | Version |
-|------|------|---------|
-| Wazuh | SIEM / XDR | 4.x |
-| Sysmon | Endpoint Telemetry | 15.x |
-| Windows 10 | Target Endpoint | Enterprise |
-| Kali Linux | Attack Simulation | 2024.x |
-| VirtualBox | Hypervisor | 7.x |
+* Wazuh (SIEM)
+* Sysmon (Endpoint Telemetry)
+* Windows 10
+* Kali Linux
+* VirtualBox
 
+---
 
 ## 📁 Repository Structure
+
+```
+soc-operations-lab/
+│
+├── README.md
+├── LICENSE
+├── architecture/
+├── wazuh/
+├── sysmon/
+├── detection-rules/
+├── incident-response/
+├── evidence/
+```
 
 ---
 
 ## 🔍 Detection Use Cases
 
-| # | Use Case | MITRE Technique | Status |
-|---|----------|----------------|--------|
-| 1 | Brute Force Login Detection | T1110 | ✅ Documented |
-| 2 | Privilege Escalation | T1068 | 🔄 In progress |
-| 3 | Suspicious PowerShell Execution | T1059.001 | 🔄 In progress |
-| 4 | Lateral Movement Detection | T1021 | 📋 Planned |
+* Brute Force Login Detection (T1110)
+* Privilege Escalation (in progress)
+* Suspicious PowerShell (in progress)
 
 ---
 
 ## 📊 SOC Workflow Simulated
 
-1. **Attack Simulated** → Kali Linux executes brute force against Windows endpoint
-2. **Telemetry Collected** → Sysmon captures Event ID 4625 (failed login)
-3. **Logs Forwarded** → Wazuh Agent sends logs to Wazuh Manager
-4. **Alert Generated** → Correlation rule triggers alert in SIEM
-5. **Triage (Tier 1)** → Validate alert, identify source IP, check targeted account
-6. **Investigation (Tier 2)** → Correlate logs, detect lateral movement, analyze behavior
-7. **Response** → Lock account, block IP, enforce password reset, escalate if needed
+1. Attack simulated from Kali
+2. Logs generated in Windows (Event ID 4625)
+3. Logs sent to Wazuh
+4. Alert generated
+5. Triage (Tier 1)
+6. Investigation (Tier 2)
+7. Response actions
 
 ---
 
 ## 🧠 Skills Demonstrated
 
-- SIEM configuration and log management (Wazuh)
-- Endpoint monitoring and telemetry (Sysmon + Windows Event Logs)
-- Alert triage and incident investigation
-- Detection rule creation based on MITRE ATT&CK
-- Attack simulation and Blue Team response
-- Documentation of SOC use cases and IR playbooks
+* SIEM monitoring (Wazuh)
+* Log analysis (Windows Events)
+* Detection engineering
+* Incident response workflow
+* MITRE ATT&CK usage
 
 ---
 
-## 📌 Key Windows Event IDs Used
+## 📌 Key Event IDs
 
-| Event ID | Description |
-|----------|-------------|
-| 4625 | Failed logon attempt |
-| 4624 | Successful logon |
-| 4672 | Special privileges assigned |
-| 4688 | New process created |
-| 7045 | New service installed |
+* 4625 → Failed login
+* 4624 → Successful login
+* 4672 → Privileged login
+* 4688 → Process creation
 
 ---
 
 ## 🚀 Lab Setup (Summary)
 
-> Full setup documentation coming soon in `/setup/` folder.
+* 3 VMs: Kali, Windows 10, Wazuh
+* Sysmon installed
+* Wazuh agent connected
+* Detection rules configured
 
-- VirtualBox with 3 VMs: Kali, Windows 10, Wazuh Manager (Ubuntu)
-- Sysmon deployed on Windows with custom config
-- Wazuh Agent installed and connected to Manager
-- Custom detection rules loaded in Wazuh
+---
+
+## 📸 Evidence (Coming Soon)
+
+This section will include:
+
+* Wazuh alerts screenshots
+* Brute force logs
+* Investigation process
 
 ---
 
