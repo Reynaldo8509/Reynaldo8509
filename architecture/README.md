@@ -1,7 +1,7 @@
 ## Sysmon
 Sysmon provides detailed endpoint telemetry.
 
-- Logs Collected
+-Logs Collected
   
 -Process creation
 
