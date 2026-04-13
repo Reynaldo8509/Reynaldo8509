@@ -7,7 +7,7 @@ Network connections
 File modifications
 Registry changes
 
-
+---
 
 # Architecture
 
