@@ -1,3 +1,14 @@
+# Sysmon
+Sysmon provides detailed endpoint telemetry.
+
+Logs Collected
+Process creation
+Network connections
+File modifications
+Registry changes
+
+
+
 # Architecture
 
 This SOC lab simulates a real-world Security Operations Center environment.
