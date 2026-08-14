@@ -50,13 +50,9 @@ A reproducible VirtualBox **SOC HomeLab** built with Kali Linux, Ubuntu/Wazuh an
 
 **Validated highlight:** WFP-based port-scan detection in the controlled ATTACK/LAB network.
 
-```mermaid
-graph LR
-    K[Kali Linux\nATTACK / MANAGEMENT] -->|Telemetry / Tests| W[Windows 11\nAgent + Sysmon]
-    W -->|Wazuh agent events| M[Ubuntu Wazuh Manager]
-    M -->|Archives / Alerts| D[Wazuh Dashboard]
-    K -->|Controlled admin| M
-```
+<p align="center">
+  <img src="assets/soc-home-lab-architecture.svg" alt="SOC Operations Lab architecture showing Kali Linux, Windows 11 with Sysmon and Wazuh Agent, Ubuntu Wazuh Manager, and Wazuh Dashboard across management and attack lab network planes" width="100%" />
+</p>
 
 - [Explore the SOC Operations Lab →](projects/soc-operations-lab/README.md)
 - WFP Port Scan: **VALIDATED**
