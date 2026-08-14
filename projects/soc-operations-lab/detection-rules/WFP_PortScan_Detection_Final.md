@@ -1,5 +1,28 @@
 # Wazuh WFP Port Scan Detection
 
+> **Case-study status: VALIDATED — documented controlled run.** The repository publishes the rule logic, forensic reconstruction and visual support; it intentionally does not publish raw production `archives.json` or `alerts.json` files.
+
+## Case-study flow
+
+```text
+Attack → WFP telemetry → EventChannel decoder path → base rule 100500
+      → correlations 100501 / 100502 → alerts.json result
+      → MANAGEMENT/NAT negative controls → engineering changes → final result
+```
+
+| Stage | Evidence-backed finding |
+|---|---|
+| Attack | A controlled Nmap TCP scan from ATTACK/LAB targeted the Windows endpoint. |
+| Telemetry | Windows Security `5152`/`5157` generated 34 records across 15 raw destination ports. |
+| Decoder / EventChannel | The effective branch was `windows_eventchannel → 60000 → 60001`. |
+| Base rule | `100500` needed level 6 to win against the level-5 `60104` sibling; it is silent tracking only. |
+| Correlation | `100501` and `100502` use `if_matched_sid=100500`, source equality, port difference, 60-second windows and `ignore=60`. |
+| Alert | The documented run produced one local alert for each correlation rule. |
+| Negative controls | MANAGEMENT and NAT telemetry remained available without feeding the detector. |
+| Result | WFP is validated for this HomeLab as a throttled high-signal heuristic, not a distinct-port counter. |
+
+**MITRE ATT&CK:** [T1046 — Network Service Discovery](https://attack.mitre.org/techniques/T1046/). The mapping describes the controlled reconnaissance behavior; it does not change the heuristic limitation of the implementation.
+
 ## 1. Lab architecture
 
 | Network | CIDR | Kali | Wazuh Manager (Ubuntu) | Windows 11 endpoint | Purpose |
@@ -216,6 +239,20 @@ The base rule's narrow filters are the control:
 
 No normal telemetry was globally silenced.
 
+```text
+MANAGEMENT 192.168.57.0/24
+    ↓ retained for investigation
+    └── excluded from 100500
+
+ATTACK/LAB 192.168.56.0/24
+    ↓ eligible inbound TCP WFP events to 192.168.56.20
+    └── 100500 → 100501 / 100502
+
+NAT 10.0.2.0/24
+    ↓ retained for investigation
+    └── excluded from 100500
+```
+
 ## 11. Validation evidence
 
 The permanent rules were checked with a temporary `<ruleset>` wrapper for
@@ -310,7 +347,7 @@ When reproducing or extending this work:
 
 ## 15. Final conclusion
 
-The WFP detector is **production-ready for this HomeLab as a throttled,
+The WFP detector is **validated for this HomeLab as a throttled,
 high-signal heuristic**: it receives real WFP events, preserves NAT and
 MANAGEMENT telemetry, and limits the observed 15-port scan to one level-10 and
 one level-13 alert.

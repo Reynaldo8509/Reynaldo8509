@@ -1,5 +1,4 @@
 # SOC Operations HomeLab
-<img width="1536" height="1024" alt="Home_Labs" src="https://github.com/user-attachments/assets/ef245809-4454-4a8b-8e96-f416abdef349" />
 
 Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali Linux, Ubuntu/Wazuh y un endpoint Windows 11. El proyecto prioriza ingeniería de detección verificable: separar telemetría de veredictos, reproducir escenarios controlados y documentar límites del motor antes de declarar una detección válida.
 
@@ -16,9 +15,9 @@ Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali L
 
 | Detección | Estado | Evidencia disponible |
 |---|---|---|
-| WFP Port Scan | **VALIDATED** | Eventos WFP reales, `archives.json`, `alerts.json` y pruebas negativas de NAT/MANAGEMENT. |
+| WFP Port Scan | **VALIDATED — documented controlled run** | Resultados históricos de eventos WFP, `archives.json`, `alerts.json` y pruebas negativas de NAT/MANAGEMENT; los logs crudos de producción no se publican. |
 | Sysmon Network / Event ID 3 | **AUDITED / PENDING VALIDATION** | EID 3 confirmado en MANAGEMENT y NAT; falta una señal ATTACK real que permita validar el detector. |
-| Windows brute force | **PENDING CONTROLLED VALIDATION** | Telemetría 4625 y reglas históricas documentadas; la correlación depende de que Windows proporcione una IP fuente utilizable. |
+| Windows brute force | **TELEMETRY OBSERVED / PENDING DETECTION VALIDATION** | Exportación sanitizada de 4625 disponible; una correlación validada requiere IP fuente utilizable y controles negativos. |
 | FIM | **CONFIGURED / REVALIDATION PENDING** | Historial de ajuste de ruido de rutas de prueba; falta un paquete público de evidencias reproducibles. |
 | YARA | **PENDING VALIDATION** | No hay configuración ni evidencia sanitizada suficiente para hacer una afirmación operativa. |
 
@@ -26,16 +25,15 @@ Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali L
 
 | Use case | Telemetry | Main rules | Status | Evidence |
 |---|---|---|---|---|
-| WFP Port Scan | Windows Security 5152/5157 | `100500–100502` | **VALIDATED** | Production WFP events + negative NAT/MANAGEMENT tests |
-| Sysmon Network | Sysmon Event ID 3 | `100409–100421` | **AUDITED / PENDING** | Real EID 3 telemetry in MANAGEMENT/NAT |
-| Windows Brute Force | Windows Security 4625 | `100210–100212` | **PENDING** | Rule design + Windows telemetry |
-| File Integrity | Wazuh syscheck/FIM | FIM rules | **REVALIDATION PENDING** | Historical FIM tests |
-| YARA | YARA scan results | `111111–111114` | **PENDING** | Sanitized evidence not yet sufficient |
+| WFP Port Scan | Windows Security 5152/5157 | `100500–100502` | **VALIDATED — documented controlled run** | Documented WFP results and NAT/MANAGEMENT negative tests; raw logs withheld |
+| Sysmon Network | Sysmon Event ID 3 | `100409`, `100420`, `100421` | **AUDITED / PENDING** | Real EID 3 telemetry in MANAGEMENT/NAT; ATTACK source event missing |
+| Windows Brute Force | Windows Security 4625 | `60122` individual-failure telemetry | **TELEMETRY OBSERVED / PENDING** | Sanitized 4625 export; no validated correlation |
+| File Integrity | Wazuh syscheck/FIM | No public rule ID | **REVALIDATION PENDING** | Historical configuration only |
+| YARA | Intended YARA scan results | No public rule ID | **PENDING** | No public end-to-end evidence |
 
-Detailed rule documents are indexed in the [Detection Engineering directory](detection-rules/README.md).
+Detailed rule documents are indexed in the [Detection Engineering directory](detection-rules/README.md); the [evidence matrix](evidence/evidence-matrix.md) records the claim boundary for each capability.
 
 ## Arquitectura
-<img width="1536" height="1024" alt="Arquitectura" src="https://github.com/user-attachments/assets/241fb358-1f68-417c-9aa2-630d762b8aa1" />
 
 ```text
                            Administration Plane
@@ -59,6 +57,24 @@ Detailed rule documents are indexed in the [Detection Engineering directory](det
 | NAT/INTERNET | `10.0.2.0/24` | — | `.3` | `.15` | Actualizaciones y telemetría externa normal. |
 
 La separación evita que tráfico administrativo o NAT se clasifique como actividad del laboratorio. Más detalle: [arquitectura](docs/architecture/README.md).
+
+## Ingeniería de falsos positivos: retener no significa alertar
+
+```text
+MANAGEMENT  192.168.57.0/24
+        ↓ telemetry retained
+        └── excluded from WFP scan detector
+
+ATTACK/LAB  192.168.56.0/24
+        ↓ eligible WFP telemetry
+        └── 100500 → 100501 / 100502
+
+NAT         10.0.2.0/24
+        ↓ telemetry retained
+        └── excluded from WFP scan detector
+```
+
+La exclusión ocurre en la base del detector WFP; no suprime telemetría de MANAGEMENT ni NAT de los archivos de investigación. Los controles negativos demostrados aplican al caso WFP, no a todos los detectores futuros.
 
 ## SOC Workflow
 
@@ -118,30 +134,10 @@ alerts.json -> Filebeat -> Indexer -> Dashboard
 
 - **34** WFP records were produced by the validated 15-port scan.
 - **15** raw destination-port values were observed.
-- The Wazuh correlation rules generated exactly one visible alert for each threshold in the observed scan.
+- The Wazuh correlation rules generated exactly one local `alerts.json` alert for each threshold in the observed scan.
 - MANAGEMENT and NAT negative tests remained outside the WFP detector.
 
-The correlation is intentionally documented as a **heuristic signal**, not exact `COUNT(DISTINCT destinationPort)` logic. The full forensic sequence and cardinality analysis are documented in [WFP Port Scan Detection](detection-rules/WFP_PortScan_Detection_Final.md).
-
-## False-Positive Reduction
-
-The detector uses the network architecture itself as part of the detection design:
-
-```text
-MANAGEMENT 192.168.57.0/24
-    -> telemetry retained
-    -> excluded from WFP correlation
-
-NAT/INTERNET 10.0.2.0/24
-    -> telemetry retained
-    -> excluded from WFP correlation
-
-ATTACK/LAB 192.168.56.0/24
-    -> controlled reconnaissance
-    -> eligible for WFP port-scan detection
-```
-
-This keeps legitimate telemetry available for investigation without allowing administration or ordinary external traffic to become a port-scan verdict.
+The correlation is intentionally documented as a **heuristic signal**, not exact `COUNT(DISTINCT destinationPort)` logic. The full forensic sequence and cardinality analysis are documented in [WFP Port Scan Detection](detection-rules/WFP_PortScan_Detection_Final.md). The production raw logs and a direct Dashboard query are not public evidence.
 
 ## Caso destacado: WFP Port Scan
 
@@ -151,13 +147,11 @@ La detección WFP utiliza eventos Windows Security `5152`/`5157` inbound TCP, li
 - `100501`: correlación de señal alta nivel 10.
 - `100502`: correlación de señal alta nivel 13.
 
-Una prueba real produjo 34 eventos WFP sobre 15 puertos de destino crudos distintos y exactamente una alerta visible de cada umbral. Estos umbrales son **heurísticas de correlación**, no `COUNT(DISTINCT destinationPort)`. Consulta la [documentación WFP validada](detection-rules/WFP_PortScan_Detection_Final.md).
+Una prueba real documentada produjo 34 eventos WFP sobre 15 puertos de destino crudos distintos y exactamente una alerta local de cada umbral en `alerts.json`. Estos umbrales son **heurísticas de correlación**, no `COUNT(DISTINCT destinationPort)`. Los resultados y el método están publicados, pero los logs crudos de producción no; consulta la [documentación WFP validada](detection-rules/WFP_PortScan_Detection_Final.md).
 
 ## Evidencia visual curada
 
-El repositorio incluye capturas técnicas revisadas de arquitectura, Wazuh, WFP y Sysmon. Las capturas conservan únicamente las direcciones privadas relevantes del HomeLab; no contienen secretos ni pantallas de autenticación. La evidencia WFP ilustra telemetría ATTACK/LAB y acompaña una detección **VALIDATED** de naturaleza heurística. La captura de Sysmon prueba la preparación del endpoint, pero Sysmon EID 3 continúa **AUDITED / PENDING VALIDATION**.
-
-[Ver el inventario de evidencia →](evidence/README.md)
+El repositorio incluye ocho capturas técnicas curadas de arquitectura, Wazuh, WFP y Sysmon. Son evidencia visual de capas concretas, no sustitutos de los artefactos de log: la captura WFP ilustra telemetría ATTACK/LAB; Sysmon prueba preparación del endpoint, pero EID 3 continúa **AUDITED / PENDING VALIDATION**. Consulta el [inventario](evidence/README.md), la [matriz de evidencia](evidence/evidence-matrix.md) y el [catálogo de imágenes](evidence/image-catalog.md) para el alcance de cada imagen.
 
 ## Problemas técnicos reales resueltos
 
@@ -183,7 +177,7 @@ El repositorio incluye capturas técnicas revisadas de arquitectura, Wazuh, WFP 
 
 ## Reproducibilidad y comandos
 
-La [guía de setup](docs/setup/README.md) separa arquitectura, roles y validación. El [Command Reference](docs/setup/08-command-reference.md) reúne los comandos públicos usados para verificar interfaces, conectividad, Sysmon, reglas Wazuh, `xmllint`, `wazuh-analysisd`, `jq` y reproducir la prueba Nmap validada.
+La [guía de setup](docs/setup/README.md) separa arquitectura, roles y validación. La [referencia histórica de comandos](docs/setup/08-command-reference.md) reúne únicamente comandos cuya ejecución está documentada y señala explícitamente los que no cuentan con evidencia histórica.
 
 La instalación histórica completa no se declara reproducible todavía: los transcripts originales de instalación se mantienen fuera del repositorio público hasta poder sanitizarlos. No se inventan comandos de instalación que no estén respaldados por la evidencia conservada.
 
@@ -194,6 +188,8 @@ La instalación histórica completa no se declara reproducible todavía: los tra
 - [Comandos de operación y reproducción](docs/setup/08-command-reference.md)
 - [Operación y validación](docs/operations/validation-workflow.md)
 - [Detección e ingeniería de reglas](detection-rules/README.md)
+- [Matriz de evidencia](evidence/evidence-matrix.md)
+- [Catálogo de imágenes](evidence/image-catalog.md)
 - [Troubleshooting](docs/troubleshooting/)
 - [Cronología técnica](docs/timeline/project-history.md)
 - [Lecciones y limitaciones](project-notes/)

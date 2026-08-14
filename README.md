@@ -8,6 +8,8 @@ IT professional with **15+ years of hands-on experience** across Windows/Linux s
 
 My security development combines structured troubleshooting with practical lab work in **Wazuh, Sysmon, Windows Event Logs, Windows Filtering Platform (WFP), network analysis, alert triage, IOC review and MITRE ATT&CK-aware investigation**. I deliberately distinguish validated detections from scenarios that are still under audit or controlled validation.
 
+**Target roles:** Junior SOC Analyst · Security Operations · Blue Team · Junior Cybersecurity Analyst
+
 ## What I Bring to a SOC Team
 
 - Strong Windows/Linux troubleshooting and endpoint administration background
@@ -19,11 +21,7 @@ My security development combines structured troubleshooting with practical lab w
 
 ## Featured Project — SOC Operations Lab
 
-A reproducible VirtualBox **SOC HomeLab** built with Kali Linux, Ubuntu/Wazuh and a Windows 11 endpoint. The lab documents architecture, network-plane separation, detection engineering, evidence handling, validation methodology, false-positive reduction and known engine limitations.
-
-<p align="center">
-  <img src="assets/soc-home-lab-hero.svg" alt="SOC Operations HomeLab showing Kali Linux, Windows 11 with Sysmon and Wazuh Agent, Ubuntu Wazuh Manager 4.14.7, Wazuh Dashboard, management network, attack lab network and NAT internet" width="100%" />
-</p>
+A reproducible VirtualBox **SOC HomeLab** built with Kali Linux, Ubuntu/Wazuh and a Windows 11 endpoint. The lab documents architecture, network-plane separation, detection engineering, evidence handling, validation methodology, false-positive reduction and known engine limitations. The project foregrounds inspected Wazuh, Windows and WFP evidence rather than illustrative visuals.
 
 ### Validated Detection Case — WFP Port Scan
 
@@ -47,15 +45,17 @@ Wazuh Manager 4.14.7
 Wazuh Dashboard
 ```
 
-**Observed validation:** 34 WFP records over 15 raw destination ports, with negative tests on MANAGEMENT and NAT traffic. The correlation rules are documented as **heuristics**, not exact `COUNT(DISTINCT destinationPort)` logic.
+**Documented controlled validation:** 34 WFP records over 15 raw destination ports, with negative tests on MANAGEMENT and NAT traffic. The correlation rules are **heuristics**, not exact `COUNT(DISTINCT destinationPort)` logic. The repository documents historical `archives.json`/`alerts.json` results but does not publish raw production logs or direct Dashboard proof.
 
-- **WFP Port Scan:** VALIDATED
+- **WFP Port Scan:** VALIDATED — documented controlled run
 - **Sysmon Event ID 3:** AUDITED / PENDING VALIDATION
-- **Windows brute force:** PENDING CONTROLLED VALIDATION
+- **Windows authentication / brute force:** TELEMETRY OBSERVED / PENDING DETECTION VALIDATION
 - **YARA:** PENDING VALIDATION
 - **FIM:** CONFIGURED / REVALIDATION PENDING
 
 [Explore the full SOC Operations Lab →](projects/soc-operations-lab/README.md)
+
+[Evidence matrix](projects/soc-operations-lab/evidence/evidence-matrix.md) · [WFP case study](projects/soc-operations-lab/detection-rules/WFP_PortScan_Detection_Final.md) · [Historical command reference](projects/soc-operations-lab/docs/setup/08-command-reference.md)
 
 ## Core Skills
 
@@ -138,6 +138,7 @@ Building practical **Blue Team / SOC** capability through controlled detection s
 - [SOC HomeLab architecture](projects/soc-operations-lab/docs/architecture/README.md)
 - [SOC HomeLab detection engineering index](projects/soc-operations-lab/detection-rules/README.md)
 - [SOC HomeLab evidence inventory](projects/soc-operations-lab/evidence/README.md)
+- [SOC HomeLab evidence catalog](projects/soc-operations-lab/evidence/image-catalog.md)
 
 ## Additional Project
 
@@ -149,6 +150,7 @@ Building practical **Blue Team / SOC** capability through controlled detection s
 
 - [LinkedIn](https://www.linkedin.com/in/reynaldo8509/)
 - [Credly](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez)
+- [Email](mailto:rey.amado8509@gmail.com)
 
 ## Responsible Use
 

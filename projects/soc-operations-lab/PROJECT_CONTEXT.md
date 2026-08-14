@@ -120,7 +120,7 @@ Riesgos pendientes: la misma limitación de cardinalidad heurística; reglas her
 
 | Detector | Estado documentado | Hecho comprobado / brecha |
 |---|---|---|
-| Windows brute force | PENDING CONTROLLED VALIDATION | Security EID `4625` da visibilidad de fallos y existe la regla oficial `60122`; para OpenSSH algunos eventos dejan `win.eventdata.ipAddress` como `-`, por lo que la correlación por IP aún no es fiable ni validada. El directorio histórico de evidencia contiene placeholders vacíos. |
+| Windows brute force | TELEMETRY OBSERVED / PENDING DETECTION VALIDATION | Security EID `4625` da visibilidad de fallos y existe la regla oficial `60122`; una exportación sanitizada contiene fallos históricos, incluidos tres desde ATTACK/LAB. Para OpenSSH algunos eventos dejan `win.eventdata.ipAddress` como `-`, por lo que una correlación por IP aún no es fiable ni validada. |
 | YARA | PENDING VALIDATION | No hay regla pública sanitizada, configuración de ejecución/recolección ni evidencia extremo a extremo en `archives.json` y `alerts.json`. El historial no basta para afirmar cobertura. |
 | FIM / syscheck | CONFIGURED / REVALIDATION PENDING | Existe un ajuste estrecho histórico para reducir ruido en una ruta de pruebas conservando FIM fuera de ella. Falta un paquete sanitizado con configuración, cambio de archivo, evidencia de ingesta y alerta final. |
 

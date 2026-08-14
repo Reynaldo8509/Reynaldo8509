@@ -23,6 +23,16 @@ El laboratorio separa la administración, los escenarios controlados y la conect
 
 El plano MANAGEMENT no participa en el detector WFP de port scan. NAT conserva telemetría, pero tampoco participa. Solo ATTACK/LAB es elegible para ese caso de uso.
 
+## Control de falsos positivos por plano
+
+```text
+MANAGEMENT 192.168.57.0/24 ──> telemetría retenida ──> excluida del detector WFP
+ATTACK/LAB 192.168.56.0/24 ──> telemetría elegible ─> base 100500 → 100501 / 100502
+NAT 10.0.2.0/24 ────────────> telemetría retenida ──> excluida del detector WFP
+```
+
+Este es un control de alcance para el caso WFP, no una regla para borrar o ignorar telemetría. MANAGEMENT y NAT siguen disponibles en las fuentes de investigación; la exclusión limita qué eventos pueden alimentar la base `100500`.
+
 ## Flujo de telemetría
 
 ```text

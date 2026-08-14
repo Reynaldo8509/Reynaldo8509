@@ -2,7 +2,7 @@
 
 ## Capturas visuales curadas
 
-Las ocho capturas siguientes son copias sin modificar de material histórico revisado visualmente. Se conservan las direcciones privadas del HomeLab porque documentan las redes ATTACK/LAB y NAT descritas en el proyecto; no se incluyen direcciones públicas ni del rango privado excluido durante la revisión. Los originales permanecen fuera del repositorio.
+Las ocho capturas siguientes son artefactos curados derivados de material histórico revisado visualmente. Algunas conservan el píxel original y otras son recortes seguros para quitar contexto irrelevante; por eso no se describen como copias sin modificar. Se conservan las direcciones privadas del HomeLab porque documentan las redes ATTACK/LAB y NAT. Los originales permanecen fuera del repositorio.
 
 | Image | Category | What it demonstrates |
 |---|---|---|
@@ -15,13 +15,15 @@ Las ocho capturas siguientes son copias sin modificar de material histórico rev
 | [wfp-blocked-connections-attack-lab.png](screenshots/wfp-blocked-connections-attack-lab.png) | WFP / network evidence | Registros de conexiones TCP bloqueadas desde Kali ATTACK/LAB hacia el endpoint Windows. Complementa la evidencia WFP publicada. |
 | [windows-sysmon-installation.png](screenshots/windows-sysmon-installation.png) | Sysmon / endpoint | Instalación correcta de Sysmon en Windows. Es evidencia de preparación del endpoint, no una validación de la detección Sysmon Event ID 3. |
 
-La detección WFP Port Scan está **VALIDATED** por eventos reales, `archives.json` y `alerts.json`; las capturas WFP son apoyo visual. Sus reglas `100500`, `100501` y `100502` son una detección heurística de alta señal, no un conteo exacto de puertos únicos. Sysmon Event ID 3 permanece **AUDITED / PENDING VALIDATION**: todavía no existe una evidencia publicada de un EID 3 ATTACK real `192.168.56.1 -> 192.168.56.20` que valide ese escenario.
+La detección WFP Port Scan está **VALIDATED como ejecución controlada documentada** por los resultados históricos de eventos reales, `archives.json` y `alerts.json`; las capturas WFP son apoyo visual. Los logs de producción no se publican, por lo que el lector puede revisar el método y la reconstrucción, pero no un raw-log package. Sus reglas `100500`, `100501` y `100502` son una detección heurística de alta señal, no un conteo exacto de puertos únicos. Sysmon Event ID 3 permanece **AUDITED / PENDING VALIDATION**: todavía no existe una evidencia publicada de un EID 3 ATTACK real `192.168.56.1 -> 192.168.56.20` que valide ese escenario.
+
+Consulta la [matriz de evidencia](evidence-matrix.md) para saber qué afirmación respalda cada artefacto y el [catálogo completo de imágenes](image-catalog.md) para la decisión individual de publicación.
 
 ## Decisión de publicación
 
-- **PUBLISH_AS_IS:** las ocho imágenes de la tabla recibieron revisión visual real y no requerían edición.
-- **SANITIZE_AND_PUBLISH:** ninguna. No se alteraron originales ni se generaron recortes que pudieran cambiar su significado técnico.
-- **DO_NOT_PUBLISH:** 49 de las 57 capturas históricas permanecen fuera del repositorio por mostrar pantallas de inicio o restablecimiento de sesión, prompts de contraseña, rutas o nombres personales, marcadores del navegador, direcciones públicas, comandos no necesarios o evidencia de bajo valor documental.
+- **PUBLISH_AS_IS / CURATED_DERIVATIVE:** las ocho imágenes de la tabla recibieron revisión visual real. El catálogo identifica cuáles se corresponden directamente con el conjunto fuente actual y cuáles son recortes derivados.
+- **SANITIZE_AND_PUBLISH:** no se añadió una nueva captura durante esta auditoría. Los candidatos B del catálogo requieren un recorte que preserve significado técnico y una segunda revisión; no se publicaron por prioridad de evidencia.
+- **DO_NOT_PUBLISH:** el directorio fuente indicado actualmente contiene 53 capturas. Las restantes permanecen fuera del repositorio por pantallas de inicio o restablecimiento de sesión, prompts de contraseña, rutas o nombres personales, marcadores del navegador, direcciones públicas, comandos no necesarios, contradicción con el estado final o bajo valor documental.
 - **VISUAL_REVIEW_PENDING:** ninguna de las imágenes publicadas.
 
 La revisión de las ocho copias no encontró contraseñas, tokens, claves privadas, cookies, códigos de autenticación ni pantallas de login. No se suben logs completos de producción, transcripciones ni material histórico sin una finalidad pública y una revisión individual.
@@ -30,4 +32,4 @@ La revisión de las ocho copias no encontró contraseñas, tokens, claves privad
 
 | Ruta | Tipo | Estado de publicación |
 |---|---|---|
-| `scenario-1-bruteforce/` | Marcador histórico de brute force | Solo README; no contiene prueba, log ni captura y no valida la detección. |
+| `scenario-1-bruteforce/` | Telemetría de autenticación histórica | CSV sanitizado de cinco eventos `4625`; prueba eventos individuales, no una detección de brute force. |
