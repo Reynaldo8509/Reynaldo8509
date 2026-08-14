@@ -17,15 +17,54 @@ My security development combines structured troubleshooting with practical lab w
 - Structured log analysis, alert triage, root-cause analysis and technical documentation
 - Blue Team training in cybersecurity monitoring, threat management, network defense and endpoint security
 
+## Featured Project — SOC Operations Lab
+
+A reproducible VirtualBox **SOC HomeLab** built with Kali Linux, Ubuntu/Wazuh and a Windows 11 endpoint. The lab documents architecture, network-plane separation, detection engineering, evidence handling, validation methodology, false-positive reduction and known engine limitations.
+
+<p align="center">
+  <img src="assets/soc-home-lab-hero.svg" alt="SOC Operations HomeLab showing Kali Linux, Windows 11 with Sysmon and Wazuh Agent, Ubuntu Wazuh Manager 4.14.7, Wazuh Dashboard, management network, attack lab network and NAT internet" width="100%" />
+</p>
+
+### Validated Detection Case — WFP Port Scan
+
+```text
+ATTACK/LAB
+192.168.56.1 (Kali)
+        |
+        | controlled TCP reconnaissance
+        v
+192.168.56.20 (Windows 11)
+        |
+        | WFP 5152 / 5157
+        v
+Wazuh Agent
+        |
+        v
+Wazuh Manager 4.14.7
+        |
+        | correlation: 100500 -> 100501 / 100502
+        v
+Wazuh Dashboard
+```
+
+**Observed validation:** 34 WFP records over 15 raw destination ports, with negative tests on MANAGEMENT and NAT traffic. The correlation rules are documented as **heuristics**, not exact `COUNT(DISTINCT destinationPort)` logic.
+
+- **WFP Port Scan:** VALIDATED
+- **Sysmon Event ID 3:** AUDITED / PENDING VALIDATION
+- **Windows brute force:** PENDING CONTROLLED VALIDATION
+- **YARA:** PENDING VALIDATION
+- **FIM:** CONFIGURED / REVALIDATION PENDING
+
+[Explore the full SOC Operations Lab →](projects/soc-operations-lab/README.md)
+
 ## Core Skills
 
 | Area | Skills |
 |---|---|
 | **SOC / Blue Team** | Wazuh, Sysmon, Windows Event Logs, WFP telemetry, log analysis, alert triage, IOC review, MITRE ATT&CK awareness, incident documentation |
-| **Endpoint Security** | Windows security events, endpoint hardening, Microsoft Defender fundamentals, malware remediation, PowerShell basics |
-| **Networking** | TCP/IP, DNS, DHCP, VLANs, routing, firewall configuration, network segmentation, VPN concepts, Wireshark, Nmap, IDS/IPS concepts |
-| **Systems** | Windows, Linux, Windows Server, Active Directory / AD DS, Group Policy, backups, remote support and troubleshooting |
-| **Automation** | Python fundamentals, Bash/Linux CLI, SQL basics, technical reporting and root-cause analysis |
+| **Detection Engineering** | Custom Wazuh rules, event correlation, threshold tuning, false-positive reduction, validation methodology, evidence-backed detection claims |
+| **Infrastructure** | Windows, Linux, Windows Server, Active Directory / AD DS, Group Policy, TCP/IP, DNS, DHCP, VLANs, routing and firewalls |
+| **Tools / Automation** | Kali, Wireshark, Nmap, PowerShell, Bash/Linux CLI, Python fundamentals, SQL basics, `jq`, technical reporting |
 
 ## Certifications & Credentials
 
@@ -40,32 +79,42 @@ My security development combines structured troubleshooting with practical lab w
 | [Network Defense](https://www.credly.com/org/cisco/badge/network-defense) | Cisco | Network monitoring and defensive controls |
 | [Endpoint Security](https://www.credly.com/org/cisco/badge/endpoint-security) | Cisco | Endpoint protection and host-based defense |
 
+Credentials support the lab; they do not replace hands-on evidence.
+
 See the broader [certification and credential inventory](docs/certifications/README.md) and my [public Credly profile](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez).
 
-## Featured Project
+## SOC Workflow
 
-### 🛡️ SOC Operations Lab
+```text
+01  Generate controlled activity
+02  Collect endpoint telemetry
+03  Decode / normalize the event path
+04  Apply base tracking rule
+05  Correlate and evaluate thresholds
+06  Validate against production evidence
+07  Investigate false positives / negatives
+08  Document result and limitations
+```
 
-A reproducible VirtualBox **SOC HomeLab** built with Kali Linux, Ubuntu/Wazuh and a Windows 11 endpoint. The project documents architecture, network-plane separation, detection engineering, evidence handling, validation methodology and known limitations.
+## False-Positive Reduction
 
-**Validated highlight:** WFP-based port-scan detection in the controlled ATTACK/LAB network.
+The HomeLab deliberately separates three network planes so legitimate traffic remains observable without feeding the WFP port-scan detector:
 
-<p align="center">
-  <img src="assets/soc-home-lab-hero.svg" alt="SOC Operations HomeLab showing Kali Linux, Windows 11 with Sysmon and Wazuh Agent, Ubuntu Wazuh Manager 4.14.7, Wazuh Dashboard, management network, attack lab network and NAT internet" width="100%" />
-</p>
+```text
+MANAGEMENT 192.168.57.0/24
+    -> retained telemetry
+    -> excluded from WFP scan correlation
 
-- [Explore the SOC Operations Lab →](projects/soc-operations-lab/README.md)
-- WFP Port Scan: **VALIDATED**
-- Sysmon Event ID 3: **AUDITED / PENDING VALIDATION**
-- Windows brute force: **PENDING CONTROLLED VALIDATION**
-- YARA: **PENDING VALIDATION**
-- FIM: **CONFIGURED / REVALIDATION PENDING**
+NAT/INTERNET 10.0.2.0/24
+    -> retained telemetry
+    -> excluded from WFP scan correlation
 
-## Additional Project
+ATTACK/LAB 192.168.56.0/24
+    -> controlled reconnaissance
+    -> eligible for the WFP port-scan detector
+```
 
-### LG TV Tools
-
-[LG TV Tools](https://github.com/Reynaldo8509/lg-tv-tools) is an independent Python/PyQt6 Linux application for discovering LG webOS TVs and supporting screen mirroring, desktop casting and media handoff through SSDP, UPnP AVTransport and DLNA.
+This separation was a key part of reducing false positives without globally silencing legitimate telemetry.
 
 ## Professional Background
 
@@ -73,16 +122,28 @@ My professional experience spans **IT Support, Help Desk, systems administration
 
 My current work in **AI quality analysis and data annotation** also strengthens attention to detail, guideline-based evaluation, ambiguity handling and structured quality documentation. This complements, rather than replaces, my IT and cybersecurity career direction.
 
+## Target Roles
+
+Open to **Junior SOC Analyst, Security Operations, Blue Team and entry-level Cybersecurity Analyst** roles, with a focus on Windows/Linux monitoring, detection engineering, log analysis and incident-response fundamentals.
+
 ## Current Focus
 
-Building practical **Blue Team / SOC** capability through controlled detection scenarios, log analysis, endpoint telemetry, evidence-backed validation and technical writing. The goal is to translate a long IT operations background into measurable security-monitoring and incident-response capability.
+Building practical **Blue Team / SOC** capability through controlled detection scenarios, log analysis, endpoint telemetry, evidence-backed validation and technical writing.
 
 ## Technical Portfolio
 
 - [Technical profile](docs/technical-profile/README.md)
 - [Career and professional scope](docs/career/README.md)
+- [SOC HomeLab setup and command reference](projects/soc-operations-lab/docs/setup/README.md)
 - [SOC HomeLab architecture](projects/soc-operations-lab/docs/architecture/README.md)
+- [SOC HomeLab detection engineering index](projects/soc-operations-lab/detection-rules/README.md)
 - [SOC HomeLab evidence inventory](projects/soc-operations-lab/evidence/README.md)
+
+## Additional Project
+
+### LG TV Tools
+
+[LG TV Tools](https://github.com/Reynaldo8509/lg-tv-tools) is an independent Python/PyQt6 Linux application for discovering LG webOS TVs and supporting screen mirroring, desktop casting and media handoff through SSDP, UPnP AVTransport and DLNA.
 
 ## Connect
 
