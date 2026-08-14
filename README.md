@@ -1,125 +1,98 @@
-# 🛡️ SOC Home Lab — Threat Detection & Incident Response
+# SOC Operations HomeLab
 
-A hands-on Security Operations Center (SOC) lab environment built to simulate real-world threat detection, log analysis, and incident response workflows.
+Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali Linux, Ubuntu/Wazuh y un endpoint Windows 11. El proyecto prioriza ingeniería de detección verificable: separar telemetría de veredictos, reproducir escenarios controlados y documentar límites del motor antes de declarar una detección válida.
 
----
+## Estado de detecciones
 
-## 🎯 Objectives
+| Detección | Estado | Evidencia disponible |
+|---|---|---|
+| WFP Port Scan | **VALIDATED** | Eventos WFP reales, `archives.json`, `alerts.json` y pruebas negativas de NAT/MANAGEMENT. |
+| Sysmon Network / Event ID 3 | **AUDITED / PENDING VALIDATION** | EID 3 confirmado en MANAGEMENT y NAT; falta una señal ATTACK real que permita validar el detector. |
+| Windows brute force | **PENDING CONTROLLED VALIDATION** | Telemetría 4625 y reglas históricas documentadas; la correlación depende de que Windows proporcione una IP fuente utilizable. |
+| FIM | **CONFIGURED / REVALIDATION PENDING** | Historial de ajuste de ruido de rutas de prueba; falta un paquete público de evidencias reproducibles. |
+| YARA | **PENDING VALIDATION** | No hay configuración ni evidencia sanitizada suficiente para hacer una afirmación operativa. |
 
-* Simulate Blue Team operations in a controlled environment
-* Practice alert triage, investigation, and incident response (Tier 1 / Tier 2)
-* Build detection rules based on real attack techniques (MITRE ATT&CK)
-* Develop hands-on experience with enterprise-grade security tools
+## Arquitectura
 
----
+```text
+                           Administration Plane
+  Kali 192.168.57.1 ───────────────┬─────────────── Ubuntu/Wazuh 192.168.57.10
+                                   │ SSH / SCP / WinRM
+                                   └─────────────── Windows 11 192.168.57.20
 
-## 🏗️ Lab Architecture
+                              Attack/Lab Plane
+  Kali 192.168.56.1 ───────────────┬─────────────── Ubuntu/Wazuh 192.168.56.10
+                                   │ controlled reconnaissance
+                                   └─────────────── Windows 11 192.168.56.20
 
-```
-[Kali Linux - Attacker]
-│
-│ Simulated attacks (brute force, enumeration)
-▼
-[Windows 10 Endpoint]
-- Sysmon (telemetry)
-- Wazuh Agent (log forwarding)
-│
-▼
-[Wazuh Manager - SIEM]
-- Log collection & correlation
-- Alert generation
-│
-▼
-[SOC Analyst]
+                              Internet/NAT Plane
+             Ubuntu/Wazuh 10.0.2.3 ──────────────── Windows 11 10.0.2.15
 ```
 
----
+| Network | CIDR | Kali | Ubuntu/Wazuh | Windows 11 | Purpose |
+|---|---|---:|---:|---:|---|
+| MANAGEMENT | `192.168.57.0/24` | `.1` | `.10` | `.20` | Administración: SSH, SCP/SFTP, WinRM y mantenimiento. |
+| ATTACK/LAB | `192.168.56.0/24` | `.1` | `.10` | `.20` | Escenarios controlados de reconnaissance y detección. |
+| NAT/INTERNET | `10.0.2.0/24` | — | `.3` | `.15` | Actualizaciones y telemetría externa normal. |
 
-## 🧰 Tools & Technologies
+La separación evita que tráfico administrativo o NAT se clasifique como actividad del laboratorio. Más detalle: [arquitectura](docs/architecture/README.md).
 
-* Wazuh (SIEM)
-* Sysmon (Endpoint Telemetry)
-* Windows 10
-* Kali Linux
-* VirtualBox
+## Flujo de datos
 
----
-
-## 📁 Repository Structure
-
-```
-soc-operations-lab/
-│
-├── README.md
-├── LICENSE
-├── architecture/
-├── wazuh/
-├── sysmon/
-├── detection-rules/
-├── incident-response/
-├── evidence/
+```text
+Windows Security / Sysmon
+        -> Wazuh Agent
+        -> Wazuh Manager 4.14.7
+        -> archives.json (ingesta)
+        -> ruleset / correlación
+        -> alerts.json (alertas)
+        -> Filebeat / Indexer / Dashboard
 ```
 
----
+`archives.json` demuestra que un evento ingresó; `alerts.json` demuestra que una regla creó una alerta. La visualización en Dashboard requiere una comprobación independiente de indexación.
 
-## 🔍 Detection Use Cases
+## Caso destacado: WFP Port Scan
 
-* Brute Force Login Detection (T1110)
-* Privilege Escalation (in progress)
-* Suspicious PowerShell (in progress)
+La detección WFP utiliza eventos Windows Security `5152`/`5157` inbound TCP, limitados a `192.168.56.0/24 -> 192.168.56.20`.
 
----
+- `100500`: base de tracking silenciosa, nivel 6, anclada a la rama Security EventChannel.
+- `100501`: correlación de señal alta nivel 10.
+- `100502`: correlación de señal alta nivel 13.
 
-## 📊 SOC Workflow Simulated
+Una prueba real produjo 34 eventos WFP sobre 15 puertos de destino crudos distintos y exactamente una alerta visible de cada umbral. Estos umbrales son **heurísticas de correlación**, no `COUNT(DISTINCT destinationPort)`. Consulta la [documentación WFP validada](detection-rules/WFP_PortScan_Detection_Final.md).
 
-1. Attack simulated from Kali
-2. Logs generated in Windows (Event ID 4625)
-3. Logs sent to Wazuh
-4. Alert generated
-5. Triage (Tier 1)
-6. Investigation (Tier 2)
-7. Response actions
+## Problemas técnicos reales resueltos
 
----
+- Una regla oficial WFP `60104` de nivel 5 eclipsaba la base custom de nivel 1. La base validada quedó en nivel 6.
+- Un escaneo generó múltiples eventos `5152`/`5157` por puerto. `ignore="60"` limita el flooding sin eliminar telemetría.
+- `wazuh-logtest` con JSON archivado puede usar un decoder distinto de `windows_eventchannel`; la validación definitiva se hizo con eventos de producción.
 
-## 🧠 Skills Demonstrated
+## Tecnologías
 
-* SIEM monitoring (Wazuh)
-* Log analysis (Windows Events)
-* Detection engineering
-* Incident response workflow
-* MITRE ATT&CK usage
+- VirtualBox
+- Kali Linux
+- Ubuntu con Wazuh Manager 4.14.7
+- Windows 11 con Wazuh Agent y Sysmon
+- Windows Filtering Platform, Windows EventChannel, `jq`, Filebeat y Wazuh Indexer/Dashboard
 
----
+## Navegación
 
-## 📌 Key Event IDs
+- [Arquitectura](docs/architecture/README.md)
+- [Guía de setup reproducible](docs/setup/README.md)
+- [Operación y validación](docs/operations/validation-workflow.md)
+- [Reglas de detección](detection-rules/)
+- [Troubleshooting](docs/troubleshooting/)
+- [Cronología técnica](docs/timeline/project-history.md)
+- [Lecciones y limitaciones](project-notes/)
+- [Inventario de evidencia](evidence/README.md)
 
-* 4625 → Failed login
-* 4624 → Successful login
-* 4672 → Privileged login
-* 4688 → Process creation
+## Principios del proyecto
 
----
+1. No declarar una detección validada sin evidencia real.
+2. Mantener telemetría legítima aunque quede fuera de un detector.
+3. Documentar límites del rules engine y de la observabilidad.
+4. No publicar claves, contraseñas, tokens, transcripciones internas ni configuraciones con secretos.
 
-## 🚀 Lab Setup (Summary)
+## Licencia
 
-* 3 VMs: Kali, Windows 10, Wazuh
-* Sysmon installed
-* Wazuh agent connected
-* Detection rules configured
-
----
-
-## 📸 Evidence (Coming Soon)
-
-This section will include:
-
-* Wazuh alerts screenshots
-* Brute force logs
-* Investigation process
-
----
-
-## 📄 License
-
-MIT License — © 2026 Reynaldo Amado Rodríguez González
+Este proyecto se publica bajo [MIT](LICENSE).

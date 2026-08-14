@@ -1,87 +1,23 @@
-# Brute Force Detection - SOC Use Case
+# Windows Brute Force
 
-## 📌 Scenario
-Multiple failed login attempts detected on a Windows endpoint, potentially indicating a brute force attack.
+> **Status: PENDING CONTROLLED VALIDATION**
 
----
+## Señales disponibles
 
-## 🎯 Objective
-Detect repeated authentication failures and identify unauthorized access attempts.
+- Windows Security `4625` registra fallos de autenticación.
+- La regla oficial `60122` proporciona visibilidad de fallos individuales.
+- El historial del laboratorio incluye correlación custom para patrones repetidos, pero una parte de los eventos OpenSSH dejó `win.eventdata.ipAddress` como `-`.
+- El canal `OpenSSH/Operational` conservó la IP en el payload, pero la extracción automática hacia un campo correlacionable no quedó validada como solución final.
 
----
+## Implicación
 
-## 📊 Log Source
-- Windows Security Event Logs
-- Sysmon (optional correlation)
+No se debe afirmar todavía que el laboratorio tiene una detección de brute force por IP validada para OpenSSH. La telemetría de fallos existe; la correlación depende de un campo fuente fiable para el tipo de autenticación evaluado.
 
----
+## Próxima validación requerida
 
-## 🔑 Relevant Event IDs
+1. Seleccionar un escenario autorizado de autenticación fallida.
+2. Confirmar campos reales en `archives.json` para Security y OpenSSH/Operational.
+3. Verificar la regla final en `alerts.json`.
+4. Registrar una prueba negativa y los límites conocidos.
 
-| Event ID | Description |
-|----------|------------|
-| 4625     | Failed login attempt |
-| 4624     | Successful login |
-| 4672     | Special privileges assigned |
-
----
-
-## 🧠 Detection Logic
-
-Alert when:
-
-- More than **5 failed login attempts**
-- Within **5–10 minutes**
-- Same source IP or same user targeted
-
----
-
-## 🔍 Example Log
-Account Name: admin
-Source Network Address: 192.168.1.50
-Failure Reason: Unknown user name or bad password
-
-
----
-
-## ⚠️ Triage (SOC Tier 1)
-
-1. Validate alert
-2. Identify source IP
-3. Check targeted account
-4. Look for successful login after failures (Event ID 4624)
-
----
-
-## 🧪 Investigation (SOC Tier 2)
-
-- Correlate logs across timeline
-- Detect lateral movement
-- Analyze account behavior
-- Verify if account was compromised
-
----
-
-## 🚨 Response Actions
-
-- Lock affected account
-- Block malicious IP
-- Enforce password reset
-- Escalate incident if necessary
-
----
-
-## 🧬 MITRE ATT&CK
-
-- T1110 — Brute Force
-
----
-
-## 🧠 Analyst Notes
-
-Repeated failed login attempts followed by a successful login may indicate account compromise.
-
-This detection helps identify early-stage attacks targeting authentication systems.
-
-
-
+No se incluyen reglas activas en este documento hasta contar con una exportación revisada y evidencia reproducible.
