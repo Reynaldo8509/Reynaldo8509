@@ -1,8 +1,29 @@
-# Certifications and learning
+# Certifications & Credentials
 
-The profile consolidates the following professional-development information previously present in the Profile README:
+## Public verification source
 
-- Cisco Certified Junior Cybersecurity Analyst and Ethical Hacker
-- Preparation for CompTIA Security+ and Network+
+[Credly public profile](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez)
 
-This repository intentionally does not publish certificates, credential files, examination records or authentication material. The technical portfolio should be read as practical evidence of ongoing systems, networking and Blue Team development rather than as a substitute for credential verification.
+Only public Credly pages are used as a source for this portfolio. No passwords, cookies, sessions, tokens, certificates or private account material are collected or stored.
+
+## Featured credentials
+
+| Credential | Issuer | Relevance | Verification |
+|---|---|---|---|
+| Public Credly credential profile | Credly | Authoritative public index for credentials relevant to IT, cybersecurity and Blue Team development. | [View public profile](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez) |
+
+## Badge selection and verification status
+
+The anonymous public rendering available during this review did not expose badge-specific metadata or public badge URLs. To avoid unsupported claims, no individual badge is currently presented as a featured certification.
+
+Before an individual badge is added, its public page must make the following information visible without authentication:
+
+- exact credential name and issuer;
+- public badge URL;
+- issue date and expiration status when available;
+- public description and associated skills when available; and
+- direct relevance to IT, Blue Team, SOC, network security, cloud security, threat hunting, log analysis or digital forensics.
+
+The intended selection is limited to 5–10 high- or medium-priority badges. Badges with no direct professional relevance, incomplete public metadata or duplicate coverage are omitted.
+
+This repository intentionally does not publish certificate files, examination records or authentication material. The technical portfolio is practical evidence of ongoing systems, networking and Blue Team development; it is not a substitute for credential verification.

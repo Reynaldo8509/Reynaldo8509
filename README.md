@@ -23,12 +23,13 @@ IT specialist with a background in systems administration, networking and infras
 | Cloud and identity | Microsoft Entra ID, Azure Fundamentals and Microsoft Defender familiarity |
 | Automation | Python and Bash scripting for monitoring, analysis and operational tasks |
 
-### Certifications and Development
+## Certifications & Credentials
 
-- Cisco Certified Junior Cybersecurity Analyst and Ethical Hacker
-- Preparing for CompTIA Security+ and Network+
+### Public Credential Verification
 
-See the [certifications and learning overview](docs/certifications/README.md) for scope and supporting portfolio context.
+My [public Credly profile](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez) is the source for independently verifiable credentials. Individual badges are listed in this portfolio only when their public Credly page exposes the exact name, issuer and verification URL without authentication.
+
+See the [certifications and credentials overview](docs/certifications/README.md) for the current verification scope, selection criteria and pending public metadata.
 
 ## Selected Projects
 
