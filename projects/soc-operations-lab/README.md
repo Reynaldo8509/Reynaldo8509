@@ -14,6 +14,7 @@ Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali L
 | YARA | **PENDING VALIDATION** | No hay configuración ni evidencia sanitizada suficiente para hacer una afirmación operativa. |
 
 ## Arquitectura
+<img width="1536" height="1024" alt="Arquitectura" src="https://github.com/user-attachments/assets/241fb358-1f68-417c-9aa2-630d762b8aa1" />
 
 ```text
                            Administration Plane
