@@ -1,65 +1,77 @@
 # Reynaldo Rodríguez
 
-## IT Specialist | Blue Team / SOC Analyst
+## IT & Network Specialist | Junior SOC Analyst Candidate | Blue Team
+
+**Windows & Linux · Networking · Wazuh · Sysmon · Log Analysis · Detection Engineering**
 
 ### Professional Summary
 
-IT specialist with a background in systems administration, networking and infrastructure operations. I am developing practical cybersecurity skills through a documented SOC HomeLab, with an emphasis on defensible detection engineering, log analysis, incident-response fundamentals and clear technical documentation.
+IT professional with **15+ years of experience** across Windows/Linux support, systems administration, networking, endpoint troubleshooting and infrastructure operations, now focused on transitioning that hands-on background into **Junior SOC / Blue Team** work.
 
-### Cybersecurity Focus
+My security development combines structured troubleshooting with practical lab work in **Wazuh, Sysmon, Windows Event Logs, Windows Filtering Platform (WFP), network analysis, alert triage, IOC review and MITRE ATT&CK-aware investigation**. The portfolio deliberately distinguishes validated detections from scenarios that are still being audited or require controlled validation.
 
-- Blue Team and SOC operations
-- Windows and Linux telemetry, SIEM workflows and detection engineering
-- Network segmentation, system hardening and infrastructure administration
-- Practical automation with Python and Bash for operational tasks
+### What I Bring to a SOC Team
 
-### Core Skills
+- Strong Windows/Linux troubleshooting and endpoint administration background
+- Network administration experience covering **TCP/IP, DNS, DHCP, VLANs, routing, segmentation and firewalls**
+- Experience with **Active Directory / AD DS, Group Policy, access management and server operations**
+- Practical SIEM and endpoint telemetry work with **Wazuh + Sysmon + Windows EventChannel**
+- Structured log analysis, alert triage, root-cause analysis and technical documentation
+- Blue Team training in cybersecurity monitoring, threat management, network defense and endpoint security
+
+## Core Skills
 
 | Area | Skills |
 |---|---|
-| Systems and infrastructure | Windows and Linux administration, DNS, DHCP, server operations and troubleshooting |
-| Networking | Network administration, segmentation, firewall fundamentals and traffic analysis |
-| Security operations | Wazuh, Windows EventChannel, Sysmon, WFP telemetry, alert triage and incident-response foundations |
-| Cloud and identity | Microsoft Entra ID, Azure Fundamentals and Microsoft Defender familiarity |
-| Automation | Python and Bash scripting for monitoring, analysis and operational tasks |
+| **SOC / Blue Team** | Wazuh, Sysmon, Windows Event Logs, WFP telemetry, log analysis, alert triage, IOC review, MITRE ATT&CK awareness, incident documentation |
+| **Endpoint Security** | Windows security events, endpoint hardening, Microsoft Defender fundamentals, malware remediation, PowerShell basics |
+| **Networking** | TCP/IP, DNS, DHCP, VLANs, routing, firewall configuration, network segmentation, VPN concepts, Wireshark, Nmap, IDS/IPS concepts |
+| **Systems** | Windows, Linux, Windows Server, Active Directory / AD DS, Group Policy, backups, remote support and troubleshooting |
+| **Automation** | Python fundamentals, Bash/Linux CLI, SQL basics, technical reporting and root-cause analysis |
 
 ## Certifications & Credentials
 
-### Cybersecurity & SOC
+### Cybersecurity & SOC — Featured
 
 | Credential | Issuer | Relevance |
 |---|---|---|
-| [CyberOps Associate](https://www.credly.com/org/cisco/badge/cyberops-associate) | Cisco | SOC operations, intrusion analysis and security monitoring |
-| [Google Cybersecurity Professional Certificate(v.2)](https://www.credly.com/org/coursera/badge/google-cybersecurity-professional-certificate-v-2) | Coursera | Foundational preparation for cybersecurity and SOC analyst roles |
-| [Junior Cybersecurity Analyst Career Path](https://www.credly.com/org/cisco/badge/junior-cybersecurity-analyst-career-path.1) | Cisco | Network and endpoint defense, alerts and incident-response planning |
-| [Cyber Threat Management](https://www.credly.com/org/cisco/badge/cyber-threat-management) | Cisco | Incident response, risk assessment and threat intelligence |
-| [Network Defense](https://www.credly.com/org/cisco/badge/network-defense) | Cisco | Network monitoring, alert evaluation and defense-in-depth |
+| [CyberOps Associate](https://www.credly.com/org/cisco/badge/cyberops-associate) | Cisco | Security operations, intrusion analysis and security monitoring |
+| [Google Cybersecurity Professional Certificate (v.2)](https://www.credly.com/org/coursera/badge/google-cybersecurity-professional-certificate-v-2) | Coursera | Entry-level cybersecurity and SOC analyst foundations |
+| [Junior Cybersecurity Analyst Career Path](https://www.credly.com/org/cisco/badge/junior-cybersecurity-analyst-career-path.1) | Cisco | Network and endpoint defense, alerting and incident-response concepts |
+| [Cyber Threat Management](https://www.credly.com/org/cisco/badge/cyber-threat-management) | Cisco | Incident response, risk management and threat intelligence |
+| [Network Defense](https://www.credly.com/org/cisco/badge/network-defense) | Cisco | Network monitoring, alert evaluation and defensive controls |
 | [Endpoint Security](https://www.credly.com/org/cisco/badge/endpoint-security) | Cisco | Endpoint protection, host-based defense and Windows security |
-| [Industrial Cybersecurity Essentials](https://www.credly.com/org/cisco/badge/industrial-cybersecurity-essentials) | Cisco | OT security, segmentation, hardening and risk assessment |
-| [Ethical Hacker](https://www.credly.com/org/cisco/badge/ethical-hacker) | Cisco | Vulnerability assessment and security testing in authorized environments |
-| [OWASP API Security Top 10 (2 hours)](https://www.credly.com/org/apisec-university/badge/owasp-api-security-top-10-2-hours) | APIsec University | API threats, authentication and authorization risks |
-| [API Security Fundamentals '25 (2 hours)](https://www.credly.com/org/apisec-university/badge/api-security-fundamentals-25-2-hours/) | APIsec University | API security governance, testing and monitoring fundamentals |
 
-> Credentials are linked to their public verification pages where available.
+Additional credentials and public verification scope are documented in [Certifications & Credentials](docs/certifications/README.md) and on my [public Credly profile](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez).
 
-The badge pages document the issuer's credential definition; my [public Credly profile](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez) is the public earner reference. See the [certifications and credentials overview](docs/certifications/README.md) for badge type, public skills and verification scope.
+## Featured Project
 
-## Selected Projects
+### 🛡️ SOC Operations Lab
 
-### SOC Operations Lab
+A reproducible VirtualBox **SOC HomeLab** built with Kali Linux, Ubuntu/Wazuh and a Windows 11 endpoint. The project documents architecture, network-plane separation, detection engineering, evidence handling, validation methodology and known limitations.
 
-A reproducible VirtualBox SOC HomeLab with Kali Linux, Ubuntu/Wazuh and a Windows 11 endpoint. It documents architecture, setup, WFP port-scan detection, Sysmon auditing, evidence handling and known limitations.
+**Validated highlight:** WFP-based port-scan detection in the controlled ATTACK/LAB network.
 
-- [Open the SOC Operations Lab](projects/soc-operations-lab/README.md)
+- [Explore the SOC Operations Lab →](projects/soc-operations-lab/README.md)
 - WFP Port Scan: **VALIDATED**
 - Sysmon Event ID 3: **AUDITED / PENDING VALIDATION**
 - Windows brute force: **PENDING CONTROLLED VALIDATION**
 - YARA: **PENDING VALIDATION**
 - FIM: **CONFIGURED / REVALIDATION PENDING**
 
+## Additional Project
+
 ### LG TV Tools
 
-[LG TV Tools](https://github.com/Reynaldo8509/lg-tv-tools) is an independent Linux application for discovering, managing and casting media to LG webOS TVs using SSDP, UPnP AVTransport and DLNA.
+[LG TV Tools](https://github.com/Reynaldo8509/lg-tv-tools) is an independent Python/PyQt6 Linux application for discovering LG webOS TVs and supporting screen mirroring, desktop casting and media handoff through SSDP, UPnP AVTransport and DLNA.
+
+## Professional Background
+
+My professional experience spans **IT Support, Help Desk, systems administration and network administration**, including Windows/Linux environments, Active Directory, server operations, networking and structured troubleshooting. My current role in AI quality analysis and data annotation also strengthens attention to detail, guideline-based evaluation, ambiguity handling and structured quality documentation.
+
+## Current Focus
+
+Building practical **Blue Team / SOC** capability through controlled detection scenarios, log analysis, endpoint telemetry, evidence-backed validation and technical writing. The goal is to translate a long IT operations background into measurable security-monitoring and incident-response capability.
 
 ## Technical Portfolio
 
@@ -68,15 +80,12 @@ A reproducible VirtualBox SOC HomeLab with Kali Linux, Ubuntu/Wazuh and a Window
 - [SOC HomeLab architecture](projects/soc-operations-lab/docs/architecture/README.md)
 - [SOC HomeLab evidence inventory](projects/soc-operations-lab/evidence/README.md)
 
-## What I Am Building
-
-I am expanding hands-on Blue Team capability through controlled lab scenarios, detection validation, technical writing and automation. The portfolio distinguishes verified detections from work that is still being audited or requires controlled validation.
-
-## Contact
+## Connect
 
 - [LinkedIn](https://www.linkedin.com/in/reynaldo8509/)
+- [Credly](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez)
 - [Email](mailto:rey.amado8509@gmail.com)
 
 ## Responsible Use
 
-Security material in this portfolio is for authorized environments, education and professional development. See the [career and professional scope](docs/career/README.md) for the consolidated statement.
+Security material in this portfolio is for authorized environments, education and professional development. Detection status and project claims are intentionally evidence-based and scoped to the documented lab environment.
