@@ -25,11 +25,24 @@ IT specialist with a background in systems administration, networking and infras
 
 ## Certifications & Credentials
 
-### Public Credential Verification
+### Cybersecurity & SOC
 
-My [public Credly profile](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez) is the source for independently verifiable credentials. Individual badges are listed in this portfolio only when their public Credly page exposes the exact name, issuer and verification URL without authentication.
+| Credential | Issuer | Relevance |
+|---|---|---|
+| [CyberOps Associate](https://www.credly.com/org/cisco/badge/cyberops-associate) | Cisco | SOC operations, intrusion analysis and security monitoring |
+| [Google Cybersecurity Professional Certificate(v.2)](https://www.credly.com/org/coursera/badge/google-cybersecurity-professional-certificate-v-2) | Coursera | Foundational preparation for cybersecurity and SOC analyst roles |
+| [Junior Cybersecurity Analyst Career Path](https://www.credly.com/org/cisco/badge/junior-cybersecurity-analyst-career-path.1) | Cisco | Network and endpoint defense, alerts and incident-response planning |
+| [Cyber Threat Management](https://www.credly.com/org/cisco/badge/cyber-threat-management) | Cisco | Incident response, risk assessment and threat intelligence |
+| [Network Defense](https://www.credly.com/org/cisco/badge/network-defense) | Cisco | Network monitoring, alert evaluation and defense-in-depth |
+| [Endpoint Security](https://www.credly.com/org/cisco/badge/endpoint-security) | Cisco | Endpoint protection, host-based defense and Windows security |
+| [Industrial Cybersecurity Essentials](https://www.credly.com/org/cisco/badge/industrial-cybersecurity-essentials) | Cisco | OT security, segmentation, hardening and risk assessment |
+| [Ethical Hacker](https://www.credly.com/org/cisco/badge/ethical-hacker) | Cisco | Vulnerability assessment and security testing in authorized environments |
+| [OWASP API Security Top 10 (2 hours)](https://www.credly.com/org/apisec-university/badge/owasp-api-security-top-10-2-hours) | APIsec University | API threats, authentication and authorization risks |
+| [API Security Fundamentals '25 (2 hours)](https://www.credly.com/org/apisec-university/badge/api-security-fundamentals-25-2-hours/) | APIsec University | API security governance, testing and monitoring fundamentals |
 
-See the [certifications and credentials overview](docs/certifications/README.md) for the current verification scope, selection criteria and pending public metadata.
+> Credentials are linked to their public verification pages where available.
+
+The badge pages document the issuer's credential definition; my [public Credly profile](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez) is the public earner reference. See the [certifications and credentials overview](docs/certifications/README.md) for badge type, public skills and verification scope.
 
 ## Selected Projects
 
