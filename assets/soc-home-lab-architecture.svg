@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071018"/>
+      <stop offset="1" stop-color="#0d1424"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1">
+      <stop offset="0" stop-color="#101b2b"/>
+      <stop offset="1" stop-color="#14243a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#4dd4ff"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="620" rx="28" fill="url(#bg)"/>
+  <rect x="24" y="24" width="1352" height="572" rx="22" fill="none" stroke="#1f3857" stroke-width="2"/>
+
+  <text x="60" y="72" fill="#e7f3ff" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="700">SOC Operations Lab</text>
+  <text x="60" y="104" fill="#8da9c9" font-family="Inter,Arial,sans-serif" font-size="16">VirtualBox architecture • controlled ATTACK/LAB • management separation • Wazuh SIEM</text>
+
+  <!-- Network planes -->
+  <rect x="54" y="138" width="1292" height="72" rx="16" fill="#0a1c24" stroke="#13b8a6" stroke-width="2"/>
+  <text x="78" y="168" fill="#54e3cf" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700">MANAGEMENT PLANE</text>
+  <text x="78" y="192" fill="#b8d8d5" font-family="Inter,Arial,sans-serif" font-size="14">192.168.57.0/24 • SSH / WinRM / administration</text>
+  <text x="1015" y="183" fill="#54e3cf" font-family="Inter,Arial,sans-serif" font-size="14">Kali .1 • Wazuh .10 • Windows .20</text>
+
+  <rect x="54" y="224" width="1292" height="72" rx="16" fill="#15102a" stroke="#9a67ff" stroke-width="2"/>
+  <text x="78" y="254" fill="#b28cff" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700">ATTACK / LAB PLANE</text>
+  <text x="78" y="278" fill="#d7c9ff" font-family="Inter,Arial,sans-serif" font-size="14">192.168.56.0/24 • controlled reconnaissance, scans and detection tests</text>
+  <text x="1025" y="269" fill="#b28cff" font-family="Inter,Arial,sans-serif" font-size="14">Kali .1 • Wazuh .10 • Windows .20</text>
+
+  <rect x="54" y="310" width="1292" height="54" rx="16" fill="#181716" stroke="#5b5a55" stroke-width="2"/>
+  <text x="78" y="344" fill="#d6d2c8" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700">NAT / INTERNET</text>
+  <text x="230" y="344" fill="#aaa69c" font-family="Inter,Arial,sans-serif" font-size="14">Ubuntu 10.0.2.3 • Windows 10.0.2.15 • normal Internet telemetry, excluded from scan correlation</text>
+
+  <!-- Nodes -->
+  <rect x="70" y="404" width="250" height="140" rx="18" fill="url(#panel)" stroke="#2c92ff" stroke-width="2"/>
+  <circle cx="112" cy="447" r="22" fill="#112f52" stroke="#4dd4ff" stroke-width="2"/>
+  <text x="112" y="455" text-anchor="middle" fill="#4dd4ff" font-size="24" font-family="Arial">K</text>
+  <text x="148" y="443" fill="#eaf4ff" font-size="20" font-weight="700" font-family="Inter,Arial,sans-serif">Kali Linux</text>
+  <text x="96" y="477" fill="#9cb6d1" font-size="14" font-family="Inter,Arial,sans-serif">Attack & admin workstation</text>
+  <text x="96" y="503" fill="#9cb6d1" font-size="13" font-family="Inter,Arial,sans-serif">Nmap • scripts • SSH • testing</text>
+  <text x="96" y="528" fill="#6dd6ff" font-size="12" font-family="Inter,Arial,sans-serif">192.168.56.1 / 192.168.57.1</text>
+
+  <rect x="390" y="404" width="250" height="140" rx="18" fill="url(#panel)" stroke="#4fc3ff" stroke-width="2"/>
+  <rect x="418" y="433" width="38" height="32" rx="4" fill="#1b66e6" opacity="0.9"/>
+  <rect x="464" y="433" width="38" height="32" rx="4" fill="#1b66e6" opacity="0.7"/>
+  <text x="520" y="446" fill="#eaf4ff" font-size="20" font-weight="700" font-family="Inter,Arial,sans-serif">Windows 11</text>
+  <text x="416" y="479" fill="#9cb6d1" font-size="14" font-family="Inter,Arial,sans-serif">Endpoint • Wazuh Agent • Sysmon</text>
+  <text x="416" y="505" fill="#9cb6d1" font-size="13" font-family="Inter,Arial,sans-serif">Security events • WFP • FIM • YARA</text>
+  <text x="416" y="528" fill="#6dd6ff" font-size="12" font-family="Inter,Arial,sans-serif">192.168.56.20 / 192.168.57.20</text>
+
+  <rect x="710" y="392" width="286" height="164" rx="18" fill="url(#panel)" stroke="#7cde7a" stroke-width="2"/>
+  <circle cx="756" cy="434" r="22" fill="#163b24" stroke="#7cde7a" stroke-width="2"/>
+  <text x="756" y="442" text-anchor="middle" fill="#8df58b" font-size="20" font-family="Arial">W</text>
+  <text x="790" y="438" fill="#eaf4ff" font-size="20" font-weight="700" font-family="Inter,Arial,sans-serif">Ubuntu Server</text>
+  <text x="730" y="474" fill="#9cb6d1" font-size="14" font-family="Inter,Arial,sans-serif">Wazuh Manager 4.x</text>
+  <text x="730" y="499" fill="#9cb6d1" font-size="13" font-family="Inter,Arial,sans-serif">Analysis engine • rules • archives</text>
+  <text x="730" y="523" fill="#9cb6d1" font-size="13" font-family="Inter,Arial,sans-serif">alert correlation • Filebeat / Indexer</text>
+  <text x="730" y="546" fill="#7fea9a" font-size="12" font-family="Inter,Arial,sans-serif">192.168.56.10 / 192.168.57.10</text>
+
+  <rect x="1068" y="404" width="270" height="140" rx="18" fill="url(#panel)" stroke="#d18bff" stroke-width="2"/>
+  <rect x="1097" y="437" width="46" height="30" rx="4" fill="#26194c" stroke="#b987ff"/>
+  <rect x="1150" y="437" width="46" height="30" rx="4" fill="#26194c" stroke="#b987ff"/>
+  <rect x="1203" y="437" width="46" height="30" rx="4" fill="#26194c" stroke="#b987ff"/>
+  <text x="1097" y="491" fill="#eaf4ff" font-size="19" font-weight="700" font-family="Inter,Arial,sans-serif">Wazuh Dashboard</text>
+  <text x="1097" y="516" fill="#b9a6d9" font-size="13" font-family="Inter,Arial,sans-serif">Events • alerts • MITRE ATT&amp;CK • triage</text>
+  <text x="1097" y="538" fill="#c797ff" font-size="12" font-family="Inter,Arial,sans-serif">Evidence-driven SOC workflow</text>
+
+  <!-- arrows -->
+  <path d="M320 474 L382 474" stroke="#4dd4ff" stroke-width="4" marker-end="url(#arrow)" filter="url(#glow)"/>
+  <path d="M640 474 L702 474" stroke="#4dd4ff" stroke-width="4" marker-end="url(#arrow)" filter="url(#glow)"/>
+  <path d="M996 474 L1060 474" stroke="#4dd4ff" stroke-width="4" marker-end="url(#arrow)" filter="url(#glow)"/>
+
+  <!-- bottom callout -->
+  <rect x="392" y="564" width="616" height="20" rx="10" fill="url(#accent)" opacity="0.25"/>
+  <text x="700" y="579" text-anchor="middle" fill="#d9ecff" font-size="12" font-family="Inter,Arial,sans-serif">Controlled attack → endpoint telemetry → SIEM correlation → analyst visibility</text>
+</svg>
