@@ -1,4 +1,5 @@
 # SOC Operations HomeLab
+<img width="1536" height="1024" alt="Home_Labs" src="https://github.com/user-attachments/assets/ef245809-4454-4a8b-8e96-f416abdef349" />
 
 Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali Linux, Ubuntu/Wazuh y un endpoint Windows 11. El proyecto prioriza ingeniería de detección verificable: separar telemetría de veredictos, reproducir escenarios controlados y documentar límites del motor antes de declarar una detección válida.
 
