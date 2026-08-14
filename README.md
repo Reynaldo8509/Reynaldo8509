@@ -1,6 +1,6 @@
 # Reynaldo Rodríguez
 
-## IT & Network Specialist | Junior SOC Analyst Candidate | Blue Team
+## IT & Network Specialist transitioning to Blue Team/SOC
 
 **Windows & Linux · Networking · Wazuh · Sysmon · Log Analysis · Detection Engineering**
 
