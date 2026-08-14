@@ -1,23 +1,68 @@
-# 🛡️ Reynaldo Rodriguez | IT Specialist & Aspiring SOC Analyst
+# Reynaldo Rodríguez
 
-Passionate IT professional with over 10 years of experience in network administration, server management, and system infrastructure. Currently pivoting into Cybersecurity with a focus on Blue Team operations, incident response, and threat intelligence.
+## IT Specialist | Blue Team / SOC Analyst
 
----
+### Professional Summary
 
-### 🚀 Professional Summary
-- 🔭 **Currently working on:** Enhancing my Home Lab for SIEM log monitoring and traffic analysis.
-- 🌱 **Learning:** Preparing for CompTIA Security+ and Network+.
-- 🛡️ **Focus:** System hardening, IDS/IPS, and vulnerability assessment.
-- 💬 **Ask me about:** Windows/Linux Administration, Zentyal Server, and Network Security.
+IT specialist with a background in systems administration, networking and infrastructure operations. I am developing practical cybersecurity skills through a documented SOC HomeLab, with an emphasis on defensible detection engineering, log analysis, incident-response fundamentals and clear technical documentation.
 
-### 🛠️ Tech Stack & Certifications
-- **Cybersecurity:** Junior Cybersecurity Analyst & Ethical Hacker (Cisco Certified).
-- **Infrastructure:** Windows & Linux Server Administration, DNS, DHCP, Firewalls.
-- **Cloud & Identity:** Microsoft Entra ID, Azure Fundamentals, Microsoft Defender.
-- **Automation:** Python Scripting for data analysis and security tasks.
+### Cybersecurity Focus
 
----
-### 📫 Connect with me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/reynaldo8509/)
+- Blue Team and SOC operations
+- Windows and Linux telemetry, SIEM workflows and detection engineering
+- Network segmentation, system hardening and infrastructure administration
+- Practical automation with Python and Bash for operational tasks
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rey.amado8509@gmail.com)
+### Core Skills
+
+| Area | Skills |
+|---|---|
+| Systems and infrastructure | Windows and Linux administration, DNS, DHCP, server operations and troubleshooting |
+| Networking | Network administration, segmentation, firewall fundamentals and traffic analysis |
+| Security operations | Wazuh, Windows EventChannel, Sysmon, WFP telemetry, alert triage and incident-response foundations |
+| Cloud and identity | Microsoft Entra ID, Azure Fundamentals and Microsoft Defender familiarity |
+| Automation | Python and Bash scripting for monitoring, analysis and operational tasks |
+
+### Certifications and Development
+
+- Cisco Certified Junior Cybersecurity Analyst and Ethical Hacker
+- Preparing for CompTIA Security+ and Network+
+
+See the [certifications and learning overview](docs/certifications/README.md) for scope and supporting portfolio context.
+
+## Selected Projects
+
+### SOC Operations Lab
+
+A reproducible VirtualBox SOC HomeLab with Kali Linux, Ubuntu/Wazuh and a Windows 11 endpoint. It documents architecture, setup, WFP port-scan detection, Sysmon auditing, evidence handling and known limitations.
+
+- [Open the SOC Operations Lab](projects/soc-operations-lab/README.md)
+- WFP Port Scan: **VALIDATED**
+- Sysmon Event ID 3: **AUDITED / PENDING VALIDATION**
+- Windows brute force: **PENDING CONTROLLED VALIDATION**
+- YARA: **PENDING VALIDATION**
+- FIM: **CONFIGURED / REVALIDATION PENDING**
+
+### LG TV Tools
+
+[LG TV Tools](https://github.com/Reynaldo8509/lg-tv-tools) is an independent Linux application for discovering, managing and casting media to LG webOS TVs using SSDP, UPnP AVTransport and DLNA.
+
+## Technical Portfolio
+
+- [Technical profile](docs/technical-profile/README.md)
+- [Career and professional scope](docs/career/README.md)
+- [SOC HomeLab architecture](projects/soc-operations-lab/docs/architecture/README.md)
+- [SOC HomeLab evidence inventory](projects/soc-operations-lab/evidence/README.md)
+
+## What I Am Building
+
+I am expanding hands-on Blue Team capability through controlled lab scenarios, detection validation, technical writing and automation. The portfolio distinguishes verified detections from work that is still being audited or requires controlled validation.
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/reynaldo8509/)
+- [Email](mailto:rey.amado8509@gmail.com)
+
+## Responsible Use
+
+Security material in this portfolio is for authorized environments, education and professional development. See the [career and professional scope](docs/career/README.md) for the consolidated statement.

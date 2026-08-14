@@ -1,0 +1,12 @@
+# Local environment and credential material
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+*.ovpn
+credentials/
+secrets/
+private/
