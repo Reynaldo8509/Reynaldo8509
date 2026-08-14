@@ -150,7 +150,6 @@ Building practical **Blue Team / SOC** capability through controlled detection s
 
 - [LinkedIn](https://www.linkedin.com/in/reynaldo8509/)
 - [Credly](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez)
-- [Email](mailto:rey.amado8509@gmail.com)
 
 ## Responsible Use
 

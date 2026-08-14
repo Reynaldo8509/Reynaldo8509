@@ -1,5 +1,7 @@
 # SOC Operations HomeLab
 
+![SOC HomeLab architecture: Kali Linux, Windows 11 with Wazuh Agent and Sysmon, Ubuntu Server with Wazuh Manager 4.14.7, Wazuh Dashboard, and MANAGEMENT, ATTACK/LAB, and NAT network planes](../../assets/soc-home-lab-hero.svg)
+
 Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali Linux, Ubuntu/Wazuh y un endpoint Windows 11. El proyecto prioriza ingeniería de detección verificable: separar telemetría de veredictos, reproducir escenarios controlados y documentar límites del motor antes de declarar una detección válida.
 
 ## What This Lab Demonstrates
@@ -32,6 +34,10 @@ Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali L
 | YARA | Intended YARA scan results | No public rule ID | **PENDING** | No public end-to-end evidence |
 
 Detailed rule documents are indexed in the [Detection Engineering directory](detection-rules/README.md); the [evidence matrix](evidence/evidence-matrix.md) records the claim boundary for each capability.
+
+## Evidencia visual curada
+
+El repositorio incluye ocho capturas técnicas curadas de arquitectura, Wazuh, WFP y Sysmon. Son evidencia visual de capas concretas, no sustitutos de los artefactos de log: la captura WFP ilustra telemetría ATTACK/LAB; Sysmon prueba preparación del endpoint, pero EID 3 continúa **AUDITED / PENDING VALIDATION**. Consulta el [inventario](evidence/README.md), la [matriz de evidencia](evidence/evidence-matrix.md) y el [catálogo de imágenes](evidence/image-catalog.md) para el alcance de cada imagen.
 
 ## Arquitectura
 
@@ -148,10 +154,6 @@ La detección WFP utiliza eventos Windows Security `5152`/`5157` inbound TCP, li
 - `100502`: correlación de señal alta nivel 13.
 
 Una prueba real documentada produjo 34 eventos WFP sobre 15 puertos de destino crudos distintos y exactamente una alerta local de cada umbral en `alerts.json`. Estos umbrales son **heurísticas de correlación**, no `COUNT(DISTINCT destinationPort)`. Los resultados y el método están publicados, pero los logs crudos de producción no; consulta la [documentación WFP validada](detection-rules/WFP_PortScan_Detection_Final.md).
-
-## Evidencia visual curada
-
-El repositorio incluye ocho capturas técnicas curadas de arquitectura, Wazuh, WFP y Sysmon. Son evidencia visual de capas concretas, no sustitutos de los artefactos de log: la captura WFP ilustra telemetría ATTACK/LAB; Sysmon prueba preparación del endpoint, pero EID 3 continúa **AUDITED / PENDING VALIDATION**. Consulta el [inventario](evidence/README.md), la [matriz de evidencia](evidence/evidence-matrix.md) y el [catálogo de imágenes](evidence/image-catalog.md) para el alcance de cada imagen.
 
 ## Problemas técnicos reales resueltos
 
