@@ -2,9 +2,9 @@
 
 > **Status: AUDITED / PENDING VALIDATION**
 
-Esta página documenta una auditoría de la cadena Sysmon EID 3. No declara un detector de port scan operativo.
+This page documents an audit of the Sysmon EID 3 chain. It does not claim an operational port-scan detector.
 
-## Ruta oficial observada
+## Observed Official Path
 
 ```text
 windows_eventchannel
@@ -14,7 +14,7 @@ windows_eventchannel
            -> 61605  (Event ID 3, group sysmon_event3)
 ```
 
-## Reglas custom auditadas
+## Audited Custom Rules
 
 ```text
 100409  level 1, if_group sysmon_event3, TCP,
@@ -27,27 +27,27 @@ windows_eventchannel
         if_matched_sid 100409, same sourceIp, different destinationPort
 ```
 
-`100409` está correctamente anclada a `sysmon_event3` y es silenciosa por diseño. Solo resulta elegible para TCP desde ATTACK/LAB hacia el endpoint Windows de ATTACK/LAB.
+`100409` is correctly anchored to `sysmon_event3` and is silent by design. It is eligible only for TCP from ATTACK/LAB to the ATTACK/LAB Windows endpoint.
 
-## Evidencia de auditoría
+## Audit Evidence
 
-| Contexto | Resultado |
+| Context | Result |
 |---|---|
-| MANAGEMENT | EID 3 real confirmado para `192.168.57.1 -> 192.168.57.20:22`; la telemetría no alimentó `100409`. |
-| NAT/INTERNET | EID 3 real confirmado desde `10.0.2.15` hacia servicios externos; no alimentó `100409`. |
-| ATTACK/LAB | No se encontró EID 3 real `192.168.56.1 -> 192.168.56.20` en el archivo revisado. |
+| MANAGEMENT | A real EID 3 was confirmed for `192.168.57.1 -> 192.168.57.20:22`; the telemetry did not feed `100409`. |
+| NAT/INTERNET | A real EID 3 was confirmed from `10.0.2.15` to external services; it did not feed `100409`. |
+| ATTACK/LAB | No real EID 3 `192.168.56.1 -> 192.168.56.20` was found in the reviewed archive. |
 
-La ausencia ATTACK es la brecha principal: sin evento fuente real no es posible validar que `100409`, `100420` o `100421` funcionen en producción.
+The missing ATTACK signal is the primary gap: without a real source event, it is not possible to validate that `100409`, `100420`, or `100421` work in the SOC HomeLab.
 
-## Riesgos técnicos identificados
+## Identified Technical Risks
 
-1. **Cardinalidad heurística.** `frequency`, `timeframe` y `different_field` no son un `COUNT(DISTINCT destinationPort)` nativo. La misma limitación documentada para WFP se aplica al motor de correlación de esta cadena.
-2. **Reglas frequency hermanas.** `100420` y `100421` comparten `if_matched_sid=100409`; pueden competir por eventos de la misma ventana.
-3. **Sin throttling.** Ninguna regla de correlación tiene `ignore="60"`, por lo que un flujo que llegue a correlacionar podría repetir alertas.
-4. **Eclipses potenciales.** Reglas oficiales más específicas `92104`, `92105`, `92107` y `92110`, y la regla local `100004` nivel 12 para `192.168.56.1 -> :22`, pueden ganar para subconjuntos de eventos. Es una consideración estructural; no fue demostrada con un EID 3 ATTACK real.
+1. **Heuristic cardinality.** `frequency`, `timeframe`, and `different_field` are not native `COUNT(DISTINCT destinationPort)`. The same limitation documented for WFP applies to this chain's correlation engine.
+2. **Sibling frequency rules.** `100420` and `100421` share `if_matched_sid=100409`; they may compete for events in the same window.
+3. **No throttling.** No correlation rule has `ignore="60"`, so a flow that does correlate could repeat alerts.
+4. **Potential shadowing.** More-specific official rules `92104`, `92105`, `92107`, and `92110`, and local level-12 rule `100004` for `192.168.56.1 -> :22`, may win for event subsets. This is a structural consideration; it was not demonstrated with a real ATTACK EID 3.
 
-## Decisión actual
+## Current Decision
 
-WFP sigue siendo la fuente validada para port scans de puertos bloqueados. Antes de cambiar la cadena Sysmon se requiere una prueba controlada futura que produzca y archive un EID 3 ATTACK real. Entonces deberán verificarse la ruta final de regla, la posible competencia con reglas oficiales, repetición de alertas y pruebas negativas de MANAGEMENT/NAT.
+WFP remains the validated source for blocked-port scans. Before changing the Sysmon chain, a future controlled test must produce and archive a real ATTACK EID 3. The final rule path, potential competition with official rules, alert repetition, and MANAGEMENT/NAT negative tests must then be verified.
 
-No elevar el nivel de `100409` por intuición: podría eclipsar reglas oficiales más específicas.
+Do not raise the level of `100409` by intuition: it could shadow more-specific official rules.

@@ -1,10 +1,10 @@
 # 07 — SSH Management
 
-Las tareas de administración utilizan la red MANAGEMENT. El material público no contiene aliases SSH, claves privadas, archivos `known_hosts` ni configuraciones locales de usuario.
+Management tasks use the MANAGEMENT Network. Public material does not contain SSH aliases, private keys, `known_hosts` files, or local user configurations.
 
-Prácticas documentadas:
+Documented Practices:
 
-- Usar autenticación por claves y `IdentitiesOnly` cuando corresponda.
-- Mantener las claves fuera del repositorio.
-- Confirmar que una conexión administrativa genere telemetría sin alimentar detectores diseñados para ATTACK/LAB.
-- Transferir configuraciones mediante canales administrativos, nunca mediante la red de simulación de ataques.
+- Use key authentication and `IdentitiesOnly` where applicable.
+- Keep keys outside the repository.
+- Confirm that a management connection generates telemetry without feeding detectors designed for ATTACK/LAB.
+- Transfer configurations through management channels, never through the attack-simulation network.

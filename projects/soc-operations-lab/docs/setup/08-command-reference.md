@@ -224,7 +224,7 @@ jq -c 'select(.rule.id == "100501" or .rule.id == "100502")' /var/ossec/logs/ale
 
 **Expected result:** WFP events are selected from `archives.json`; visible correlation alerts are selected from `alerts.json`.
 
-**What it proves:** the documented evidence method for the validated WFP run. Raw production log files remain private, so the repository records the result and method rather than publishing them.
+**What it proves:** the documented evidence method for the validated WFP run. Raw HomeLab log files remain private, so the repository records the result and method rather than publishing them.
 
 ### Historical full-port reconnaissance command
 

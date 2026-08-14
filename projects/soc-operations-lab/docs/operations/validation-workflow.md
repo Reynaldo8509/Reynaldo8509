@@ -1,24 +1,24 @@
-# Operación: flujo de validación
+# Operations: Validation Workflow
 
-## Principio de evidencia
+## Evidence Principle
 
-| Capa | Qué demuestra | Qué no demuestra |
+| Layer | What It Demonstrates | What It Does Not Demonstrate |
 |---|---|---|
-| `archives.json` | El manager ingirió y decodificó el evento. | Que una regla creó alerta o que Dashboard la muestra. |
-| `alerts.json` | Una regla creó una alerta visible. | Que Indexer y Dashboard la recibieron. |
-| Filebeat / Indexer | Salud del pipeline de indexación. | Que una consulta o panel concreto muestra el documento. |
-| Consulta autenticada / Dashboard | Indexación y visualización real. | La calidad o la semántica de la detección. |
+| `archives.json` | The manager ingested and decoded the event. | That a rule created an alert or that Dashboard displays it. |
+| `alerts.json` | A rule created a visible alert. | That Indexer and Dashboard received it. |
+| Filebeat / Indexer | Indexing-pipeline health. | That a specific query or dashboard shows the document. |
+| Authenticated query / Dashboard | Actual indexing and visualization. | The quality or semantics of the detection. |
 
-## Flujo de cambios de reglas
+## Rule-Change Workflow
 
-1. Respaldar el archivo afectado y registrar hash cuando corresponda.
-2. Validar XML mediante wrapper si el ruleset es un fragmento de varios grupos.
-3. Ejecutar `wazuh-analysisd -t` y tratar warnings nuevos como fallos a investigar.
-4. Reiniciar solo el servicio autorizado.
-5. Probar con telemetría real del ámbito autorizado.
-6. Validar ruta positiva y negativas de MANAGEMENT/NAT.
-7. Revisar `archives.json`, `alerts.json` y, si hay acceso, el índice/Dashboard.
+1. Back up the affected file and record a hash where appropriate.
+2. Validate XML through a wrapper if the ruleset is a multi-group fragment.
+3. Run `wazuh-analysisd -t` and treat new warnings as failures to investigate.
+4. Restart only the authorized service.
+5. Test with real telemetry in the authorized scope.
+6. Validate the positive path and MANAGEMENT/NAT negative paths.
+7. Review `archives.json`, `alerts.json`, and, if access is available, the index/Dashboard.
 
-## Uso de wazuh-logtest
+## Using wazuh-logtest
 
-`wazuh-logtest` es útil para validar sintaxis y conceptos de correlación. No sustituye el evento de producción: un JSON pegado manualmente puede seguir el decoder `json` y no la ruta `windows_eventchannel` real.
+`wazuh-logtest` is useful for validating syntax and correlation concepts. It does not replace the real event: manually pasted JSON can follow the `json` decoder rather than the real `windows_eventchannel` path.

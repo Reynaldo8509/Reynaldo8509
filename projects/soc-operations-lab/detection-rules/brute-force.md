@@ -2,25 +2,25 @@
 
 > **Status: PENDING CONTROLLED VALIDATION**
 
-## Señales disponibles
+## Available Signals
 
-- Windows Security `4625` registra fallos de autenticación.
-- La regla oficial `60122` proporciona visibilidad de fallos individuales.
-- El historial del laboratorio incluye correlación custom para patrones repetidos, pero una parte de los eventos OpenSSH dejó `win.eventdata.ipAddress` como `-`.
-- El canal `OpenSSH/Operational` conservó la IP en el payload, pero la extracción automática hacia un campo correlacionable no quedó validada como solución final.
-- Una exportación sanitizada contiene cinco eventos `4625` históricos: tres fallos NTLM desde `192.168.56.1` y dos fallos locales `127.0.0.1`, todos con la regla individual `60122`. Es evidencia de telemetría, no de una correlación de brute force.
+- Windows Security `4625` records authentication failures.
+- Official rule `60122` provides visibility into individual failures.
+- The SOC HomeLab history includes custom correlation for repeated patterns, but some OpenSSH events left `win.eventdata.ipAddress` as `-`.
+- The `OpenSSH/Operational` channel retained the IP in the payload, but automatic extraction into a correlatable field was not validated as the final solution.
+- A sanitized export contains five historical `4625` events: three NTLM failures from `192.168.56.1` and two local failures from `127.0.0.1`, all with individual rule `60122`. This is telemetry evidence, not brute-force correlation evidence.
 
-## Implicación
+## Implication
 
-No se debe afirmar todavía que el laboratorio tiene una detección de brute force por IP validada para OpenSSH. La telemetría de fallos existe; la correlación depende de un campo fuente fiable para el tipo de autenticación evaluado.
+The SOC HomeLab must not yet claim a validated IP-based brute-force detection for OpenSSH. Failure telemetry exists; correlation depends on a reliable source field for the authentication type being assessed.
 
-## Próxima validación requerida
+## Next Required Validation
 
-1. Seleccionar un escenario autorizado de autenticación fallida.
-2. Confirmar campos reales en `archives.json` para Security y OpenSSH/Operational.
-3. Verificar la regla final en `alerts.json`.
-4. Registrar una prueba negativa y los límites conocidos.
+1. Select an authorized failed-authentication scenario.
+2. Confirm the real fields in `archives.json` for Security and OpenSSH/Operational.
+3. Verify the final rule in `alerts.json`.
+4. Record a negative test and the known limitations.
 
-No se incluyen reglas activas en este documento hasta contar con una exportación revisada y evidencia reproducible.
+This document does not include active rules until a reviewed export and reproducible evidence are available.
 
-La exportación disponible está en [evidence/scenario-1-bruteforce](../evidence/scenario-1-bruteforce/events-2026-08-08T18_46_56.179Z.csv). Su campo `rule.mitre.id` refleja la regla histórica de Wazuh y no debe reinterpretarse como la asignación final del caso de uso; la intención de detección se mapea a [T1110 — Brute Force](https://attack.mitre.org/techniques/T1110/) una vez que exista una correlación validada.
+The available export is in [evidence/scenario-1-bruteforce](../evidence/scenario-1-bruteforce/events-2026-08-08T18_46_56.179Z.csv). Its `rule.mitre.id` field reflects the historical Wazuh rule and must not be reinterpreted as the final use-case mapping; the intended detection maps to [T1110 — Brute Force](https://attack.mitre.org/techniques/T1110/) once validated correlation exists.

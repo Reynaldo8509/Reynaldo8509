@@ -1,26 +1,26 @@
-# Inventario y decisión de publicación
+# Inventory and Publication Decision
 
-Este inventario clasifica el material revisado al preparar el repositorio. Los originales no se movieron ni se borraron.
+This inventory classifies the material reviewed while preparing the repository. Originals were neither moved nor deleted.
 
-| Fuente / conjunto | Categoría | Propósito | Utilidad pública | Sensibilidad / decisión |
+| Source / Set | Category | Purpose | Public Value | Sensitivity / Decision |
 |---|---|---|---|---|
-| `ContextoIA/contexto_anterior.md` | I, D, E, F | Historial técnico extenso de cambios y troubleshooting. | Alta como fuente de conocimiento. | Puede contener material operativo; extraer conocimiento, no copiar. |
-| `ContextoIA/transcripcion_completa.md`, `.txt`, `transcripcion_wazuh.txt` | I, L | Transcripciones completas de sesiones. | Baja en forma cruda. | No publicar; fuente privada de decisiones verificadas. |
-| `ContextoIA/contexto_maestro.md` | H, J, K | Resumen de contextos de varias tareas. | Media. | Histórico y mezclado con material ajeno; usar solo para corroborar, no copiar. |
-| `ContextoIA/WFP_PortScan_Detection_Final.md` | D, H | Informe técnico WFP. | Alta. | Transformado en `detection-rules/WFP_PortScan_Detection_Final.md`; revisar siempre antes de publicar. |
-| `ContextoIA/Proyecto SOC WASU/.../events-*.csv` | G, L | Exportación de eventos. | Potencialmente alta. | No copiar hasta sanitizar campos, fechas e identificadores. |
-| `/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/...` | G, L | 53 capturas actualmente disponibles de instalación, Wazuh y Windows. | Potencialmente alta tras revisión individual. | Ocho artefactos curados se publican en `evidence/screenshots/`; algunas son recortes seguros y no copias byte a byte. Las demás se mantienen fuera por sensibilidad, falta de contexto, contradicción con el estado final o bajo valor documental. Consulta `evidence/image-catalog.md`. |
-| `ContextoIA/*/MEMORY.md`, `raw_memories.md`, `memory_summary.md` | I, L | Memoria de agentes y resúmenes internos. | Baja. | Nunca publicar. |
-| `ContextoIA/memories_root_backup.sqlite` | I, L | Copia de memoria interna. | Ninguna. | Nunca publicar. |
-| Capturas históricas del repositorio (`fase1_repo_ready.png`, SHA-256 `3ae74ac…bf64cbf82`; `fase1_repo2_ready.png`, SHA-256 `a623425e…26662a25`) | G, L | Preparación inicial del repositorio. | Ninguna. | **UNSAFE_TO_PUBLISH**: la revisión visual mostró nombre de usuario/ruta local y pantalla de autenticación GitHub. Las dos copias originales fueron preservadas fuera del repositorio; sus duplicados exactos no se publican. |
-| Placeholders `scenario-1-bruteforce/attack.png`, `wazuh-alert.png` y `logs.json` (0 bytes; SHA-256 `e3b0c442…b855`) | F, G, J, K | Estructura histórica vacía. | Ninguna. | Retirados del repositorio: no son evidencia ni contenido publicable. |
-| 53 capturas bajo el directorio fuente indicado | G, I, L | Instalación, operación y pruebas históricas. | Ocho son útiles como evidencia visual pública. | Revisión individual: ocho artefactos curados están publicados; el catálogo clasifica los restantes como **B**, **C** o **D**. Los originales no se modificaron. |
-| `evidence/screenshots/` (8 archivos) | G, H | Evidencia visual curada de arquitectura, Wazuh, WFP y Sysmon. | Alta, con alcance explícito. | **PUBLISH_AS_IS**: revisión visual real, sin contraseñas, tokens, claves, cookies, códigos de autenticación, pantallas de login, direcciones públicas ni direcciones del rango privado excluido. Las IPs privadas de ATTACK/LAB y NAT se conservan como parte de la arquitectura documentada. |
-| `evidence/scenario-1-bruteforce/` | F, K | Marcador documental de escenario inicial. | Baja. | Solo README; no debe usarse como prueba. |
-| `detection-rules/WFP_PortScan_Detection_Final.md` | D, H | Detección WFP validada. | Alta. | Publicable: contiene resultados sanitizados, límites de cardinalidad y no incluye secretos. |
+| `ContextoIA/contexto_anterior.md` | I, D, E, F | Extensive technical history of changes and troubleshooting. | High as a knowledge source. | May contain operational material; extract knowledge, do not copy. |
+| `ContextoIA/transcripcion_completa.md`, `.txt`, `transcripcion_wazuh.txt` | I, L | Full session transcripts. | Low in raw form. | Do not publish; private source of verified decisions. |
+| `ContextoIA/contexto_maestro.md` | H, J, K | Summary of contexts from multiple tasks. | Medium. | Historical and mixed with unrelated material; use only for corroboration, do not copy. |
+| `ContextoIA/WFP_PortScan_Detection_Final.md` | D, H | WFP technical report. | High. | Transformed into `detection-rules/WFP_PortScan_Detection_Final.md`; always review before publishing. |
+| `ContextoIA/Proyecto SOC WASU/.../events-*.csv` | G, L | Event export. | Potentially high. | Do not copy until fields, dates, and identifiers are sanitized. |
+| `/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/...` | G, L | 53 currently available installation, Wazuh, and Windows screenshots. | Potentially high after individual review. | Eight curated artifacts are published in `evidence/screenshots/`; some are safe crops rather than byte-for-byte copies. The rest remain outside the repository because of sensitivity, lack of context, contradiction with the final status, or low documentary value. See `evidence/image-catalog.md`. |
+| `ContextoIA/*/MEMORY.md`, `raw_memories.md`, `memory_summary.md` | I, L | Agent memory and internal summaries. | Low. | Never publish. |
+| `ContextoIA/memories_root_backup.sqlite` | I, L | Internal memory copy. | None. | Never publish. |
+| Historical repository screenshots (`fase1_repo_ready.png`, SHA-256 `3ae74ac…bf64cbf82`; `fase1_repo2_ready.png`, SHA-256 `a623425e…26662a25`) | G, L | Initial repository preparation. | None. | **UNSAFE_TO_PUBLISH**: visual review showed a local username/path and GitHub authentication screen. Both original copies were preserved outside the repository; their exact duplicates are not published. |
+| Placeholders `scenario-1-bruteforce/attack.png`, `wazuh-alert.png`, and `logs.json` (0 bytes; SHA-256 `e3b0c442…b855`) | F, G, J, K | Empty historical structure. | None. | Removed from the repository: they are neither evidence nor publishable content. |
+| 53 screenshots under the identified source directory | G, I, L | Historical installation, operations, and tests. | Eight are useful as public visual evidence. | Individual review: eight curated artifacts are published; the catalog classifies the remaining ones as **B**, **C**, or **D**. Originals were not modified. |
+| `evidence/screenshots/` (8 files) | G, H | Curated visual evidence of architecture, Wazuh, WFP, and Sysmon. | High, with explicit scope. | **PUBLISH_AS_IS**: real visual review, with no passwords, tokens, keys, cookies, authentication codes, login screens, public addresses, or addresses from the excluded private range. ATTACK/LAB and NAT private IPs are retained as part of the documented architecture. |
+| `evidence/scenario-1-bruteforce/` | F, K | Initial-scenario documentation marker. | Low. | README only; must not be used as proof. |
+| `detection-rules/WFP_PortScan_Detection_Final.md` | D, H | Validated WFP detection. | High. | Publishable: contains sanitized results and cardinality limitations, and includes no secrets. |
 
-## Leyenda
+## Legend
 
-- **D** detección, **E** troubleshooting, **F** pruebas, **G** evidencia, **H** documentación, **I** transcripción interna, **J** duplicado, **K** obsoleto/incompleto, **L** sensible o requiere revisión.
+- **D** detection, **E** troubleshooting, **F** tests, **G** evidence, **H** documentation, **I** internal transcript, **J** duplicate, **K** obsolete/incomplete, **L** sensitive or requires review.
 
-La fuente histórica permanece fuera del repositorio. La documentación pública expresa resultados validados y limitaciones, no conversaciones ni datos operativos crudos.
+The historical source remains outside the repository. Public documentation presents validated results and limitations, not conversations or raw operational data.

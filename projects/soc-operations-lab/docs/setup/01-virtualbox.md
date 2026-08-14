@@ -1,14 +1,14 @@
 # 01 — VirtualBox
 
-## Componentes
+## Components
 
-El laboratorio utiliza tres máquinas virtuales: Kali Linux, Ubuntu con Wazuh Manager y un endpoint Windows 11. VirtualBox proporciona tres adaptadores lógicos por rol cuando aplica: MANAGEMENT, ATTACK/LAB y NAT/INTERNET.
+The SOC HomeLab uses three virtual machines: Kali Linux, Ubuntu with Wazuh Manager, and a Windows 11 endpoint. VirtualBox provides three logical adapters per role where applicable: MANAGEMENT, ATTACK/LAB, and NAT/INTERNET.
 
-## Criterio reproducible
+## Reproducibility Criteria
 
-1. Crear las tres VMs.
-2. Asignar los adaptadores a las tres redes documentadas en [networking](06-networking.md).
-3. Confirmar direcciones IP antes de probar detecciones.
-4. Ejecutar escenarios solo desde ATTACK/LAB contra activos del laboratorio.
+1. Create the three VMs.
+2. Assign adapters to the three networks documented in [networking](06-networking.md).
+3. Confirm IP addresses before testing detections.
+4. Run scenarios only from ATTACK/LAB against SOC HomeLab assets.
 
-La exportación de máquinas, sus tamaños, versiones exactas de ISO y snapshots no forma parte todavía del material público. Deben registrarse en una futura reconstrucción limpia antes de declararse un procedimiento paso a paso completo.
+VM exports, their sizes, exact ISO versions, and snapshots are not yet part of the public material. They must be recorded during a future clean rebuild before a complete step-by-step procedure can be claimed.

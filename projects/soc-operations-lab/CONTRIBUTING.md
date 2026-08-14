@@ -1,11 +1,11 @@
-# Contribuir de forma segura
+# Contribute Safely
 
-Este laboratorio documenta configuraciones y pruebas reales. Antes de proponer un cambio:
+This SOC HomeLab documents real configurations and tests. Before proposing a change:
 
-1. Conserva los límites MANAGEMENT, ATTACK/LAB y NAT.
-2. No declares una detección validada sin eventos reales y una prueba negativa relevante.
-3. Valida reglas Wazuh con `wazuh-analysisd -t` antes de reiniciar un servicio.
-4. Distingue ingesta (`archives.json`), creación de alerta (`alerts.json`) e indexación/visualización.
-5. No añadas secretos, llaves privadas, respaldos de producción, transcripciones completas ni capturas sin revisión.
+1. Preserve the MANAGEMENT, ATTACK/LAB, and NAT boundaries.
+2. Do not claim a validated detection without real events and a relevant negative test.
+3. Validate Wazuh rules with `wazuh-analysisd -t` before restarting a service.
+4. Distinguish ingestion (`archives.json`), alert creation (`alerts.json`), and indexing/visualization.
+5. Do not add secrets, private keys, environment backups, full transcripts, or unreviewed screenshots.
 
-Las mejoras de detección deben explicar su evidencia, falsos positivos esperados, límites y plan de rollback. No se realizan commits ni pushes automáticos desde procedimientos de validación.
+Detection improvements must explain their evidence, expected false positives, limitations, and rollback plan. Do not make automatic commits or pushes from validation procedures.

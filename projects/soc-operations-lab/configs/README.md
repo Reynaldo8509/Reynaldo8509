@@ -1,12 +1,12 @@
-# Configuraciones publicables
+# Publishable Configurations
 
-Este directorio se reserva para configuraciones sanitizadas y reproducibles. Actualmente no se exportan archivos activos de Wazuh, Sysmon, YARA o Windows porque pueden contener rutas específicas, identificadores del entorno o material sensible.
+This directory is reserved for sanitized, reproducible configurations. Active Wazuh, Sysmon, YARA, and Windows files are not currently exported because they may contain environment-specific paths, identifiers, or sensitive material.
 
-Una futura configuración publicada debe incluir:
+A future published configuration must include:
 
-1. propósito y versión del componente;
-2. variables o valores que el lector deba reemplazar;
-3. validación reproducible;
-4. revisión de secretos antes de añadirla al repositorio.
+1. the component purpose and version;
+2. variables or values the reader must replace;
+3. reproducible validation;
+4. a secret review before it is added to the repository.
 
-Las reglas WFP ya documentadas se mantienen en [detection-rules](../detection-rules/), no como copia de `local_rules.xml` activo.
+The documented WFP rules are maintained in [detection-rules](../detection-rules/), not as a copy of the active `local_rules.xml`.

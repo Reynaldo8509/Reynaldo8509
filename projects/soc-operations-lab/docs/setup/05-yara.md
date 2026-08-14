@@ -1,14 +1,14 @@
 # 05 — YARA
 
-## Estado
+## Status
 
 **PENDING VALIDATION**.
 
-El material histórico menciona trabajo de YARA y detección de malware, pero no existe en este repositorio una regla, configuración de despliegue y evidencia sanitizada que permitan afirmar que el flujo funciona de extremo a extremo.
+Historical material mentions YARA work and malware detection, but this repository does not contain a rule, deployment configuration, and sanitized evidence that support an end-to-end workflow claim.
 
-Antes de publicar una implementación YARA deben existir, como mínimo:
+Before publishing a YARA implementation, the following must exist at minimum:
 
-1. Regla YARA segura para compartir y su licencia/origen.
-2. Método de ejecución y recolección por Wazuh documentado.
-3. Muestra de evento en `archives.json` y alerta correspondiente en `alerts.json`.
-4. Prueba negativa y estrategia de actualización.
+1. A YARA rule that is safe to share and its license/provenance.
+2. A documented Wazuh execution and collection method.
+3. An event sample in `archives.json` and its corresponding alert in `alerts.json`.
+4. A negative test and update strategy.

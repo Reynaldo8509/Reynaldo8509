@@ -1,14 +1,14 @@
-# Cronología técnica del proyecto
+# Technical Project Timeline
 
-Esta cronología resume decisiones y evidencia; no reproduce transcripciones internas.
+This timeline summarizes decisions and evidence; it does not reproduce internal transcripts.
 
-| Periodo | Hito | Estado |
+| Period | Milestone | Status |
 |---|---|---|
-| Julio de 2026 | Construcción inicial de las VMs y red del laboratorio. | Histórico documentado |
-| Finales de julio de 2026 | Instalación y comprobaciones iniciales de Ubuntu/Wazuh. | Histórico documentado |
-| 5 de agosto de 2026 | Evidencia histórica de instalación/comprobación de Sysmon. | Histórico documentado |
-| Agosto de 2026 | Revisión de FIM y supresión limitada de ruido de rutas de prueba. | Configurado; requiere revalidación pública |
-| Agosto de 2026 | Ingeniería y validación real del detector WFP Port Scan. | **VALIDATED** |
-| Agosto de 2026 | Auditoría de la ruta Sysmon Event ID 3 y de sus riesgos de correlación. | **AUDITED / PENDING VALIDATION** |
+| July 2026 | Initial build of the SOC HomeLab VMs and network. | Documented historical activity |
+| Late July 2026 | Initial Ubuntu/Wazuh installation and checks. | Documented historical activity |
+| August 5, 2026 | Historical Sysmon installation/verification evidence. | Documented historical activity |
+| August 2026 | FIM review and limited noise suppression for test paths. | Configured; requires public revalidation |
+| August 2026 | WFP Port Scan detector engineering and real-event validation. | **VALIDATED** |
+| August 2026 | Audit of the Sysmon Event ID 3 path and its correlation risks. | **AUDITED / PENDING VALIDATION** |
 
-Las fechas se basan en artefactos y registros del laboratorio. Las secuencias de comandos completas y transcripciones se mantienen fuera del repositorio público por contener material operativo y potencialmente sensible.
+Dates are based on SOC HomeLab artifacts and records. Complete command sequences and transcripts remain outside the public repository because they contain operational and potentially sensitive material.

@@ -1,16 +1,16 @@
-# 02 — Ubuntu y Wazuh Manager
+# 02 — Ubuntu and Wazuh Manager
 
-## Estado comprobado
+## Verified Status
 
 - Wazuh Manager: `4.14.7`.
-- Rol: recepción de telemetría Windows EventChannel, análisis, correlación y generación de alertas.
-- Red MANAGEMENT: `192.168.57.10`.
-- Red ATTACK/LAB: `192.168.56.10`.
-- Red NAT/INTERNET: `10.0.2.3`.
+- Role: Windows EventChannel telemetry reception, analysis, correlation, and alert generation.
+- MANAGEMENT Network: `192.168.57.10`.
+- ATTACK/LAB Network: `192.168.56.10`.
+- NAT/INTERNET Network: `10.0.2.3`.
 
-## Procedimiento verificable
+## Verifiable Procedure
 
-Una modificación de ruleset debe seguir este orden:
+A ruleset modification must follow this order:
 
 ```bash
 # Validar un fragmento local_rules.xml sin alterar su estructura fragmentada
@@ -19,8 +19,8 @@ xmllint --noout /tmp/local_rules.xml.xmllint-wrapper
 sudo /var/ossec/bin/wazuh-analysisd -t
 ```
 
-Después de una modificación autorizada y validada, se verifica el servicio y los logs. No se publica `ossec.conf`, respaldos del manager ni archivos que puedan contener secretos sin una revisión específica.
+After an authorized and validated modification, verify the service and logs. `ossec.conf`, manager backups, and files that may contain secrets are not published without a specific review.
 
-## Límite de reproducibilidad
+## Reproducibility Limitation
 
-La instalación exacta, dependencias del Indexer y certificados no se exportaron como configuración pública sanitizada. Esta sección describe el proceso de validación, no un instalador completo.
+The exact installation, Indexer dependencies, and certificates were not exported as sanitized public configuration. This section describes the validation process, not a complete installer.

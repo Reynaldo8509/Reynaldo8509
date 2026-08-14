@@ -1,14 +1,14 @@
-# 03 — Windows 11 y Wazuh Agent
+# 03 — Windows 11 and Wazuh Agent
 
-## Rol del endpoint
+## Endpoint Role
 
-Windows 11 es el endpoint monitorizado. Entrega Windows Security EventChannel y Sysmon al manager mediante Wazuh Agent.
+Windows 11 is the monitored endpoint. It sends Windows Security EventChannel and Sysmon telemetry to the manager through Wazuh Agent.
 
-## Fuentes de telemetría relevantes
+## Relevant Telemetry Sources
 
-- Windows Security `5152`/`5157`: señal WFP usada por el detector validado.
-- Windows Security `4625`: fallos de autenticación.
-- Microsoft-Windows-Sysmon/Operational Event ID 3: conexiones de red Sysmon.
-- FIM/syscheck: cambios de integridad de archivos según la configuración activa.
+- Windows Security `5152`/`5157`: WFP signal used by the validated detector.
+- Windows Security `4625`: authentication failures.
+- Microsoft-Windows-Sysmon/Operational Event ID 3: Sysmon network connections.
+- FIM/syscheck: file-integrity changes according to the active configuration.
 
-La configuración del agente y las rutas monitorizadas no se publican aquí porque no existe todavía una exportación sanitizada y revisada. La documentación de detección debe basarse en campos que aparezcan en `archives.json`, no solo en configuraciones esperadas.
+The agent configuration and monitored paths are not published here because a sanitized, reviewed export is not yet available. Detection documentation must be based on fields that appear in `archives.json`, not only on expected configurations.

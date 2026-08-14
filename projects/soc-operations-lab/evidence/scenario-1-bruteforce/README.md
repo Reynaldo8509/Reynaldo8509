@@ -1,5 +1,5 @@
 # Scenario 1 — Brute Force (legacy marker)
 
-Este directorio conserva un export sanitizado de cinco eventos Windows Security `4625` ([CSV](events-2026-08-08T18_46_56.179Z.csv)) y el marcador documental del escenario histórico. Tres filas muestran fallos NTLM desde `192.168.56.1`; dos son fallos locales desde `127.0.0.1`. El archivo no contiene contraseñas, tokens ni direcciones públicas.
+This directory retains a sanitized export of five Windows Security `4625` events ([CSV](events-2026-08-08T18_46_56.179Z.csv)) and the historical scenario documentation marker. Three rows show NTLM failures from `192.168.56.1`; two are local failures from `127.0.0.1`. The file contains no passwords, tokens, or public addresses.
 
-El CSV prueba telemetría individual y la regla histórica `60122`; no prueba una correlación custom, una alerta de brute force ni una prueba negativa. La futura evidencia deberá contener una prueba autorizada, campos sanitizados de ingesta/alerta y una descripción de la regla efectiva. Hasta entonces, el estado de brute force es **TELEMETRY OBSERVED / PENDING DETECTION VALIDATION**.
+The CSV proves individual telemetry and historical rule `60122`; it does not prove a custom correlation, a brute-force alert, or a negative test. Future evidence must contain an authorized test, sanitized ingestion/alert fields, and a description of the effective rule. Until then, the brute-force status is **TELEMETRY OBSERVED / PENDING DETECTION VALIDATION**.

@@ -1,17 +1,17 @@
 # 06 — Networking
 
-| Network | CIDR | Kali | Ubuntu/Wazuh | Windows | Uso |
+| Network | CIDR | Kali | Ubuntu/Wazuh | Windows | Purpose |
 |---|---|---:|---:|---:|---|
-| MANAGEMENT | `192.168.57.0/24` | `192.168.57.1` | `192.168.57.10` | `192.168.57.20` | Administración y transferencias. |
-| ATTACK/LAB | `192.168.56.0/24` | `192.168.56.1` | `192.168.56.10` | `192.168.56.20` | Simulaciones y validación de detecciones. |
-| NAT/INTERNET | `10.0.2.0/24` | — | `10.0.2.3` | `10.0.2.15` | Actualizaciones y servicios externos. |
+| MANAGEMENT | `192.168.57.0/24` | `192.168.57.1` | `192.168.57.10` | `192.168.57.20` | Management and transfers. |
+| ATTACK/LAB | `192.168.56.0/24` | `192.168.56.1` | `192.168.56.10` | `192.168.56.20` | Simulations and detection validation. |
+| NAT/INTERNET | `10.0.2.0/24` | — | `10.0.2.3` | `10.0.2.15` | Updates and external services. |
 
-## Alcance de la evidencia
+## Evidence Scope
 
-La tabla describe el diseño operativo final documentado. Las capturas revisadas muestran direcciones ATTACK/LAB y NAT en el endpoint y una prueba de conectividad puntual, pero no recuperan comandos de creación de adaptadores, rutas ni una captura final de los tres planos a la vez. Por tanto, la segmentación está **documentada y parcialmente evidenciada**, no es un procedimiento de VirtualBox reproducible paso a paso.
+The table describes the documented final operating design. The reviewed screenshots show ATTACK/LAB and NAT addresses on the endpoint and a point-in-time connectivity test, but do not recover adapter-creation commands, routes, or a final screenshot of all three planes at once. Therefore, segmentation is **documented and partially evidenced**, not a reproducible step-by-step VirtualBox procedure.
 
-### Regla operativa
+### Operating Rule
 
-Las pruebas de detección de ataque se limitan a ATTACK/LAB. MANAGEMENT y NAT deben conservar telemetría; no son fuentes elegibles para el detector WFP de port scan.
+Attack-detection tests are limited to ATTACK/LAB. MANAGEMENT and NAT must retain telemetry; they are not eligible sources for the WFP port-scan detector.
 
-Consulta los comandos confirmados y las brechas de historial en la [referencia de comandos](08-command-reference.md).
+See the confirmed commands and historical gaps in the [command reference](08-command-reference.md).

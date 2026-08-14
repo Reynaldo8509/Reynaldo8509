@@ -1,35 +1,35 @@
-# Inventario de evidencia
+# Evidence Inventory
 
-## Capturas visuales curadas
+## Curated Visual Screenshots
 
-Las ocho capturas siguientes son artefactos curados derivados de material histórico revisado visualmente. Algunas conservan el píxel original y otras son recortes seguros para quitar contexto irrelevante; por eso no se describen como copias sin modificar. Se conservan las direcciones privadas del HomeLab porque documentan las redes ATTACK/LAB y NAT. Los originales permanecen fuera del repositorio.
+The following eight screenshots are curated artifacts derived from visually reviewed historical material. Some retain the original pixels and others are safe crops that remove irrelevant context; therefore, they are not described as unmodified copies. SOC HomeLab private addresses are retained because they document the ATTACK/LAB and NAT networks. Originals remain outside the repository.
 
 | Image | Category | What it demonstrates |
 |---|---|---|
-| [windows-endpoint-attack-nat-connectivity.png](screenshots/windows-endpoint-attack-nat-connectivity.png) | Architecture / Windows endpoint | El endpoint Windows 11 tiene la interfaz ATTACK/LAB `192.168.56.20`, la interfaz NAT `10.0.2.15` y conectividad hacia el manager ATTACK/LAB. |
-| [wazuh-windows-agent-enrollment.jpg](screenshots/wazuh-windows-agent-enrollment.jpg) | Wazuh / enrollment | El Dashboard muestra el flujo de enrolamiento del agente Windows y el manager ATTACK/LAB `192.168.56.10`. |
-| [wazuh-endpoint-summary.jpg](screenshots/wazuh-endpoint-summary.jpg) | Wazuh / endpoint | Resumen histórico del endpoint Windows administrado por Wazuh 4.14.7. |
-| [wazuh-events-explorer.jpg](screenshots/wazuh-events-explorer.jpg) | Wazuh / event exploration | Exploración histórica de eventos del endpoint en el Dashboard; aporta contexto de observabilidad, no una validación adicional de detector. |
-| [wazuh-mitre-dashboard.jpg](screenshots/wazuh-mitre-dashboard.jpg) | Wazuh / MITRE | Vista histórica MITRE del Dashboard que ilustra el análisis de telemetría del endpoint; no se atribuye a WFP ni a Sysmon EID 3. |
-| [wfp-eventchannel-attack-lab.png](screenshots/wfp-eventchannel-attack-lab.png) | WFP / raw EventChannel | Evento WFP decodificado de ATTACK/LAB, con origen `192.168.56.1`, destino `192.168.56.20` y TCP. Demuestra la telemetría que alimenta la detección. |
-| [wfp-blocked-connections-attack-lab.png](screenshots/wfp-blocked-connections-attack-lab.png) | WFP / network evidence | Registros de conexiones TCP bloqueadas desde Kali ATTACK/LAB hacia el endpoint Windows. Complementa la evidencia WFP publicada. |
-| [windows-sysmon-installation.png](screenshots/windows-sysmon-installation.png) | Sysmon / endpoint | Instalación correcta de Sysmon en Windows. Es evidencia de preparación del endpoint, no una validación de la detección Sysmon Event ID 3. |
+| [windows-endpoint-attack-nat-connectivity.png](screenshots/windows-endpoint-attack-nat-connectivity.png) | Architecture / Windows endpoint | The Windows 11 endpoint has ATTACK/LAB interface `192.168.56.20`, NAT interface `10.0.2.15`, and connectivity to the ATTACK/LAB manager. |
+| [wazuh-windows-agent-enrollment.jpg](screenshots/wazuh-windows-agent-enrollment.jpg) | Wazuh / enrollment | Dashboard shows the Windows agent enrollment flow and ATTACK/LAB manager `192.168.56.10`. |
+| [wazuh-endpoint-summary.jpg](screenshots/wazuh-endpoint-summary.jpg) | Wazuh / endpoint | Historical summary of the Windows endpoint managed by Wazuh 4.14.7. |
+| [wazuh-events-explorer.jpg](screenshots/wazuh-events-explorer.jpg) | Wazuh / event exploration | Historical Dashboard exploration of endpoint events; it provides observability context, not additional detector validation. |
+| [wazuh-mitre-dashboard.jpg](screenshots/wazuh-mitre-dashboard.jpg) | Wazuh / MITRE | Historical Dashboard MITRE view that illustrates endpoint telemetry analysis; it is not attributed to WFP or Sysmon EID 3. |
+| [wfp-eventchannel-attack-lab.png](screenshots/wfp-eventchannel-attack-lab.png) | WFP / raw EventChannel | Decoded ATTACK/LAB WFP event with source `192.168.56.1`, destination `192.168.56.20`, and TCP. It demonstrates the telemetry that feeds the detection. |
+| [wfp-blocked-connections-attack-lab.png](screenshots/wfp-blocked-connections-attack-lab.png) | WFP / network evidence | Records of blocked TCP connections from Kali ATTACK/LAB to the Windows endpoint. It complements the published WFP evidence. |
+| [windows-sysmon-installation.png](screenshots/windows-sysmon-installation.png) | Sysmon / endpoint | Successful Sysmon installation on Windows. It is endpoint-preparation evidence, not validation of the Sysmon Event ID 3 detection. |
 
-La detección WFP Port Scan está **VALIDATED como ejecución controlada documentada** por los resultados históricos de eventos reales, `archives.json` y `alerts.json`; las capturas WFP son apoyo visual. Los logs de producción no se publican, por lo que el lector puede revisar el método y la reconstrucción, pero no un raw-log package. Sus reglas `100500`, `100501` y `100502` son una detección heurística de alta señal, no un conteo exacto de puertos únicos. Sysmon Event ID 3 permanece **AUDITED / PENDING VALIDATION**: todavía no existe una evidencia publicada de un EID 3 ATTACK real `192.168.56.1 -> 192.168.56.20` que valide ese escenario.
+The WFP Port Scan detection is **VALIDATED as a documented controlled run** by historical real-event results, `archives.json`, and `alerts.json`; the WFP screenshots provide visual support. Raw HomeLab logs are not published, so readers can review the method and reconstruction but not a raw-log package. Rules `100500`, `100501`, and `100502` are a high-signal heuristic detection, not an exact count of unique ports. Sysmon Event ID 3 remains **AUDITED / PENDING VALIDATION**: there is still no published evidence of a real ATTACK EID 3 `192.168.56.1 -> 192.168.56.20` that validates that scenario.
 
-Consulta la [matriz de evidencia](evidence-matrix.md) para saber qué afirmación respalda cada artefacto y el [catálogo completo de imágenes](image-catalog.md) para la decisión individual de publicación.
+See the [evidence matrix](evidence-matrix.md) to understand which claim each artifact supports and the [complete image catalog](image-catalog.md) for the individual publication decision.
 
-## Decisión de publicación
+## Publication Decision
 
-- **PUBLISH_AS_IS / CURATED_DERIVATIVE:** las ocho imágenes de la tabla recibieron revisión visual real. El catálogo identifica cuáles se corresponden directamente con el conjunto fuente actual y cuáles son recortes derivados.
-- **SANITIZE_AND_PUBLISH:** no se añadió una nueva captura durante esta auditoría. Los candidatos B del catálogo requieren un recorte que preserve significado técnico y una segunda revisión; no se publicaron por prioridad de evidencia.
-- **DO_NOT_PUBLISH:** el directorio fuente indicado actualmente contiene 53 capturas. Las restantes permanecen fuera del repositorio por pantallas de inicio o restablecimiento de sesión, prompts de contraseña, rutas o nombres personales, marcadores del navegador, direcciones públicas, comandos no necesarios, contradicción con el estado final o bajo valor documental.
-- **VISUAL_REVIEW_PENDING:** ninguna de las imágenes publicadas.
+- **PUBLISH_AS_IS / CURATED_DERIVATIVE:** the eight images in the table received real visual review. The catalog identifies which correspond directly to the current source set and which are derived crops.
+- **SANITIZE_AND_PUBLISH:** no new screenshot was added during this audit. Catalog B candidates require a crop that preserves technical meaning and a second review; they were not published because of evidence priority.
+- **DO_NOT_PUBLISH:** the identified source directory currently contains 53 screenshots. The remaining images stay outside the repository because of login or session-reset screens, password prompts, personal paths or names, browser bookmarks, public addresses, unnecessary commands, contradiction with the final status, or low documentary value.
+- **VISUAL_REVIEW_PENDING:** none of the published images.
 
-La revisión de las ocho copias no encontró contraseñas, tokens, claves privadas, cookies, códigos de autenticación ni pantallas de login. No se suben logs completos de producción, transcripciones ni material histórico sin una finalidad pública y una revisión individual.
+Review of the eight copies found no passwords, tokens, private keys, cookies, authentication codes, or login screens. Complete HomeLab logs, transcripts, and historical material are not uploaded without a public purpose and individual review.
 
-## Evidencia de escenarios
+## Scenario Evidence
 
-| Ruta | Tipo | Estado de publicación |
+| Path | Type | Publication Status |
 |---|---|---|
-| `scenario-1-bruteforce/` | Telemetría de autenticación histórica | CSV sanitizado de cinco eventos `4625`; prueba eventos individuales, no una detección de brute force. |
+| `scenario-1-bruteforce/` | Historical authentication telemetry | Sanitized CSV of five `4625` events; it proves individual events, not a brute-force detection. |

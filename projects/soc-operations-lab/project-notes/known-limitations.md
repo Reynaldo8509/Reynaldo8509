@@ -2,18 +2,18 @@
 
 ## WFP Port Scan
 
-- `100501` y `100502` son umbrales heurísticos de alta señal; no cuentan puertos únicos de forma exacta.
-- `ignore=60` limita alertas repetidas, pero no representa una garantía de una sola alerta por atacante durante toda una campaña larga.
-- La visibilidad final en Dashboard no fue probada mediante una consulta autenticada al índice durante la validación descrita; se comprobó salud del pipeline.
+- `100501` and `100502` are high-signal heuristic thresholds; they do not count unique ports exactly.
+- `ignore=60` limits repeated alerts, but does not guarantee a single alert per attacker throughout a long campaign.
+- Final Dashboard visibility was not tested through an authenticated query to the index during the documented validation; pipeline health was checked.
 
 ## Sysmon Network
 
-- Falta evidencia EID 3 ATTACK real desde Kali hacia Windows.
-- Las correlaciones existentes no tienen throttling y comparten una base, con riesgos de cardinalidad y competencia.
-- Reglas oficiales más específicas pueden eclipsar subconjuntos de eventos.
+- Real ATTACK EID 3 evidence from Kali to Windows is missing.
+- Existing correlations have no throttling and share a base, creating cardinality and competition risks.
+- More-specific official rules can shadow event subsets.
 
-## Otros detectores
+## Other Detectors
 
-- Brute force por IP para OpenSSH requiere campos fuente fiables.
-- YARA no tiene un paquete de validación publicable seleccionado.
-- FIM requiere una revalidación de extremo a extremo con evidencia sanitizada.
+- IP-based brute force for OpenSSH requires reliable source fields.
+- YARA does not have a selected publishable validation package.
+- FIM requires end-to-end revalidation with sanitized evidence.

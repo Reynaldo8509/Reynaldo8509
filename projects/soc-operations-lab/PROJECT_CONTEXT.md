@@ -1,56 +1,56 @@
-# Contexto maestro persistente — SOC HomeLab
+# Persistent Master Context — SOC HomeLab
 
-> Propósito: punto de partida técnico para futuras sesiones. Resume únicamente decisiones, estado y límites persistentes; no reemplaza las evidencias ni las configuraciones activas. Última consolidación: 2026-08-13.
+> Purpose: technical starting point for future sessions. It summarizes only persistent decisions, status, and boundaries; it does not replace evidence or active configurations. Last consolidation: 2026-08-13.
 
-## 1. Objetivo del SOC HomeLab
+## 1. SOC HomeLab Objective
 
-Construir un laboratorio SOC reproducible, basado en VirtualBox, que permita diseñar y validar detecciones Windows con evidencia verificable. El criterio del proyecto es separar claramente la telemetría recibida de una alerta creada, ejecutar escenarios autorizados y controlados, y no declarar una detección como validada hasta comprobar su comportamiento con eventos reales.
+Build a reproducible SOC HomeLab based on VirtualBox that supports designing and validating Windows detections with verifiable evidence. The project criterion is to clearly separate received telemetry from a created alert, run authorized and controlled scenarios, and not declare a detection validated until its behavior has been verified with real events.
 
-El caso de uso principal terminado es la detección heurística de reconocimiento/port scan mediante eventos WFP de Windows. Sysmon EID 3, brute force, YARA y FIM conservan estados distintos y no deben presentarse como equivalentes a esa validación.
+The main completed use case is heuristic reconnaissance/port-scan detection through Windows WFP events. Sysmon EID 3, brute force, YARA, and FIM retain distinct statuses and must not be presented as equivalent to that validation.
 
-## 2. Arquitectura
+## 2. Architecture
 
-| Componente | Rol persistente |
+| Component | Persistent Role |
 |---|---|
-| Kali Linux | Administración desde MANAGEMENT y ejecución de escenarios controlados desde ATTACK/LAB. |
-| Ubuntu / Wazuh Manager 4.14.7 | Recibe Windows EventChannel, analiza y correlaciona eventos, guarda archivos locales y alimenta el pipeline de alertas. |
-| Windows 11 Endpoint | Endpoint monitorizado con Wazuh Agent, Windows Security EventChannel, Sysmon y FIM. |
-| VirtualBox | Plataforma de virtualización y segmentación de los adaptadores/redes del laboratorio. |
+| Kali Linux | Management from MANAGEMENT and controlled-scenario execution from ATTACK/LAB. |
+| Ubuntu / Wazuh Manager 4.14.7 | Receives Windows EventChannel, analyzes and correlates events, stores local files, and feeds the alert pipeline. |
+| Windows 11 Endpoint | Monitored endpoint with Wazuh Agent, Windows Security EventChannel, Sysmon, and FIM. |
+| VirtualBox | SOC HomeLab virtualization platform and adapter/network segmentation. |
 
-Flujo de telemetría:
+Telemetry flow:
 
 ```text
 Windows Security / Sysmon -> Wazuh Agent -> Ubuntu Wazuh Manager
-  -> archives.json (ingesta) -> ruleset/correlación -> alerts.json (alerta)
+  -> archives.json (ingestion) -> ruleset/correlation -> alerts.json (alert)
   -> Filebeat -> Wazuh Indexer -> Wazuh Dashboard
 ```
 
-`archives.json` prueba que el manager ingirió y decodificó el evento. `alerts.json` prueba que una regla creó una alerta. La indexación y la visualización en Dashboard son una capa independiente que exige una consulta autenticada al índice o una comprobación visible en la UI.
+`archives.json` proves that the manager ingested and decoded the event. `alerts.json` proves that a rule created an alert. Indexing and Dashboard visualization are an independent layer that require an authenticated query to the index or a visible UI check.
 
-## 3. Tres redes
+## 3. Three Networks
 
-| Red | CIDR | Kali | Ubuntu / Wazuh | Windows 11 |
+| Network | CIDR | Kali | Ubuntu / Wazuh | Windows 11 |
 |---|---|---:|---:|---:|
 | MANAGEMENT | `192.168.57.0/24` | `192.168.57.1` | `192.168.57.10` | `192.168.57.20` |
 | ATTACK/LAB | `192.168.56.0/24` | `192.168.56.1` | `192.168.56.10` | `192.168.56.20` |
 | NAT/INTERNET | `10.0.2.0/24` | — | `10.0.2.3` | `10.0.2.15` |
 
-## 4. Propósito de cada red
+## 4. Purpose of Each Network
 
-- **MANAGEMENT:** administración, SSH, SCP/SFTP, WinRM, mantenimiento y transferencia de archivos. Es telemetría legítima y no debe clasificarse por defecto como ataque.
-- **ATTACK/LAB:** único plano destinado a reconnaissance y pruebas de detección controladas contra activos del laboratorio. Para el detector WFP, solo el tráfico desde esta red hacia Windows es elegible.
-- **NAT/INTERNET:** actualizaciones, repositorios y conectividad externa normal. Su telemetría se conserva para investigación, pero no alimenta el detector WFP de port scan.
+- **MANAGEMENT:** management, SSH, SCP/SFTP, WinRM, maintenance, and file transfer. It is legitimate telemetry and must not be classified as attack activity by default.
+- **ATTACK/LAB:** the only network plane intended for reconnaissance and controlled detection tests against SOC HomeLab assets. For the WFP detector, only traffic from this network to Windows is eligible.
+- **NAT/INTERNET:** updates, repositories, and normal external connectivity. Its telemetry is retained for investigation but does not feed the WFP port-scan detector.
 
 ## 5. Wazuh
 
-- **Versión del manager:** `4.14.7`.
-- **Ubicación del manager:** VM Ubuntu; direcciones `192.168.57.10`, `192.168.56.10` y `10.0.2.3` según el plano.
-- **Reglas locales activas:** `/var/ossec/etc/rules/local_rules.xml` en el manager.
-- **Archivos de evidencia operativa:** `/var/ossec/logs/archives/archives.json` y `/var/ossec/logs/alerts/alerts.json`.
+- **Manager version:** `4.14.7`.
+- **Manager location:** Ubuntu VM; addresses `192.168.57.10`, `192.168.56.10`, and `10.0.2.3` by network plane.
+- **Active local rules:** `/var/ossec/etc/rules/local_rules.xml` on the manager.
+- **Operational evidence files:** `/var/ossec/logs/archives/archives.json` and `/var/ossec/logs/alerts/alerts.json`.
 
-### Validación de reglas
+### Rule Validation
 
-`local_rules.xml` puede contener fragmentos con varios grupos de nivel superior, por lo que se valida el fragmento mediante un wrapper temporal, sin modificar el archivo real:
+`local_rules.xml` can contain fragments with multiple top-level groups, so the fragment is validated through a temporary wrapper without modifying the real file:
 
 ```bash
 { printf '%s\n' '<ruleset>'; sudo cat /var/ossec/etc/rules/local_rules.xml; printf '%s\n' '</ruleset>'; } > /tmp/local_rules.xml.xmllint-wrapper
@@ -58,156 +58,156 @@ xmllint --noout /tmp/local_rules.xml.xmllint-wrapper
 sudo /var/ossec/bin/wazuh-analysisd -t
 ```
 
-Tratar cualquier warning nuevo de `wazuh-analysisd -t` como fallo que debe investigarse, incluso si el proceso devuelve código cero. Después de un cambio autorizado, validar con EventChannel real y comprobar tanto `archives.json` como `alerts.json`; no basta con `wazuh-logtest` ni con la salud de Filebeat.
+Treat any new `wazuh-analysisd -t` warning as a failure that must be investigated, even if the process returns zero. After an authorized change, validate with real EventChannel and check both `archives.json` and `alerts.json`; neither `wazuh-logtest` nor Filebeat health is sufficient.
 
 ## 6. WFP Port Scan
 
-**Estado: VALIDATED.** Es un detector de alta señal y con throttling para el HomeLab, no un contador exacto de puertos únicos.
+**Status: VALIDATED.** It is a high-signal, throttled detector for the SOC HomeLab, not an exact unique-port counter.
 
-### Reglas y ruta efectiva
+### Rules and Effective Path
 
 ```text
 windows_eventchannel -> 60000 -> 60001 -> 100500 -> 100501 / 100502
 ```
 
-Las reglas están en `local_rules.xml` del manager:
+The rules are in the manager's `local_rules.xml`:
 
-| ID | Función | Parámetros/alcance clave |
+| ID | Function | Key Parameters/Scope |
 |---:|---|---|
-| `100500` | Base de tracking silenciosa | Nivel 6; `if_sid=60001`; Security EID `5152`/`5157`; inbound (`%%14592`), TCP (`6`), origen `192.168.56.0/24`, destino `192.168.56.20`; `no_log`. |
-| `100501` | Correlación de señal alta | Nivel 10; `if_matched_sid=100500`; misma `sourceAddress`; distinto `destPort`; `frequency=10`, `timeframe=60`, `ignore=60`. |
-| `100502` | Correlación de señal más alta | Nivel 13; misma lógica; `frequency=14`, `timeframe=60`, `ignore=60`. |
+| `100500` | Silent tracking base | Level 6; `if_sid=60001`; Security EID `5152`/`5157`; inbound (`%%14592`), TCP (`6`), source `192.168.56.0/24`, destination `192.168.56.20`; `no_log`. |
+| `100501` | High-signal correlation | Level 10; `if_matched_sid=100500`; same `sourceAddress`; different `destPort`; `frequency=10`, `timeframe=60`, `ignore=60`. |
+| `100502` | Higher-signal correlation | Level 13; same logic; `frequency=14`, `timeframe=60`, `ignore=60`. |
 
-### Significado técnico de los parámetros
+### Technical Meaning of Parameters
 
-- **Nivel 6 en `100500`:** es necesario para ganar la comparación entre reglas hermanas de la rama Security. Con nivel 1, la regla oficial `60104` (nivel 5) eclipsaba la base custom. `60104` permanece sin cambios como telemetría de auditoría WFP; no es un veredicto de port scan.
-- **`frequency`:** número de coincidencias históricas que la correlación requiere dentro de su ventana; no equivale a un conteo SQL ni a puertos únicos.
-- **`timeframe=60`:** ventana móvil de correlación de 60 segundos.
-- **`ignore=60`:** tras una alerta, suprime nuevas alertas de esa regla durante 60 segundos. Limita flooding, pero no deduplica eventos WFP ni garantiza una alerta única durante campañas largas.
-- **`if_matched_sid=100500`:** las correlaciones cuentan la cadena base filtrada, no cualquier evento Windows.
-- **`same_field sourceAddress`:** restringe la correlación a un mismo origen.
-- **`different_field destPort`:** compara el puerto del evento actual con eventos previos. No construye ni mantiene un conjunto de puertos distintos.
+- **Level 6 in `100500`:** required to win the sibling-rule comparison in the Security branch. At level 1, official level-5 rule `60104` shadowed the custom base. `60104` remains unchanged as WFP audit telemetry; it is not a port-scan verdict.
+- **`frequency`:** the number of historical matches required by correlation within its window; it is not equivalent to a SQL count or unique ports.
+- **`timeframe=60`:** 60-second rolling correlation window.
+- **`ignore=60`:** after an alert, suppresses new alerts from that rule for 60 seconds. It limits flooding, but does not deduplicate WFP events or guarantee a single alert during long campaigns.
+- **`if_matched_sid=100500`:** correlations count the filtered base chain, not any Windows event.
+- **`same_field sourceAddress`:** restricts correlation to the same source.
+- **`different_field destPort`:** compares the current event port with previous events. It does not build or maintain a set of distinct ports.
 
-### Limitación de cardinalidad
+### Cardinality Limitation
 
-La validación real observó 34 eventos WFP para 15 puertos de destino crudos distintos; hubo repeticiones con `eventRecordID` únicos. En Wazuh 4.14.7, `different_field` filtra comparaciones de historial, pero no implementa `COUNT(DISTINCT destPort)`. Por ello, `100501` y `100502` son umbrales heurísticos de patrones rápidos, no afirmaciones de exactamente 10 o 15 puertos únicos. `frequency=14` en `100502` es una compensación empírica de la interacción de reglas hermanas y tampoco debe reinterpretarse como cardinalidad exacta.
+The real validation observed 34 WFP events for 15 distinct raw destination ports; repetitions had unique `eventRecordID` values. In Wazuh 4.14.7, `different_field` filters history comparisons but does not implement `COUNT(DISTINCT destPort)`. Therefore, `100501` and `100502` are heuristic thresholds for rapid patterns, not claims of exactly 10 or 15 unique ports. `frequency=14` in `100502` is an empirical compensation for sibling-rule interaction and must not be reinterpreted as exact cardinality.
 
-### Evidencia y controles negativos
+### Evidence and Negative Controls
 
-La prueba ATTACK/LAB real produjo 34 eventos WFP y una alerta visible de cada regla de correlación (`100501` y `100502`), mientras la base silenciosa recibió el resto aplicable. MANAGEMENT y NAT conservaron telemetría sin alimentar estas correlaciones. La salud de Filebeat, Indexer y Dashboard se comprobó en el momento de la validación, pero no se realizó una consulta autenticada a `wazuh-alerts-*` ni una búsqueda UI para probar de forma directa la visualización final.
+The real ATTACK/LAB test produced 34 WFP events and one visible alert from each correlation rule (`100501` and `100502`), while the silent base received the remaining applicable events. MANAGEMENT and NAT retained telemetry without feeding these correlations. Filebeat, Indexer, and Dashboard health were checked at validation time, but no authenticated query to `wazuh-alerts-*` or UI search was performed to directly prove final visualization.
 
 ## 7. Sysmon EID 3
 
-**Estado: AUDITED / PENDING VALIDATION.** Esta cadena no es un detector validado de port scan.
+**Status: AUDITED / PENDING VALIDATION.** This chain is not a validated port-scan detector.
 
-Ruta oficial auditada:
+Audited official path:
 
 ```text
 windows_eventchannel -> 60000 -> 60004 -> 61600 -> 61605 -> sysmon_event3
 ```
 
-| ID | Función documentada |
+| ID | Documented Function |
 |---:|---|
-| `100409` | Base silenciosa de nivel 1: `if_group=sysmon_event3`, TCP, origen `192.168.56.0/24`, destino `192.168.56.20`. |
-| `100420` | Correlación nivel 10: `if_matched_sid=100409`, `frequency=10`, `timeframe=60`, mismo `sourceIp`, distinto `destinationPort`. |
-| `100421` | Correlación nivel 13: `if_matched_sid=100409`, `frequency=15`, `timeframe=60`, mismo `sourceIp`, distinto `destinationPort`. |
+| `100409` | Silent level-1 base: `if_group=sysmon_event3`, TCP, source `192.168.56.0/24`, destination `192.168.56.20`. |
+| `100420` | Level-10 correlation: `if_matched_sid=100409`, `frequency=10`, `timeframe=60`, same `sourceIp`, different `destinationPort`. |
+| `100421` | Level-13 correlation: `if_matched_sid=100409`, `frequency=15`, `timeframe=60`, same `sourceIp`, different `destinationPort`. |
 
-Se confirmó EID 3 real en MANAGEMENT (`192.168.57.1 -> 192.168.57.20:22`) y en NAT/INTERNET hacia servicios externos; esos casos no alimentaron `100409`. **Todavía no existe evidencia archivada de un EID 3 ATTACK real desde `192.168.56.1` hacia `192.168.56.20`.** Sin ese evento fuente no se puede validar en producción `100409`, `100420` ni `100421`.
+A real EID 3 was confirmed in MANAGEMENT (`192.168.57.1 -> 192.168.57.20:22`) and in NAT/INTERNET to external services; those cases did not feed `100409`. **There is still no archived evidence of a real ATTACK EID 3 from `192.168.56.1` to `192.168.56.20`.** Without that source event, `100409`, `100420`, and `100421` cannot be validated in the SOC HomeLab.
 
-Riesgos pendientes: la misma limitación de cardinalidad heurística; reglas hermanas que pueden competir al compartir la base; falta de `ignore` en las correlaciones; y posible eclipse por reglas oficiales Sysmon más específicas o una regla local dirigida al puerto 22. No elevar niveles ni rediseñar esta cadena por intuición antes de generar y archivar la señal ATTACK autorizada.
+Outstanding risks: the same heuristic-cardinality limitation; sibling rules that may compete by sharing the base; no `ignore` in the correlations; and possible shadowing by more-specific official Sysmon rules or a local rule targeting port 22. Do not raise levels or redesign this chain by intuition before generating and archiving the authorized ATTACK signal.
 
-## 8. Otros detectores
+## 8. Other Detectors
 
-| Detector | Estado documentado | Hecho comprobado / brecha |
+| Detector | Documented Status | Verified Fact / Gap |
 |---|---|---|
-| Windows brute force | TELEMETRY OBSERVED / PENDING DETECTION VALIDATION | Security EID `4625` da visibilidad de fallos y existe la regla oficial `60122`; una exportación sanitizada contiene fallos históricos, incluidos tres desde ATTACK/LAB. Para OpenSSH algunos eventos dejan `win.eventdata.ipAddress` como `-`, por lo que una correlación por IP aún no es fiable ni validada. |
-| YARA | PENDING VALIDATION | No hay regla pública sanitizada, configuración de ejecución/recolección ni evidencia extremo a extremo en `archives.json` y `alerts.json`. El historial no basta para afirmar cobertura. |
-| FIM / syscheck | CONFIGURED / REVALIDATION PENDING | Existe un ajuste estrecho histórico para reducir ruido en una ruta de pruebas conservando FIM fuera de ella. Falta un paquete sanitizado con configuración, cambio de archivo, evidencia de ingesta y alerta final. |
+| Windows brute force | TELEMETRY OBSERVED / PENDING DETECTION VALIDATION | Security EID `4625` provides failure visibility and official rule `60122` exists; a sanitized export contains historical failures, including three from ATTACK/LAB. For OpenSSH, some events leave `win.eventdata.ipAddress` as `-`, so IP-based correlation is not yet reliable or validated. |
+| YARA | PENDING VALIDATION | There is no public sanitized rule, execution/collection configuration, or end-to-end evidence in `archives.json` and `alerts.json`. History is insufficient to claim coverage. |
+| FIM / syscheck | CONFIGURED / REVALIDATION PENDING | A historical narrow adjustment exists to reduce noise in a test path while retaining FIM outside it. A sanitized package with configuration, a file change, ingestion evidence, and a final alert is missing. |
 
-## 9. Principales lecciones aprendidas
+## 9. Key Lessons Learned
 
-1. Separar MANAGEMENT, ATTACK/LAB y NAT reduce falsos positivos sin perder telemetría útil.
-2. Una regla base custom puede perder ante una hermana oficial de mayor nivel; validar la ruta EventChannel real es imprescindible.
-3. La telemetría estándar (`60104`, por ejemplo) y el veredicto de detección son conceptos distintos.
-4. `wazuh-logtest` con JSON pegado puede usar el decoder `json`, no la cadena `windows_eventchannel`; no sustituye una prueba real.
-5. `archives.json` demuestra ingesta, `alerts.json` creación de alertas y una consulta/UI autenticada demuestra indexación/visualización.
-6. `frequency`, `timeframe` y `different_field` no implementan cardinalidad exacta de puertos distintos.
-7. Las pruebas negativas de MANAGEMENT y NAT son parte de la validación, no un detalle opcional.
-8. La ausencia de EID 3 ATTACK es una brecha de evidencia, no una confirmación de que Sysmon o la correlación funcionen.
+1. Separating MANAGEMENT, ATTACK/LAB, and NAT reduces false positives without losing useful telemetry.
+2. A custom base rule can lose to a higher-level official sibling; validating the real EventChannel path is essential.
+3. Standard telemetry (`60104`, for example) and the detection verdict are distinct concepts.
+4. `wazuh-logtest` with pasted JSON can use the `json` decoder rather than the `windows_eventchannel` chain; it does not replace a real test.
+5. `archives.json` demonstrates ingestion, `alerts.json` alert creation, and an authenticated query/UI demonstrates indexing/visualization.
+6. `frequency`, `timeframe`, and `different_field` do not implement exact cardinality of distinct ports.
+7. MANAGEMENT and NAT negative tests are part of validation, not an optional detail.
+8. The absence of ATTACK EID 3 is an evidence gap, not confirmation that Sysmon or correlation works.
 
-## 10. Limitaciones conocidas
+## 10. Known Limitations
 
-- WFP `100501`/`100502` son heurísticas y no cuentan puertos únicos de forma exacta.
-- `ignore=60` reduce alertas repetidas, pero una campaña de más de 60 segundos puede volver a generar alertas.
-- La visualización final de WFP en Dashboard/Indexer no se verificó directamente mediante consulta autenticada; solo se comprobó la salud del pipeline y la creación local de alertas.
-- Sysmon EID 3 no cuenta con la señal ATTACK fuente necesaria; sus correlaciones no tienen throttling y pueden competir con reglas más específicas.
-- Brute force por IP en OpenSSH depende de disponer de un campo fuente real y correlacionable.
-- YARA y FIM no tienen aún evidencia pública sanitizada de extremo a extremo.
+- WFP `100501`/`100502` are heuristics and do not count unique ports exactly.
+- `ignore=60` reduces repeated alerts, but a campaign lasting more than 60 seconds can generate alerts again.
+- Final WFP visualization in Dashboard/Indexer was not directly verified through an authenticated query; only pipeline health and local alert creation were checked.
+- Sysmon EID 3 does not have the required source ATTACK signal; its correlations have no throttling and can compete with more-specific rules.
+- IP-based brute force in OpenSSH depends on having a real correlatable source field.
+- YARA and FIM do not yet have public sanitized end-to-end evidence.
 
-## 11. Reglas importantes de operación
+## 11. Important Operating Rules
 
-- No mezclar MANAGEMENT con ATTACK/LAB: solo ATTACK/LAB debe participar en escenarios de ataque y en la base WFP de este caso de uso.
-- NAT conserva telemetría para investigación, aunque quede excluida de detectores específicos.
-- No asumir cardinalidad exacta a partir de `frequency` o `different_field`.
-- Validar producción con eventos reales en `archives.json` y alertas en `alerts.json`.
-- Diferenciar siempre `wazuh-logtest` de EventChannel real y de la ruta de decoder/ruleset efectiva.
-- Antes de un cambio autorizado de reglas: respaldo, wrapper `xmllint`, `wazuh-analysisd -t`, prueba positiva y negativas de MANAGEMENT/NAT, e inspección de evidencias.
-- No publicar copias activas de Wazuh/Sysmon/YARA, transcripciones, capturas sin revisar, claves, contraseñas, tokens o respaldos de producción.
+- Do not mix MANAGEMENT with ATTACK/LAB: only ATTACK/LAB must participate in attack scenarios and the WFP base for this use case.
+- NAT retains telemetry for investigation even when excluded from specific detectors.
+- Do not assume exact cardinality from `frequency` or `different_field`.
+- Validate the SOC HomeLab with real events in `archives.json` and alerts in `alerts.json`.
+- Always distinguish `wazuh-logtest` from real EventChannel and the effective decoder/ruleset path.
+- Before an authorized rule change: back up, use the `xmllint` wrapper, run `wazuh-analysisd -t`, perform a positive test and MANAGEMENT/NAT negative tests, and inspect evidence.
+- Do not publish active Wazuh/Sysmon/YARA copies, transcripts, unreviewed screenshots, keys, passwords, tokens, or environment backups.
 
-## 12. Estructura del repositorio
+## 12. Repository Structure
 
 ```text
 soc-operations-lab/
-├── README.md                         # visión general y estados
-├── PROJECT_CONTEXT.md                # este contexto maestro
-├── configs/                          # solo configuraciones sanitizadas (sin activos por ahora)
-├── detection-rules/                  # WFP, Sysmon, brute force, YARA y FIM
+├── README.md                         # overview and statuses
+├── PROJECT_CONTEXT.md                # this master context
+├── configs/                          # sanitized configurations only (no active files yet)
+├── detection-rules/                  # WFP, Sysmon, brute force, YARA, and FIM
 ├── docs/
-│   ├── architecture/                 # diseño de redes y componentes
-│   ├── operations/                   # flujo de validación e inventario
-│   ├── setup/                        # material de reconstrucción parcial
-│   ├── timeline/                     # cronología técnica
-│   └── troubleshooting/              # incidencias WFP y Sysmon
-├── evidence/                         # inventario y artefactos sanitizados/históricos
-├── project-notes/                    # lecciones, mejoras y limitaciones
-└── scripts/validation/               # comprobación de seguridad de publicación
+│   ├── architecture/                 # network and component design
+│   ├── operations/                   # validation workflow and inventory
+│   ├── setup/                        # partial rebuild material
+│   ├── timeline/                     # technical timeline
+│   └── troubleshooting/              # WFP and Sysmon incidents
+├── evidence/                         # inventory and sanitized/historical artifacts
+├── project-notes/                    # lessons, improvements, and limitations
+└── scripts/validation/               # publication-safety check
 ```
 
-La documentación pública no contiene las configuraciones activas de `ossec.conf`, Sysmon ni Wazuh, y los artefactos históricos privados permanecen fuera del repositorio.
+Public documentation does not contain active `ossec.conf`, Sysmon, or Wazuh configurations, and private historical artifacts remain outside the repository.
 
-## 13. Estado actual de GitHub
+## 13. Current GitHub Status
 
-- Remoto configurado: `origin` apunta al repositorio GitHub `Reynaldo8509/soc-operations-lab`.
-- Rama local actual: `main`.
-- HEAD local observado: `89502f8023c95290c95ae144985062b584aa711f` (`Auto sync: 2026-04-30 20:06:20`). No se consultó el remoto durante esta consolidación, así que la relación actual de `main` con `origin/main` no está verificada.
-- El árbol de trabajo ya contenía modificaciones, eliminaciones y archivos sin seguimiento antes de crear este contexto. Son cambios del usuario/proyecto y deben preservarse.
-- En esta tarea no se ejecutaron `git add`, `git commit` ni `git push`.
+- Configured remote: `origin` points to GitHub repository `Reynaldo8509/soc-operations-lab`.
+- Current local branch: `main`.
+- Observed local HEAD: `89502f8023c95290c95ae144985062b584aa711f` (`Auto sync: 2026-04-30 20:06:20`). The remote was not queried during this consolidation, so the current relationship between `main` and `origin/main` was not verified.
+- The working tree already contained modifications, deletions, and untracked files before this context was created. They are user/project changes and must be preserved.
+- This task did not run `git add`, `git commit`, or `git push`.
 
-## 14. Qué está terminado
+## 14. Completed Work
 
-- Arquitectura de tres redes y sus límites operativos documentados.
-- Wazuh Manager 4.14.7 con recepción de Windows EventChannel en el laboratorio.
-- Detector WFP `100500`/`100501`/`100502` validado con eventos reales ATTACK/LAB, controles negativos de MANAGEMENT/NAT y evidencias de `archives.json`/`alerts.json`.
-- Documentación de la limitación de cardinalidad, prioridad de reglas y throttling WFP.
-- Auditoría de la ruta oficial Sysmon EID 3 y exclusiones negativas de MANAGEMENT/NAT.
-- Estructura de documentación, política de publicación y chequeo estático de patrones de secretos en el repositorio.
+- Documented three-network architecture and its operating boundaries.
+- Wazuh Manager 4.14.7 with Windows EventChannel reception in the SOC HomeLab.
+- WFP detector `100500`/`100501`/`100502` validated with real ATTACK/LAB events, MANAGEMENT/NAT negative controls, and `archives.json`/`alerts.json` evidence.
+- Documentation of cardinality limitation, rule priority, and WFP throttling.
+- Audit of the official Sysmon EID 3 path and MANAGEMENT/NAT negative exclusions.
+- Documentation structure, publication policy, and static secret-pattern check in the repository.
 
-## 15. Qué está pendiente
+## 15. Pending Work
 
-1. Generar un evento Sysmon EID 3 ATTACK autorizado `192.168.56.1 -> 192.168.56.20`; después confirmar ruta final, reglas ganadoras, repetición de alertas y negativos MANAGEMENT/NAT.
-2. Verificar indexación/visualización WFP mediante consulta autenticada a `wazuh-alerts-*` y/o búsqueda en Dashboard antes de afirmar visibilidad UI.
-3. Validar brute force con un escenario autorizado y un campo de IP fuente realmente utilizable; documentar alerta y prueba negativa.
-4. Preparar una regla YARA con procedencia/licencia, procedimiento de ejecución y evidencia sanitizada de ingesta, alerta y negativo.
-5. Revalidar FIM con un cambio controlado, verificando que la exclusión limitada no oculte rutas fuera de su ámbito.
-6. Publicar configuraciones reproducibles solo tras sanitización y revisión; reemplazar o retirar con autorización los placeholders vacíos de brute force.
-7. Si se requiere conteo exacto de puertos distintos, diseñar y validar una normalización stateful externa al motor de reglas nativo.
+1. Generate an authorized Sysmon EID 3 ATTACK event `192.168.56.1 -> 192.168.56.20`; then confirm the final path, winning rules, alert repetition, and MANAGEMENT/NAT negatives.
+2. Verify WFP indexing/visualization through an authenticated query to `wazuh-alerts-*` and/or a Dashboard search before claiming UI visibility.
+3. Validate brute force with an authorized scenario and a genuinely usable source-IP field; document the alert and negative test.
+4. Prepare a YARA rule with provenance/license, execution procedure, and sanitized ingestion, alert, and negative evidence.
+5. Revalidate FIM with a controlled change, confirming that the limited exclusion does not hide paths outside its scope.
+6. Publish reproducible configurations only after sanitization and review; replace or remove empty brute-force placeholders with authorization.
+7. If exact distinct-port counting is required, design and validate stateful normalization outside the native rules engine.
 
-## 16. Qué no debe modificarse sin una nueva decisión técnica
+## 16. What Must Not Change Without a New Technical Decision
 
-- Los límites y direccionamiento de MANAGEMENT, ATTACK/LAB y NAT.
-- `100500`, `100501` y `100502`, incluidos el nivel 6, filtros ATTACK/LAB, umbrales y `ignore=60`, sin nueva evidencia de producción y pruebas negativas.
-- Las reglas oficiales Wazuh, Windows Firewall y cualquier configuración activa de Wazuh/Sysmon, incluida `ossec.conf`, salvo alcance explícitamente autorizado.
-- La telemetría de MANAGEMENT o NAT mediante supresión global para reducir ruido.
-- La clasificación de Sysmon EID 3 como "validada" hasta capturar el evento ATTACK real requerido.
-- La afirmación de que WFP cuenta puertos únicos exactamente o que Dashboard muestra alertas sin prueba directa.
-- Publicación de claves, secretos, configuraciones activas, respaldos, transcripciones completas o capturas sin revisión de sensibilidad.
+- MANAGEMENT, ATTACK/LAB, and NAT boundaries and addressing.
+- `100500`, `100501`, and `100502`, including level 6, ATTACK/LAB filters, thresholds, and `ignore=60`, without new real-event evidence and negative tests.
+- Official Wazuh rules, Windows Firewall, and any active Wazuh/Sysmon configuration, including `ossec.conf`, except within explicitly authorized scope.
+- MANAGEMENT or NAT telemetry through global suppression to reduce noise.
+- Classification of Sysmon EID 3 as "validated" before capturing the required real ATTACK event.
+- The claim that WFP counts unique ports exactly or that Dashboard displays alerts without direct proof.
+- Publication of keys, secrets, active configurations, backups, full transcripts, or screenshots without sensitivity review.

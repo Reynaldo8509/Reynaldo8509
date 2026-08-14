@@ -2,29 +2,29 @@
 
 ## Problem
 
-Los eventos WFP `5152`/`5157` llegaban al manager, pero inicialmente la regla custom no recibía los eventos reales. Después de corregir la ruta, un mismo escaneo generaba alertas repetidas.
+WFP events `5152`/`5157` reached the manager, but initially the custom rule did not receive the real events. After correcting the path, a single scan generated repeated alerts.
 
 ## Evidence
 
-- Windows Security EventChannel siguió `60000 -> 60001`.
-- `60104` (AUDIT_FAILURE) era una hermana de nivel 5.
-- Un escaneo de 15 puertos filtrados produjo 34 eventos WFP y 15 puertos de destino crudos distintos.
+- Windows Security EventChannel followed `60000 -> 60001`.
+- `60104` (AUDIT_FAILURE) was a level-5 sibling.
+- A scan of 15 filtered ports produced 34 WFP events and 15 distinct raw destination ports.
 
 ## Root cause
 
-1. La base `100500` de nivel 1 quedaba eclipsada por `60104` de nivel 5.
-2. WFP generó varios registros por puerto y la correlación Wazuh no mantiene un conjunto exacto de puertos únicos.
+1. Level-1 base `100500` was shadowed by level-5 `60104`.
+2. WFP generated multiple records per port, and Wazuh correlation does not maintain an exact set of unique ports.
 
 ## Solution
 
-- Base `100500`: nivel 6, `if_sid=60001`, filtros ATTACK/LAB y `no_log`.
-- Correlaciones `100501` y `100502`: throttling `ignore=60`.
-- El umbral `frequency=14` de `100502` es una compensación observada de la interacción entre reglas frequency hermanas; no es cardinalidad exacta.
+- Base `100500`: level 6, `if_sid=60001`, ATTACK/LAB filters, and `no_log`.
+- Correlations `100501` and `100502`: `ignore=60` throttling.
+- `100502` threshold `frequency=14` is an observed compensation for sibling frequency-rule interaction; it is not exact cardinality.
 
 ## Validation
 
-La prueba real produjo una alerta `100501` y una `100502`, sin alimentar el detector desde NAT o MANAGEMENT. La telemetría WFP permaneció disponible en archivos.
+The real test produced one `100501` alert and one `100502` alert without feeding the detector from NAT or MANAGEMENT. WFP telemetry remained available in archives.
 
 ## Lesson learned
 
-Validar contra EventChannel real y separar telemetría (`60104`) de veredicto de detección. Para el detalle forense y los límites, consulta [la regla WFP validada](../../detection-rules/WFP_PortScan_Detection_Final.md).
+Validate against the real EventChannel and separate telemetry (`60104`) from the detection verdict. For forensic detail and limitations, see the [validated WFP rule](../../detection-rules/WFP_PortScan_Detection_Final.md).

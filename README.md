@@ -45,7 +45,7 @@ Wazuh Manager 4.14.7
 Wazuh Dashboard
 ```
 
-**Documented controlled validation:** 34 WFP records over 15 raw destination ports, with negative tests on MANAGEMENT and NAT traffic. The correlation rules are **heuristics**, not exact `COUNT(DISTINCT destinationPort)` logic. The repository documents historical `archives.json`/`alerts.json` results but does not publish raw production logs or direct Dashboard proof.
+**Documented controlled validation:** 34 WFP records over 15 raw destination ports, with negative tests on MANAGEMENT and NAT traffic. The correlation rules are **heuristics**, not exact `COUNT(DISTINCT destinationPort)` logic. The repository documents historical `archives.json`/`alerts.json` results but does not publish raw HomeLab logs or direct Dashboard proof.
 
 - **WFP Port Scan:** VALIDATED — documented controlled run
 - **Sysmon Event ID 3:** AUDITED / PENDING VALIDATION
@@ -91,7 +91,7 @@ See the broader [certification and credential inventory](docs/certifications/REA
 03  Decode / normalize the event path
 04  Apply base tracking rule
 05  Correlate and evaluate thresholds
-06  Validate against production evidence
+06  Validate against real HomeLab evidence
 07  Investigate false positives / negatives
 08  Document result and limitations
 ```

@@ -1,6 +1,6 @@
 # Wazuh WFP Port Scan Detection
 
-> **Case-study status: VALIDATED — documented controlled run.** The repository publishes the rule logic, forensic reconstruction and visual support; it intentionally does not publish raw production `archives.json` or `alerts.json` files.
+> **Case-study status: VALIDATED — documented controlled run.** The repository publishes the rule logic, forensic reconstruction and visual support; it intentionally does not publish raw HomeLab `archives.json` or `alerts.json` files.
 
 ## Case-study flow
 
@@ -56,7 +56,7 @@ windows_eventchannel
 ```
 
 With `100500` at level 1, sibling rule `60104` was selected first and the custom
-base did not receive the live WFP event. A reversible production test proved
+base did not receive the live WFP event. A reversible controlled test proved
 that `100500` at level 6 wins this sibling comparison and receives the event.
 This is why the final base rule is level 6. Rule `60104` remains unmodified: it
 is standard WFP audit-failure telemetry, not a port-scan verdict.

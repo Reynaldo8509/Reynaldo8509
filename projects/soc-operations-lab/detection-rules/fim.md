@@ -2,8 +2,8 @@
 
 > **Status: CONFIGURED / REVALIDATION PENDING**
 
-El historial del laboratorio muestra que FIM/syscheck está configurado y que se realizó un ajuste estrecho para reducir ruido de una ruta de pruebas. Ese ajuste buscó conservar visibilidad de FIM fuera de dicha ruta.
+The SOC HomeLab history shows that FIM/syscheck is configured and that a narrow adjustment was made to reduce noise from a test path. That adjustment was intended to preserve FIM visibility outside that path.
 
-No existe todavía un paquete público sanitizado con configuración, rutas monitorizadas, evento de cambio y alerta final que permita declarar una validación completa de extremo a extremo. Por ello, esta página no publica XML ni rutas de usuario.
+There is not yet a public sanitized package containing configuration, monitored paths, a change event, and a final alert that would support an end-to-end validation claim. Therefore, this page does not publish XML or user paths.
 
-Para cerrar esta detección se requiere una prueba controlada de cambio de archivo, evidencia de `archives.json` y `alerts.json`, y una revisión de que la excepción limitada no oculte rutas fuera de su ámbito.
+To complete this detection, a controlled file-change test, `archives.json` and `alerts.json` evidence, and a review confirming that the limited exception does not hide paths outside its scope are required.

@@ -2,26 +2,26 @@
 
 ![SOC HomeLab architecture: Kali Linux, Windows 11 with Wazuh Agent and Sysmon, Ubuntu Server with Wazuh Manager 4.14.7, Wazuh Dashboard, and MANAGEMENT, ATTACK/LAB, and NAT network planes](../../assets/soc-home-lab-hero.svg)
 
-Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali Linux, Ubuntu/Wazuh y un endpoint Windows 11. El proyecto prioriza ingeniería de detección verificable: separar telemetría de veredictos, reproducir escenarios controlados y documentar límites del motor antes de declarar una detección válida.
+A reproducible SOC HomeLab built with VirtualBox, Kali Linux, Ubuntu/Wazuh, and a Windows 11 endpoint. The project prioritizes verifiable detection engineering: separating telemetry from detection verdicts, reproducing controlled scenarios, and documenting engine limitations before declaring a detection valid.
 
 ## What This Lab Demonstrates
 
 - Detection engineering with Wazuh custom rules and event correlation
 - Windows Security EventChannel and Sysmon endpoint telemetry
-- Network-plane separation between administration, attack testing and NAT/internet
+- Network-plane separation between management, attack testing, and NAT/Internet
 - False-positive reduction without globally silencing legitimate telemetry
-- Production-event validation instead of relying on synthetic logtest results alone
+- Real-event validation instead of relying on synthetic logtest results alone
 - Evidence handling, investigation workflow and explicit documentation of engine limitations
 
-## Estado de detecciones
+## Detection Status
 
-| Detección | Estado | Evidencia disponible |
+| Detection | Status | Available Evidence |
 |---|---|---|
-| WFP Port Scan | **VALIDATED — documented controlled run** | Resultados históricos de eventos WFP, `archives.json`, `alerts.json` y pruebas negativas de NAT/MANAGEMENT; los logs crudos de producción no se publican. |
-| Sysmon Network / Event ID 3 | **AUDITED / PENDING VALIDATION** | EID 3 confirmado en MANAGEMENT y NAT; falta una señal ATTACK real que permita validar el detector. |
-| Windows brute force | **TELEMETRY OBSERVED / PENDING DETECTION VALIDATION** | Exportación sanitizada de 4625 disponible; una correlación validada requiere IP fuente utilizable y controles negativos. |
-| FIM | **CONFIGURED / REVALIDATION PENDING** | Historial de ajuste de ruido de rutas de prueba; falta un paquete público de evidencias reproducibles. |
-| YARA | **PENDING VALIDATION** | No hay configuración ni evidencia sanitizada suficiente para hacer una afirmación operativa. |
+| WFP Port Scan | **VALIDATED — documented controlled run** | Historical WFP event results, `archives.json`, `alerts.json`, and NAT/MANAGEMENT negative tests; raw HomeLab logs are not published. |
+| Sysmon Network / Event ID 3 | **AUDITED / PENDING VALIDATION** | EID 3 confirmed in MANAGEMENT and NAT; a real ATTACK signal required to validate the detector is missing. |
+| Windows brute force | **TELEMETRY OBSERVED / PENDING DETECTION VALIDATION** | Sanitized 4625 export available; validated correlation requires a usable source IP and negative controls. |
+| FIM | **CONFIGURED / REVALIDATION PENDING** | Historical test-path noise adjustment; a public package of reproducible evidence is missing. |
+| YARA | **PENDING VALIDATION** | There is insufficient configuration or sanitized evidence to make an operational claim. |
 
 ## Detection Coverage Matrix
 
@@ -35,11 +35,11 @@ Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali L
 
 Detailed rule documents are indexed in the [Detection Engineering directory](detection-rules/README.md); the [evidence matrix](evidence/evidence-matrix.md) records the claim boundary for each capability.
 
-## Evidencia visual curada
+## Curated Visual Evidence
 
-El repositorio incluye ocho capturas técnicas curadas de arquitectura, Wazuh, WFP y Sysmon. Son evidencia visual de capas concretas, no sustitutos de los artefactos de log: la captura WFP ilustra telemetría ATTACK/LAB; Sysmon prueba preparación del endpoint, pero EID 3 continúa **AUDITED / PENDING VALIDATION**. Consulta el [inventario](evidence/README.md), la [matriz de evidencia](evidence/evidence-matrix.md) y el [catálogo de imágenes](evidence/image-catalog.md) para el alcance de cada imagen.
+The repository includes eight curated technical screenshots covering architecture, Wazuh, WFP, and Sysmon. They are visual evidence of specific layers, not substitutes for log artifacts: the WFP screenshot illustrates ATTACK/LAB telemetry; Sysmon demonstrates endpoint preparation, while EID 3 remains **AUDITED / PENDING VALIDATION**. See the [inventory](evidence/README.md), [evidence matrix](evidence/evidence-matrix.md), and [image catalog](evidence/image-catalog.md) for the scope of each image.
 
-## Arquitectura
+## Architecture
 
 ```text
                            Administration Plane
@@ -58,13 +58,13 @@ El repositorio incluye ocho capturas técnicas curadas de arquitectura, Wazuh, W
 
 | Network | CIDR | Kali | Ubuntu/Wazuh | Windows 11 | Purpose |
 |---|---|---:|---:|---:|---|
-| MANAGEMENT | `192.168.57.0/24` | `.1` | `.10` | `.20` | Administración: SSH, SCP/SFTP, WinRM y mantenimiento. |
-| ATTACK/LAB | `192.168.56.0/24` | `.1` | `.10` | `.20` | Escenarios controlados de reconnaissance y detección. |
-| NAT/INTERNET | `10.0.2.0/24` | — | `.3` | `.15` | Actualizaciones y telemetría externa normal. |
+| MANAGEMENT | `192.168.57.0/24` | `.1` | `.10` | `.20` | Management: SSH, SCP/SFTP, WinRM, and maintenance. |
+| ATTACK/LAB | `192.168.56.0/24` | `.1` | `.10` | `.20` | Controlled reconnaissance and detection scenarios. |
+| NAT/INTERNET | `10.0.2.0/24` | — | `.3` | `.15` | Updates and normal external telemetry. |
 
-La separación evita que tráfico administrativo o NAT se clasifique como actividad del laboratorio. Más detalle: [arquitectura](docs/architecture/README.md).
+The separation prevents management or NAT traffic from being classified as lab activity. More detail: [architecture](docs/architecture/README.md).
 
-## Ingeniería de falsos positivos: retener no significa alertar
+## False-Positive Engineering: Retention Does Not Mean Alerting
 
 ```text
 MANAGEMENT  192.168.57.0/24
@@ -80,7 +80,7 @@ NAT         10.0.2.0/24
         └── excluded from WFP scan detector
 ```
 
-La exclusión ocurre en la base del detector WFP; no suprime telemetría de MANAGEMENT ni NAT de los archivos de investigación. Los controles negativos demostrados aplican al caso WFP, no a todos los detectores futuros.
+The exclusion occurs at the WFP detector base; it does not suppress MANAGEMENT or NAT telemetry from investigation files. The demonstrated negative controls apply to the WFP case, not to every future detector.
 
 ## SOC Workflow
 
@@ -90,24 +90,24 @@ La exclusión ocurre en la base del detector WFP; no suprime telemetría de MANA
 03  Decode / normalize the event path
 04  Apply base tracking rule
 05  Correlate and evaluate thresholds
-06  Validate against production evidence
+06  Validate against real HomeLab evidence
 07  Investigate false positives / negatives
 08  Document result and limitations
 ```
 
-## Flujo de datos
+## Data Flow
 
 ```text
 Windows Security / Sysmon
         -> Wazuh Agent
         -> Wazuh Manager 4.14.7
-        -> archives.json (ingesta)
-        -> ruleset / correlación
-        -> alerts.json (alertas)
+        -> archives.json (ingestion)
+        -> ruleset / correlation
+        -> alerts.json (alerts)
         -> Filebeat / Indexer / Dashboard
 ```
 
-`archives.json` demuestra que un evento ingresó; `alerts.json` demuestra que una regla creó una alerta. La visualización en Dashboard requiere una comprobación independiente de indexación.
+`archives.json` demonstrates that an event was ingested; `alerts.json` demonstrates that a rule created an alert. Dashboard visualization requires an independent indexing check.
 
 ## Detection Case Study — WFP Port Scan
 
@@ -143,67 +143,67 @@ alerts.json -> Filebeat -> Indexer -> Dashboard
 - The Wazuh correlation rules generated exactly one local `alerts.json` alert for each threshold in the observed scan.
 - MANAGEMENT and NAT negative tests remained outside the WFP detector.
 
-The correlation is intentionally documented as a **heuristic signal**, not exact `COUNT(DISTINCT destinationPort)` logic. The full forensic sequence and cardinality analysis are documented in [WFP Port Scan Detection](detection-rules/WFP_PortScan_Detection_Final.md). The production raw logs and a direct Dashboard query are not public evidence.
+The correlation is intentionally documented as a **heuristic signal**, not exact `COUNT(DISTINCT destinationPort)` logic. The full forensic sequence and cardinality analysis are documented in [WFP Port Scan Detection](detection-rules/WFP_PortScan_Detection_Final.md). Raw HomeLab logs and a direct Dashboard query are not public evidence.
 
-## Caso destacado: WFP Port Scan
+## Featured Case: WFP Port Scan
 
-La detección WFP utiliza eventos Windows Security `5152`/`5157` inbound TCP, limitados a `192.168.56.0/24 -> 192.168.56.20`.
+The WFP detection uses inbound TCP Windows Security events `5152`/`5157`, scoped to `192.168.56.0/24 -> 192.168.56.20`.
 
-- `100500`: base de tracking silenciosa, nivel 6, anclada a la rama Security EventChannel.
-- `100501`: correlación de señal alta nivel 10.
-- `100502`: correlación de señal alta nivel 13.
+- `100500`: silent level-6 tracking base, anchored to the Security EventChannel branch.
+- `100501`: level-10 high-signal correlation.
+- `100502`: level-13 high-signal correlation.
 
-Una prueba real documentada produjo 34 eventos WFP sobre 15 puertos de destino crudos distintos y exactamente una alerta local de cada umbral en `alerts.json`. Estos umbrales son **heurísticas de correlación**, no `COUNT(DISTINCT destinationPort)`. Los resultados y el método están publicados, pero los logs crudos de producción no; consulta la [documentación WFP validada](detection-rules/WFP_PortScan_Detection_Final.md).
+A documented real test produced 34 WFP events across 15 distinct raw destination ports and exactly one local alert for each threshold in `alerts.json`. These thresholds are **correlation heuristics**, not `COUNT(DISTINCT destinationPort)`. The results and method are published, but raw HomeLab logs are not; see the [validated WFP documentation](detection-rules/WFP_PortScan_Detection_Final.md).
 
-## Problemas técnicos reales resueltos
+## Real Technical Issues Resolved
 
-- Una regla oficial WFP `60104` de nivel 5 eclipsaba la base custom de nivel 1. La base validada quedó en nivel 6.
-- Un escaneo generó múltiples eventos `5152`/`5157` por puerto. `ignore="60"` limita el flooding sin eliminar telemetría.
-- `wazuh-logtest` con JSON archivado puede usar un decoder distinto de `windows_eventchannel`; la validación definitiva se hizo con eventos de producción.
+- An official level-5 WFP rule `60104` shadowed the level-1 custom base. The validated base is level 6.
+- A scan generated multiple `5152`/`5157` events per port. `ignore="60"` limits flooding without removing telemetry.
+- `wazuh-logtest` with archived JSON can use a decoder different from `windows_eventchannel`; definitive validation used real HomeLab events.
 
 ## Engineering Lessons
 
-1. Un evento válido no equivale automáticamente a una detección válida.
-2. Mayor volumen de eventos no implica necesariamente actividad maliciosa.
-3. Separar planos de red reduce presión de falsos positivos sin eliminar telemetría.
-4. La validación con eventos Windows EventChannel reales es más representativa que una prueba sintética aislada.
-5. Los límites del rules engine deben documentarse antes de interpretar un contador de correlación como cardinalidad exacta.
+1. A valid event does not automatically equal a valid detection.
+2. A higher event volume does not necessarily imply malicious activity.
+3. Separating network planes reduces false-positive pressure without removing telemetry.
+4. Validation with real Windows EventChannel events is more representative than an isolated synthetic test.
+5. Rules-engine limitations must be documented before interpreting a correlation counter as exact cardinality.
 
-## Tecnologías
+## Technologies
 
 - VirtualBox
 - Kali Linux
-- Ubuntu con Wazuh Manager 4.14.7
-- Windows 11 con Wazuh Agent y Sysmon
-- Windows Filtering Platform, Windows EventChannel, `jq`, Filebeat y Wazuh Indexer/Dashboard
+- Ubuntu with Wazuh Manager 4.14.7
+- Windows 11 with Wazuh Agent and Sysmon
+- Windows Filtering Platform, Windows EventChannel, `jq`, Filebeat, and Wazuh Indexer/Dashboard
 
-## Reproducibilidad y comandos
+## Reproducibility and Commands
 
-La [guía de setup](docs/setup/README.md) separa arquitectura, roles y validación. La [referencia histórica de comandos](docs/setup/08-command-reference.md) reúne únicamente comandos cuya ejecución está documentada y señala explícitamente los que no cuentan con evidencia histórica.
+The [setup guide](docs/setup/README.md) separates architecture, roles, and validation. The [historical command reference](docs/setup/08-command-reference.md) contains only commands whose execution is documented and explicitly identifies those without historical evidence.
 
-La instalación histórica completa no se declara reproducible todavía: los transcripts originales de instalación se mantienen fuera del repositorio público hasta poder sanitizarlos. No se inventan comandos de instalación que no estén respaldados por la evidencia conservada.
+The complete historical installation is not yet claimed as reproducible: the original installation transcripts remain outside the public repository until they can be sanitized. No installation commands are invented when they are not supported by retained evidence.
 
-## Navegación
+## Navigation
 
-- [Arquitectura](docs/architecture/README.md)
-- [Guía de setup reproducible](docs/setup/README.md)
-- [Comandos de operación y reproducción](docs/setup/08-command-reference.md)
-- [Operación y validación](docs/operations/validation-workflow.md)
-- [Detección e ingeniería de reglas](detection-rules/README.md)
-- [Matriz de evidencia](evidence/evidence-matrix.md)
-- [Catálogo de imágenes](evidence/image-catalog.md)
+- [Architecture](docs/architecture/README.md)
+- [Reproducible Setup Guide](docs/setup/README.md)
+- [Operations and Reproduction Commands](docs/setup/08-command-reference.md)
+- [Operations and Validation](docs/operations/validation-workflow.md)
+- [Detection and Rule Engineering](detection-rules/README.md)
+- [Evidence Matrix](evidence/evidence-matrix.md)
+- [Image Catalog](evidence/image-catalog.md)
 - [Troubleshooting](docs/troubleshooting/)
-- [Cronología técnica](docs/timeline/project-history.md)
-- [Lecciones y limitaciones](project-notes/)
-- [Inventario de evidencia](evidence/README.md)
+- [Technical Timeline](docs/timeline/project-history.md)
+- [Lessons and Limitations](project-notes/)
+- [Evidence Inventory](evidence/README.md)
 
-## Principios del proyecto
+## Project Principles
 
-1. No declarar una detección validada sin evidencia real.
-2. Mantener telemetría legítima aunque quede fuera de un detector.
-3. Documentar límites del rules engine y de la observabilidad.
-4. No publicar claves, contraseñas, tokens, transcripciones internas ni configuraciones con secretos.
+1. Do not declare a detection validated without real evidence.
+2. Retain legitimate telemetry even when it is outside a detector.
+3. Document rules-engine and observability limitations.
+4. Do not publish keys, passwords, tokens, internal transcripts, or configurations containing secrets.
 
-## Licencia
+## License
 
-Este proyecto se publica bajo [MIT](LICENSE).
+This project is published under [MIT](LICENSE).
