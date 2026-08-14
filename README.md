@@ -61,6 +61,10 @@ La detección WFP utiliza eventos Windows Security `5152`/`5157` inbound TCP, li
 
 Una prueba real produjo 34 eventos WFP sobre 15 puertos de destino crudos distintos y exactamente una alerta visible de cada umbral. Estos umbrales son **heurísticas de correlación**, no `COUNT(DISTINCT destinationPort)`. Consulta la [documentación WFP validada](detection-rules/WFP_PortScan_Detection_Final.md).
 
+## Evidencia visual curada
+
+El repositorio incluye ocho capturas técnicas revisadas de arquitectura, Wazuh, WFP y Sysmon. Las capturas conservan únicamente las direcciones privadas relevantes del HomeLab; no contienen secretos ni pantallas de autenticación. La evidencia WFP ilustra telemetría ATTACK/LAB y acompaña una detección **VALIDATED** de naturaleza heurística. La captura de Sysmon prueba la preparación del endpoint, pero Sysmon EID 3 continúa **AUDITED / PENDING VALIDATION**. Consulta el [inventario de evidencia](evidence/README.md) para el alcance y las limitaciones de cada imagen.
+
 ## Problemas técnicos reales resueltos
 
 - Una regla oficial WFP `60104` de nivel 5 eclipsaba la base custom de nivel 1. La base validada quedó en nivel 6.
