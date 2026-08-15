@@ -24,6 +24,12 @@ My security development combines structured troubleshooting with practical lab w
 | SIEM stack | **Wazuh 4.14.7 + Windows Security + Sysmon** |
 | Current detection discipline | **Evidence-backed status with explicit limitations** |
 
+## Selected Technical Outcomes
+
+- Built and documented a Wazuh WFP port-scan use case using **34 real Windows telemetry records across 15 raw destination ports**.
+- Designed three separated network planes to retain legitimate telemetry while reducing WFP detector false positives.
+- Documented detection-engineering decisions, correlation heuristics, negative controls, engine limitations and reproducibility commands.
+
 ## What I Bring to a SOC Team
 
 - Strong Windows/Linux troubleshooting and endpoint administration background
