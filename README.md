@@ -10,6 +10,20 @@ My security development combines structured troubleshooting with practical lab w
 
 **Target roles:** Junior SOC Analyst · Security Operations · Blue Team · Junior Cybersecurity Analyst
 
+### Recruiter Quick Links
+
+[**SOC HomeLab**](projects/soc-operations-lab/README.md) · [**WFP Case Study**](projects/soc-operations-lab/detection-rules/WFP_PortScan_Detection_Final.md) · [**Evidence Matrix**](projects/soc-operations-lab/evidence/evidence-matrix.md) · [**Command Reference**](projects/soc-operations-lab/docs/setup/08-command-reference.md) · [**Credly**](https://www.credly.com/users/reynaldo-amado-rodriguez-gonzalez) · [**LinkedIn**](https://www.linkedin.com/in/reynaldo8509/)
+
+## Evidence Snapshot
+
+| HomeLab signal | Result |
+|---|---|
+| WFP port-scan use case | **Validated — documented controlled run** |
+| WFP telemetry observed | **34 records / 15 raw destination ports** |
+| Network planes | **3 — MANAGEMENT / ATTACK-LAB / NAT-INTERNET** |
+| SIEM stack | **Wazuh 4.14.7 + Windows Security + Sysmon** |
+| Current detection discipline | **Evidence-backed status with explicit limitations** |
+
 ## What I Bring to a SOC Team
 
 - Strong Windows/Linux troubleshooting and endpoint administration background
@@ -21,7 +35,9 @@ My security development combines structured troubleshooting with practical lab w
 
 ## Featured Project — SOC Operations Lab
 
-A reproducible VirtualBox **SOC HomeLab** built with Kali Linux, Ubuntu/Wazuh and a Windows 11 endpoint. The lab documents architecture, network-plane separation, detection engineering, evidence handling, validation methodology, false-positive reduction and known engine limitations. The project foregrounds inspected Wazuh, Windows and WFP evidence rather than illustrative visuals.
+A reproducible VirtualBox **SOC HomeLab** built with Kali Linux, Ubuntu/Wazuh and a Windows 11 endpoint. The lab documents architecture, network-plane separation, detection engineering, evidence handling, validation methodology, false-positive reduction and known engine limitations. The project foregrounds inspected Wazuh, Windows and WFP evidence rather than treating diagrams as proof.
+
+![SOC HomeLab architecture showing Kali Linux, Windows 11 with Wazuh Agent and Sysmon, Ubuntu/Wazuh Manager 4.14.7, Wazuh Dashboard, and separated management, attack/lab, and NAT network planes](assets/soc-home-lab-hero.svg)
 
 ### Validated Detection Case — WFP Port Scan
 
