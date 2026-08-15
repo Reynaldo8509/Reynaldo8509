@@ -1,0 +1,76 @@
+name: Portfolio Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate Markdown links and image references
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib, re, sys
+
+          root = pathlib.Path('.')
+          failures = []
+          pattern = re.compile(r'!?\[[^\]]*\]\(([^)]+)\)')
+          for path in root.rglob('*.md'):
+              if any(part in {'.git', '.github'} for part in path.parts):
+                  continue
+              text = path.read_text(encoding='utf-8', errors='replace')
+              for target in pattern.findall(text):
+                  target = target.strip().split()[0]
+                  if target.startswith(('http://', 'https://', '#', 'mailto:')):
+                      continue
+                  target = target.split('#', 1)[0]
+                  if not target:
+                      continue
+                  candidate = (path.parent / target).resolve()
+                  if not candidate.exists():
+                      failures.append(f'{path}: missing target {target}')
+          if failures:
+              print('\n'.join(failures))
+              sys.exit(1)
+          print('Local Markdown links and image references: OK')
+          PY
+
+      - name: Validate SVG assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v xmllint >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq libxml2-utils
+          fi
+          shopt -s nullglob
+          svgs=(assets/*.svg assets/**/*.svg)
+          if [ ${#svgs[@]} -eq 0 ]; then
+            echo 'No SVG assets found; skipping.'
+            exit 0
+          fi
+          for svg in "${svgs[@]}"; do
+            echo "Validating $svg"
+            xmllint --noout "$svg"
+          done
+
+      - name: Check for obvious private contact exposure
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -Rni --exclude-dir=.git --exclude-dir=.github --exclude='*.lock' -E 'rey\.amado8509@gmail\.com' .; then
+            echo 'Personal email exposure detected.'
+            exit 1
+          fi
+          echo 'Public portfolio email privacy check: OK'
