@@ -40,6 +40,8 @@ Detailed rule documents are indexed in the [Detection Engineering directory](det
 The repository includes eight curated technical screenshots covering architecture, Wazuh, WFP, and Sysmon. They are visual evidence of specific layers, not substitutes for log artifacts: the WFP screenshot illustrates ATTACK/LAB telemetry; Sysmon demonstrates endpoint preparation, while EID 3 remains **AUDITED / PENDING VALIDATION**. See the [inventory](evidence/README.md), [evidence matrix](evidence/evidence-matrix.md), and [image catalog](evidence/image-catalog.md) for the scope of each image.
 
 ## Architecture
+<img width="1536" height="1024" alt="Arquitectura" src="https://github.com/user-attachments/assets/5e4c42d1-e02a-42f8-a04b-b21cf6892de3" />
+
 
 ```text
                            Administration Plane
