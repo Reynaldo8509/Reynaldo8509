@@ -41,6 +41,9 @@ My security development combines structured troubleshooting with practical lab w
 
 ## Featured Project — SOC Operations Lab
 
+<img width="1536" height="1024" alt="Home_Labs" src="https://github.com/user-attachments/assets/02cdba0b-1eac-4ffc-9a6b-6b6c1ac9f7f7" />
+
+
 A reproducible VirtualBox **SOC HomeLab** built with Kali Linux, Ubuntu/Wazuh and a Windows 11 endpoint. The lab documents architecture, network-plane separation, detection engineering, evidence handling, validation methodology, false-positive reduction and known engine limitations. The project foregrounds inspected Wazuh, Windows and WFP evidence rather than treating diagrams as proof.
 
 ![SOC HomeLab architecture showing Kali Linux, Windows 11 with Wazuh Agent and Sysmon, Ubuntu/Wazuh Manager 4.14.7, Wazuh Dashboard, and separated management, attack/lab, and NAT network planes](assets/soc-home-lab-hero.svg)
