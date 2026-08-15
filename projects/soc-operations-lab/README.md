@@ -14,6 +14,7 @@ A reproducible SOC HomeLab built with VirtualBox, Kali Linux, Ubuntu/Wazuh, and 
 - Evidence handling, investigation workflow and explicit documentation of engine limitations
 
 ## Detection Status
+<img width="1536" height="1024" alt="Detection Status" src="https://github.com/user-attachments/assets/973c9f23-46c0-4ccb-8911-85ebcaa14970" />
 
 | Detection | Status | Available Evidence |
 |---|---|---|
@@ -24,6 +25,8 @@ A reproducible SOC HomeLab built with VirtualBox, Kali Linux, Ubuntu/Wazuh, and 
 | YARA | **PENDING VALIDATION** | There is insufficient configuration or sanitized evidence to make an operational claim. |
 
 ## Detection Coverage Matrix
+
+<img width="1536" height="1024" alt="Detection Coverage Matrix" src="https://github.com/user-attachments/assets/2b609d76-723c-4cbb-b5d5-b06238b4209c" />
 
 | Use case | Telemetry | Main rules | Status | Evidence |
 |---|---|---|---|---|
@@ -67,6 +70,7 @@ The repository includes eight curated technical screenshots covering architectur
 The separation prevents management or NAT traffic from being classified as lab activity. More detail: [architecture](docs/architecture/README.md).
 
 ## False-Positive Engineering: Retention Does Not Mean Alerting
+<img width="1536" height="1024" alt="False-Positive Engineering: Retention Does Not Mean Alerting" src="https://github.com/user-attachments/assets/410e8fdb-2887-4c66-9401-2831579b93af" />
 
 ```text
 MANAGEMENT  192.168.57.0/24
