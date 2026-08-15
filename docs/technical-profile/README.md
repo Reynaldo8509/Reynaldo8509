@@ -1,22 +1,39 @@
-# Technical profile
+# Technical Profile
 
-## IT, systems and networking
+## IT, Systems and Networking
 
 - Windows and Linux administration
 - Server operations, DNS and DHCP
 - Network administration, segmentation and firewall fundamentals
-- Troubleshooting and operational documentation
+- Active Directory / AD DS, Group Policy and access-management fundamentals
+- Troubleshooting, root-cause analysis and operational documentation
 
-## Blue Team and SOC development
+## Blue Team and SOC Development
 
-- Wazuh Manager and Windows agent telemetry
-- Windows EventChannel, Sysmon and Windows Filtering Platform (WFP)
+- Wazuh Manager and Windows Agent telemetry
+- Windows EventChannel, Windows Filtering Platform (WFP) and Sysmon
 - Detection engineering, alert triage and evidence handling
-- Incident-response fundamentals and SIEM-oriented log analysis
+- SIEM-oriented log analysis and incident-response fundamentals
+- False-positive reduction through network-plane scoping and correlation tuning
 
-## Automation and platform familiarity
+## Detection Engineering Practices
 
-- Python and Bash scripting for operational and security tasks
+- Custom Wazuh base and correlation rules
+- Threshold and `timeframe` tuning
+- Negative controls for MANAGEMENT and NAT traffic
+- Evidence-backed validation with real HomeLab events
+- Explicit separation of telemetry, alert creation, indexing and Dashboard visibility
+- Documentation of engine limitations and known detection boundaries
+
+## Automation and Tooling
+
+- Kali Linux, PowerShell, Bash/Linux CLI and `jq`
+- Python fundamentals and SQL basics
+- Wireshark and Nmap for controlled network analysis
 - Microsoft Entra ID, Azure Fundamentals and Microsoft Defender familiarity
 
-For evidence-backed detector status and the complete technical documentation, use the [SOC Operations Lab](../../projects/soc-operations-lab/README.md). Its project context deliberately distinguishes validated work from pending validation.
+## Evidence Standard
+
+The associated [SOC Operations Lab](../../projects/soc-operations-lab/README.md) distinguishes **VALIDATED**, **OBSERVED**, and **PENDING** capabilities. A documented event, service state or screenshot is not treated as a validated detection without the required event path, correlation result and negative controls.
+
+For the strongest demonstrated case, see the [WFP Port Scan case study](../../projects/soc-operations-lab/detection-rules/WFP_PortScan_Detection_Final.md) and the [evidence matrix](../../projects/soc-operations-lab/evidence/evidence-matrix.md).
