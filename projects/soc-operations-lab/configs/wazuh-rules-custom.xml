@@ -1,0 +1,24 @@
+<!--
+  Candidate rule for review only — NOT installed on the Wazuh manager.
+
+  Preconditions:
+  1. Sysmon Event ID 1 must be enabled and forwarded by the Wazuh agent.
+  2. Validate with xmllint and wazuh-analysisd -t against a candidate ruleset.
+  3. Test with a benign marker; back up local_rules.xml before installation.
+
+  The 2026-08-16 PowerShell exercise showed that current endpoint telemetry
+  lacks EID 1 / Script Block Logging, so activating this rule now would not
+  create detection coverage.
+-->
+<group name="windows,powershell,execution,">
+  <rule id="100530" level="10">
+    <if_group>sysmon_event1</if_group>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^1$</field>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\(powershell|pwsh)\.exe$</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)(-enc(odedcommand)?\s+|frombase64string|\biex\b|invoke-expression)</field>
+    <description>Suspicious encoded or dynamic PowerShell execution</description>
+    <group>attack,execution,powershell,</group>
+    <mitre><id>T1059.001</id></mitre>
+  </rule>
+</group>
