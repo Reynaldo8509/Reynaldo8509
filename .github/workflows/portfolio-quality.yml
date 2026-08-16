@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   quality:
@@ -18,10 +19,118 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Scan committed content for secrets
-        uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7
+      - name: Cache gitleaks binary
+        uses: actions/cache@v4
+        with:
+          path: /usr/local/bin/gitleaks
+          key: gitleaks-v8.24.3-${{ runner.os }}-v1
+
+      - name: Install gitleaks (retry and backoff)
+        id: install_gitleaks
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="8.24.3"
+          binary="/usr/local/bin/gitleaks"
+          url="https://github.com/zricethezav/gitleaks/releases/download/v${version}/gitleaks_${version}_linux_x64.tar.gz"
+          max_attempts=5
+
+          if [ -x "$binary" ]; then
+            "$binary" version
+            printf 'network_failure=false\nattempts=0\n' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          archive="$RUNNER_TEMP/gitleaks-${version}.tar.gz"
+          staging="$RUNNER_TEMP/gitleaks-${version}"
+          for attempt in $(seq 1 "$max_attempts"); do
+            echo "Download attempt ${attempt}/${max_attempts}"
+            rm -f "$archive"
+            if curl --fail --location --show-error --retry 3 --retry-all-errors \
+              --retry-delay 5 --connect-timeout 15 --max-time 120 \
+              "$url" -o "$archive"; then
+              rm -rf "$staging"
+              mkdir -p "$staging"
+              tar -xzf "$archive" -C "$staging" gitleaks
+              sudo install -m 0755 "$staging/gitleaks" "$binary"
+              "$binary" version
+              printf 'network_failure=false\nattempts=%s\n' "$attempt" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep "$((attempt * 5))"
+          done
+
+          curl -v --fail --location --connect-timeout 15 --max-time 60 \
+            "$url" -o /dev/null > gitleaks-curl-verbose.log 2>&1 || true
+          printf 'network_failure=true\nattempts=%s\n' "$max_attempts" >> "$GITHUB_OUTPUT"
+          echo "::error::gitleaks download failed after ${max_attempts} attempts"
+          exit 2
+
+      - name: Scan committed content for secrets (retry)
+        id: run_gitleaks
+        shell: bash
+        run: |
+          set -euo pipefail
+          report="gitleaks-report-$(date -u +%Y%m%dT%H%M%SZ).json"
+          max_attempts=3
+          exit_code=1
+          for attempt in $(seq 1 "$max_attempts"); do
+            echo "Scan attempt ${attempt}/${max_attempts}"
+            if /usr/local/bin/gitleaks detect --source=. --redact \
+              --report-format json --report-path "$report"; then
+              exit 0
+            else
+              exit_code=$?
+            fi
+            sleep "$((attempt * 10))"
+          done
+          echo "::error::gitleaks scan failed after ${max_attempts} attempts"
+          exit "$exit_code"
+
+      - name: Upload gitleaks diagnostics
+        if: ${{ failure() && (steps.install_gitleaks.outcome == 'failure' || steps.run_gitleaks.outcome == 'failure') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitleaks-diagnostics-${{ github.run_id }}
+          path: |
+            gitleaks-report-*.json
+            gitleaks-curl-verbose.log
+          if-no-files-found: warn
+
+      - name: Report persistent gitleaks network failure
+        if: ${{ failure() && steps.install_gitleaks.outputs.network_failure == 'true' && github.run_attempt > 1 }}
+        uses: actions/github-script@v7
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ATTEMPTS: ${{ steps.install_gitleaks.outputs.attempts }}
+        with:
+          script: |
+            const title = 'CI: gitleaks ECONNRESET – external network incident';
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+            if (existing.data.some((issue) => issue.title === title)) {
+              core.info('An open network-incident issue already exists.');
+              return;
+            }
+            const body = [
+              'The Gitleaks release download failed after retry/backoff on a workflow re-run.',
+              '',
+              `- Run ID: ${context.runId}`,
+              `- Run URL: ${runUrl}`,
+              `- Download attempts: ${process.env.ATTEMPTS}`,
+              `- Timestamp (UTC): ${new Date().toISOString()}`,
+              '- Diagnostics: download the `gitleaks-diagnostics` artifact from the linked run.'
+            ].join('\n');
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body
+            });
 
       - name: Validate Markdown links and image references
         shell: bash
