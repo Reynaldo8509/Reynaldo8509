@@ -7,7 +7,7 @@ Repositorio de un laboratorio SOC reproducible construido con VirtualBox, Kali L
 | Detección | Estado | Evidencia disponible |
 |---|---|---|
 | WFP Port Scan | **VALIDATED** | Eventos WFP reales, `archives.json`, `alerts.json` y pruebas negativas de NAT/MANAGEMENT. |
-| Sysmon Network / Event ID 3 | **AUDITED / PENDING VALIDATION** | EID 3 confirmado en MANAGEMENT y NAT; falta una señal ATTACK real que permita validar el detector. |
+| Sysmon Network / Event ID 3 | **VALIDATED** | EID 3 real desde ATTACK/LAB y replay de correlación; Management y NAT permanecen excluidos. |
 | Windows brute force | **PENDING CONTROLLED VALIDATION** | Telemetría 4625 y reglas históricas documentadas; la correlación depende de que Windows proporcione una IP fuente utilizable. |
 | FIM | **CONFIGURED / REVALIDATION PENDING** | Historial de ajuste de ruido de rutas de prueba; falta un paquete público de evidencias reproducibles. |
 | YARA | **PENDING VALIDATION** | No hay configuración ni evidencia sanitizada suficiente para hacer una afirmación operativa. |
@@ -63,7 +63,7 @@ Una prueba real produjo 34 eventos WFP sobre 15 puertos de destino crudos distin
 
 ## Evidencia visual curada
 
-El repositorio incluye ocho capturas técnicas revisadas de arquitectura, Wazuh, WFP y Sysmon. Las capturas conservan únicamente las direcciones privadas relevantes del HomeLab; no contienen secretos ni pantallas de autenticación. La evidencia WFP ilustra telemetría ATTACK/LAB y acompaña una detección **VALIDATED** de naturaleza heurística. La captura de Sysmon prueba la preparación del endpoint, pero Sysmon EID 3 continúa **AUDITED / PENDING VALIDATION**. Consulta el [inventario de evidencia](evidence/README.md) para el alcance y las limitaciones de cada imagen.
+El repositorio incluye capturas técnicas revisadas de arquitectura, Wazuh, WFP y Sysmon. Las imágenes publicadas pasaron cribado OCR de correos, términos de credenciales y rutas de perfil; sólo conservan direcciones privadas relevantes del HomeLab. La evidencia WFP ilustra telemetría ATTACK/LAB y acompaña una detección **VALIDATED** de naturaleza heurística. Sysmon EID 3 también fue validado con una conexión real desde ATTACK/LAB. Consulta el [inventario de imágenes](docs/images/README.md) y el [inventario de evidencia](evidence/README.md) para el alcance y las limitaciones.
 
 ## Problemas técnicos reales resueltos
 
@@ -89,6 +89,8 @@ El repositorio incluye ocho capturas técnicas revisadas de arquitectura, Wazuh,
 - [Cronología técnica](docs/timeline/project-history.md)
 - [Lecciones y limitaciones](project-notes/)
 - [Inventario de evidencia](evidence/README.md)
+- [Capturas técnicas publicadas](docs/images/README.md)
+- [Comandos reproducibles](docs/commands_used.md)
 
 ## Principios del proyecto
 

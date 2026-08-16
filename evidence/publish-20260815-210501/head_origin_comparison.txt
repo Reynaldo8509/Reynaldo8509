@@ -1,0 +1,1 @@
+HEAD_EQUALS_ORIGIN_MAIN=unverified_remote_unavailable

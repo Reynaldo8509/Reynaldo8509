@@ -1,0 +1,78 @@
+publish_run=20260815-210501
+started=2026-08-15T21:05:01-05:00
+2026-08-15T21:05:01-05:00	CMD: inventory clones/backups; git status/log/fsck; git ls-remote; bundle fallback
+2026-08-15T21:05:02-05:00	RESULT: fsck_rc=0 origin_rc=128 bundle=/home/reyam/GitBackup/soc-operations-lab-20260815-210501.bundle
+2026-08-15T21:05:41-05:00	CMD: rg email PII excluding .git; tracked secret-filename scan; inspect 4625 CSV; enumerate external Markdown links
+2026-08-15T21:05:41-05:00	RESULT: email_matches=23 secret_candidates=0
+2026-08-15T21:06:03-05:00	REPAIR: moved accidental .git metadata scan outside repository; regenerating sanitized PII scan
+2026-08-15T21:06:03-05:00	RESULT: corrected_worktree_email_matches=12 tracked_email_matches=0
+2026-08-15T21:06:17-05:00	REPAIR: moved derived PII-bearing outputs; scanned tracked publishable text only via git ls-files
+2026-08-15T21:06:17-05:00	RESULT: no_email_pii_in_tracked_publishable_text
+2026-08-15T21:06:37-05:00	CMD: enumerate tracked Markdown external links; validate local Markdown targets
+2026-08-15T21:06:37-05:00	RESULT: local_link_check=LOCAL_LINKS_CHECKED 67 external_link_lines=0
+2026-08-15T21:06:55-05:00	CMD: find source Ubuntu images; file/identify metadata; inspect destination names
+2026-08-15T21:07:34-05:00	CMD: backup original images with cp --preserve; OCR scan to classify only filenames/reasons
+2026-08-15T21:08:11-05:00	CMD: inspect OCR classification counts after completed scan
+2026-08-15T21:08:34-05:00	RESULT: originals_backup=/home/reyam/GitBackup/images-210501 candidates= excluded=
+2026-08-15T21:08:35-05:00	REPAIR: OCR classifier produced empty output; verify NUL list and rerun with explicit Path reader
+2026-08-15T21:09:31-05:00	CMD: unit-test OCR classifier with one image; stderr isolated outside publishable files
+2026-08-15T21:09:32-05:00	RESULT: OCR_unit_rc=0
+2026-08-15T21:09:35-05:00	RESULT: OCR_repair candidates= excluded=
+2026-08-15T21:09:50-05:00	REPAIR: replaced failing batch OCR classifier with tested Bash loop; no OCR text retained
+2026-08-15T21:10:47-05:00	REPAIR: batch OCR exceeded command window; reset generated classification for six bounded batches
+2026-08-15T21:10:51-05:00	RESULT: OCR_batch candidates= excluded=
+2026-08-15T21:11:06-05:00	CMD: OCR bounded batch start=0 count=10
+2026-08-15T21:11:15-05:00	RESULT: OCR_batch_start=0 rc=0
+2026-08-15T21:11:29-05:00	CMD: OCR bounded batch start=10 count=10
+2026-08-15T21:11:44-05:00	RESULT: OCR_batch_start=10 rc=0
+2026-08-15T21:11:56-05:00	CMD: OCR bounded batch start=20 count=10
+2026-08-15T21:12:06-05:00	RESULT: OCR_batch_start=20 rc=0
+2026-08-15T21:12:19-05:00	CMD: OCR bounded batch start=30 count=10
+2026-08-15T21:12:27-05:00	RESULT: OCR_batch_start=30 rc=0
+2026-08-15T21:12:39-05:00	CMD: OCR bounded batch start=40 count=10
+2026-08-15T21:12:55-05:00	RESULT: OCR_batch_start=40 rc=0
+2026-08-15T21:13:07-05:00	CMD: OCR bounded batch start=50 count=10
+2026-08-15T21:13:08-05:00	RESULT: OCR_batch_start=50 rc=0
+2026-08-15T21:13:14-05:00	CMD: verify completed OCR classification count and exclusions
+2026-08-15T21:13:49-05:00	REPAIR: replaced NUL OCR input with line-safe path list and per-batch outputs
+2026-08-15T21:14:09-05:00	CMD: OCR repaired text-list batch start=0 count=9
+2026-08-15T21:14:17-05:00	RESULT: OCR_repaired_batch_start=0 rc=0
+2026-08-15T21:14:17-05:00	CMD: OCR repaired text-list batch start=9 count=9
+2026-08-15T21:14:31-05:00	RESULT: OCR_repaired_batch_start=9 rc=0
+2026-08-15T21:14:31-05:00	CMD: OCR repaired text-list batch start=18 count=9
+2026-08-15T21:14:41-05:00	RESULT: OCR_repaired_batch_start=18 rc=0
+2026-08-15T21:14:41-05:00	CMD: OCR repaired text-list batch start=27 count=9
+2026-08-15T21:14:48-05:00	RESULT: OCR_repaired_batch_start=27 rc=0
+2026-08-15T21:14:48-05:00	CMD: OCR repaired text-list batch start=36 count=9
+2026-08-15T21:14:55-05:00	RESULT: OCR_repaired_batch_start=36 rc=0
+2026-08-15T21:14:55-05:00	CMD: OCR repaired text-list batch start=45 count=9
+2026-08-15T21:15:09-05:00	RESULT: OCR_repaired_batch_start=45 rc=0
+2026-08-15T21:15:18-05:00	CMD: combine repaired OCR batch TSV files and verify one record per source image
+2026-08-15T21:15:18-05:00	RESULT: OCR_records=53 candidates= excluded=
+2026-08-15T21:15:27-05:00	REPAIR: corrected awk quoting in OCR count logging; classification output unaffected
+2026-08-15T21:15:27-05:00	RESULT: OCR_records=53 candidates=45 excluded=8
+2026-08-15T21:16:02-05:00	CMD: copy OCR-approved images with normalized kebab-case names; strip metadata; validate and hash
+2026-08-15T21:16:04-05:00	RESULT: copied_publishable_images=45 metadata_strip=complete
+2026-08-15T21:16:31-05:00	CMD: generate sanitized docs/images index from copied assets and SHA-256 list
+2026-08-15T21:16:31-05:00	RESULT: docs_images_index_count=45
+2026-08-15T21:17:37-05:00	CMD: recheck tracked PII, local Markdown links, image metadata/profile validation, and image optimization tools
+2026-08-15T21:17:37-05:00	RESULT: new_doc_email_lines=0 local_link_missing=0
+2026-08-15T21:18:04-05:00	CMD: web-optimize copied images with ImageMagick; keep replacement only if smaller; originals already backed up
+2026-08-15T21:18:29-05:00	RESULT: before_bytes=18314492 after_bytes=16917854 optimized_files=43 unchanged_files=4
+2026-08-15T21:18:53-05:00	CMD: regenerate docs/images index after optimization and validate image count
+2026-08-15T21:18:53-05:00	RESULT: indexed_images=46
+2026-08-15T21:19:04-05:00	REPAIR: images_index mistakenly included README; restrict index to raster extensions
+2026-08-15T21:19:04-05:00	RESULT: corrected_indexed_images=45
+2026-08-15T21:19:38-05:00	CMD: git switch -c publish/finalize-evidence-210501 from current validated cardinality branch
+2026-08-15T21:19:38-05:00	RESULT: branch_create_rc=0 branch=publish/finalize-evidence-210501
+2026-08-15T21:19:47-05:00	REPAIR: initial branch used abbreviated timestamp; creating full timestamp branch without deleting prior branch
+2026-08-15T21:19:47-05:00	RESULT: corrected_branch_create_rc=0 branch=publish/finalize-evidence-20260815-210501
+2026-08-15T21:20:32-05:00	CMD: final fsck, staged-content PII scan, Markdown link check, image count and diff checks
+2026-08-15T21:20:32-05:00	RESULT: fsck_rc=0 diff_rc=0 links_missing=0 images=45
+2026-08-15T21:21:02-05:00	CMD: generate sanitized publish evidence; git add curated docs/images and evidence; scan staged files; commit
+2026-08-15T21:21:02-05:00	RESULT: staged PII/secret scan passed
+2026-08-15T21:21:23-05:00	REPAIR: normalize generated evidence whitespace and regenerate relative SHA-256 mapping
+2026-08-15T21:21:23-05:00	RESULT: staged_diff_check_after_repair_rc=0
+2026-08-15T21:21:34-05:00	CMD: rescan exact staged files for emails/known secrets; commit curated evidence
+2026-08-15T21:21:34-05:00	RESULT: staged PII/secret scan passed before commit
+2026-08-15T21:21:53-05:00	REPAIR: remove inherited executable bit from published raster images; originals are backed up
