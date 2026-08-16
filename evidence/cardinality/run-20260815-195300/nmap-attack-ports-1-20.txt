@@ -1,0 +1,29 @@
+# Nmap 7.99 scan initiated Sat Aug 15 20:01:43 2026 as: /usr/lib/nmap/nmap -Pn -sS --min-rate 100 --max-retries 0 -T4 -p 1-20 -oN /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/nmap-attack-ports-1-20.txt 192.168.56.20
+Warning: 192.168.56.20 giving up on port because retransmission cap hit (0).
+Nmap scan report for 192.168.56.20
+Host is up (0.00018s latency).
+
+PORT   STATE    SERVICE
+1/tcp  filtered tcpmux
+2/tcp  filtered compressnet
+3/tcp  filtered compressnet
+4/tcp  filtered unknown
+5/tcp  filtered rje
+6/tcp  filtered unknown
+7/tcp  filtered echo
+8/tcp  filtered unknown
+9/tcp  filtered discard
+10/tcp filtered unknown
+11/tcp filtered systat
+12/tcp filtered unknown
+13/tcp filtered daytime
+14/tcp filtered unknown
+15/tcp filtered netstat
+16/tcp filtered unknown
+17/tcp filtered qotd
+18/tcp filtered msp
+19/tcp filtered chargen
+20/tcp filtered ftp-data
+MAC Address: 08:00:27:AC:D4:88 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Sat Aug 15 20:01:48 2026 -- 1 IP address (1 host up) scanned in 4.91 seconds
