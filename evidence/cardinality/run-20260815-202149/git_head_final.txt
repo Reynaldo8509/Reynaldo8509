@@ -1,0 +1,1 @@
+6922918 cardinality: verified run-20260815-202149 — WFP and Sysmon tests PASS

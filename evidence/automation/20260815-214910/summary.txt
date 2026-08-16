@@ -1,0 +1,9 @@
+run_id: 20260815-214910
+fetch_rc: 128
+ls_remote_rc: 128
+local_head: c336974997adf3e7cbcaf9f9cbe4158bac5a874a
+origin_main: e8af044464d09e4c817597c43afd382401857cf1
+diverged: yes
+backup_branches: backup-local created; backup-remote created
+origin_changed: no
+push_performed: no

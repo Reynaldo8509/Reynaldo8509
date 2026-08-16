@@ -1,0 +1,6 @@
+{
+  "scanner": "gitleaks",
+  "available": false,
+  "finding_count": null,
+  "note": "gitleaks was not installed; no secret values were recorded."
+}

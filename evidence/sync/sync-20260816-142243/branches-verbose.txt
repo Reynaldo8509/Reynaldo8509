@@ -1,0 +1,9 @@
+  backup-local-20260815-214910              c336974 docs: record local publish gate status
+  backup-remote-20260815-214910             e8af044 [origin/main: behind 49] docs: add curated SOC lab evidence screenshots
+  backup/pre-evidence-audit-20260814        e8af044 docs: add curated SOC lab evidence screenshots
+  canonical-main                            65284c0 [origin/main: behind 6] Recover SOC HomeLab evidence into consolidated portfolio
+  cardinality-fix-20260815-195300           c8bace2 cardinality: verified run-20260815-205438 — WFP & Sysmon tests
+  legacy-local-20260815-215425              c336974 docs: record local publish gate status
+  main                                      e8af044 [origin/main: behind 49] docs: add curated SOC lab evidence screenshots
+* publish/finalize-evidence-20260815-210501 c336974 docs: record local publish gate status
+  publish/finalize-evidence-210501          c8bace2 cardinality: verified run-20260815-205438 — WFP & Sysmon tests

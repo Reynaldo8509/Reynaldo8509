@@ -1,0 +1,29 @@
+
+### Corrected Sysmon Event ID 3 agent inspection (sanitized fields)
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+#< CLIXML
+
+Name      Status StartType
+----      ------ ---------
+Sysmon64 Running Automatic
+                          
+
+
+
+TimeCreated          Id SourceIp     DestinationIp DestinationPort Protocol Initiated
+-----------          -- --------     ------------- --------------- -------- ---------
+8/15/2026 8:02:51 PM  3 192.168.57.1 192.168.57.20 22              tcp      false    
+8/15/2026 8:01:46 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+8/15/2026 8:01:10 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+8/15/2026 8:00:03 PM  3 10.0.2.15    20.184.175.12 443             tcp      true     
+8/15/2026 7:35:42 PM  3 10.0.2.15    20.42.73.24   443             tcp      true     
+8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+8/15/2026 7:31:10 PM  3 10.0.2.15    52.123.247.43 443             tcp      true     
+
+
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj><Obj S="progress" RefId="1"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj><Obj S="progress" RefId="2"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>

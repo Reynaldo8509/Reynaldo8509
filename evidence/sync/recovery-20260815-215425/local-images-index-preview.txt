@@ -1,0 +1,100 @@
+{
+  "image_count": 45,
+  "images": [
+    {
+      "path": "docs/images/1-captura-de-pantalla_20260728_214354.png",
+      "filename": "1-captura-de-pantalla_20260728_214354.png",
+      "size_bytes": 169816,
+      "sha256": "4f28bef5f8434602d63c65248b8dd4be16ed116030a73c78ec3db15e72e558ba",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/1-wazuh-08-05-2026_09_10.jpg",
+      "filename": "1-wazuh-08-05-2026_09_10.jpg",
+      "size_bytes": 194168,
+      "sha256": "e6b33a5bd95ab6875e345909de1957a1a64cf2064246e1ed73a16258a5d5fe66",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/10-wazuh-08-05-2026_10_21.jpg",
+      "filename": "10-wazuh-08-05-2026_10_21.jpg",
+      "size_bytes": 192603,
+      "sha256": "7c7395f1950a9e014ecc610c8c00a45b5b0c611c88b331ca055088e04821c645",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/11-captura-de-pantalla_20260728_222046.png",
+      "filename": "11-captura-de-pantalla_20260728_222046.png",
+      "size_bytes": 97536,
+      "sha256": "9be66179f3ea15c9d2905e2df3a7116e18313167a6bbef8b2a2c04a59789d089",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/11-wazuh-08-05-2026_10_21.jpg",
+      "filename": "11-wazuh-08-05-2026_10_21.jpg",
+      "size_bytes": 136411,
+      "sha256": "c71538ddd03a130986904e808d21473f010d7b1ae348a407e8ec593f06276c48",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/12-captura-de-pantalla_20260728_222251.png",
+      "filename": "12-captura-de-pantalla_20260728_222251.png",
+      "size_bytes": 94306,
+      "sha256": "5ecfd01e64f3622e989d8e7130469a45147777f9556c3c4414a5bd8fcc8e1906",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/13-captura-de-pantalla_20260728_222310.png",
+      "filename": "13-captura-de-pantalla_20260728_222310.png",
+      "size_bytes": 129539,
+      "sha256": "ede5369cdd22c1d2fa09690421ce556a9b316deb076487c2e8d959f1a8629925",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/14-captura-de-pantalla_20260728_222605.png",
+      "filename": "14-captura-de-pantalla_20260728_222605.png",
+      "size_bytes": 65896,
+      "sha256": "d96c51f888636c9f24ebf0f38da9cc5982fb50e71ce1263417d81d857871e6a7",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/15-captura-de-pantalla_20260728_225127.png",
+      "filename": "15-captura-de-pantalla_20260728_225127.png",
+      "size_bytes": 106614,
+      "sha256": "911bd3c886f9f5593abca089af564371070c3a968d4aa2b1476214e27979d2a1",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/16-captura-de-pantalla_20260728_225149.png",
+      "filename": "16-captura-de-pantalla_20260728_225149.png",
+      "size_bytes": 21578,
+      "sha256": "839a12b34374e7fcb940dbb098e83713ff5f10533251f6b5c6b8aa359f58b055",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/17-captura-de-pantalla_20260728_225346.png",
+      "filename": "17-captura-de-pantalla_20260728_225346.png",
+      "size_bytes": 77468,
+      "sha256": "21839c9b30035d56fb1c5cde2519b0969f2f49b6263d587a3601473f86557c65",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {
+      "path": "docs/images/2-captura-de-pantalla_20260728_214732.png",
+      "filename": "2-captura-de-pantalla_20260728_214732.png",
+      "size_bytes": 69473,
+      "sha256": "95c4dcbab3980b6ce0af3699b66b7705e86c8337df6267d9676b2e462db179ce",
+      "publishable": true,
+      "note": "OCR screened; metadata stripped; web-optimized when smaller."
+    },
+    {

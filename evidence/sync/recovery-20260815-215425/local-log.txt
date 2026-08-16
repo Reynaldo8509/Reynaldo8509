@@ -1,0 +1,30 @@
+c336974 (HEAD -> publish/finalize-evidence-20260815-210501, backup-local-20260815-214910) docs: record local publish gate status
+17fe734 docs: curate public lab evidence and publish checklist
+c8bace2 (publish/finalize-evidence-210501, cardinality-fix-20260815-195300) cardinality: verified run-20260815-205438 — WFP & Sysmon tests
+028c7e5 cardinality: verified run-20260815-202149 — WFP and Sysmon tests PASS
+481be25 fix(cardinality): enable direct Sysmon EID 3 base matching, validated 2026-08-15
+e8af044 (origin/main, origin/HEAD, main, backup/pre-evidence-audit-20260814, backup-remote-20260815-214910) docs: add curated SOC lab evidence screenshots
+454ffb3 docs: publish SOC home lab architecture and validated detections
+89502f8 Auto sync: 2026-04-30 20:06:20
+8ed7f54 Auto sync: 2026-04-30 20:04:45
+4703086 Test commit with custom message
+32bd6a5 .
+5d7c47e Prueba de sincronizacion
+b4b9efe sync
+da8b152 update
+0d15489 Add structure for brute force attack scenario
+62ada79 Add screenshots evidence for SOC lab
+f180440 test credential save
+63c02b7 Improve evidence structure for SOC lab (baseline, attacks, logs, screenshots)
+3591474 Add initial evidence structure and baseline documentation
+d14ba71 Add SOC Home Lab Context documentation
+87d70e3 Update README with full SOC lab structure
+aa7161a Add architecture diagram to README
+6409d9c Add architecture diagram to README
+c90c0d6 Add architecture diagram to README
+a59f7ef Revise README for SOC Home Lab documentationRewrite main README with full lab documentation
+8fb9735 Delete architecture/incident-response/README.md
+6536a02 Delete architecture/sysmon/README.md
+3bd06c1 Update README.md
+73e99af Update README.md
+2b02623 Update README.md

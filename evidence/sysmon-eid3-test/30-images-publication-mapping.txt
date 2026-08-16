@@ -1,0 +1,5 @@
+source_count 53 curated_count 8
+PUBLISH_AS_IS /mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/34-Captura de pantalla_20260729_123904.png => wfp-eventchannel-attack-lab.png
+PUBLISH_AS_IS /mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/1-Wazuh-08-05-2026_09_10.jpg => wazuh-windows-agent-enrollment.jpg
+PUBLISH_AS_IS /mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/10-Wazuh-08-05-2026_10_21.jpg => wazuh-endpoint-summary.jpg
+PUBLISH_AS_IS /mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Paso 2 - Instalar Sysmon.png => windows-sysmon-installation.png

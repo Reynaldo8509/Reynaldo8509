@@ -1,0 +1,6 @@
+github.com
+  ✓ Logged in to github.com account Reynaldo8509 (<LOCAL_ROOT>/.config/gh/hosts.yml)
+  - Active account: true
+  - Git operations protocol: https
+  - Token: <REDACTED>
+  - Token scopes: 'delete_repo', 'gist', 'read:org', 'repo', 'workflow'

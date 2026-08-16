@@ -1,0 +1,5 @@
+e8af044 docs: add curated SOC lab evidence screenshots
+454ffb3 docs: publish SOC home lab architecture and validated detections
+89502f8 Auto sync: 2026-04-30 20:06:20
+8ed7f54 Auto sync: 2026-04-30 20:04:45
+4703086 Test commit with custom message

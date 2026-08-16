@@ -1,0 +1,1 @@
+{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.57.1","destinationIp":"192.168.56.20","destinationPort":"30"}}}

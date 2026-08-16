@@ -1,0 +1,12 @@
+TOTAL_CHANGED 157
+DOCS_OR_EVIDENCE 153
+IMAGES_OR_BINARIES 47
+CRITICAL_CONFIG_OR_AUTOMATION 7
+CLASSIFICATION=manual_review_recommended
+CRITICAL	evidence/cardinality/run-20260815-195300/rules_1005xx.xml
+CRITICAL	evidence/cardinality/run-20260815-202149/rules_relevant.xml
+CRITICAL	evidence/cardinality/run-20260815-205438/rules_relevant.xml
+CRITICAL	tools/build_cardinality_candidate.py
+CRITICAL	tools/generate_logtest_events.py
+CRITICAL	tools/parse_cardinality.py
+CRITICAL	tools/validate_and_install_candidate.sh

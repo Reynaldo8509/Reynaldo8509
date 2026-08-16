@@ -1,0 +1,7 @@
+total 32K
+drwxr-xr-x  6 root  root  4.0K Aug 15 19:53 .
+drwx------ 87 reyam reyam  12K Aug 15 19:44 ..
+drwxr-xr-x  6 root  root  4.0K Aug 13 21:34 Reynaldo8509.git
+drwxr-xr-x  2 root  root  4.0K Aug 15 20:55 cardinality-backups
+drwxr-xr-x  6 root  root  4.0K Aug 13 21:34 professional-portfolio.git
+drwxr-xr-x  6 root  root  4.0K Aug 13 21:34 soc-operations-lab.git

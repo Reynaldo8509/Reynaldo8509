@@ -1,0 +1,6 @@
+fetch_rc=0
+diff_rc=0
+safety_rc=0
+links_rc=0
+bash_rc=0
+pycompile_rc=0

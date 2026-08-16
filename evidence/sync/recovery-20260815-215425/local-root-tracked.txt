@@ -1,0 +1,13 @@
+.gitignore
+CLAUDE.md
+CONTRIBUTING.md
+LICENSE
+PROJECT_CONTEXT.md
+README.md
+configs
+detection-rules
+docs
+evidence
+project-notes
+scripts
+tools

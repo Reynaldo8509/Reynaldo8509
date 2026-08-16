@@ -1,0 +1,27 @@
+ evidence/INDEX.md                                  |   4 +
+ evidence/cardinality/run-20260815-202149/README.md |  14 ++
+ .../cardinality/run-20260815-202149/actions.log    |  53 ++++++++
+ .../analysisd_candidate_test.txt                   |   0
+ .../run-20260815-202149/backup_ruleset.txt         |   8 ++
+ .../run-20260815-202149/candidate_sha256.txt       |   3 +
+ .../cardinality/cardinality_report.txt             |   8 ++
+ .../cardinality/sequence_unique_ports.csv          |  35 +++++
+ .../run-20260815-202149/cardinality/summary.json   |  43 ++++++
+ .../run-20260815-202149/cardinality_report.md      | 147 +++++++++++++++++++++
+ .../run-20260815-202149/git_diff_check.txt         |   0
+ .../run-20260815-202149/logtest_sysmon_15_hits.txt | 107 +++++++++++++++
+ .../logtest_sysmon_exclusion_hits.txt              |   2 +
+ .../logtest_sysmon_final_ids.txt                   |  15 +++
+ .../current_attack_events_sanitized.jsonl          |  20 +++
+ .../current_relevant_alerts_sanitized.jsonl        |   2 +
+ .../production_test/nmap_1-20.txt                  |  29 ++++
+ .../production_test/nmap_sysmon_tcp_connect_22.txt |   8 ++
+ .../production_test/sysmon_eid3_sanitized.jsonl    |   1 +
+ .../run-20260815-202149/restart_manager.txt        |   1 +
+ .../run-20260815-202149/rules_relevant.xml         |  53 ++++++++
+ .../cardinality/run-20260815-202149/summary.txt    |  10 ++
+ .../run-20260815-202149/tool_bash_syntax.txt       |   0
+ .../run-20260815-202149/tool_pycompile.txt         |   0
+ .../run-20260815-202149/xmllint_candidate.txt      |   0
+ tools/build_cardinality_candidate.py               |   5 +-
+ 26 files changed, 567 insertions(+), 1 deletion(-)

@@ -1,0 +1,2 @@
+active
+sha256sum: /var/ossec/etc/rules/local_rules.xml: Permission denied

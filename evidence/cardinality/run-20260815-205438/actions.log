@@ -23,3 +23,4 @@ started=2026-08-15T20:54:38-05:00
 2026-08-15T20:58:23-05:00	RESULT: pre_publish_origin_rc=128; push skipped unless zero
 2026-08-15T20:58:48-05:00	CMD: git add curated sanitized artifacts; secret scan; git diff --cached --check; git commit
 2026-08-15T20:58:48-05:00	RESULT: secret scan passed for staged evidence
+2026-08-15T20:58:48-05:00	RESULT: staged_diff_check_rc=0

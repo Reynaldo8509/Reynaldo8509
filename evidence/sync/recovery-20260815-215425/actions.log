@@ -1,0 +1,80 @@
+2026-08-15T21:54:25-05:00 start recovery inventory stamp=20260815-215425
+2026-08-15T21:54:25-05:00 git remote -v
+2026-08-15T21:54:25-05:00 git status --short --branch
+2026-08-15T21:54:25-05:00 git fsck --full
+2026-08-15T21:54:25-05:00 git branch -avv
+2026-08-15T21:54:25-05:00 git log --all --decorate -n 30
+2026-08-15T21:54:25-05:00 create local bundle and working-tree snapshot
+2026-08-15T21:54:26-05:00 snapshot bundle_rc=0 tree_rc=0 fsck_rc=0
+2026-08-15T21:54:26-05:00 gh repo list Reynaldo8509 --limit 100
+2026-08-15T21:54:27-05:00 gh repo view profile
+2026-08-15T21:54:27-05:00 gh api profile repository root contents
+2026-08-15T21:54:28-05:00 git ls-remote profile remote
+2026-08-15T21:54:28-05:00 git ls-remote obsolete origin
+2026-08-15T21:54:53-05:00 gh api recursive profile main tree
+2026-08-15T21:54:53-05:00 gh api profile commits
+2026-08-15T21:54:53-05:00 summarize profile tree and local top-level tracked paths
+2026-08-15T21:54:53-05:00 git log profile remote main via temporary bare query
+2026-08-15T21:55:24-05:00 repair: previous profile-tree API query was unquoted under zsh; retrying quoted and with explicit repo cwd
+2026-08-15T21:55:24-05:00 gh api quoted recursive profile tree
+2026-08-15T21:55:24-05:00 gh api profile commits
+2026-08-15T21:55:25-05:00 profile tree root summary
+2026-08-15T21:55:25-05:00 local root tracked paths
+2026-08-15T21:55:25-05:00 compare local history against profile history in isolated bare clone
+2026-08-15T21:56:00-05:00 repair: compare used invalid bare ref path; retry with refs/heads/main
+2026-08-15T21:56:24-05:00 merge_base_rc=128 matrix_rc=0
+2026-08-15T21:57:20-05:00 audit tracked local files for publication-sensitive patterns; output only path/line/category
+2026-08-15T21:57:21-05:00 audit_rc=0
+2026-08-15T21:57:21-05:00 classify local-only additions by publication policy
+2026-08-15T21:57:41-05:00 extract cloud/local diffs for detection-status documents
+2026-08-15T21:58:04-05:00 create isolated profile recovery worktree
+2026-08-15T21:58:05-05:00 create branch recovery/soc-operations-lab-20260815-215425 from origin/main
+2026-08-15T21:58:05-05:00 inspect candidate publication checker and image index
+2026-08-15T21:58:05-05:00 import vetted local-only artifacts under projects/soc-operations-lab
+2026-08-15T21:58:05-05:00 local archive import_rc=128
+2026-08-15T21:58:05-05:00 inspect staged candidate before documentation patch
+2026-08-15T21:58:20-05:00 repair: mapfile unavailable in zsh and validator path assumed project root; candidate remained clean; retry with zsh array split
+2026-08-15T21:58:20-05:00 inspect profile project publication checker
+2026-08-15T21:58:20-05:00 idempotent vetted local-only artifact import
+2026-08-15T21:58:20-05:00 archive_rc=0 extract_rc=0 imported_path_count=129
+2026-08-15T21:58:34-05:00 read validated Sysmon/Cardinality evidence summaries to scope documentation claims
+2026-08-15T21:59:57-05:00 stage only recovery candidate project artifacts and status-document corrections
+2026-08-15T21:59:57-05:00 git diff --cached --check
+2026-08-15T21:59:57-05:00 run repository publication safety checker
+2026-08-15T21:59:57-05:00 custom staged email and absolute-path audit: path/line/category only
+2026-08-15T21:59:58-05:00 validate staged local markdown links
+2026-08-15T21:59:58-05:00 validate imported images are recognizable and list sizes/checksums
+2026-08-15T21:59:58-05:00 record staged diff/status
+2026-08-15T22:00:27-05:00 validation gate failed: staged candidate exposed local absolute paths; preserve private originals and redact paths in isolated candidate
+2026-08-15T22:00:27-05:00 redacted absolute local paths in 13 files; private originals retained outside repository
+2026-08-15T22:00:27-05:00 rerun staged content audit after redaction
+2026-08-15T22:00:28-05:00 post_redaction_audit_rc=0
+2026-08-15T22:01:24-05:00 stage synchronization guide
+2026-08-15T22:01:24-05:00 fetch canonical origin before final validation
+2026-08-15T22:01:24-05:00 run final diff, publication safety, markdown links, script syntax, and Python compilation
+2026-08-15T22:01:25-05:00 final_rc fetch=0 diff=0 safety=0 links=0 bash=0 py=0
+2026-08-15T22:01:52-05:00 final staged PII audit after all documentation changes
+2026-08-15T22:01:53-05:00 commit validated recovery candidate with GitHub noreply identity
+2026-08-15T22:01:53-05:00 commit_rc=0 commit=3dcc0a187fe62470a63743d38ccaa26b855049b8
+2026-08-15T22:01:53-05:00 push recovery branch to canonical origin
+2026-08-15T22:02:13-05:00 create pull request from validated recovery branch
+2026-08-15T22:02:14-05:00 pr_create_rc=0 url=https://github.com/Reynaldo8509/Reynaldo8509/pull/1
+2026-08-15T22:02:14-05:00 retrieve PR metadata and checks
+2026-08-15T22:02:30-05:00 refresh PR mergeability
+2026-08-15T22:02:31-05:00 merge PR 1 without deleting recovery branch
+2026-08-15T22:02:33-05:00 pr_merge_rc=0
+2026-08-15T22:02:33-05:00 fetch canonical main and record final remote head
+2026-08-15T22:02:34-05:00 fetch_after_merge_rc=0 canonical_main=65284c07a6a8578443d9a2c0a62c5e39dc2f5c00
+2026-08-15T22:03:26-05:00 preserve legacy Git configuration and branch before canonical remote switch
+2026-08-15T22:03:26-05:00 created legacy-local-20260815-215425 at c336974997adf3e7cbcaf9f9cbe4158bac5a874a
+2026-08-15T22:03:26-05:00 update legacy checkout origin to canonical portfolio remote per authorized migration
+2026-08-15T22:03:26-05:00 fetch canonical origin into legacy checkout
+2026-08-15T22:03:29-05:00 canonical-main created tracking origin/main
+2026-08-15T22:03:29-05:00 canonical local checkout exists; verify and fast-forward only
+2026-08-15T22:03:31-05:00 verify canonical checkout exactly follows origin/main
+2026-08-15T22:03:31-05:00 legacy_fetch_rc=0 canonical_synced=yes
+2026-08-15T22:04:35-05:00 created recovery-report.md after patch-format repair
+2026-08-15T22:04:35-05:00 final git fsck legacy and canonical
+2026-08-15T22:04:36-05:00 verify canonical remote and PR state
+2026-08-15T22:04:37-05:00 list GitHub repositories final inventory
+2026-08-15T22:04:37-05:00 final_status PASS legacy_fsck=0 canonical_fsck=0

@@ -1,0 +1,5 @@
+?? projects/soc-operations-lab/docs/cardinality-investigation.md
+?? projects/soc-operations-lab/docs/commands_used.md
+?? projects/soc-operations-lab/docs/images/
+?? projects/soc-operations-lab/evidence/cardinality/
+?? projects/soc-operations-lab/tools/

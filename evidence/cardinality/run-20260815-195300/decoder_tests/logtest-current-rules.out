@@ -1,0 +1,11 @@
+
+### Generate non-sensitive logtest fixtures
+  15 /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/wfp15.jsonl
+  15 /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/sysmon15.jsonl
+  30 total
+
+### WFP logtest replay against active rules (no configuration change)
+bash: line 1: /var/ossec/bin/wazuh-logtest: Permission denied
+
+### Sysmon EID 3 logtest replay against active rules (no configuration change)
+bash: line 1: /var/ossec/bin/wazuh-logtest: Permission denied

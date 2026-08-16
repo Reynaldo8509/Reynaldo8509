@@ -1,0 +1,5 @@
+[tests/auto-audit-20260815-234701 0514a14] chore(audit): record audit PR publication status
+ 4 files changed, 6 insertions(+)
+ create mode 100644 projects/soc-operations-lab/evidence/tests/auto-audit-20260815-234701/cmd-gh-pr-create.log
+ create mode 100644 projects/soc-operations-lab/evidence/tests/auto-audit-20260815-234701/cmd-gh-pr-view.log
+ create mode 100644 projects/soc-operations-lab/evidence/tests/auto-audit-20260815-234701/pr-status.txt

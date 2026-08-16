@@ -1,0 +1,16 @@
+status: PASS
+former_remote: removed (Reynaldo8509/soc-operations-lab)
+canonical_repository: https://github.com/Reynaldo8509/Reynaldo8509
+canonical_project_path: projects/soc-operations-lab
+merged_pr: https://github.com/Reynaldo8509/Reynaldo8509/pull/1
+merged_commit: 65284c07a6a8578443d9a2c0a62c5e39dc2f5c00
+canonical_head_matches_origin_main: yes
+legacy_head_preserved: c336974997adf3e7cbcaf9f9cbe4158bac5a874a
+legacy_origin: https://github.com/Reynaldo8509/Reynaldo8509.git
+legacy_fsck_rc: 0
+canonical_fsck_rc: 0
+canonical_ls_remote_rc: 0
+pr_query_rc: 0
+repo_inventory_rc: 0
+local_backup: /home/reyam/GitBackup/recovery-20260815-215425
+evidence_run: /home/reyam/soc-operations-lab/evidence/sync/recovery-20260815-215425

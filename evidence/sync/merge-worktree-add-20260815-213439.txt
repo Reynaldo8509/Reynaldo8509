@@ -1,0 +1,4 @@
+Preparing worktree (detached HEAD e8af044)
+HEAD is now at e8af044 docs: add curated SOC lab evidence screenshots
+Switched to a new branch 'codex-dry-merge-check-20260815-213439'
+Deleted branch codex-dry-merge-check-20260815-213439 (was e8af044).

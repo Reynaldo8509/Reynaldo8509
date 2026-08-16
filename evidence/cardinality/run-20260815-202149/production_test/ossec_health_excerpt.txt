@@ -1,0 +1,101 @@
+2026/08/14 03:12:47 wazuh-analysisd: INFO: Connected to 'queue/alerts/ar' (active-response queue)
+2026/08/14 03:12:47 wazuh-analysisd: INFO: EPS limit disabled
+2026/08/13 22:12:49 wazuh-modulesd:osquery: WARNING: W0813 22:12:49.821722  1970 options.cpp:106] The CLI only flag --config_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+2026/08/13 22:12:49 wazuh-modulesd:osquery: WARNING: W0813 22:12:49.821748  1970 options.cpp:106] The CLI only flag --logger_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-vulnerabilities-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-packages-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-system-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-processes-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-ports-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-hotfixes-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-hardware-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-protocols-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-interfaces-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-networks-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-users-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-groups-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-browser-extensions-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:50 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-services-wazuh-manager', retrying until the connection is successful.
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/13 22:12:51 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/14 03:13:19 wazuh-analysisd: INFO: (1225): SIGNAL [(15)-(Terminated)] Received. Exit Cleaning...
+2026/08/16 00:00:07 wazuh-analysisd: INFO: Total rules enabled: '8497'
+2026/08/16 00:00:07 wazuh-analysisd: INFO: White listing IP: '127.0.0.1'
+2026/08/16 00:00:07 wazuh-analysisd: INFO: White listing IP: '127.0.0.53'
+2026/08/16 00:00:07 wazuh-analysisd: INFO: 2 IPs in the white list for active response.
+2026/08/16 00:00:07 wazuh-analysisd: INFO: White listing Hostname: 'localhost.localdomain'
+2026/08/16 00:00:07 wazuh-analysisd: INFO: 1 Hostname(s) in the white list for active response.
+2026/08/16 00:00:07 wazuh-analysisd: INFO: Started (pid: 1428).
+2026/08/16 00:00:07 wazuh-analysisd: INFO: (7200): Logtest started
+2026/08/15 19:00:08 wazuh-modulesd:osquery: WARNING: W0815 19:00:08.005721  1727 options.cpp:106] The CLI only flag --config_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+2026/08/15 19:00:08 wazuh-modulesd:osquery: WARNING: W0815 19:00:08.005748  1727 options.cpp:106] The CLI only flag --logger_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-packages-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-vulnerabilities-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-system-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-processes-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-ports-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-hotfixes-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-hardware-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-protocols-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-interfaces-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-networks-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-users-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:09 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-groups-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:09 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-browser-extensions-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:09 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-services-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:10 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:10 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:10 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/16 00:00:10 wazuh-analysisd: INFO: Connected to 'queue/alerts/ar' (active-response queue)
+2026/08/16 00:00:10 wazuh-analysisd: INFO: EPS limit disabled
+2026/08/15 19:00:10 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:35 indexer-connector: WARNING: Failed to sync agent '006': No available server
+2026/08/15 19:00:35 indexer-connector: WARNING: Failed to sync agent '006': No available server
+2026/08/15 19:01:07 indexer-connector: WARNING: Failed to sync agent '006': No available server
+2026/08/15 19:01:07 indexer-connector: WARNING: Failed to sync agent '006': No available server
+2026/08/16 01:01:27 wazuh-analysisd: INFO: (1225): SIGNAL [(15)-(Terminated)] Received. Exit Cleaning...
+2026/08/16 01:01:35 wazuh-analysisd: INFO: Total rules enabled: '8494'
+2026/08/16 01:01:35 wazuh-analysisd: INFO: White listing IP: '127.0.0.1'
+2026/08/16 01:01:35 wazuh-analysisd: INFO: White listing IP: '127.0.0.53'
+2026/08/16 01:01:35 wazuh-analysisd: INFO: 2 IPs in the white list for active response.
+2026/08/16 01:01:35 wazuh-analysisd: INFO: White listing Hostname: 'localhost.localdomain'
+2026/08/16 01:01:35 wazuh-analysisd: INFO: 1 Hostname(s) in the white list for active response.
+2026/08/16 01:01:35 wazuh-analysisd: INFO: Started (pid: 7405).
+2026/08/16 01:01:35 wazuh-analysisd: INFO: (7200): Logtest started
+2026/08/16 01:01:38 wazuh-analysisd: INFO: Connected to 'queue/alerts/ar' (active-response queue)
+2026/08/16 01:01:38 wazuh-analysisd: INFO: EPS limit disabled
+2026/08/15 20:01:40 wazuh-modulesd:osquery: WARNING: W0815 20:01:40.646356  7823 options.cpp:106] The CLI only flag --config_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+2026/08/15 20:01:40 wazuh-modulesd:osquery: WARNING: W0815 20:01:40.646381  7823 options.cpp:106] The CLI only flag --logger_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+2026/08/16 01:24:36 wazuh-analysisd: INFO: (1225): SIGNAL [(15)-(Terminated)] Received. Exit Cleaning...
+2026/08/16 01:24:40 wazuh-analysisd: INFO: Total rules enabled: '8494'
+2026/08/16 01:24:40 wazuh-analysisd: INFO: White listing IP: '127.0.0.1'
+2026/08/16 01:24:40 wazuh-analysisd: INFO: White listing IP: '127.0.0.53'
+2026/08/16 01:24:40 wazuh-analysisd: INFO: 2 IPs in the white list for active response.
+2026/08/16 01:24:40 wazuh-analysisd: INFO: White listing Hostname: 'localhost.localdomain'
+2026/08/16 01:24:40 wazuh-analysisd: INFO: 1 Hostname(s) in the white list for active response.
+2026/08/16 01:24:40 wazuh-analysisd: INFO: Started (pid: 11484).
+2026/08/16 01:24:41 wazuh-analysisd: INFO: (7200): Logtest started
+2026/08/16 01:24:44 wazuh-analysisd: INFO: Connected to 'queue/alerts/ar' (active-response queue)
+2026/08/16 01:24:44 wazuh-analysisd: INFO: EPS limit disabled
+2026/08/15 20:24:44 wazuh-modulesd:osquery: WARNING: W0815 20:24:44.885337 11783 options.cpp:106] The CLI only flag --config_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+2026/08/15 20:24:44 wazuh-modulesd:osquery: WARNING: W0815 20:24:44.885361 11783 options.cpp:106] The CLI only flag --logger_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup

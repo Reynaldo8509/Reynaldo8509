@@ -1,0 +1,171 @@
+
+### Create review branch and stage curated evidence only
+Switched to a new branch 'cardinality-fix-20260815-195300'
+
+### Staged files
+docs/cardinality-investigation.md
+evidence/INDEX.md
+evidence/cardinality/report.md
+evidence/cardinality/run-20260815-195300/archive-discovery.txt
+evidence/cardinality/run-20260815-195300/baseline-validation.txt
+evidence/cardinality/run-20260815-195300/cardinality/cardinality_report.txt
+evidence/cardinality/run-20260815-195300/cardinality/raw_selected_events.json
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv
+evidence/cardinality/run-20260815-195300/cardinality/summary.json
+evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate-matches.txt
+evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out
+evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt
+evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out
+evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate-matches.txt
+evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out
+evidence/cardinality/run-20260815-195300/decoder_tests/sysmon-duplicate-then-new.jsonl
+evidence/cardinality/run-20260815-195300/decoder_tests/sysmon-nonconsecutive-duplicate.jsonl
+evidence/cardinality/run-20260815-195300/decoder_tests/sysmon15.jsonl
+evidence/cardinality/run-20260815-195300/decoder_tests/wfp15.jsonl
+evidence/cardinality/run-20260815-195300/event-source-discovery.txt
+evidence/cardinality/run-20260815-195300/failure-20260815-200300/rollback-and-reason.txt
+evidence/cardinality/run-20260815-195300/final-validation-and-inventory.txt
+evidence/cardinality/run-20260815-195300/minimal-candidate-validation.txt
+evidence/cardinality/run-20260815-195300/nmap-attack-connect-port22.txt
+evidence/cardinality/run-20260815-195300/nmap-attack-ports-1-20.txt
+evidence/cardinality/run-20260815-195300/production-test-run.txt
+evidence/cardinality/run-20260815-195300/production_test/collection-sanitized.txt
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt
+evidence/cardinality/run-20260815-195300/production_test/sysmon-attack-connect-test.txt
+evidence/cardinality/run-20260815-195300/proposal_cardinality.md
+evidence/cardinality/run-20260815-195300/rules_1005xx.xml
+tools/build_cardinality_candidate.py
+tools/generate_logtest_events.py
+tools/parse_cardinality.py
+tools/validate_and_install_candidate.sh
+
+### Secret marker scan of staged content
+evidence/cardinality/run-20260815-195300/baseline-validation.txt:47: new blank line at EOF.
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:1: trailing whitespace.
++event_index,timestamp,source_ip,destination_ip,protocol,destination_port,is_unique_port_for_session,unique_port_count,event_id,rule_id
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:2: trailing whitespace.
++1,2026-08-12T22:54:47.865000,192.168.56.1,192.168.56.20,unknown,143,True,1,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:3: trailing whitespace.
++2,2026-08-12T22:54:47.866000,192.168.56.1,192.168.56.20,unknown,993,True,2,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:4: trailing whitespace.
++3,2026-08-12T22:54:47.879000,192.168.56.1,192.168.56.20,unknown,110,True,3,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:5: trailing whitespace.
++4,2026-08-12T22:54:47.895000,192.168.56.1,192.168.56.20,unknown,111,True,4,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:6: trailing whitespace.
++5,2026-08-12T22:54:47.911000,192.168.56.1,192.168.56.20,unknown,995,True,5,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:7: trailing whitespace.
++6,2026-08-12T22:54:47.927000,192.168.56.1,192.168.56.20,unknown,587,True,6,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:8: trailing whitespace.
++7,2026-08-12T22:54:47.943000,192.168.56.1,192.168.56.20,unknown,21,True,7,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:9: trailing whitespace.
++8,2026-08-12T22:54:47.958000,192.168.56.1,192.168.56.20,unknown,23,True,8,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:10: trailing whitespace.
++9,2026-08-12T22:54:47.990000,192.168.56.1,192.168.56.20,unknown,199,True,9,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:11: trailing whitespace.
++10,2026-08-12T22:54:48.038000,192.168.56.1,192.168.56.20,unknown,256,True,10,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:12: trailing whitespace.
++11,2026-08-12T22:54:48.054000,192.168.56.1,192.168.56.20,unknown,554,True,11,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:13: trailing whitespace.
++12,2026-08-12T22:54:48.087000,192.168.56.1,192.168.56.20,unknown,443,True,12,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:14: trailing whitespace.
++13,2026-08-12T22:54:48.104000,192.168.56.1,192.168.56.20,unknown,443,False,12,5157,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:15: trailing whitespace.
++14,2026-08-12T22:54:48.120000,192.168.56.1,192.168.56.20,unknown,25,True,13,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:16: trailing whitespace.
++15,2026-08-12T22:54:48.136000,192.168.56.1,192.168.56.20,unknown,113,True,14,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:17: trailing whitespace.
++16,2026-08-12T22:54:48.166000,192.168.56.1,192.168.56.20,unknown,53,True,15,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:18: trailing whitespace.
++17,2026-08-12T22:54:48.166000,192.168.56.1,192.168.56.20,unknown,80,True,16,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:19: trailing whitespace.
++18,2026-08-12T22:54:48.182000,192.168.56.1,192.168.56.20,unknown,889,True,17,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:20: trailing whitespace.
++19,2026-08-12T22:54:48.199000,192.168.56.1,192.168.56.20,unknown,419,True,18,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:21: trailing whitespace.
++20,2026-08-12T22:54:48.230000,192.168.56.1,192.168.56.20,unknown,485,True,19,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:22: trailing whitespace.
++21,2026-08-12T22:54:48.231000,192.168.56.1,192.168.56.20,unknown,622,True,20,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:23: trailing whitespace.
++22,2026-08-12T22:54:48.246000,192.168.56.1,192.168.56.20,unknown,268,True,21,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:24: trailing whitespace.
++23,2026-08-12T22:54:48.262000,192.168.56.1,192.168.56.20,unknown,286,True,22,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:25: trailing whitespace.
++24,2026-08-12T22:54:48.294000,192.168.56.1,192.168.56.20,unknown,321,True,23,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:26: trailing whitespace.
++25,2026-08-12T22:54:48.294000,192.168.56.1,192.168.56.20,unknown,679,True,24,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:27: trailing whitespace.
++26,2026-08-12T22:54:48.310000,192.168.56.1,192.168.56.20,unknown,226,True,25,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:28: trailing whitespace.
++27,2026-08-12T22:54:48.328000,192.168.56.1,192.168.56.20,unknown,173,True,26,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:29: trailing whitespace.
++28,2026-08-12T22:54:48.361000,192.168.56.1,192.168.56.20,unknown,184,True,27,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:30: trailing whitespace.
++29,2026-08-12T22:54:48.361000,192.168.56.1,192.168.56.20,unknown,811,True,28,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:31: trailing whitespace.
++30,2026-08-12T22:54:48.376000,192.168.56.1,192.168.56.20,unknown,773,True,29,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:32: trailing whitespace.
++31,2026-08-12T22:54:48.391000,192.168.56.1,192.168.56.20,unknown,266,True,30,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:33: trailing whitespace.
++32,2026-08-12T22:54:48.422000,192.168.56.1,192.168.56.20,unknown,436,True,31,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:34: trailing whitespace.
++33,2026-08-12T22:54:48.423000,192.168.56.1,192.168.56.20,unknown,74,True,32,5152,100509
+evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv:35: trailing whitespace.
++34,2026-08-12T22:54:48.438000,192.168.56.1,192.168.56.20,unknown,787,True,33,5152,100509
+evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:570: new blank line at EOF.
+evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:252: new blank line at EOF.
+evidence/cardinality/run-20260815-195300/minimal-candidate-validation.txt:11: trailing whitespace.
++ 
+evidence/cardinality/run-20260815-195300/production-test-run.txt:6: trailing whitespace.
++vboxnet0         UP             192.168.56.1/24 
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:3: trailing whitespace.
++** WARNING: connection is not using a post-quantum key exchange algorithm.
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:4: trailing whitespace.
++** This session may be vulnerable to "store now, decrypt later" attacks.
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:5: trailing whitespace.
++** The server may need to be upgraded. See https://openssh.com/pq.html
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:6: trailing whitespace.
++#< CLIXML
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:7: trailing whitespace.
++
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:8: trailing whitespace.
++Name      Status StartType
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:9: trailing whitespace.
++----      ------ ---------
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:10: trailing whitespace.
++Sysmon64 Running Automatic
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:11: trailing whitespace.
++                          
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:12: trailing whitespace.
++
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:13: trailing whitespace.
++
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:14: trailing whitespace.
++
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:15: trailing whitespace.
++TimeCreated          Id SourceIp     DestinationIp DestinationPort Protocol Initiated
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:16: trailing whitespace.
++-----------          -- --------     ------------- --------------- -------- ---------
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:17: trailing whitespace.
++8/15/2026 8:02:51 PM  3 192.168.57.1 192.168.57.20 22              tcp      false    
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:18: trailing whitespace.
++8/15/2026 8:01:46 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:19: trailing whitespace.
++8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:20: trailing whitespace.
++8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:21: trailing whitespace.
++8/15/2026 8:01:10 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:22: trailing whitespace.
++8/15/2026 8:00:03 PM  3 10.0.2.15    20.184.175.12 443             tcp      true     
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:23: trailing whitespace.
++8/15/2026 7:35:42 PM  3 10.0.2.15    20.42.73.24   443             tcp      true     
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:24: trailing whitespace.
++8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:25: trailing whitespace.
++8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:26: trailing whitespace.
++8/15/2026 7:31:10 PM  3 10.0.2.15    52.123.247.43 443             tcp      true     
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:27: trailing whitespace.
++
+evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt:28: trailing whitespace.
++

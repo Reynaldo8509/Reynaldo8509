@@ -1,0 +1,5 @@
+wazuh-manager
+active
+sudo: a password is required
+sudo_nopasswd_rc=1
+stat: cannot statx '/var/ossec/etc/rules/local_rules.xml': Permission denied

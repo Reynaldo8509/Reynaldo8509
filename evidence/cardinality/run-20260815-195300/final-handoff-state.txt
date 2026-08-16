@@ -1,0 +1,51 @@
+
+### Final local handoff state
+481be25 fix(cardinality): enable direct Sysmon EID 3 base matching, validated 2026-08-15
+?? artifacts/
+?? docs/images_index.json
+?? docs/portscan-cardinality-analysis.md
+?? evidence/cardinality/run-20260815-194747.log
+?? evidence/cardinality/run-20260815-195300/baseline-validation.txt
+?? evidence/cardinality/run-20260815-195300/candidate-analysisd-validation.txt
+?? evidence/cardinality/run-20260815-195300/candidate-build-validation.txt
+?? evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt
+?? evidence/cardinality/run-20260815-195300/candidate-v2-build-validation.txt
+?? evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt
+?? evidence/cardinality/run-20260815-195300/cardinality-execution.txt
+?? evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out
+?? evidence/cardinality/run-20260815-195300/decoder_tests/logtest-current-rules-matches.txt
+?? evidence/cardinality/run-20260815-195300/decoder_tests/logtest-current-rules-root.out
+?? evidence/cardinality/run-20260815-195300/decoder_tests/logtest-current-rules.out
+?? evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out
+?? evidence/cardinality/run-20260815-195300/final-handoff-state.txt
+?? evidence/cardinality/run-20260815-195300/git-commit-push.txt
+?? evidence/cardinality/run-20260815-195300/git-curation-corrected.txt
+?? evidence/cardinality/run-20260815-195300/git-curation-validation.txt
+?? evidence/cardinality/run-20260815-195300/local_rules.xml.candidate
+?? evidence/cardinality/run-20260815-195300/local_rules.xml.candidate-sysmon-minimal
+?? evidence/cardinality/run-20260815-195300/local_rules.xml.candidate-v2
+?? evidence/cardinality/run-20260815-195300/local_rules.xml.source
+?? evidence/cardinality/run-20260815-195300/minimal-candidate-validation.txt
+?? evidence/cardinality/run-20260815-195300/pre-commit-validation.txt
+?? evidence/cardinality/run-20260815-195300/production-test-run.txt
+?? evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection-corrected.txt
+?? evidence/cardinality/run-20260815-195300/production_test/sysmon-agent-inspection.txt
+?? evidence/cardinality/run-20260815-195300/publication-diagnosis.txt
+?? evidence/cardinality/run-20260815-195300/run-20260815-195300.log
+?? evidence/cardinality/run-20260815-195300/sysmon-rule-investigation.txt
+?? evidence/sysmon-eid3-test/
+?? scripts/replay_events.sh
+?? tools/__pycache__/
+active
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml
+73:  <rule id="100409" level="1">
+74-    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+75-    <field name="win.system.channel">^Microsoft-Windows-Sysmon/Operational$</field>
+76-    <field name="win.system.eventID">^3$</field>
+77-    <field name="win.eventdata.protocol">^tcp$</field>
+78-    <field name="win.eventdata.sourceIp">^192\.168\.56\.</field>
+79-    <field name="win.eventdata.destinationIp">^192\.168\.56\.20$</field>
+80-    <options>no_log</options>
+81-    <description>Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows</description>
+82-  </rule>
+83-

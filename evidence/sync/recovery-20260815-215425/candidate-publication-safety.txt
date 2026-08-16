@@ -1,0 +1,3 @@
+== Content patterns requiring review ==
+== Secret-like filenames requiring review ==
+PASS: no high-confidence secret patterns or secret-like filenames found.

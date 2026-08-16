@@ -1,0 +1,10 @@
+  <rule id="100004" level="12">
+    <if_group>sysmon_event3</if_group>
+    <field name="win.eventdata.destinationPort">22</field>
+    <field name="win.eventdata.sourceIp">^192\.168\.56\.1$</field>
+    <description>SSH connection from Kali attacker</description>
+    <group>lateral_movement,ssh,attack</group>
+    <mitre>
+      <id>T1021.004</id>
+    </mitre>
+  </rule>

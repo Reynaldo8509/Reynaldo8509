@@ -1,0 +1,168 @@
+
+===== evidence/cardinality/run-20260815-205438/cardinality_run_summary.md =====
+# Resumen — run 20260815-205438
+
+## Objetivo y resultado
+
+PASS operativo: WFP produjo 100501 en 10 puertos distintos y 100502 en 15;
+Sysmon EID 3 real ATTACK/LAB fue detectado por la regla específica 100004.
+
+## Pasos ejecutados
+
+1. Verificación de ATTACK, GitHub/origin y backup con SHA-256.
+2. Validación XML y `wazuh-analysisd -t`.
+3. Parseo reproducible de los 34 eventos y replay Sysmon con `wazuh-logtest`.
+4. Nmap autorizado, exportación tolerante a JSON incompleto y análisis de orden.
+
+## Publicación
+
+No se hizo push. `gh auth status` es válido, pero `git ls-remote origin
+refs/heads/main` devolvió `Repository not found`; no se alteró la URL ni se
+intentó crear repositorios. Para restaurarlo, verificar que
+`Reynaldo8509/soc-operations-lab` exista y que el token tenga acceso a ese repo,
+después ejecutar `git push origin HEAD:main` desde la rama aprobada.
+
+## Próximo paso
+
+Mantener las reglas actuales para detección operativa. Si se exige cardinalidad
+matemáticamente exacta, aprobar la alternativa B (agregador SQLite) y ejecutar
+su PoC y matriz de pruebas antes de instalarla.
+
+===== evidence/cardinality/run-20260815-205438/cardinality_report.md =====
+# Cardinalidad WFP y Sysmon — run 20260815-205438
+
+## Decisión
+
+**PASS operativo.** El ruleset activo validó con `xmllint` (wrapper temporal)
+y `wazuh-analysisd -t`; el escaneo autorizado ATTACK/LAB produjo `100501` en
+el décimo puerto distinto y `100502` en el decimoquinto. No se modificó el
+ruleset durante este run: la candidata/corrección Sysmon ya activa se preservó.
+
+## Reconstrucción histórica
+
+El fixture CSV de 34 eventos, filtrado por `192.168.56.1 → 192.168.56.20`,
+contiene 33 puertos únicos. El orden y los conteos se encuentran en
+[sequence_unique_ports.csv](cardinality/sequence_unique_ports.csv).
+
+| Evento | Puerto | Puertos únicos acumulados | Regla del CSV |
+|---:|---:|---:|---:|
+| 9 | 199 | 9 | 100509 |
+| 10 | 256 | 10 | 100509 |
+| 13 | 443 (repetido) | 12 | 100509 |
+
+Las filas históricas tienen `rule.id=100509`, no `100501`/`100502`; por ello
+no prueban que “evento 9 produjo 100501” ni que “evento 10 produjo 100502”.
+Prueban cardinalidad 9 y 10, respectivamente. El detalle reproducible está en
+[cardinality_report.txt](cardinality/cardinality_report.txt).
+
+## Prueba real ATTACK/LAB
+
+Se ejecutó `nmap -Pn -sS --min-rate 100 --max-retries 0 -T4 -p 1-20
+192.168.56.20` desde la interfaz local `192.168.56.1`. Los 20 WFP EID 5152
+fueron exportados sanitizados. El orden real fue:
+
+| Evento | Puerto | Cardinalidad | Regla final |
+|---:|---:|---:|---:|
+| 9 | 2 | 9 | 100500 |
+| 10 | 15 | 10 | 100501 |
+| 14 | 6 | 14 | 100500 |
+| 15 | 1 | 15 | 100502 |
+
+Evidencia: [current_event_order.txt](current_event_order.txt),
+[current_attack_events_sanitized.jsonl](current_attack_events_sanitized.jsonl)
+y [current_alerts_sanitized.jsonl](current_alerts_sanitized.jsonl).
+
+`100501` usa `frequency=10`, `timeframe=60`, `if_matched_sid=100500`,
+`same_field=sourceAddress` y `different_field=destPort`. `100502` comparte el
+antecedente y usa `frequency=14`; en esta versión el evento actual completa el
+cruce observado de 15. El campo `firedtimes=2` que aparece en las alertas es
+el número acumulado de emisiones de esa regla, no la cardinalidad del lote
+actual.
+
+## Sysmon y límites de la correlación
+
+El replay local de 15 puertos Sysmon alcanzó `100420` en el décimo puerto.
+La conexión TCP autorizada ATTACK→SSH generó Sysmon EID 3 real y fue detectada
+por `100004`, regla directa y más específica para puerto 22. La corrección de
+`100409` continúa filtrando proveedor Sysmon, canal operativo, EID 3, TCP,
+origen `192.168.56.0/24` y destino `192.168.56.20`.
+
+La configuración actual ofrece el comportamiento operativo validado, pero no
+expone un conjunto persistente de puertos. Dos reglas hermanas con el mismo
+`if_matched_sid` no constituyen una garantía formal de `COUNT(DISTINCT)`. La
+propuesta para exactitud se documenta en [proposal_cardinality.md](proposal_cardinality.md).
+
+## Validación y seguridad
+
+- Backup remoto/local SHA-256: [backup_ruleset.txt](backup_ruleset.txt).
+- XML: [xmllint_candidate.txt](xmllint_candidate.txt).
+- Análisis: [analysisd_candidate_test.txt](analysisd_candidate_test.txt).
+- Nmap: [nmap_1-20.txt](nmap_1-20.txt).
+- Acciones y comandos sanitizados: [actions.log](actions.log).
+
+Las IPs mostradas son exclusivamente del laboratorio autorizado; no se
+incluyeron contraseñas, llaves ni artefactos privados.
+
+===== evidence/cardinality/run-20260815-205438/summary.txt =====
+
+===== evidence/cardinality/report.md =====
+# Informe final — cardinalidad WFP y Sysmon EID 3
+
+Run: `20260815-195300`. No se publicaron claves, contraseñas ni transcripciones.
+
+## Hallazgos confirmados
+
+- Los 34 eventos reales del export CSV forman una sesión
+  `192.168.56.1 -> 192.168.56.20`; hay **33 puertos únicos**. El evento 13 repite
+  443.
+- El evento 9 histórico es puerto 199 y deja cardinalidad 9; el evento 10 es
+  puerto 256 y deja cardinalidad 10. Por ello la afirmación “evento 9 produjo
+  100501 y evento 10 produjo 100502” no está respaldada por los datos.
+- Las reglas activas tenían `100501 frequency=10` y `100502 frequency=14`, con
+  `timeframe=60`, `same_field=sourceAddress` y
+  `different_field=destPort`.
+- En el test real de 20 puertos, `100501` apareció en el décimo puerto distinto
+  observado (puerto 7) y `100502` en el decimoquinto (puerto 12). Ambos eventos
+  fueron WFP 5152 ATTACK/LAB. La diferencia entre `frequency=14` y el evento 15
+  es la semántica observable de esta versión; se documenta con evidencia, no se
+  infiere como un conteo SQL.
+
+## Cambio aplicado y validado
+
+Se sustituyó en `100409` el dependencia de `<if_group>sysmon_event3</if_group>`
+por predicados explícitos de proveedor Sysmon, canal, Event ID 3, TCP, origen
+ATTACK/LAB y destino endpoint. Así no se relaja ninguna exclusión NAT o
+Management. Se hicieron backups con SHA-256, wrapper XML válido y
+`wazuh-analysisd -t` RC 0 sin WARNING/ERROR/CRITICAL antes del reinicio.
+
+Un logtest de 15 eventos Sysmon distintos dispara `100420` en el décimo. Un
+Sysmon EID 3 real fue generado por `nmap -sT -p 22 192.168.56.20` desde
+ATTACK/LAB; llegó con `sourceIp=192.168.56.1`, destino `.56.20`, TCP e
+`Initiated=false`. No se generaron diez conexiones exitosas distintas porque no
+se modificó el endpoint fuera de las pruebas Nmap autorizadas.
+
+## Cardinalidad exacta
+
+`different_field` rechazó un duplicado consecutivo y uno no consecutivo en las
+pruebas de logtest incluidas. Aun así, la regla nativa no ofrece un conjunto
+persistido/auditable ni un contrato de `COUNT(DISTINCT)` independiente de la
+versión. La propuesta A usa `session_id` enriquecido y conserva Wazuh; la B usa
+SQLite y es la recomendada cuando “exacta” es un requisito de control, no solo de
+alerta. Véase `proposal_cardinality.md`.
+
+## Artefactos y reproducción
+
+- Parser: `tools/parse_cardinality.py`.
+- Fixtures: `tools/generate_logtest_events.py`.
+- Builder validado: `tools/build_cardinality_candidate.py`.
+- Secuencia: `run-20260815-195300/cardinality/sequence_unique_ports.csv`.
+- Evidencia de producción: `run-20260815-195300/production_test/`.
+
+```bash
+python3 tools/parse_cardinality.py INPUT.csv --output evidence/cardinality/run-X/cardinality --limit 34
+python3 tools/generate_logtest_events.py --kind sysmon --count 15 | ssh wazuh 'sudo /var/ossec/bin/wazuh-logtest'
+nmap -Pn -sS --min-rate 100 --max-retries 0 -T4 -p 1-20 192.168.56.20
+```
+
+La rama/publicación se decidirá tras la revisión final de los artefactos curados;
+no se incluye la salida raw que contenía atributos personales del endpoint.

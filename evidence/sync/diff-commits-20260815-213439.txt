@@ -1,0 +1,5 @@
+> c336974 docs: record local publish gate status
+> 17fe734 docs: curate public lab evidence and publish checklist
+> c8bace2 cardinality: verified run-20260815-205438 — WFP & Sysmon tests
+> 028c7e5 cardinality: verified run-20260815-202149 — WFP and Sysmon tests PASS
+> 481be25 fix(cardinality): enable direct Sysmon EID 3 base matching, validated 2026-08-15
