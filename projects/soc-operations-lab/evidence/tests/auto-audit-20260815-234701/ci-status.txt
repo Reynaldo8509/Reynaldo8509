@@ -1,0 +1,6 @@
+completed	success	Recover SOC HomeLab evidence into consolidated portfolio	Portfolio Quality	main	push	31923290542	27s	2026-08-16T03:02:35Z
+completed	success	Recover SOC HomeLab evidence into consolidated portfolio	Portfolio Quality	recovery/soc-operations-lab-20260815-215425	pull_request	31923279799	19s	2026-08-16T03:02:17Z
+completed	success	Enhance README with SOC HomeLab project details	Portfolio Quality	main	push	31915863232	20s	2026-08-15T23:53:04Z
+completed	success	Update README with detection status and coverage details	Portfolio Quality	main	push	31915783224	19s	2026-08-15T23:51:11Z
+completed	success	Update README with details on architecture and evidence	Portfolio Quality	main	push	31914802265	15s	2026-08-15T23:28:11Z
+completed	success	ci: add portfolio quality checks	Portfolio Quality	main	push	31892266577	26s	2026-08-15T15:16:47Z
