@@ -9,7 +9,9 @@ PR, tag, release ni se modificó ningún repositorio remoto.
 ## Inventario y backups
 
 - HEAD inicial auditado: `c8bace2`.
-- `git fsck --full`: correcto, sin salida de errores.
+- Commit curado de esta publicación: `17fe734`.
+- `git fsck --full`: RC 0. Enumera blobs colgantes tras enmiendas locales, pero
+  no errores de integridad; no se ejecutó recolección de objetos.
 - Comparación con `origin/main`: no verificable por indisponibilidad del remoto.
 - Bundle local de recuperación: `soc-operations-lab-20260815-210501.bundle`;
   SHA-256 `36d1e4267188d79d3a4a1c2924fac5bef6ab1b529e5569cb52afd8ba9fcc4799`.
@@ -65,4 +67,5 @@ tiene acceso; después ejecutar `git push origin HEAD:main` o publicar la rama
 de revisión `publish/finalize-evidence-20260815-210501`. Esta rama parte del
 estado validado de cardinalidad, no de `main`, porque esos commits aún no están
 en el remoto. No se debe cambiar la URL del remoto sin confirmar el destino
-correcto.
+correcto. La comparación contra la referencia local, potencialmente obsoleta,
+enumera 153 rutas entre `origin/main` y la rama actual.

@@ -76,3 +76,8 @@ started=2026-08-15T21:05:01-05:00
 2026-08-15T21:21:34-05:00	CMD: rescan exact staged files for emails/known secrets; commit curated evidence
 2026-08-15T21:21:34-05:00	RESULT: staged PII/secret scan passed before commit
 2026-08-15T21:21:53-05:00	REPAIR: remove inherited executable bit from published raster images; originals are backed up
+2026-08-15T21:21:53-05:00	RESULT: image_mode_repair_amend_rc=0
+2026-08-15T21:22:11-05:00	CMD: git fsck; git diff --name-only origin/main..HEAD; git ls-remote origin main; gh auth status; git status
+2026-08-15T21:22:13-05:00	RESULT: post_fsck_rc=0 origin_diff_rc=0 origin_gate_rc=128 gh_rc=0
+2026-08-15T21:22:44-05:00	CMD: stage final sanitized publish gate evidence and commit local publication status
+2026-08-15T21:22:44-05:00	RESULT: final staged PII scan passed
