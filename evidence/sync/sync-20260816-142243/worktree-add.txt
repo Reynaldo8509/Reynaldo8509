@@ -1,0 +1,2 @@
+Preparing worktree (detached HEAD fbdff40)
+HEAD is now at fbdff40 sync: preserve pending local SOC evidence 20260816-142243
