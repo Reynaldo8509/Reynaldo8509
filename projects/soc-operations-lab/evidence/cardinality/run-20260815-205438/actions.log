@@ -1,0 +1,25 @@
+run=20260815-205438
+started=2026-08-15T20:54:38-05:00
+2026-08-15T20:54:38-05:00	CMD: ip -br -4 addr; git ls-remote origin refs/heads/main; gh auth status
+2026-08-15T20:54:39-05:00	RESULT: origin_rc=128 gh_rc=0
+2026-08-15T20:55:08-05:00	CMD: ssh wazuh sudo cp --preserve=mode,ownership,timestamps local_rules.xml /var/ossec/etc/rules/local_rules.xml.bak-20260815-205438; sha256sum
+2026-08-15T20:55:08-05:00	RESULT: backup_rc=0
+2026-08-15T20:55:08-05:00	CMD: ssh wazuh sudo cat backup > GitBackup/cardinality-backups/local_rules.xml.bak-STAMP
+2026-08-15T20:55:09-05:00	CMD: extract relevant rules; validate wrapper with xmllint; wazuh-analysisd -t
+2026-08-15T20:55:10-05:00	RESULT: xml_rc=0 analysisd_rc=0
+2026-08-15T20:55:27-05:00	CMD: locate historical CSV; parse_cardinality.py --limit 34 --source 192.168.56.1 --destination 192.168.56.20
+2026-08-15T20:55:27-05:00	RESULT: parse_cardinality_rc=0
+2026-08-15T20:55:45-05:00	CMD: generate Sysmon 15-port fixture locally on ATTACK host; scp; sudo wazuh-logtest -v
+2026-08-15T20:55:47-05:00	RESULT: logtest_rc=0 threshold10=pass
+2026-08-15T20:56:15-05:00	CMD: nmap -Pn -sS --min-rate 100 --max-retries 0 -T4 -p 1-20 192.168.56.20; nmap -Pn -sT -p22 192.168.56.20
+2026-08-15T20:56:25-05:00	RESULT: nmap_wfp_rc=0 nmap_sysmon_rc=0 cutoff=2026-08-16T01:56:15
+2026-08-15T20:56:40-05:00	CMD: ssh wazuh sudo tail alerts/archives | jq -R fromjson? sanitized current ATTACK events
+2026-08-15T20:56:40-05:00	RESULT: collected alerts=2 attack_events=22
+2026-08-15T20:56:53-05:00	CMD: python analyze sanitized current ATTACK event order and alert positions
+2026-08-15T20:56:53-05:00	RESULT: event-order analysis complete
+2026-08-15T20:58:01-05:00	CMD: export active ruleset; build idempotent candidate; xmllint wrapper; py_compile; bash -n
+2026-08-15T20:58:02-05:00	RESULT: candidate_cmp_rc=0 xml_rc=0 py_rc=0 bash_rc=0
+2026-08-15T20:58:22-05:00	CMD: git ls-remote origin refs/heads/main (pre-publish gate)
+2026-08-15T20:58:23-05:00	RESULT: pre_publish_origin_rc=128; push skipped unless zero
+2026-08-15T20:58:48-05:00	CMD: git add curated sanitized artifacts; secret scan; git diff --cached --check; git commit
+2026-08-15T20:58:48-05:00	RESULT: secret scan passed for staged evidence

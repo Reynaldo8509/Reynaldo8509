@@ -1,0 +1,63 @@
+run=20260815-202149
+started=2026-08-15T20:21:49-05:00
+2026-08-15T20:21:49-05:00	created run directory
+2026-08-15T20:21:49-05:00	captured git baseline
+2026-08-15T20:21:58-05:00	ssh wazuh: verify manager, ruleset, sudo capability
+2026-08-15T20:22:06-05:00	local action wrapper hit zsh reserved variable status; retrying with rc
+2026-08-15T20:22:06-05:00	ssh wazuh: verify manager, ruleset, sudo capability
+2026-08-15T20:22:06-05:00	manager sanity command rc=1
+2026-08-15T20:22:26-05:00	manager backup /var/ossec/etc/rules/local_rules.xml.bak-202149 and SHA256
+2026-08-15T20:22:26-05:00	manager backup command rc=0
+2026-08-15T20:22:26-05:00	copied backup to GitBackup: <LOCAL_HOME>/GitBackup/cardinality-backups/local_rules.xml.bak-202149
+2026-08-15T20:22:42-05:00	correcting backup timestamp name from abbreviated suffix; preserving both backups
+2026-08-15T20:22:42-05:00	corrected manager backup command rc=0
+2026-08-15T20:22:42-05:00	extract rules 100500,100501,100502,100409,100420,100421
+2026-08-15T20:22:42-05:00	extract relevant rules rc=0
+2026-08-15T20:22:59-05:00	locate historical events CSV and run cardinality parser
+2026-08-15T20:22:59-05:00	parse_cardinality.py rc=0 input=<LOCAL_HOME>/.local/share/Trash/files/events-2026-08-13T17_25_14.105Z.csv
+2026-08-15T20:23:11-05:00	generate Sysmon EID3 15-port fixture and run wazuh-logtest against active rules
+2026-08-15T20:23:12-05:00	wazuh-logtest Sysmon fixture rc=126
+2026-08-15T20:23:16-05:00	inspect logtest output after empty summary
+2026-08-15T20:23:29-05:00	retry wazuh-logtest with manager sudo and local fixture staging
+2026-08-15T20:23:35-05:00	wazuh-logtest Sysmon fixture via sudo rc=1
+2026-08-15T20:23:39-05:00	inspect privileged logtest fixture output
+2026-08-15T20:23:53-05:00	correct sudo stdin routing for logtest; the prior shell redirection fed fixture to sudo
+2026-08-15T20:23:54-05:00	corrected wazuh-logtest Sysmon fixture via sudo rc=0
+2026-08-15T20:24:13-05:00	export active ruleset, build idempotent candidate, compare SHA256
+2026-08-15T20:24:13-05:00	candidate XML wrapper validation rc=0
+2026-08-15T20:24:26-05:00	validate active-equivalent candidate with wazuh-analysisd -t
+2026-08-15T20:24:26-05:00	analysisd candidate validation rc=0
+2026-08-15T20:24:36-05:00	controlled restart of wazuh-manager after validated active-equivalent candidate
+2026-08-15T20:24:47-05:00	manager restart/status rc=0
+2026-08-15T20:25:02-05:00	confirm ATTACK source interface and run authorized nmap TCP SYN test 1-20 to 192.168.56.20
+2026-08-15T20:25:07-05:00	nmap ATTACK/LAB 1-20 rc=0
+2026-08-15T20:25:37-05:00	wait for agent forwarding and collect sanitized alerts/archive evidence
+2026-08-15T20:25:53-05:00	sanitized production evidence collected
+2026-08-15T20:26:18-05:00	recollect live JSON using line-tolerant parser; filter current production test window
+2026-08-15T20:26:18-05:00	line-tolerant production evidence recollected
+2026-08-15T20:26:25-05:00	inspect parser outputs for report composition
+2026-08-15T20:26:35-05:00	search local non-private project records for historical 100501/100502 firedtimes evidence
+2026-08-15T20:27:12-05:00	run limited ATTACK/LAB TCP connect test to validate real Sysmon EID 3 schema
+2026-08-15T20:27:17-05:00	nmap Sysmon schema test port 22 rc=0
+2026-08-15T20:27:27-05:00	collected sanitized real Sysmon EID3 evidence
+2026-08-15T20:27:47-05:00	inspect effective rule 100004 and local Sysmon rule hierarchy after real EID3 matched generic rule
+2026-08-15T20:27:58-05:00	characterize rule 100004 precedence in Sysmon synthetic replay
+2026-08-15T20:28:04-05:00	inspect local order around rule 100004 and Sysmon base
+2026-08-15T20:28:50-05:00	generate Management and NAT Sysmon exclusion fixtures and run privileged logtest
+2026-08-15T20:28:52-05:00	Sysmon exclusion replay completed
+2026-08-15T20:30:11-05:00	documented report, README, summary and evidence index
+2026-08-15T20:30:11-05:00	run local script syntax checks and git diff check
+2026-08-15T20:30:11-05:00	local syntax and diff checks rc=0
+2026-08-15T20:30:30-05:00	prepare curated non-sensitive evidence for commit
+2026-08-15T20:30:30-05:00	secret scan passed for staged files
+2026-08-15T20:30:43-05:00	review staged diff and create validated continuity-run commit
+2026-08-15T20:30:43-05:00	staged diff check rc=0
+2026-08-15T20:30:43-05:00	git commit validated run rc=0
+2026-08-15T20:30:56-05:00	verify origin/main availability before authorized push
+2026-08-15T20:30:57-05:00	git ls-remote origin main rc=128
+2026-08-15T20:31:26-05:00	recorded remote publication blocker and amend local evidence commit
+2026-08-15T20:31:26-05:00	amended local commit with publication status rc=0
+2026-08-15T20:31:49-05:00	final sanity: manager service and local repository state
+2026-08-15T20:32:09-05:00	retry final manager SHA256 with required sudo; amend action log and sanity evidence
+2026-08-15T20:32:09-05:00	final manager status and SHA256 via sudo rc=0
+2026-08-15T20:32:09-05:00	amend final run evidence into local commit

@@ -1,0 +1,5 @@
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml.bak-20260815-205438
+wazuh:wazuh 660 /var/ossec/etc/rules/local_rules.xml
+wazuh:wazuh 660 /var/ossec/etc/rules/local_rules.xml.bak-20260815-205438
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  <LOCAL_HOME>/GitBackup/cardinality-backups/local_rules.xml.bak-20260815-205438

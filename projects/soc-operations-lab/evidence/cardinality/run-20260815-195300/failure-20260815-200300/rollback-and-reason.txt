@@ -1,0 +1,9 @@
+
+### Functional-failure rollback of v2 candidate
+sha256sum: /var/ossec/etc/rules/local_rules.xml: Permission denied
+sha256sum: /var/ossec/etc/rules/local_rules.xml.bak-20260815-195300: Permission denied
+
+### Verify automatic rollback state
+e9ee3e1de767a0052a45c07040830f5fc265f1311d4f79b11fb118cdc9f4d33b  /var/ossec/etc/rules/local_rules.xml
+e9ee3e1de767a0052a45c07040830f5fc265f1311d4f79b11fb118cdc9f4d33b  /var/ossec/etc/rules/local_rules.xml.bak-20260815-195300
+rollback_analysisd_rc=0
