@@ -1,0 +1,7 @@
+scenario=controlled_port_scan
+source=192.168.56.1
+target=192.168.56.20
+started_utc=20260816T234238Z
+finished_utc=20260816T234243Z
+wazuh_validation_utc=20260816T234617Z
+wazuh_alerts_confirmed=yes

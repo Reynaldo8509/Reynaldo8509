@@ -1,0 +1,23 @@
+# Nmap 7.99 scan initiated Sun Aug 16 18:42:38 2026 as: /usr/lib/nmap/nmap -Pn -sS -e vboxnet0 -T3 --min-rate 100 --max-retries 1 -p 20,21,23,25,53,80,110,143,161,389,443,636,993,995,5985 -oN /home/reyam/soc-operations-lab/projects/soc-operations-lab/evidence/scenario-2-port-scan-20260816T234238Z/nmap-15-ports.txt -oX /home/reyam/soc-operations-lab/projects/soc-operations-lab/evidence/scenario-2-port-scan-20260816T234238Z/nmap-15-ports.xml 192.168.56.20
+Nmap scan report for 192.168.56.20
+Host is up (0.00045s latency).
+
+PORT     STATE    SERVICE
+20/tcp   filtered ftp-data
+21/tcp   filtered ftp
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+53/tcp   filtered domain
+80/tcp   filtered http
+110/tcp  filtered pop3
+143/tcp  filtered imap
+161/tcp  filtered snmp
+389/tcp  filtered ldap
+443/tcp  filtered https
+636/tcp  filtered ldapssl
+993/tcp  filtered imaps
+995/tcp  filtered pop3s
+5985/tcp open     wsman
+MAC Address: 08:00:27:AC:D4:88 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Sun Aug 16 18:42:43 2026 -- 1 IP address (1 host up) scanned in 5.01 seconds
