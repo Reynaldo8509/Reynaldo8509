@@ -1,0 +1,44 @@
+
+### Baseline analysisd result with explicit status
+analysisd_rc=0
+
+### Retrieve source and build local candidate
+e9ee3e1de767a0052a45c07040830f5fc265f1311d4f79b11fb118cdc9f4d33b  /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.source
+fe60da209c82fb7183a69321bb9435342939e5a312727ad3382eee9198209d9e  /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate
+--- /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.source	2026-08-15 19:57:51.767198177 -0500
++++ /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate	2026-08-15 19:57:51.846670152 -0500
+@@ -40,8 +40,19 @@
+   </rule>
+ 
+ 
++  <rule id="100506" level="1">
++    <if_sid>60001</if_sid>
++    <field name="win.system.channel">^Security$</field>
++    <field name="win.system.eventID">^5152$|^5157$</field>
++    <field name="win.eventdata.direction">^%%14592$</field>
++    <field name="win.eventdata.protocol">^6$</field>
++    <field name="win.eventdata.sourceAddress">^192\.168\.56\.</field>
++    <field name="win.eventdata.destAddress">^192\.168\.56\.20$</field>
++    <options>no_log</options>
++    <description>WFP port-scan high-threshold tracking base: Attack/Lab TCP block to Windows</description>
++  </rule>
+   <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+-    <if_matched_sid>100500</if_matched_sid>
++    <if_matched_sid>100506</if_matched_sid>
+     <same_field>win.eventdata.sourceAddress</same_field>
+     <different_field>win.eventdata.destPort</different_field>
+     <description>High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds</description>
+@@ -71,7 +82,9 @@
+   </rule>
+ 
+   <rule id="100409" level="1">
+-    <if_group>sysmon_event3</if_group>
++    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
++    <field name="win.system.channel">^Microsoft-Windows-Sysmon/Operational$</field>
++    <field name="win.system.eventID">^3$</field>
+     <field name="win.eventdata.protocol">^tcp$</field>
+     <field name="win.eventdata.sourceIp">^192\.168\.56\.</field>
+     <field name="win.eventdata.destinationIp">^192\.168\.56\.20$</field>
+
+### Candidate XML wrapper validation on manager
+candidate_xmllint_rc=0

@@ -1,0 +1,98 @@
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+1-Captura de pantalla_20260728_214354.pngtPNGt1027x918t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+10-Captura de pantalla_20260728_221909.pngtPNGt968x923t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+11-Captura de pantalla_20260728_222046.pngtPNGt968x911t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+12-Captura de pantalla_20260728_222251.pngtPNGt974x896t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+13-Captura de pantalla_20260728_222310.pngtPNGt977x925t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+14-Captura de pantalla_20260728_222605.pngtPNGt977x965t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+15-Captura de pantalla_20260728_225127.pngtPNGt1049x958t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+16-Captura de pantalla_20260728_225149.pngtPNGt730x373t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+17-Captura de pantalla_20260728_225346.pngtPNGt1044x945t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+18-Captura de pantalla_20260729_111029.pngtPNGt627x488t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+19-Captura de pantalla_20260729_111103.pngtPNGt793x960t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+2-Captura de pantalla_20260728_214732.pngtPNGt964x898t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+20-Captura de pantalla_20260729_111238.pngtPNGt791x952t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+21-Captura de pantalla_20260729_123627.pngtPNGt803x975t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+22-Captura de pantalla_20260729_123627.pngtPNGt774x955t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+23-Captura de pantalla_20260729_123627.pngtPNGt796x944t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+24-Captura de pantalla_20260729_123904.pngtPNGt798x957t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+26-Captura de pantalla_20260729_123904.pngtPNGt1646x969t
+28-Captura de pantalla_20260729_123904.pngtJPEGt1920x1376ticc
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+29-Captura de pantalla_20260729_123904.pngtPNGt1728x934t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+3-Captura de pantalla_20260728_215737.pngtPNGt985x897t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+30-Captura de pantalla_20260729_123904.pngtPNGt933x749t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+31-Captura de pantalla_20260729_123904.pngtPNGt815x168t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+32-Captura de pantalla_20260729_123904.pngtPNGt991x601t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+33-Captura de pantalla_20260729_123904.pngtPNGt777x938t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+34-Captura de pantalla_20260729_123904.pngtPNGt820x997t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+35-Captura de pantalla_20260729_123904.pngtPNGt781x747t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+36-Captura de pantalla_20260729_123904.pngtPNGt760x901t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+4-Captura de pantalla_20260728_215851.pngtPNGt984x913t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+5-Captura de pantalla_20260728_220012.pngtPNGt967x911t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+6-Captura de pantalla_20260728_220124.pngtPNGt959x922t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+7-Captura de pantalla_20260728_220148.pngtPNGt962x910t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+8-Captura de pantalla_20260728_220314.pngtPNGt969x906t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+9-Captura de pantalla_20260728_221011.pngtPNGt952x2538t
+1-Wazuh-08-05-2026_09_10.jpgtJPEGt1920x1997ticc
+10-Wazuh-08-05-2026_10_21.jpgtJPEGt1920x1302ticc
+11-Wazuh-08-05-2026_10_21.jpgtJPEGt1920x967texif
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+2-Captura de pantalla_20260805_091128.pngtPNGt1022x888t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+2-Verificar que Sysmon quedó instalado.pngtPNGt1014x949t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+3-Captura de pantalla_20260805_091128.pngtPNGt1021x913t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+4-Captura de pantalla_20260805_091128.pngtPNGt1013x911t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+5-Captura de pantalla_20260805_091405.pngtPNGt1023x916t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+6-Captura de pantalla_20260805_091405.pngtPNGt1917x736t
+7-Captura de pantalla_20260805_091405.jpgtJPEGt1920x1395texif
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+7-Captura de pantalla_20260805_091405.pngtPNGt1026x922t
+8-Wazuh-08-05-2026_10_21.jpgtJPEGt1920x1222ticc
+9-Wazuh-08-05-2026_10_21.jpgtJPEGt1920x4403texif
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+Crear el directorio de trabajo Sysmon.pngtPNGt1022x928t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+Descargar Sysmon (Microsoft Sysinternals).pngtPNGt1028x913t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+Paso 2 - Instalar Sysmon.pngtPNGt1024x492t
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+Verificar que Sysmon quedó instalado.pngtPNGt343x94t
+Wazuh-08-05-2026_09_35.jpgtJPEGt1920x1221texif
+identify: unknown image property "%[profiles]" @ warning/property.c/InterpretImageProperties/4281.
+Wazuh-08-05-2026_09_36.jpgtJPEGt952x1410t

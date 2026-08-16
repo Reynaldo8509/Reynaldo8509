@@ -1,0 +1,6 @@
+lo               UNKNOWN        127.0.0.1/8 
+eth0             UP             192.168.18.12/24 
+tailscale0       UNKNOWN        100.88.127.85/32 
+docker0          DOWN           172.17.0.1/16 
+vboxnet0         UP             192.168.56.1/24 
+vboxnet1         UP             192.168.57.1/24 

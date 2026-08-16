@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "audit_id": "auto-audit-20260815-234701",
+  "timestamp_local": "20260815-234701",
+  "scope": {
+    "legacy_checkout": "soc-operations-lab",
+    "canonical_profile_repo": "Reynaldo8509/Reynaldo8509",
+    "canonical_project_subtree": "projects/soc-operations-lab"
+  },
+  "git": {
+    "legacy_head": "c336974997adf3e7cbcaf9f9cbe4158bac5a874a",
+    "canonical_head": "65284c07a6a8578443d9a2c0a62c5e39dc2f5c00",
+    "canonical_origin_main": "65284c07a6a8578443d9a2c0a62c5e39dc2f5c00",
+    "canonical_synced": true
+  },
+  "checks": {
+    "context_reference": {
+      "status": "missing"
+    },
+    "gitleaks": {
+      "status": "unavailable"
+    },
+    "sensitive_pattern_audit": {
+      "finding_count": 0,
+      "values_redacted": true
+    },
+    "markdown_and_images": {
+      "status": "pass",
+      "details": [
+        "checked_local_links=124",
+        "image_links=20",
+        "image_manifest_entries=45",
+        "image_files_present=47",
+        "PASS: no broken local Markdown/HTML links or indexed images"
+      ]
+    },
+    "ci": {
+      "recent_runs": 6,
+      "latest_status": "completed\tsuccess\tRecover SOC HomeLab evidence into consolidated portfolio\tPortfolio Quality\tmain\tpush\t31923290542\t27s\t2026-08-16T03:02:35Z"
+    },
+    "large_files": [
+      {
+        "bytes": 4628026,
+        "path": "docs/images/9-captura-de-pantalla_20260728_221011.png"
+      },
+      {
+        "bytes": 1630898,
+        "path": "evidence/screenshots/wazuh-events-explorer.jpg"
+      },
+      {
+        "bytes": 1544209,
+        "path": "docs/images/9-wazuh-08-05-2026_10_21.jpg"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "CONTEXT_REFERENCE_MISSING",
+      "severity": "medium",
+      "status": "open",
+      "detail": "The requested /mnt/data context reference was unavailable; no alternative was found."
+    },
+    {
+      "id": "GITLEAKS_UNAVAILABLE",
+      "severity": "medium",
+      "status": "open",
+      "detail": "No gitleaks binary was installed, so only the location-only pattern audit ran."
+    },
+    {
+      "id": "LARGE_TRACKED_FILE",
+      "severity": "low",
+      "status": "review",
+      "detail": "Tracked file exceeds 1 MiB; consider optimization or Git LFS if it continues to grow.",
+      "path": "docs/images/9-captura-de-pantalla_20260728_221011.png",
+      "bytes": 4628026
+    },
+    {
+      "id": "LARGE_TRACKED_FILE",
+      "severity": "low",
+      "status": "review",
+      "detail": "Tracked file exceeds 1 MiB; consider optimization or Git LFS if it continues to grow.",
+      "path": "evidence/screenshots/wazuh-events-explorer.jpg",
+      "bytes": 1630898
+    },
+    {
+      "id": "LARGE_TRACKED_FILE",
+      "severity": "low",
+      "status": "review",
+      "detail": "Tracked file exceeds 1 MiB; consider optimization or Git LFS if it continues to grow.",
+      "path": "docs/images/9-wazuh-08-05-2026_10_21.jpg",
+      "bytes": 1544209
+    },
+    {
+      "id": "CANONICAL_CHECKOUT_SYNCED",
+      "severity": "info",
+      "status": "pass",
+      "detail": "Canonical profile checkout HEAD equals origin/main."
+    },
+    {
+      "id": "LEGACY_HISTORY_SEPARATE",
+      "severity": "info",
+      "status": "documented",
+      "detail": "The standalone checkout has independent legacy history; it is preserved and should not be merged directly into the consolidated profile root."
+    },
+    {
+      "id": "MARKDOWN_AND_IMAGE_REFERENCES",
+      "severity": "info",
+      "status": "pass",
+      "detail": "No broken local Markdown/HTML links or indexed images were found."
+    },
+    {
+      "id": "SENSITIVE_PATTERN_AUDIT",
+      "severity": "info",
+      "status": "pass",
+      "detail": "Location-only secret/PII pattern audit returned no findings."
+    },
+    {
+      "id": "AUDIT_SCOPE_ESCAPE_QUARANTINED",
+      "severity": "high",
+      "status": "remediated",
+      "detail": "An initial publication-safety invocation ran outside the project directory. Its sensitive out-of-scope output was quarantined locally, removed from the index, and the check was rerun in the correct directory."
+    }
+  ],
+  "sanitization": {
+    "secrets_detected": false,
+    "credential_values_written_to_artifacts": false,
+    "private_backup_location": "GitBackup/auto-audit-20260815-234701",
+    "out_of_scope_log_quarantined": true,
+    "private_quarantine": "GitBackup/secret_leaks_auto-audit-20260815-234701"
+  },
+  "next_actions": [
+    "Keep publication-safety commands scoped with an explicit project working directory; never commit raw scanner output from a broader path.",
+    "Restore the requested context reference if it should be part of audit evidence.",
+    "Install gitleaks and rerun this audit for an independent secret scan.",
+    "Review the three tracked images above 1 MiB for web optimization or Git LFS.",
+    "Use the canonical profile checkout for future changes."
+  ]
+}

@@ -1,0 +1,3 @@
+CONFLICTS_DETECTED
+The isolated merge emitted content and file-location conflicts. The temporary
+worktree merge was aborted; no merge was committed to the local checkout.

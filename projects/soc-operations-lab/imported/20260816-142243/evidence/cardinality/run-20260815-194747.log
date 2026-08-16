@@ -1,0 +1,55 @@
+run_log=/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-194747.log
+
+### Context complete-read digest (content deliberately not copied)
+/home/reyam/ContextoIA/contexto_anterior.md: lines=8690 bytes=496496 sha256=55624ac60138b77572e1fda10779b75887672f265f0d3ad2a2140c074183b8cb
+topics: 100500=28, 100501=20, 100502=20, cardinalidad=0, if_matched_sid=38, frequency=47, sysmon=73
+/home/reyam/ContextoIA/transcripcion_completa.md: lines=2064 bytes=101705 sha256=f3526e0d39533b0ca59a166ffb0a1c3a3a999515b3a5648c9a3b07e12155cbc1
+topics: 100500=19, 100501=21, 100502=26, cardinalidad=0, if_matched_sid=14, frequency=11, sysmon=30
+
+### Repository state
+?? artifacts/
+?? docs/images_index.json
+?? docs/portscan-cardinality-analysis.md
+?? evidence/cardinality/
+?? evidence/sysmon-eid3-test/
+?? scripts/replay_events.sh
+
+### SSH verification via configured wazuh host
+wazuh-manager
+lo               UNKNOWN        127.0.0.1/8 
+enp0s3           UP             10.0.2.3/24 metric 100 
+enp0s8           UP             192.168.56.10/24 
+enp0s9           UP             192.168.57.10/24 
+
+### Requested Wazuh rules (read-only)
+  <rule id="100500" level="6">
+    <if_sid>60001</if_sid>
+    <field name="win.system.channel">^Security$</field>
+    <field name="win.system.eventID">^5152$|^5157$</field>
+    <field name="win.eventdata.direction">^%%14592$</field>
+    <field name="win.eventdata.protocol">^6$</field>
+    <field name="win.eventdata.sourceAddress">^192\.168\.56\.</field>
+    <field name="win.eventdata.destAddress">^192\.168\.56\.20$</field>
+    <options>no_log</options>
+    <description>WFP port-scan tracking base: Attack/Lab TCP block to Windows</description>
+  </rule>
+  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+    <if_matched_sid>100500</if_matched_sid>
+    <same_field>win.eventdata.sourceAddress</same_field>
+    <different_field>win.eventdata.destPort</different_field>
+    <description>Possible port scan detected via Windows Firewall - 10 different destination ports from same source within 60 seconds</description>
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>
+  </rule>
+  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+    <if_matched_sid>100500</if_matched_sid>
+    <same_field>win.eventdata.sourceAddress</same_field>
+    <different_field>win.eventdata.destPort</different_field>
+    <description>High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds</description>
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>
+  </rule>
+
+### Date-stamped manager backup
+backup=/var/ossec/etc/rules/local_rules.xml.bak-20260815-194748
+mode=660 owner=wazuh:wazuh size=8066

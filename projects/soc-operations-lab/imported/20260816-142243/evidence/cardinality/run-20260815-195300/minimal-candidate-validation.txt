@@ -1,0 +1,26 @@
+
+### Backup original before minimal Sysmon candidate
+e9ee3e1de767a0052a45c07040830f5fc265f1311d4f79b11fb118cdc9f4d33b  /var/ossec/etc/rules/local_rules.xml.bak-20260815-200500
+
+### Build and validate minimal candidate
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate-sysmon-minimal
+--- /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.source	2026-08-15 19:57:51.767198177 -0500
++++ /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate-sysmon-minimal	2026-08-15 20:00:59.784179677 -0500
+@@ -71,7 +71,9 @@
+   </rule>
+ 
+   <rule id="100409" level="1">
+-    <if_group>sysmon_event3</if_group>
++    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
++    <field name="win.system.channel">^Microsoft-Windows-Sysmon/Operational$</field>
++    <field name="win.system.eventID">^3$</field>
+     <field name="win.eventdata.protocol">^tcp$</field>
+     <field name="win.eventdata.sourceIp">^192\.168\.56\.</field>
+     <field name="win.eventdata.destinationIp">^192\.168\.56\.20$</field>
+minimal_candidate_xmllint_rc=0
+
+### Install only after candidate validation and analysisd check
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml
+e9ee3e1de767a0052a45c07040830f5fc265f1311d4f79b11fb118cdc9f4d33b  /var/ossec/etc/rules/local_rules.xml.pretest-20260815-200500
+ANALYSISD_VALID=1
+ANALYSISD_OUTPUT=/tmp/wazuh-analysisd-20260815-200500.out

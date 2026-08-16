@@ -1,0 +1,107 @@
+237:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+244:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+301:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+302:		*Rule 100409 matched
+304:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+305:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+308:	id: '100409'
+548:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+555:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+612:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+613:		*Rule 100409 matched
+615:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+616:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+619:	id: '100409'
+859:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+866:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+923:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+924:		*Rule 100409 matched
+926:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+927:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+930:	id: '100409'
+1170:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+1177:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+1234:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+1235:		*Rule 100409 matched
+1237:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+1238:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+1241:	id: '100409'
+1481:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+1488:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+1545:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+1546:		*Rule 100409 matched
+1548:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+1549:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+1552:	id: '100409'
+1792:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+1799:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+1856:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+1857:		*Rule 100409 matched
+1859:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+1860:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+1863:	id: '100409'
+2103:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+2110:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+2167:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+2168:		*Rule 100409 matched
+2170:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+2171:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+2174:	id: '100409'
+2414:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+2421:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+2478:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+2479:		*Rule 100409 matched
+2481:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+2482:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+2485:	id: '100409'
+2725:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+2732:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+2789:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+2790:		*Rule 100409 matched
+2792:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+2793:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+2796:	id: '100409'
+3036:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+3043:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+3100:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+3101:		*Rule 100409 matched
+3103:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+3104:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+3105:		*Rule 100420 matched
+3108:	id: '100420'
+3115:	mitre.id: '['T1046']'
+3353:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+3360:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+3417:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+3418:		*Rule 100409 matched
+3420:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+3421:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+3424:	id: '100409'
+3664:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+3671:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+3728:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+3729:		*Rule 100409 matched
+3731:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+3732:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+3735:	id: '100409'
+3975:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+3982:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+4039:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+4040:		*Rule 100409 matched
+4042:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+4043:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+4046:	id: '100409'
+4286:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+4293:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+4350:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+4351:		*Rule 100409 matched
+4353:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+4354:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+4357:	id: '100409'
+4597:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
+4604:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
+4661:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
+4662:		*Rule 100409 matched
+4664:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
+4665:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
+4668:	id: '100409'

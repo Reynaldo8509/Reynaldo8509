@@ -1,0 +1,183 @@
+<!-- Local rules
+==================================================================
+  LOCAL RULES - SOC HOME LAB (Wazuh 4.x)
+  Header repaired without changing functional rules.
+==================================================================
+-->
+
+
+<!-- ============================================================
+     GRUPO: AUTENTICACIÓN Y ESCALADA DE PRIVILEGIOS (Windows)
+     ============================================================ -->
+
+
+<!-- ============================================================
+     GRUPO: DETECCIÓN DE PORT SCAN — FUENTE 2: Sysmon Event ID 3
+     (Network Connection) — endpoint-level, complementa la fuente 1
+     ============================================================ -->
+<!-- General Windows WFP port-scan detection -->
+<group name="windows,firewall,portscan">
+  <rule id="100500" level="6">
+    <if_sid>60001</if_sid>
+    <field name="win.system.channel">^Security$</field>
+    <field name="win.system.eventID">^5152$|^5157$</field>
+    <field name="win.eventdata.direction">^%%14592$</field>
+    <field name="win.eventdata.protocol">^6$</field>
+    <field name="win.eventdata.sourceAddress">^192\.168\.56\.</field>
+    <field name="win.eventdata.destAddress">^192\.168\.56\.20$</field>
+    <options>no_log</options>
+    <description>WFP port-scan tracking base: Attack/Lab TCP block to Windows</description>
+  </rule>
+
+
+  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+    <if_matched_sid>100500</if_matched_sid>
+    <same_field>win.eventdata.sourceAddress</same_field>
+    <different_field>win.eventdata.destPort</different_field>
+    <description>Possible port scan detected via Windows Firewall - 10 different destination ports from same source within 60 seconds</description>
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>
+  </rule>
+
+
+  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+    <if_matched_sid>100500</if_matched_sid>
+    <same_field>win.eventdata.sourceAddress</same_field>
+    <different_field>win.eventdata.destPort</different_field>
+    <description>High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds</description>
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>
+  </rule>
+
+</group>
+
+<group name="sysmon_eid3,network,windows">
+
+  <!-- [FIX] Regla 100003 eliminada: era duplicado exacto de 100410,
+       y ningún otro rule la referenciaba (100004 usa if_group directo,
+       no if_sid 100003). Código muerto. -->
+
+  <!-- IP conocida del atacante (Kali) conectando por SSH: alerta directa,
+       no requiere umbral porque el origen ya es de confianza cero -->
+  <rule id="100004" level="12">
+    <if_group>sysmon_event3</if_group>
+    <field name="win.eventdata.destinationPort">22</field>
+    <field name="win.eventdata.sourceIp">^192\.168\.56\.1$</field>
+    <description>SSH connection from Kali attacker</description>
+    <group>lateral_movement,ssh,attack</group>
+    <mitre>
+      <id>T1021.004</id>
+    </mitre>
+  </rule>
+
+  <rule id="100409" level="1">
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.channel">^Microsoft-Windows-Sysmon/Operational$</field>
+    <field name="win.system.eventID">^3$</field>
+    <field name="win.eventdata.protocol">^tcp$</field>
+    <field name="win.eventdata.sourceIp">^192\.168\.56\.</field>
+    <field name="win.eventdata.destinationIp">^192\.168\.56\.20$</field>
+    <options>no_log</options>
+    <description>Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows</description>
+  </rule>
+
+
+
+
+
+
+  <rule id="100420" level="10" frequency="10" timeframe="60">
+    <if_matched_sid>100409</if_matched_sid>
+    <same_field>win.eventdata.sourceIp</same_field>
+    <different_field>win.eventdata.destinationPort</different_field>
+    <description>Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds</description>
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>
+  </rule>
+
+
+  <rule id="100421" level="13" frequency="15" timeframe="60">
+    <if_matched_sid>100409</if_matched_sid>
+    <same_field>win.eventdata.sourceIp</same_field>
+    <different_field>win.eventdata.destinationPort</different_field>
+    <description>High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds</description>
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>
+  </rule>
+
+
+  <rule id="100308" level="0">
+    <if_group>syscheck</if_group>
+    <field name="syscheck.path">prueba</field>
+    <description>Ignore intentional FIM test files under Downloadsprueba</description>
+  </rule>
+</group><group name="malware,yara,">
+  <rule id="111111" level="7">
+    <if_sid>554</if_sid>
+    <field name="file" type="pcre2">(?i)C:\\Users.*\\Downloads</field>
+    <description>New file in Windows Downloads directory queued for malware scan</description>
+  </rule>
+  <rule id="111112" level="7">
+    <if_sid>550</if_sid>
+    <field name="file" type="pcre2">(?i)C:\\Users.*\\Downloads</field>
+    <description>Modified file in Windows Downloads directory queued for malware scan</description>
+  </rule>
+  <rule id="111113" level="0">
+    <decoded_as>yara_decoder</decoded_as>
+    <description>YARA scan result grouping rule</description>
+  </rule>
+  <rule id="111114" level="12">
+    <if_sid>111113</if_sid>
+    <match>wazuh-yara: INFO - Scan result:</match>
+    <description>YARA detected a malware pattern</description>
+    <group>malware,yara,</group>
+  </rule>
+</group>
+
+<!-- Brute force correlation: Windows Security Event ID 4625, remote logon types with source IP -->
+<group name="windows,authentication,brute_force,">
+  <rule id="100210" level="0">
+    <if_sid>18106</if_sid>
+    <field name="win.system.eventID">^4625$</field>
+    <field name="win.eventdata.logonType">3|8|9|10</field>
+    <field name="win.eventdata.ipAddress" type="pcre2">^(?!-|0\.0\.0\.0|127\.0\.0\.1$).+</field>
+    <description>Windows remote failed logon with source IP (4625) tracking</description>
+  </rule>
+  <rule id="100211" level="10" frequency="5" timeframe="120">
+    <if_matched_sid>100210</if_matched_sid>
+    <same_srcip />
+    <description>Possible Windows brute force attack: 5 failed remote logons from the same source IP in 2 minutes</description>
+    <group>authentication_failed,brute_force,attack,</group>
+    <mitre><id>T1110</id></mitre>
+  </rule>
+  <rule id="100212" level="12" frequency="10" timeframe="120">
+    <if_matched_sid>100210</if_matched_sid>
+    <same_srcip />
+    <description>High-confidence Windows brute force attack: 10 failed remote logons from the same source IP in 2 minutes</description>
+    <group>authentication_failed,brute_force,attack,</group>
+    <mitre><id>T1110</id></mitre>
+  </rule>
+</group>
+ 
+<!-- OpenSSH Windows brute-force correlation. Windows stores the source IP inside win.eventdata.payload. -->
+<group name="windows,openssh,authentication,brute_force,">
+  <rule id="100220" level="0">
+    <decoded_as>json</decoded_as>
+    <field name="win.system.channel">^OpenSSH/Operational$</field>
+    <field name="win.eventdata.payload" type="pcre2">^Failed password for \S+ from [0-9A-Fa-f:.]+ port \d+ ssh2$</field>
+    <description>Windows OpenSSH failed password with source IP in payload</description>
+  </rule>
+  <rule id="100221" level="10" frequency="5" timeframe="120">
+    <if_matched_sid>100220</if_matched_sid>
+    <description>Possible Windows OpenSSH brute force: 5 failed passwords on the same agent in 2 minutes</description>
+    <group>authentication_failed,brute_force,attack,</group>
+    <mitre><id>T1110.001</id><id>T1021.004</id></mitre>
+  </rule>
+  <rule id="100222" level="12" frequency="10" timeframe="120">
+    <if_matched_sid>100220</if_matched_sid>
+    <description>High-confidence Windows OpenSSH brute force: 10 failed passwords on the same agent in 2 minutes</description>
+    <group>authentication_failed,brute_force,attack,</group>
+    <mitre><id>T1110.001</id><id>T1021.004</id></mitre>
+  </rule>
+</group>
+

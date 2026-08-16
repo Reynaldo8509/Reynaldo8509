@@ -1,0 +1,219 @@
+6-
+7-**Phase 1: Completed pre-decoding.
+8:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20001"}}}'
+9-
+10-**Phase 2: Completed decoding.
+11-	name: 'json'
+12-	win.eventdata.destinationIp: '192.168.56.20'
+13:	win.eventdata.destinationPort: '20001'
+14-	win.eventdata.protocol: 'tcp'
+15-	win.eventdata.sourceIp: '192.168.56.1'
+--
+19-
+20-**Phase 3: Completed filtering (rules).
+21:	id: '100409'
+22-	level: '1'
+23-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+24-
+25-	groups: '['sysmon_eid3', 'network', 'windows']'
+26:	firedtimes: '1'
+27-	mail: 'False'
+28-
+29-**Phase 1: Completed pre-decoding.
+30:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20002"}}}'
+31-
+32-**Phase 2: Completed decoding.
+33-	name: 'json'
+34-	win.eventdata.destinationIp: '192.168.56.20'
+35:	win.eventdata.destinationPort: '20002'
+36-	win.eventdata.protocol: 'tcp'
+37-	win.eventdata.sourceIp: '192.168.56.1'
+--
+41-
+42-**Phase 3: Completed filtering (rules).
+43:	id: '100409'
+44-	level: '1'
+45-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+46-	groups: '['sysmon_eid3', 'network', 'windows']'
+47-
+48:	firedtimes: '2'
+49-	mail: 'False'
+50-
+51-**Phase 1: Completed pre-decoding.
+52:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20003"}}}'
+53-
+54-**Phase 2: Completed decoding.
+55-	name: 'json'
+56-	win.eventdata.destinationIp: '192.168.56.20'
+57:	win.eventdata.destinationPort: '20003'
+58-	win.eventdata.protocol: 'tcp'
+59-	win.eventdata.sourceIp: '192.168.56.1'
+--
+63-
+64-**Phase 3: Completed filtering (rules).
+65:	id: '100409'
+66-	level: '1'
+67-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+68-	groups: '['sysmon_eid3', 'network', 'windows']'
+69-
+70:	firedtimes: '3'
+71-	mail: 'False'
+72-
+73-**Phase 1: Completed pre-decoding.
+74:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20004"}}}'
+75-
+76-**Phase 2: Completed decoding.
+77-	name: 'json'
+78-	win.eventdata.destinationIp: '192.168.56.20'
+79:	win.eventdata.destinationPort: '20004'
+80-	win.eventdata.protocol: 'tcp'
+81-	win.eventdata.sourceIp: '192.168.56.1'
+--
+85-
+86-**Phase 3: Completed filtering (rules).
+87:	id: '100409'
+88-	level: '1'
+89-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+90-
+91-	groups: '['sysmon_eid3', 'network', 'windows']'
+92:	firedtimes: '4'
+93-	mail: 'False'
+94-
+95-**Phase 1: Completed pre-decoding.
+96:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20005"}}}'
+97-
+98-**Phase 2: Completed decoding.
+99-	name: 'json'
+100-	win.eventdata.destinationIp: '192.168.56.20'
+101:	win.eventdata.destinationPort: '20005'
+102-	win.eventdata.protocol: 'tcp'
+103-	win.eventdata.sourceIp: '192.168.56.1'
+--
+107-
+108-**Phase 3: Completed filtering (rules).
+109:	id: '100409'
+110-	level: '1'
+111-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+112-	groups: '['sysmon_eid3', 'network', 'windows']'
+113:	firedtimes: '5'
+114-
+115-	mail: 'False'
+116-
+117-**Phase 1: Completed pre-decoding.
+118:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20006"}}}'
+119-
+120-**Phase 2: Completed decoding.
+121-	name: 'json'
+122-	win.eventdata.destinationIp: '192.168.56.20'
+123:	win.eventdata.destinationPort: '20006'
+124-	win.eventdata.protocol: 'tcp'
+125-	win.eventdata.sourceIp: '192.168.56.1'
+--
+129-
+130-**Phase 3: Completed filtering (rules).
+131:	id: '100409'
+132-	level: '1'
+133-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+134-	groups: '['sysmon_eid3', 'network', 'windows']'
+135-
+136:	firedtimes: '6'
+137-	mail: 'False'
+138-
+139-**Phase 1: Completed pre-decoding.
+140:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20007"}}}'
+141-
+142-**Phase 2: Completed decoding.
+143-	name: 'json'
+144-	win.eventdata.destinationIp: '192.168.56.20'
+145:	win.eventdata.destinationPort: '20007'
+146-	win.eventdata.protocol: 'tcp'
+147-	win.eventdata.sourceIp: '192.168.56.1'
+--
+151-
+152-**Phase 3: Completed filtering (rules).
+153:	id: '100409'
+154-
+155-	level: '1'
+156-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+157-	groups: '['sysmon_eid3', 'network', 'windows']'
+158:	firedtimes: '7'
+159-	mail: 'False'
+160-
+161-**Phase 1: Completed pre-decoding.
+162:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20008"}}}'
+163-
+164-**Phase 2: Completed decoding.
+165-	name: 'json'
+166-	win.eventdata.destinationIp: '192.168.56.20'
+167:	win.eventdata.destinationPort: '20008'
+168-	win.eventdata.protocol: 'tcp'
+169-	win.eventdata.sourceIp: '192.168.56.1'
+--
+173-
+174-**Phase 3: Completed filtering (rules).
+175:	id: '100409'
+176-	level: '1'
+177-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+178-
+179-	groups: '['sysmon_eid3', 'network', 'windows']'
+180:	firedtimes: '8'
+181-	mail: 'False'
+182-
+183-**Phase 1: Completed pre-decoding.
+184:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20009"}}}'
+185-
+186-**Phase 2: Completed decoding.
+187-	name: 'json'
+188-	win.eventdata.destinationIp: '192.168.56.20'
+189:	win.eventdata.destinationPort: '20009'
+190-	win.eventdata.protocol: 'tcp'
+191-	win.eventdata.sourceIp: '192.168.56.1'
+--
+196-
+197-**Phase 3: Completed filtering (rules).
+198:	id: '100409'
+199-	level: '1'
+200-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+201-	groups: '['sysmon_eid3', 'network', 'windows']'
+202:	firedtimes: '9'
+203-	mail: 'False'
+204-
+205-**Phase 1: Completed pre-decoding.
+206:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20009"}}}'
+207-
+208-**Phase 2: Completed decoding.
+209-	name: 'json'
+210-	win.eventdata.destinationIp: '192.168.56.20'
+211:	win.eventdata.destinationPort: '20009'
+212-	win.eventdata.protocol: 'tcp'
+213-	win.eventdata.sourceIp: '192.168.56.1'
+--
+217-
+218-**Phase 3: Completed filtering (rules).
+219:	id: '100409'
+220-	level: '1'
+221-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+222-	groups: '['sysmon_eid3', 'network', 'windows']'
+223:	firedtimes: '10'
+224-
+225-	mail: 'False'
+226-
+227-**Phase 1: Completed pre-decoding.
+228:	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20010"}}}'
+229-
+230-**Phase 2: Completed decoding.
+231-	name: 'json'
+232-	win.eventdata.destinationIp: '192.168.56.20'
+233:	win.eventdata.destinationPort: '20010'
+234-	win.eventdata.protocol: 'tcp'
+235-	win.eventdata.sourceIp: '192.168.56.1'
+--
+239-
+240-**Phase 3: Completed filtering (rules).
+241:	id: '100420'
+242-	level: '10'
+243-	description: 'Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds'
+244-	groups: '['sysmon_eid3', 'network', 'windowsreconnaissance', 'port_scan', 'attack']'
+245:	firedtimes: '1'
+246-	frequency: '10'
+247-	mail: 'False'

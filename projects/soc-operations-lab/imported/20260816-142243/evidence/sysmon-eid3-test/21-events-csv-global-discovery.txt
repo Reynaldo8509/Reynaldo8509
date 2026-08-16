@@ -1,0 +1,4 @@
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Formatos de tablas/events-2026-08-08T18_46_56.179Z.csv	1667 bytes
+/home/reyam/Reynaldo8509/projects/soc-operations-lab/evidence/scenario-1-bruteforce/events-2026-08-08T18_46_56.179Z.csv	1668 bytes
+/home/reyam/.local/share/Trash/files/events-2026-08-13T17_25_14.105Z.csv	1823899 bytes
+/home/reyam/ContextoIA/Proyecto SOC WASU/Formatos de tablas/events-2026-08-08T18_46_56.179Z.csv	1667 bytes

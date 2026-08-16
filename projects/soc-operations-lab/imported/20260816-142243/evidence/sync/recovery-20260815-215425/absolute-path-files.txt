@@ -1,0 +1,13 @@
+projects/soc-operations-lab/docs/commands_used.md
+projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/cardinality/cardinality_report.txt
+projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/event-source-discovery.txt
+projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/final-validation-and-inventory.txt
+projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/nmap-attack-connect-port22.txt
+projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/nmap-attack-ports-1-20.txt
+projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/actions.log
+projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/backup_ruleset.txt
+projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/candidate_sha256.txt
+projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/cardinality/cardinality_report.txt
+projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/backup_ruleset.txt
+projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/candidate_sha256.txt
+projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/cardinality/cardinality_report.txt

@@ -1,0 +1,63 @@
+
+### Backup active v1 before candidate v2
+fe60da209c82fb7183a69321bb9435342939e5a312727ad3382eee9198209d9e  /var/ossec/etc/rules/local_rules.xml.bak-20260815-200100
+
+### Build candidate v2 and show diff from original
+6df5ac53181db30ec28b68dc36a055f299c6b17e5cb802e63b09c0a2fa20ef5e  /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate-v2
+--- /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.source	2026-08-15 19:57:51.767198177 -0500
++++ /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate-v2	2026-08-15 19:59:14.433345118 -0500
+@@ -40,8 +40,19 @@
+   </rule>
+ 
+ 
++  <rule id="100506" level="1">
++    <if_sid>60001</if_sid>
++    <field name="win.system.channel">^Security$</field>
++    <field name="win.system.eventID">^5152$|^5157$</field>
++    <field name="win.eventdata.direction">^%%14592$</field>
++    <field name="win.eventdata.protocol">^6$</field>
++    <field name="win.eventdata.sourceAddress">^192\.168\.56\.</field>
++    <field name="win.eventdata.destAddress">^192\.168\.56\.20$</field>
++    <options>no_log</options>
++    <description>WFP port-scan high-threshold tracking base: Attack/Lab TCP block to Windows</description>
++  </rule>
+   <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+-    <if_matched_sid>100500</if_matched_sid>
++    <if_matched_sid>100506</if_matched_sid>
+     <same_field>win.eventdata.sourceAddress</same_field>
+     <different_field>win.eventdata.destPort</different_field>
+     <description>High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds</description>
+@@ -71,7 +82,9 @@
+   </rule>
+ 
+   <rule id="100409" level="1">
+-    <if_group>sysmon_event3</if_group>
++    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
++    <field name="win.system.channel">^Microsoft-Windows-Sysmon/Operational$</field>
++    <field name="win.system.eventID">^3$</field>
+     <field name="win.eventdata.protocol">^tcp$</field>
+     <field name="win.eventdata.sourceIp">^192\.168\.56\.</field>
+     <field name="win.eventdata.destinationIp">^192\.168\.56\.20$</field>
+@@ -94,8 +107,18 @@
+   </rule>
+ 
+ 
++  <rule id="100410" level="1">
++    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
++    <field name="win.system.channel">^Microsoft-Windows-Sysmon/Operational$</field>
++    <field name="win.system.eventID">^3$</field>
++    <field name="win.eventdata.protocol">^tcp$</field>
++    <field name="win.eventdata.sourceIp">^192\.168\.56\.</field>
++    <field name="win.eventdata.destinationIp">^192\.168\.56\.20$</field>
++    <options>no_log</options>
++    <description>Sysmon Event ID 3 high-threshold tracking base: Attack/Lab TCP connection to Windows</description>
++  </rule>
+   <rule id="100421" level="13" frequency="15" timeframe="60">
+-    <if_matched_sid>100409</if_matched_sid>
++    <if_matched_sid>100410</if_matched_sid>
+     <same_field>win.eventdata.sourceIp</same_field>
+     <different_field>win.eventdata.destinationPort</different_field>
+     <description>High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds</description>
+
+### Candidate v2 XML wrapper validation
+candidate_v2_xmllint_rc=0

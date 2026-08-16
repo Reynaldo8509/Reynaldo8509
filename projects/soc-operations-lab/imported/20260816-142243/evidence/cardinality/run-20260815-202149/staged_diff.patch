@@ -1,0 +1,724 @@
+diff --git a/evidence/INDEX.md b/evidence/INDEX.md
+index c819c94..e854ae7 100644
+--- a/evidence/INDEX.md
++++ b/evidence/INDEX.md
+@@ -1,6 +1,8 @@
+ # Índice de evidencia — investigación de cardinalidad
+ 
+ La ejecución principal es [`cardinality/run-20260815-195300/`](cardinality/run-20260815-195300/).
++La verificación de continuidad y prueba de producción posterior es
++[`cardinality/run-20260815-202149/`](cardinality/run-20260815-202149/).
+ 
+ | Artefacto | Contenido |
+ |---|---|
+@@ -9,6 +11,8 @@ La ejecución principal es [`cardinality/run-20260815-195300/`](cardinality/run-
+ | `cardinality/run-20260815-195300/decoder_tests/` | Fixtures JSON no sensibles y pruebas `wazuh-logtest` |
+ | `cardinality/run-20260815-195300/production_test/` | Campos sanitizados de WFP/Sysmon y pruebas Nmap autorizadas |
+ | `cardinality/run-20260815-195300/proposal_cardinality.md` | Alternativas para cardinalidad exacta |
++| `cardinality/run-20260815-202149/cardinality_report.md` | Reconstrucción final, validación de continuidad y decisión de arquitectura |
++| `cardinality/run-20260815-202149/production_test/` | Evidencia sanitizada de WFP, Sysmon EID 3 y Nmap autorizado |
+ 
+ No se versionan logs raw que contengan atributos personales del endpoint, credenciales
+ ni claves. Los backups del manager permanecen fuera del repositorio, en
+diff --git a/evidence/cardinality/run-20260815-202149/README.md b/evidence/cardinality/run-20260815-202149/README.md
+new file mode 100644
+index 0000000..b109ded
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/README.md
+@@ -0,0 +1,14 @@
++# Run 20260815-202149
++
++- [x] Backup activo y SHA-256 registrado.
++- [x] XML envuelto validado con `xmllint`.
++- [x] `wazuh-analysisd -t` limpio y RC 0.
++- [x] Reinicio controlado; `wazuh-manager` activo.
++- [x] Secuencia histórica de 34 eventos reconstruida.
++- [x] Nmap ATTACK/LAB de 20 puertos produjo `100501` y `100502`.
++- [x] EID 3 Sysmon real y exclusiones Management/NAT comprobados.
++- [x] Informe y evidencia sanitizada generados.
++
++El informe completo está en [cardinality_report.md](cardinality_report.md).
++Los logs completos de `wazuh-logtest` permanecen locales; las salidas que se
++versionen son fixtures y extractos no sensibles.
+diff --git a/evidence/cardinality/run-20260815-202149/actions.log b/evidence/cardinality/run-20260815-202149/actions.log
+new file mode 100644
+index 0000000..55ba854
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/actions.log
+@@ -0,0 +1,51 @@
++run=20260815-202149
++started=2026-08-15T20:21:49-05:00
++2026-08-15T20:21:49-05:00	created run directory
++2026-08-15T20:21:49-05:00	captured git baseline
++2026-08-15T20:21:58-05:00	ssh wazuh: verify manager, ruleset, sudo capability
++2026-08-15T20:22:06-05:00	local action wrapper hit zsh reserved variable status; retrying with rc
++2026-08-15T20:22:06-05:00	ssh wazuh: verify manager, ruleset, sudo capability
++2026-08-15T20:22:06-05:00	manager sanity command rc=1
++2026-08-15T20:22:26-05:00	manager backup /var/ossec/etc/rules/local_rules.xml.bak-202149 and SHA256
++2026-08-15T20:22:26-05:00	manager backup command rc=0
++2026-08-15T20:22:26-05:00	copied backup to GitBackup: /home/reyam/GitBackup/cardinality-backups/local_rules.xml.bak-202149
++2026-08-15T20:22:42-05:00	correcting backup timestamp name from abbreviated suffix; preserving both backups
++2026-08-15T20:22:42-05:00	corrected manager backup command rc=0
++2026-08-15T20:22:42-05:00	extract rules 100500,100501,100502,100409,100420,100421
++2026-08-15T20:22:42-05:00	extract relevant rules rc=0
++2026-08-15T20:22:59-05:00	locate historical events CSV and run cardinality parser
++2026-08-15T20:22:59-05:00	parse_cardinality.py rc=0 input=/home/reyam/.local/share/Trash/files/events-2026-08-13T17_25_14.105Z.csv
++2026-08-15T20:23:11-05:00	generate Sysmon EID3 15-port fixture and run wazuh-logtest against active rules
++2026-08-15T20:23:12-05:00	wazuh-logtest Sysmon fixture rc=126
++2026-08-15T20:23:16-05:00	inspect logtest output after empty summary
++2026-08-15T20:23:29-05:00	retry wazuh-logtest with manager sudo and local fixture staging
++2026-08-15T20:23:35-05:00	wazuh-logtest Sysmon fixture via sudo rc=1
++2026-08-15T20:23:39-05:00	inspect privileged logtest fixture output
++2026-08-15T20:23:53-05:00	correct sudo stdin routing for logtest; the prior shell redirection fed fixture to sudo
++2026-08-15T20:23:54-05:00	corrected wazuh-logtest Sysmon fixture via sudo rc=0
++2026-08-15T20:24:13-05:00	export active ruleset, build idempotent candidate, compare SHA256
++2026-08-15T20:24:13-05:00	candidate XML wrapper validation rc=0
++2026-08-15T20:24:26-05:00	validate active-equivalent candidate with wazuh-analysisd -t
++2026-08-15T20:24:26-05:00	analysisd candidate validation rc=0
++2026-08-15T20:24:36-05:00	controlled restart of wazuh-manager after validated active-equivalent candidate
++2026-08-15T20:24:47-05:00	manager restart/status rc=0
++2026-08-15T20:25:02-05:00	confirm ATTACK source interface and run authorized nmap TCP SYN test 1-20 to 192.168.56.20
++2026-08-15T20:25:07-05:00	nmap ATTACK/LAB 1-20 rc=0
++2026-08-15T20:25:37-05:00	wait for agent forwarding and collect sanitized alerts/archive evidence
++2026-08-15T20:25:53-05:00	sanitized production evidence collected
++2026-08-15T20:26:18-05:00	recollect live JSON using line-tolerant parser; filter current production test window
++2026-08-15T20:26:18-05:00	line-tolerant production evidence recollected
++2026-08-15T20:26:25-05:00	inspect parser outputs for report composition
++2026-08-15T20:26:35-05:00	search local non-private project records for historical 100501/100502 firedtimes evidence
++2026-08-15T20:27:12-05:00	run limited ATTACK/LAB TCP connect test to validate real Sysmon EID 3 schema
++2026-08-15T20:27:17-05:00	nmap Sysmon schema test port 22 rc=0
++2026-08-15T20:27:27-05:00	collected sanitized real Sysmon EID3 evidence
++2026-08-15T20:27:47-05:00	inspect effective rule 100004 and local Sysmon rule hierarchy after real EID3 matched generic rule
++2026-08-15T20:27:58-05:00	characterize rule 100004 precedence in Sysmon synthetic replay
++2026-08-15T20:28:04-05:00	inspect local order around rule 100004 and Sysmon base
++2026-08-15T20:28:50-05:00	generate Management and NAT Sysmon exclusion fixtures and run privileged logtest
++2026-08-15T20:28:52-05:00	Sysmon exclusion replay completed
++2026-08-15T20:30:11-05:00	documented report, README, summary and evidence index
++2026-08-15T20:30:11-05:00	run local script syntax checks and git diff check
++2026-08-15T20:30:11-05:00	local syntax and diff checks rc=0
++2026-08-15T20:30:30-05:00	prepare curated non-sensitive evidence for commit
+diff --git a/evidence/cardinality/run-20260815-202149/analysisd_candidate_test.txt b/evidence/cardinality/run-20260815-202149/analysisd_candidate_test.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/evidence/cardinality/run-20260815-202149/backup_ruleset.txt b/evidence/cardinality/run-20260815-202149/backup_ruleset.txt
+new file mode 100644
+index 0000000..ea5b9d6
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/backup_ruleset.txt
+@@ -0,0 +1,8 @@
++771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml
++771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml.bak-202149
++wazuh:wazuh 660 /var/ossec/etc/rules/local_rules.xml
++wazuh:wazuh 660 /var/ossec/etc/rules/local_rules.xml.bak-202149
++771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /home/reyam/GitBackup/cardinality-backups/local_rules.xml.bak-202149
++771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml
++771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml.bak-20260815-202149
++771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /home/reyam/GitBackup/cardinality-backups/local_rules.xml.bak-20260815-202149
+diff --git a/evidence/cardinality/run-20260815-202149/candidate_sha256.txt b/evidence/cardinality/run-20260815-202149/candidate_sha256.txt
+new file mode 100644
+index 0000000..afe3dc4
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/candidate_sha256.txt
+@@ -0,0 +1,3 @@
++771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/local_rules.xml.active-20260815-202149
++771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/candidate-20260815-202149.xml
++candidate_equals_active=yes
+diff --git a/evidence/cardinality/run-20260815-202149/cardinality/cardinality_report.txt b/evidence/cardinality/run-20260815-202149/cardinality/cardinality_report.txt
+new file mode 100644
+index 0000000..4152f1c
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/cardinality/cardinality_report.txt
+@@ -0,0 +1,8 @@
++INPUT=/home/reyam/.local/share/Trash/files/events-2026-08-13T17_25_14.105Z.csv
++TOTAL_EVENTS=34
++SESSIONS=1
++SESSION={"destination_ip": "192.168.56.20", "ports": [21, 23, 25, 53, 74, 80, 110, 111, 113, 143, 173, 184, 199, 226, 256, 266, 268, 286, 321, 419, 436, 443, 485, 554, 587, 622, 679, 773, 787, 811, 889, 993, 995], "protocol": "unknown", "source_ip": "192.168.56.1", "unique_destination_ports": 33}
++EVENT_9_METADATA={"destination_ip": "192.168.56.20", "destination_port": 199, "event_id": "5152", "event_index": 9, "is_unique_port_for_session": true, "protocol": "unknown", "rule_id": "100509", "source_ip": "192.168.56.1", "timestamp": "2026-08-12T22:54:47.990000", "unique_port_count": 9}
++EVENT_9_RAW_CSV={"agent.name": "WIN11-ENDPOINT", "data.audit.srcip": "", "data.aws.resource.instanceDetails.networkInterfaces.privateIpAddress": "", "data.aws.resource.instanceDetails.networkInterfaces.publicIp": "", "data.aws.source_ip_address": "", "data.gcp.resource.labels.location": "", "data.netinfo.iface.rx_dropped": "", "data.netinfo.iface.tx_dropped": "", "data.srcip": "", "data.win.eventdata.destAddress": "192.168.56.20", "data.win.eventdata.destPort": "199", "data.win.eventdata.ruleName": "", "data.win.eventdata.sourceAddress": "192.168.56.1", "data.win.system.eventID": "5152", "rule.description": "Inbound TCP packet blocked by Windows Firewall - port scan probe", "rule.id": "100509", "rule.level": "10", "rule.mitre.technique": "[\"Network Service Discovery\"]", "timestamp": "12 Aug , 2026 @ 22:54:47.990"}
++EVENT_10_METADATA={"destination_ip": "192.168.56.20", "destination_port": 256, "event_id": "5152", "event_index": 10, "is_unique_port_for_session": true, "protocol": "unknown", "rule_id": "100509", "source_ip": "192.168.56.1", "timestamp": "2026-08-12T22:54:48.038000", "unique_port_count": 10}
++EVENT_10_RAW_CSV={"agent.name": "WIN11-ENDPOINT", "data.audit.srcip": "", "data.aws.resource.instanceDetails.networkInterfaces.privateIpAddress": "", "data.aws.resource.instanceDetails.networkInterfaces.publicIp": "", "data.aws.source_ip_address": "", "data.gcp.resource.labels.location": "", "data.netinfo.iface.rx_dropped": "", "data.netinfo.iface.tx_dropped": "", "data.srcip": "", "data.win.eventdata.destAddress": "192.168.56.20", "data.win.eventdata.destPort": "256", "data.win.eventdata.ruleName": "", "data.win.eventdata.sourceAddress": "192.168.56.1", "data.win.system.eventID": "5152", "rule.description": "Inbound TCP packet blocked by Windows Firewall - port scan probe", "rule.id": "100509", "rule.level": "10", "rule.mitre.technique": "[\"Network Service Discovery\"]", "timestamp": "12 Aug , 2026 @ 22:54:48.038"}
+diff --git a/evidence/cardinality/run-20260815-202149/cardinality/sequence_unique_ports.csv b/evidence/cardinality/run-20260815-202149/cardinality/sequence_unique_ports.csv
+new file mode 100644
+index 0000000..0797229
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/cardinality/sequence_unique_ports.csv
+@@ -0,0 +1,35 @@
++event_index,timestamp,source_ip,destination_ip,protocol,destination_port,is_unique_port_for_session,unique_port_count,event_id,rule_id
++1,2026-08-12T22:54:47.865000,192.168.56.1,192.168.56.20,unknown,143,True,1,5152,100509
++2,2026-08-12T22:54:47.866000,192.168.56.1,192.168.56.20,unknown,993,True,2,5152,100509
++3,2026-08-12T22:54:47.879000,192.168.56.1,192.168.56.20,unknown,110,True,3,5152,100509
++4,2026-08-12T22:54:47.895000,192.168.56.1,192.168.56.20,unknown,111,True,4,5152,100509
++5,2026-08-12T22:54:47.911000,192.168.56.1,192.168.56.20,unknown,995,True,5,5152,100509
++6,2026-08-12T22:54:47.927000,192.168.56.1,192.168.56.20,unknown,587,True,6,5152,100509
++7,2026-08-12T22:54:47.943000,192.168.56.1,192.168.56.20,unknown,21,True,7,5152,100509
++8,2026-08-12T22:54:47.958000,192.168.56.1,192.168.56.20,unknown,23,True,8,5152,100509
++9,2026-08-12T22:54:47.990000,192.168.56.1,192.168.56.20,unknown,199,True,9,5152,100509
++10,2026-08-12T22:54:48.038000,192.168.56.1,192.168.56.20,unknown,256,True,10,5152,100509
++11,2026-08-12T22:54:48.054000,192.168.56.1,192.168.56.20,unknown,554,True,11,5152,100509
++12,2026-08-12T22:54:48.087000,192.168.56.1,192.168.56.20,unknown,443,True,12,5152,100509
++13,2026-08-12T22:54:48.104000,192.168.56.1,192.168.56.20,unknown,443,False,12,5157,100509
++14,2026-08-12T22:54:48.120000,192.168.56.1,192.168.56.20,unknown,25,True,13,5152,100509
++15,2026-08-12T22:54:48.136000,192.168.56.1,192.168.56.20,unknown,113,True,14,5152,100509
++16,2026-08-12T22:54:48.166000,192.168.56.1,192.168.56.20,unknown,53,True,15,5152,100509
++17,2026-08-12T22:54:48.166000,192.168.56.1,192.168.56.20,unknown,80,True,16,5152,100509
++18,2026-08-12T22:54:48.182000,192.168.56.1,192.168.56.20,unknown,889,True,17,5152,100509
++19,2026-08-12T22:54:48.199000,192.168.56.1,192.168.56.20,unknown,419,True,18,5152,100509
++20,2026-08-12T22:54:48.230000,192.168.56.1,192.168.56.20,unknown,485,True,19,5152,100509
++21,2026-08-12T22:54:48.231000,192.168.56.1,192.168.56.20,unknown,622,True,20,5152,100509
++22,2026-08-12T22:54:48.246000,192.168.56.1,192.168.56.20,unknown,268,True,21,5152,100509
++23,2026-08-12T22:54:48.262000,192.168.56.1,192.168.56.20,unknown,286,True,22,5152,100509
++24,2026-08-12T22:54:48.294000,192.168.56.1,192.168.56.20,unknown,321,True,23,5152,100509
++25,2026-08-12T22:54:48.294000,192.168.56.1,192.168.56.20,unknown,679,True,24,5152,100509
++26,2026-08-12T22:54:48.310000,192.168.56.1,192.168.56.20,unknown,226,True,25,5152,100509
++27,2026-08-12T22:54:48.328000,192.168.56.1,192.168.56.20,unknown,173,True,26,5152,100509
++28,2026-08-12T22:54:48.361000,192.168.56.1,192.168.56.20,unknown,184,True,27,5152,100509
++29,2026-08-12T22:54:48.361000,192.168.56.1,192.168.56.20,unknown,811,True,28,5152,100509
++30,2026-08-12T22:54:48.376000,192.168.56.1,192.168.56.20,unknown,773,True,29,5152,100509
++31,2026-08-12T22:54:48.391000,192.168.56.1,192.168.56.20,unknown,266,True,30,5152,100509
++32,2026-08-12T22:54:48.422000,192.168.56.1,192.168.56.20,unknown,436,True,31,5152,100509
++33,2026-08-12T22:54:48.423000,192.168.56.1,192.168.56.20,unknown,74,True,32,5152,100509
++34,2026-08-12T22:54:48.438000,192.168.56.1,192.168.56.20,unknown,787,True,33,5152,100509
+diff --git a/evidence/cardinality/run-20260815-202149/cardinality/summary.json b/evidence/cardinality/run-20260815-202149/cardinality/summary.json
+new file mode 100644
+index 0000000..1a46ada
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/cardinality/summary.json
+@@ -0,0 +1,43 @@
++[
++  {
++    "source_ip": "192.168.56.1",
++    "destination_ip": "192.168.56.20",
++    "protocol": "unknown",
++    "unique_destination_ports": 33,
++    "ports": [
++      21,
++      23,
++      25,
++      53,
++      74,
++      80,
++      110,
++      111,
++      113,
++      143,
++      173,
++      184,
++      199,
++      226,
++      256,
++      266,
++      268,
++      286,
++      321,
++      419,
++      436,
++      443,
++      485,
++      554,
++      587,
++      622,
++      679,
++      773,
++      787,
++      811,
++      889,
++      993,
++      995
++    ]
++  }
++]
+diff --git a/evidence/cardinality/run-20260815-202149/cardinality_report.md b/evidence/cardinality/run-20260815-202149/cardinality_report.md
+new file mode 100644
+index 0000000..6437fa9
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/cardinality_report.md
+@@ -0,0 +1,147 @@
++# Informe final de cardinalidad — run 20260815-202149
++
++## Resultado ejecutivo
++
++La configuración activa pasó la validación XML (mediante un wrapper, porque
++`local_rules.xml` contiene varios fragmentos `<group>`) y
++`wazuh-analysisd -t` terminó con RC 0 sin `WARNING`, `ERROR` ni `CRITICAL`.
++El servicio `wazuh-manager` se reinició y quedó `active`.
++
++La corrección mínima ya instalada para Sysmon EID 3 se conservó sin cambios:
++la regla base `100409` identifica explícitamente proveedor Sysmon, canal,
++EID 3, TCP, origen ATTACK y destino Windows. La candidata generada en este
++run fue idéntica al archivo activo (SHA-256
++`771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca`), por lo
++que no hubo una segunda sustitución innecesaria.
++
++El escaneo autorizado de 20 puertos desde `192.168.56.1` hacia
++`192.168.56.20` produjo 20 eventos WFP y alertas `100501` y `100502`. La
++conexión TCP autorizada a SSH produjo un Sysmon EID 3 real y fue detectada por
++la regla específica `100004`; esa regla es intencionadamente más específica
++para ATTACK/LAB hacia el puerto 22.
++
++## Reconstrucción de los 34 eventos históricos
++
++Entrada: exportación CSV local `events-2026-08-13T17_25_14.105Z.csv`, filtrada
++por origen `192.168.56.1`, destino `192.168.56.20`, ordenada por marca de
++tiempo y limitada a 34 filas. La exportación no es un volcado de
++`archives.json`; sus filas reportan la regla histórica `100509`. Por tanto no
++prueba un `firedtimes` de los correladores actuales.
++
++La secuencia fue:
++
++```
++143, 993, 110, 111, 995, 587, 21, 23, 199, 256, 554, 443,
++443 (repetido), 25, 113, 53, 80, 889, 419, 485, 622, 268, 286,
++321, 679, 226, 173, 184, 811, 773, 266, 436, 74, 787
++```
++
++Hay 33 puertos distintos. El evento 9 es `199`, con cardinalidad 9; el evento
++10 es `256`, con cardinalidad 10. El evento 13 vuelve a usar `443`, por lo que
++mantiene cardinalidad 12. Las filas completas y la clasificación por evento
++están en [sequence_unique_ports.csv](cardinality/sequence_unique_ports.csv) y
++[cardinality_report.txt](cardinality/cardinality_report.txt).
++
++### Aclaración sobre «evento 9 → 100501; evento 10 → 100502»
++
++Esa afirmación no está respaldada por los 34 datos exportados ni por las
++reglas activas. Las filas 9 y 10 llevan `rule.id=100509`, no `100501` ni
++`100502`. Además, el XML activo establece:
++
++```xml
++<rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
++  <if_matched_sid>100500</if_matched_sid>
++  <same_field>win.eventdata.sourceAddress</same_field>
++  <different_field>win.eventdata.destPort</different_field>
++</rule>
++<rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
++  <if_matched_sid>100500</if_matched_sid>
++  <same_field>win.eventdata.sourceAddress</same_field>
++  <different_field>win.eventdata.destPort</different_field>
++</rule>
++```
++
++El replay y la prueba real demuestran que `different_field` descarta los
++reintentos del mismo puerto en esta versión. Sin embargo, dos correladores
++hermanos que comparten `if_matched_sid=100500` comparten efectos del estado de
++correlación: el motor no ofrece un conjunto de puertos ni un contador de
++cardinalidad auditable. Por eso `frequency=14` es una compensación observada
++para la alerta número 15, no una garantía declarativa de `COUNT(DISTINCT)`.
++
++En el escaneo de producción actual, `100501` se emitió en el décimo puerto
++distinto (puerto 20) y `100502` en el decimoquinto (puerto 6). Véase
++[current_attack_events_sanitized.jsonl](production_test/current_attack_events_sanitized.jsonl)
++y [current_relevant_alerts_sanitized.jsonl](production_test/current_relevant_alerts_sanitized.jsonl).
++
++## Sysmon EID 3 y exclusiones
++
++La regla base `100409` conserva estas condiciones: proveedor
++`Microsoft-Windows-Sysmon`, canal `Microsoft-Windows-Sysmon/Operational`, EID
++`3`, `protocol=tcp`, origen `192.168.56.0/24` y destino `192.168.56.20`.
++
++Un `nmap -sT -p 22` autorizado generó EID 3 real con origen ATTACK. El evento
++final fue `100004`, regla directa para SSH desde Kali; su mayor especificidad
++prevalece sobre la base silenciosa `100409`, pero conserva el alcance requerido
++y confirma detección. El registro sanitizado está en
++[sysmon_eid3_sanitized.jsonl](production_test/sysmon_eid3_sanitized.jsonl).
++
++Los replays de una IP de Management (`192.168.57.1`) y una NAT (`10.0.2.2`) no
++produjeron `100409`, `100420` ni `100421`; evidencia:
++[logtest_sysmon_exclusion_hits.txt](logtest_sysmon_exclusion_hits.txt).
++
++## Arquitectura para cardinalidad exacta
++
++### A. Correlación Wazuh enriquecida
++
++Un enriquecedor previo debe emitir un campo explícito y estable, por ejemplo
++`session_id=source|destination|protocol|bucket_utc_60s`. La base sigue filtrando
++ATTACK/LAB y ambos umbrales se acotan con ese campo:
++
++```xml
++<rule id="100500" level="1">
++  <!-- WFP EID 5152/5157, TCP, source 192.168.56.0/24, dest .56.20 -->
++  <options>no_log</options>
++</rule>
++<rule id="100501" level="10" frequency="10" timeframe="60">
++  <if_matched_sid>100500</if_matched_sid>
++  <same_field>session_id</same_field>
++  <different_field>win.eventdata.destPort</different_field>
++</rule>
++```
++
++Pros: permanece en Wazuh y limita NAT/Management desde la base. Contras: debe
++validarse por versión que los dos umbrales no interfieran; el motor sigue sin
++exponer el conjunto persistente. No se aplicó.
++
++### B. Agregador SQLite local — recomendado
++
++Consumir solamente eventos ya filtrados ATTACK/LAB e insertar en SQLite una
++clave única `(bucket, source, destination, protocol, dest_port)`. El proceso
++emite un evento Wazuh al cruzar 10 y 15, guardando `emitted_10` y `emitted_15`
++por sesión. Así se implementa `COUNT(DISTINCT dest_port)` real y ambos umbrales
++son independientes y auditables. Requiere un nuevo componente, monitoreo y
++retención; no se instaló en este run.
++
++## Comandos reproducibles
++
++```bash
++python3 tools/parse_cardinality.py INPUT.csv --output evidence/cardinality/run-STAMP/cardinality \
++  --limit 34 --source 192.168.56.1 --destination 192.168.56.20
++python3 tools/generate_logtest_events.py --kind sysmon --ports 21,22,23,24,25,26,27,28,29,30
++# En el manager, con privilegios:
++/var/ossec/bin/wazuh-logtest -v < fixture.jsonl
++nmap -Pn -sS --min-rate 100 --max-retries 0 -T4 -p 1-20 192.168.56.20
++```
++
++## Artefactos y decisión
++
++- Backup y hashes: [backup_ruleset.txt](backup_ruleset.txt).
++- Bitácora: [actions.log](actions.log).
++- Reglas extraídas: [rules_relevant.xml](rules_relevant.xml).
++- Validaciones: [xmllint_candidate.txt](xmllint_candidate.txt) y
++  [analysisd_candidate_test.txt](analysisd_candidate_test.txt).
++- Prueba WFP: [nmap_1-20.txt](production_test/nmap_1-20.txt).
++
++La corrección Sysmon mínima y la detección WFP se validaron positivamente. No
++conviene optimizar más reglas hermanas para afirmar cardinalidad exacta: la
++alternativa B es la vía segura si se necesita esa propiedad formal.
+diff --git a/evidence/cardinality/run-20260815-202149/git_diff_check.txt b/evidence/cardinality/run-20260815-202149/git_diff_check.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_hits.txt b/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_hits.txt
+new file mode 100644
+index 0000000..7b94ed6
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_hits.txt
+@@ -0,0 +1,107 @@
++237:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++244:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++301:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++302:		*Rule 100409 matched
++304:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++305:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++308:	id: '100409'
++548:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++555:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++612:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++613:		*Rule 100409 matched
++615:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++616:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++619:	id: '100409'
++859:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++866:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++923:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++924:		*Rule 100409 matched
++926:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++927:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++930:	id: '100409'
++1170:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++1177:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++1234:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++1235:		*Rule 100409 matched
++1237:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++1238:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++1241:	id: '100409'
++1481:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++1488:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++1545:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++1546:		*Rule 100409 matched
++1548:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++1549:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++1552:	id: '100409'
++1792:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++1799:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++1856:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++1857:		*Rule 100409 matched
++1859:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++1860:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++1863:	id: '100409'
++2103:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++2110:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++2167:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++2168:		*Rule 100409 matched
++2170:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++2171:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++2174:	id: '100409'
++2414:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++2421:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++2478:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++2479:		*Rule 100409 matched
++2481:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++2482:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++2485:	id: '100409'
++2725:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++2732:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++2789:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++2790:		*Rule 100409 matched
++2792:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++2793:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++2796:	id: '100409'
++3036:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++3043:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++3100:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++3101:		*Rule 100409 matched
++3103:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++3104:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++3105:		*Rule 100420 matched
++3108:	id: '100420'
++3115:	mitre.id: '['T1046']'
++3353:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++3360:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++3417:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++3418:		*Rule 100409 matched
++3420:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++3421:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++3424:	id: '100409'
++3664:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++3671:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++3728:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++3729:		*Rule 100409 matched
++3731:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++3732:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++3735:	id: '100409'
++3975:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++3982:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++4039:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++4040:		*Rule 100409 matched
++4042:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++4043:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++4046:	id: '100409'
++4286:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++4293:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++4350:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++4351:		*Rule 100409 matched
++4353:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++4354:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++4357:	id: '100409'
++4597:	Trying rule: 65601 - (Gitlab) ERROR: couldn't complete $(method) request.
++4604:	Trying rule: 65622 - (Gitlab) ERROR: couldn't complete $(method) request.
++4661:	Trying rule: 100409 - Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows
++4662:		*Rule 100409 matched
++4664:	Trying rule: 100421 - High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds
++4665:	Trying rule: 100420 - Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds
++4668:	id: '100409'
+diff --git a/evidence/cardinality/run-20260815-202149/logtest_sysmon_exclusion_hits.txt b/evidence/cardinality/run-20260815-202149/logtest_sysmon_exclusion_hits.txt
+new file mode 100644
+index 0000000..d0d7c70
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/logtest_sysmon_exclusion_hits.txt
+@@ -0,0 +1,2 @@
++== logtest_sysmon_management.out ==
++== logtest_sysmon_nat.out ==
+diff --git a/evidence/cardinality/run-20260815-202149/logtest_sysmon_final_ids.txt b/evidence/cardinality/run-20260815-202149/logtest_sysmon_final_ids.txt
+new file mode 100644
+index 0000000..6d342c7
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/logtest_sysmon_final_ids.txt
+@@ -0,0 +1,15 @@
++308:	id: '100409'
++619:	id: '100409'
++930:	id: '100409'
++1241:	id: '100409'
++1552:	id: '100409'
++1863:	id: '100409'
++2174:	id: '100409'
++2485:	id: '100409'
++2796:	id: '100409'
++3108:	id: '100420'
++3424:	id: '100409'
++3735:	id: '100409'
++4046:	id: '100409'
++4357:	id: '100409'
++4668:	id: '100409'
+diff --git a/evidence/cardinality/run-20260815-202149/production_test/current_attack_events_sanitized.jsonl b/evidence/cardinality/run-20260815-202149/production_test/current_attack_events_sanitized.jsonl
+new file mode 100644
+index 0000000..5279c3e
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/production_test/current_attack_events_sanitized.jsonl
+@@ -0,0 +1,20 @@
++{"timestamp":"2026-08-16T01:25:07.714+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"1","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.716+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"4","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.718+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"11","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.720+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"2","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.721+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"8","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.722+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"5","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.725+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"3","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.741+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"15","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.758+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"16","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.773+0000","decoder":"windows_eventchannel","rule_id":"100501","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"20","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.790+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"12","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.806+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"17","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.823+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"7","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.839+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"19","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.855+0000","decoder":"windows_eventchannel","rule_id":"100502","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"6","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.871+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"14","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.887+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"10","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.903+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"9","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.918+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"18","protocol":"6"}
++{"timestamp":"2026-08-16T01:25:07.934+0000","decoder":"windows_eventchannel","rule_id":"100500","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"13","protocol":"6"}
+diff --git a/evidence/cardinality/run-20260815-202149/production_test/current_relevant_alerts_sanitized.jsonl b/evidence/cardinality/run-20260815-202149/production_test/current_relevant_alerts_sanitized.jsonl
+new file mode 100644
+index 0000000..bfb2fc1
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/production_test/current_relevant_alerts_sanitized.jsonl
+@@ -0,0 +1,2 @@
++{"timestamp":"2026-08-16T01:25:07.773+0000","rule_id":"100501","firedtimes":1,"source":"192.168.56.1","destination":"192.168.56.20","dest_port":"20","protocol":"6","description":"Possible port scan detected via Windows Firewall - 10 different destination ports from same source within 60 seconds"}
++{"timestamp":"2026-08-16T01:25:07.855+0000","rule_id":"100502","firedtimes":1,"source":"192.168.56.1","destination":"192.168.56.20","dest_port":"6","protocol":"6","description":"High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds"}
+diff --git a/evidence/cardinality/run-20260815-202149/production_test/nmap_1-20.txt b/evidence/cardinality/run-20260815-202149/production_test/nmap_1-20.txt
+new file mode 100644
+index 0000000..efa8659
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/production_test/nmap_1-20.txt
+@@ -0,0 +1,29 @@
++Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-15 20:25 -0500
++Warning: 192.168.56.20 giving up on port because retransmission cap hit (0).
++Nmap scan report for 192.168.56.20
++Host is up (0.00056s latency).
++
++PORT   STATE    SERVICE
++1/tcp  filtered tcpmux
++2/tcp  filtered compressnet
++3/tcp  filtered compressnet
++4/tcp  filtered unknown
++5/tcp  filtered rje
++6/tcp  filtered unknown
++7/tcp  filtered echo
++8/tcp  filtered unknown
++9/tcp  filtered discard
++10/tcp filtered unknown
++11/tcp filtered systat
++12/tcp filtered unknown
++13/tcp filtered daytime
++14/tcp filtered unknown
++15/tcp filtered netstat
++16/tcp filtered unknown
++17/tcp filtered qotd
++18/tcp filtered msp
++19/tcp filtered chargen
++20/tcp filtered ftp-data
++MAC Address: 08:00:27:AC:D4:88 (Oracle VirtualBox virtual NIC)
++
++Nmap done: 1 IP address (1 host up) scanned in 4.92 seconds
+diff --git a/evidence/cardinality/run-20260815-202149/production_test/nmap_sysmon_tcp_connect_22.txt b/evidence/cardinality/run-20260815-202149/production_test/nmap_sysmon_tcp_connect_22.txt
+new file mode 100644
+index 0000000..aeda9e8
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/production_test/nmap_sysmon_tcp_connect_22.txt
+@@ -0,0 +1,8 @@
++Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-15 20:27 -0500
++Nmap scan report for 192.168.56.20
++Host is up (0.00079s latency).
++
++PORT   STATE SERVICE
++22/tcp open  ssh
++
++Nmap done: 1 IP address (1 host up) scanned in 4.53 seconds
+diff --git a/evidence/cardinality/run-20260815-202149/production_test/sysmon_eid3_sanitized.jsonl b/evidence/cardinality/run-20260815-202149/production_test/sysmon_eid3_sanitized.jsonl
+new file mode 100644
+index 0000000..fe55436
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/production_test/sysmon_eid3_sanitized.jsonl
+@@ -0,0 +1 @@
++{"timestamp":"2026-08-16T01:27:20.406+0000","decoder":"windows_eventchannel","rule_id":"100004","provider":"Microsoft-Windows-Sysmon","event_id":"3","channel":"Microsoft-Windows-Sysmon/Operational","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"22","protocol":"tcp"}
+diff --git a/evidence/cardinality/run-20260815-202149/restart_manager.txt b/evidence/cardinality/run-20260815-202149/restart_manager.txt
+new file mode 100644
+index 0000000..584c847
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/restart_manager.txt
+@@ -0,0 +1 @@
++active
+diff --git a/evidence/cardinality/run-20260815-202149/rules_relevant.xml b/evidence/cardinality/run-20260815-202149/rules_relevant.xml
+new file mode 100644
+index 0000000..7952beb
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/rules_relevant.xml
+@@ -0,0 +1,53 @@
++  <rule id="100500" level="6">
++    <if_sid>60001</if_sid>
++    <field name="win.system.channel">^Security$</field>
++    <field name="win.system.eventID">^5152$|^5157$</field>
++    <field name="win.eventdata.direction">^%%14592$</field>
++    <field name="win.eventdata.protocol">^6$</field>
++    <field name="win.eventdata.sourceAddress">^192\.168\.56\.</field>
++    <field name="win.eventdata.destAddress">^192\.168\.56\.20$</field>
++    <options>no_log</options>
++    <description>WFP port-scan tracking base: Attack/Lab TCP block to Windows</description>
++  </rule>
++  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
++    <if_matched_sid>100500</if_matched_sid>
++    <same_field>win.eventdata.sourceAddress</same_field>
++    <different_field>win.eventdata.destPort</different_field>
++    <description>Possible port scan detected via Windows Firewall - 10 different destination ports from same source within 60 seconds</description>
++    <group>reconnaissance,port_scan,attack,</group>
++    <mitre><id>T1046</id></mitre>
++  </rule>
++  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
++    <if_matched_sid>100500</if_matched_sid>
++    <same_field>win.eventdata.sourceAddress</same_field>
++    <different_field>win.eventdata.destPort</different_field>
++    <description>High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds</description>
++    <group>reconnaissance,port_scan,attack,</group>
++    <mitre><id>T1046</id></mitre>
++  </rule>
++  <rule id="100409" level="1">
++    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
++    <field name="win.system.channel">^Microsoft-Windows-Sysmon/Operational$</field>
++    <field name="win.system.eventID">^3$</field>
++    <field name="win.eventdata.protocol">^tcp$</field>
++    <field name="win.eventdata.sourceIp">^192\.168\.56\.</field>
++    <field name="win.eventdata.destinationIp">^192\.168\.56\.20$</field>
++    <options>no_log</options>
++    <description>Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows</description>
++  </rule>
++  <rule id="100420" level="10" frequency="10" timeframe="60">
++    <if_matched_sid>100409</if_matched_sid>
++    <same_field>win.eventdata.sourceIp</same_field>
++    <different_field>win.eventdata.destinationPort</different_field>
++    <description>Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds</description>
++    <group>reconnaissance,port_scan,attack,</group>
++    <mitre><id>T1046</id></mitre>
++  </rule>
++  <rule id="100421" level="13" frequency="15" timeframe="60">
++    <if_matched_sid>100409</if_matched_sid>
++    <same_field>win.eventdata.sourceIp</same_field>
++    <different_field>win.eventdata.destinationPort</different_field>
++    <description>High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds</description>
++    <group>reconnaissance,port_scan,attack,</group>
++    <mitre><id>T1046</id></mitre>
++  </rule>
+diff --git a/evidence/cardinality/run-20260815-202149/summary.txt b/evidence/cardinality/run-20260815-202149/summary.txt
+new file mode 100644
+index 0000000..da8056f
+--- /dev/null
++++ b/evidence/cardinality/run-20260815-202149/summary.txt
+@@ -0,0 +1,10 @@
++PASS WITH ARCHITECTURE LIMITATION
++
++Ruleset candidate equals active ruleset; XML and analysisd validation passed.
++Manager restarted successfully. ATTACK/LAB Nmap 1-20 produced WFP alerts
++100501 (10th distinct port) and 100502 (15th distinct port). Real Sysmon EID 3
++from ATTACK/LAB was detected by the specific SSH rule 100004. Management and
++NAT replay inputs did not match 100409/100420/100421. Exact cardinality remains
++an architecture item: use a session enricher with version validation or the
++recommended SQLite aggregator; do not claim exact COUNT(DISTINCT) from the
++current sibling correlation rules.
+diff --git a/evidence/cardinality/run-20260815-202149/tool_bash_syntax.txt b/evidence/cardinality/run-20260815-202149/tool_bash_syntax.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/evidence/cardinality/run-20260815-202149/tool_pycompile.txt b/evidence/cardinality/run-20260815-202149/tool_pycompile.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/evidence/cardinality/run-20260815-202149/xmllint_candidate.txt b/evidence/cardinality/run-20260815-202149/xmllint_candidate.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/tools/build_cardinality_candidate.py b/tools/build_cardinality_candidate.py
+index 8b7ca99..094c817 100644
+--- a/tools/build_cardinality_candidate.py
++++ b/tools/build_cardinality_candidate.py
+@@ -35,7 +35,10 @@ def main() -> int:
+     parser.add_argument("candidate", type=Path)
+     args = parser.parse_args()
+     text = args.source.read_text(encoding="utf-8")
+-    text = replace_once(text, OLD_SYSMON, NEW_SYSMON, "Sysmon base")
++    if OLD_SYSMON in text:
++        text = replace_once(text, OLD_SYSMON, NEW_SYSMON, "Sysmon base")
++    elif NEW_SYSMON not in text:
++        raise SystemExit("Sysmon base is neither the legacy nor the corrected form")
+     args.candidate.write_text(text, encoding="utf-8")
+     return 0
+ 

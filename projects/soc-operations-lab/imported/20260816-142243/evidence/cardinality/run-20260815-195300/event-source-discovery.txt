@@ -1,0 +1,16 @@
+
+### Event source discovery (local and manager, read-only)
+/home/reyam/.local/share/Trash/files/events-2026-08-13T17_25_14.105Z.csv	1823899 bytes
+/home/reyam/.local/share/Trash/files/events_miltre-2026-08-13T17_26_01.415Z.csv	1799645 bytes
+/home/reyam/soc-operations-lab/artifacts/events-34.json	14396 bytes
+
+### Manager archive locations
+/var/ossec/logs/alerts/alerts.json	1330661 bytes
+/var/ossec/logs/archives/archives.json	21558790 bytes
+
+### Candidate source profile
+candidate= /home/reyam/.local/share/Trash/files/events-2026-08-13T17_25_14.105Z.csv exists= True size= 1823899
+columns= ['timestamp', 'agent.name', 'rule.id', 'data.win.system.eventID', 'rule.mitre.technique', 'rule.description', 'rule.level', 'data.win.eventdata.sourceAddress', 'data.win.eventdata.destAddress', 'data.win.eventdata.destPort', 'data.win.eventdata.ruleName', 'data.srcip', 'data.audit.srcip', 'data.aws.resource.instanceDetails.networkInterfaces.publicIp', 'data.netinfo.iface.tx_dropped', 'data.netinfo.iface.rx_dropped', 'data.aws.resource.instanceDetails.networkInterfaces.privateIpAddress', 'data.gcp.resource.labels.location', 'data.aws.source_ip_address']
+first_row= {'timestamp': '13 Aug , 2026 @ 12:21:01.920', 'agent.name': 'WIN11-ENDPOINT', 'rule.id': '92154', 'data.win.system.eventID': '7', 'rule.mitre.technique': '["Scheduled Task"]', 'rule.description': 'Process loaded taskschd.dll module. May be used to create delayed malware execution', 'rule.level': '4', 'data.win.eventdata.sourceAddress': '', 'data.win.eventdata.destAddress': '', 'data.win.eventdata.destPort': '', 'data.win.eventdata.ruleName': 'technique_id=T1053,technique_name=Scheduled Task', 'data.srcip': '', 'data.audit.srcip': '', 'data.aws.resource.instanceDetails.networkInterfaces.publicIp': '', 'data.netinfo.iface.tx_dropped': '', 'data.netinfo.iface.rx_dropped': '', 'data.aws.resource.instanceDetails.networkInterfaces.privateIpAddress': '', 'data.gcp.resource.labels.location': '', 'data.aws.source_ip_address': ''}
+candidate= /home/reyam/soc-operations-lab/artifacts/events-34.json exists= True size= 14396
+type= derived_dashboard_csv_selection status= NOT_ARCHIVE_RAW events= 34

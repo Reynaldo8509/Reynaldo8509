@@ -1,0 +1,12 @@
+{
+  "repo": "/home/reyam/soc-operations-lab",
+  "local_main": "a20285f9a5f0f8edc66bfe9b07fd0b03d7d969ae",
+  "origin_main": "a20285f9a5f0f8edc66bfe9b07fd0b03d7d969ae",
+  "preservation_branch": "sync/20260816-142243",
+  "review_pr": "https://github.com/Reynaldo8509/Reynaldo8509/pull/5",
+  "merge_result": "manual_review_required_due_to_content_and_relocation_conflicts",
+  "backup": "/home/reyam/GitBackup/sync-20260816-142243",
+  "secrets_detected": false,
+  "force_push_used": false,
+  "main_merged": false
+}

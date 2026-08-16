@@ -1,0 +1,274 @@
+From https://github.com/Reynaldo8509/Reynaldo8509
+ * branch            main       -> FETCH_HEAD
+Updating 6e880b4..65284c0
+Fast-forward
+ .github/workflows/portfolio-quality.yml            |  76 +++
+ README.md                                          |  27 +-
+ docs/career/README.md                              |  51 +-
+ docs/certifications/README.md                      |   2 +-
+ docs/technical-profile/README.md                   |  37 +-
+ projects/soc-operations-lab/README.md              |  12 +-
+ .../detection-rules/sysmon-network.md              |  10 +-
+ .../docs/cardinality-investigation.md              |   7 +
+ projects/soc-operations-lab/docs/commands_used.md  |  35 +
+ .../1-captura-de-pantalla_20260728_214354.png      | Bin 0 -> 169816 bytes
+ .../docs/images/1-wazuh-08-05-2026_09_10.jpg       | Bin 0 -> 194168 bytes
+ .../docs/images/10-wazuh-08-05-2026_10_21.jpg      | Bin 0 -> 192603 bytes
+ .../11-captura-de-pantalla_20260728_222046.png     | Bin 0 -> 97536 bytes
+ .../docs/images/11-wazuh-08-05-2026_10_21.jpg      | Bin 0 -> 136411 bytes
+ .../12-captura-de-pantalla_20260728_222251.png     | Bin 0 -> 94306 bytes
+ .../13-captura-de-pantalla_20260728_222310.png     | Bin 0 -> 129539 bytes
+ .../14-captura-de-pantalla_20260728_222605.png     | Bin 0 -> 65896 bytes
+ .../15-captura-de-pantalla_20260728_225127.png     | Bin 0 -> 106614 bytes
+ .../16-captura-de-pantalla_20260728_225149.png     | Bin 0 -> 21578 bytes
+ .../17-captura-de-pantalla_20260728_225346.png     | Bin 0 -> 77468 bytes
+ .../2-captura-de-pantalla_20260728_214732.png      | Bin 0 -> 69473 bytes
+ .../2-captura-de-pantalla_20260805_091128.png      | Bin 0 -> 590032 bytes
+ .../2-verificar-que-sysmon-quedo-instalado.png     | Bin 0 -> 186541 bytes
+ .../20-captura-de-pantalla_20260729_111238.png     | Bin 0 -> 773941 bytes
+ .../23-captura-de-pantalla_20260729_123627.png     | Bin 0 -> 786837 bytes
+ .../24-captura-de-pantalla_20260729_123904.png     | Bin 0 -> 778428 bytes
+ .../26-captura-de-pantalla_20260729_123904.png     | Bin 0 -> 117793 bytes
+ .../28-captura-de-pantalla_20260729_123904.png     | Bin 0 -> 305269 bytes
+ .../3-captura-de-pantalla_20260728_215737.png      | Bin 0 -> 101469 bytes
+ .../3-captura-de-pantalla_20260805_091128.png      | Bin 0 -> 291724 bytes
+ .../30-captura-de-pantalla_20260729_123904.png     | Bin 0 -> 671362 bytes
+ .../31-captura-de-pantalla_20260729_123904.png     | Bin 0 -> 133104 bytes
+ .../32-captura-de-pantalla_20260729_123904.png     | Bin 0 -> 63074 bytes
+ .../33-captura-de-pantalla_20260729_123904.png     | Bin 0 -> 181036 bytes
+ .../34-captura-de-pantalla_20260729_123904.png     | Bin 0 -> 708518 bytes
+ .../35-captura-de-pantalla_20260729_123904.png     | Bin 0 -> 573093 bytes
+ .../36-captura-de-pantalla_20260729_123904.png     | Bin 0 -> 323840 bytes
+ .../4-captura-de-pantalla_20260728_215851.png      | Bin 0 -> 113362 bytes
+ .../4-captura-de-pantalla_20260805_091128.png      | Bin 0 -> 275910 bytes
+ .../5-captura-de-pantalla_20260805_091405.png      | Bin 0 -> 295522 bytes
+ .../6-captura-de-pantalla_20260805_091405.png      | Bin 0 -> 121530 bytes
+ .../7-captura-de-pantalla_20260728_220148.png      | Bin 0 -> 79884 bytes
+ .../7-captura-de-pantalla_20260805_091405.jpg      | Bin 0 -> 180425 bytes
+ .../7-captura-de-pantalla_20260805_091405.png      | Bin 0 -> 284587 bytes
+ .../8-captura-de-pantalla_20260728_220314.png      | Bin 0 -> 90382 bytes
+ .../docs/images/8-wazuh-08-05-2026_10_21.jpg       | Bin 0 -> 191765 bytes
+ .../9-captura-de-pantalla_20260728_221011.png      | Bin 0 -> 4628026 bytes
+ .../docs/images/9-wazuh-08-05-2026_10_21.jpg       | Bin 0 -> 1544209 bytes
+ projects/soc-operations-lab/docs/images/README.md  |  13 +
+ .../crear-el-directorio-de-trabajo-sysmon.png      | Bin 0 -> 292173 bytes
+ .../descargar-sysmon-microsoft-sysinternals-.png   | Bin 0 -> 321560 bytes
+ .../docs/images/images_index.json                  | 365 +++++++++++
+ .../docs/images/paso-2-instalar-sysmon.png         | Bin 0 -> 125980 bytes
+ .../verificar-que-sysmon-quedo-instalado.png       | Bin 0 -> 1826 bytes
+ .../docs/images/wazuh-08-05-2026_09_35.jpg         | Bin 0 -> 200355 bytes
+ .../docs/images/wazuh-08-05-2026_09_36.jpg         | Bin 0 -> 228889 bytes
+ .../docs/operations/repository-synchronization.md  |  26 +
+ .../docs/troubleshooting/sysmon-eid3.md            |  14 +-
+ .../evidence/cardinality/report.md                 |  60 ++
+ .../run-20260815-195300/archive-discovery.txt      |   4 +
+ .../cardinality/cardinality_report.txt             |   8 +
+ .../cardinality/raw_selected_events.json           | 716 +++++++++++++++++++++
+ .../cardinality/sequence_unique_ports.csv          |  35 +
+ .../run-20260815-195300/cardinality/summary.json   |  43 ++
+ .../decoder_tests/logtest-candidate-matches.txt    | 135 ++++
+ .../logtest-duplicate-characterization-matches.txt | 219 +++++++
+ .../logtest-nonconsecutive-duplicate-matches.txt   |  80 +++
+ .../logtest-nonconsecutive-duplicate.out           | 225 +++++++
+ .../decoder_tests/sysmon-duplicate-then-new.jsonl  |  11 +
+ .../sysmon-nonconsecutive-duplicate.jsonl          |  10 +
+ .../decoder_tests/sysmon15.jsonl                   |  15 +
+ .../run-20260815-195300/decoder_tests/wfp15.jsonl  |  15 +
+ .../run-20260815-195300/event-source-discovery.txt |  16 +
+ .../rollback-and-reason.txt                        |   9 +
+ .../final-validation-and-inventory.txt             |  49 ++
+ .../nmap-attack-connect-port22.txt                 |   8 +
+ .../run-20260815-195300/nmap-attack-ports-1-20.txt |  29 +
+ .../production_test/collection-sanitized.txt       |  32 +
+ .../production_test/sysmon-attack-connect-test.txt |  16 +
+ .../run-20260815-195300/proposal_cardinality.md    |  53 ++
+ .../run-20260815-195300/rules_1005xx.xml           |  27 +
+ .../cardinality/run-20260815-202149/README.md      |  14 +
+ .../cardinality/run-20260815-202149/actions.log    |  63 ++
+ .../run-20260815-202149/amend_diff_check.txt       |   0
+ .../analysisd_candidate_test.txt                   |   0
+ .../run-20260815-202149/backup_ruleset.txt         |   8 +
+ .../run-20260815-202149/candidate_sha256.txt       |   3 +
+ .../cardinality/cardinality_report.txt             |   8 +
+ .../cardinality/sequence_unique_ports.csv          |  35 +
+ .../run-20260815-202149/cardinality/summary.json   |  43 ++
+ .../run-20260815-202149/cardinality_report.md      | 154 +++++
+ .../final_manager_sanity_sudo.txt                  |   2 +
+ .../run-20260815-202149/git_diff_check.txt         |   0
+ .../run-20260815-202149/git_ls_remote.txt          |   2 +
+ .../cardinality/run-20260815-202149/git_push.txt   |   1 +
+ .../cardinality/run-20260815-202149/git_remote.txt |   2 +
+ .../run-20260815-202149/logtest_sysmon_15_hits.txt | 107 +++
+ .../logtest_sysmon_exclusion_hits.txt              |   2 +
+ .../logtest_sysmon_final_ids.txt                   |  15 +
+ .../current_attack_events_sanitized.jsonl          |  20 +
+ .../current_relevant_alerts_sanitized.jsonl        |   2 +
+ .../production_test/nmap_1-20.txt                  |  29 +
+ .../production_test/nmap_sysmon_tcp_connect_22.txt |   8 +
+ .../production_test/sysmon_eid3_sanitized.jsonl    |   1 +
+ .../run-20260815-202149/restart_manager.txt        |   1 +
+ .../run-20260815-202149/rules_relevant.xml         |  53 ++
+ .../cardinality/run-20260815-202149/summary.txt    |  13 +
+ .../run-20260815-202149/tool_bash_syntax.txt       |   0
+ .../run-20260815-202149/tool_pycompile.txt         |   0
+ .../run-20260815-202149/xmllint_candidate.txt      |   0
+ .../cardinality/run-20260815-205438/actions.log    |  25 +
+ .../analysisd_candidate_test.txt                   |   0
+ .../run-20260815-205438/attack_interface_check.txt |   1 +
+ .../run-20260815-205438/backup_ruleset.txt         |   5 +
+ .../run-20260815-205438/candidate_sha256.txt       |   2 +
+ .../cardinality/cardinality_report.txt             |   8 +
+ .../cardinality/sequence_unique_ports.csv          |  35 +
+ .../run-20260815-205438/cardinality/summary.json   |  43 ++
+ .../run-20260815-205438/cardinality_report.md      |  73 +++
+ .../run-20260815-205438/cardinality_run_summary.md |  27 +
+ .../current_alerts_sanitized.jsonl                 |   2 +
+ .../current_attack_events_sanitized.jsonl          |  22 +
+ .../run-20260815-205438/current_event_order.txt    |  22 +
+ .../run-20260815-205438/git_ls_remote.txt          |   2 +
+ .../git_ls_remote_pre_publish.txt                  |   2 +
+ .../run-20260815-205438/logtest_sysmon_15_hits.txt |  15 +
+ .../cardinality/run-20260815-205438/nmap_1-20.txt  |  29 +
+ .../nmap_sysmon_tcp_connect_22.txt                 |   8 +
+ .../run-20260815-205438/proposal_cardinality.md    |  59 ++
+ .../run-20260815-205438/rules_relevant.xml         |  53 ++
+ .../run-20260815-205438/staged_diff_check.txt      |   0
+ .../run-20260815-205438/tool_bash_syntax.txt       |   0
+ .../run-20260815-205438/tool_pycompile.txt         |   0
+ .../run-20260815-205438/xmllint_candidate.txt      |   0
+ .../tools/build_cardinality_candidate.py           |  47 ++
+ .../tools/generate_logtest_events.py               |  31 +
+ .../soc-operations-lab/tools/parse_cardinality.py  | 122 ++++
+ .../tools/validate_and_install_candidate.sh        |  30 +
+ 138 files changed, 3706 insertions(+), 33 deletions(-)
+ create mode 100644 .github/workflows/portfolio-quality.yml
+ create mode 100644 projects/soc-operations-lab/docs/cardinality-investigation.md
+ create mode 100644 projects/soc-operations-lab/docs/commands_used.md
+ create mode 100644 projects/soc-operations-lab/docs/images/1-captura-de-pantalla_20260728_214354.png
+ create mode 100644 projects/soc-operations-lab/docs/images/1-wazuh-08-05-2026_09_10.jpg
+ create mode 100644 projects/soc-operations-lab/docs/images/10-wazuh-08-05-2026_10_21.jpg
+ create mode 100644 projects/soc-operations-lab/docs/images/11-captura-de-pantalla_20260728_222046.png
+ create mode 100644 projects/soc-operations-lab/docs/images/11-wazuh-08-05-2026_10_21.jpg
+ create mode 100644 projects/soc-operations-lab/docs/images/12-captura-de-pantalla_20260728_222251.png
+ create mode 100644 projects/soc-operations-lab/docs/images/13-captura-de-pantalla_20260728_222310.png
+ create mode 100644 projects/soc-operations-lab/docs/images/14-captura-de-pantalla_20260728_222605.png
+ create mode 100644 projects/soc-operations-lab/docs/images/15-captura-de-pantalla_20260728_225127.png
+ create mode 100644 projects/soc-operations-lab/docs/images/16-captura-de-pantalla_20260728_225149.png
+ create mode 100644 projects/soc-operations-lab/docs/images/17-captura-de-pantalla_20260728_225346.png
+ create mode 100644 projects/soc-operations-lab/docs/images/2-captura-de-pantalla_20260728_214732.png
+ create mode 100644 projects/soc-operations-lab/docs/images/2-captura-de-pantalla_20260805_091128.png
+ create mode 100644 projects/soc-operations-lab/docs/images/2-verificar-que-sysmon-quedo-instalado.png
+ create mode 100644 projects/soc-operations-lab/docs/images/20-captura-de-pantalla_20260729_111238.png
+ create mode 100644 projects/soc-operations-lab/docs/images/23-captura-de-pantalla_20260729_123627.png
+ create mode 100644 projects/soc-operations-lab/docs/images/24-captura-de-pantalla_20260729_123904.png
+ create mode 100644 projects/soc-operations-lab/docs/images/26-captura-de-pantalla_20260729_123904.png
+ create mode 100644 projects/soc-operations-lab/docs/images/28-captura-de-pantalla_20260729_123904.png
+ create mode 100644 projects/soc-operations-lab/docs/images/3-captura-de-pantalla_20260728_215737.png
+ create mode 100644 projects/soc-operations-lab/docs/images/3-captura-de-pantalla_20260805_091128.png
+ create mode 100644 projects/soc-operations-lab/docs/images/30-captura-de-pantalla_20260729_123904.png
+ create mode 100644 projects/soc-operations-lab/docs/images/31-captura-de-pantalla_20260729_123904.png
+ create mode 100644 projects/soc-operations-lab/docs/images/32-captura-de-pantalla_20260729_123904.png
+ create mode 100644 projects/soc-operations-lab/docs/images/33-captura-de-pantalla_20260729_123904.png
+ create mode 100644 projects/soc-operations-lab/docs/images/34-captura-de-pantalla_20260729_123904.png
+ create mode 100644 projects/soc-operations-lab/docs/images/35-captura-de-pantalla_20260729_123904.png
+ create mode 100644 projects/soc-operations-lab/docs/images/36-captura-de-pantalla_20260729_123904.png
+ create mode 100644 projects/soc-operations-lab/docs/images/4-captura-de-pantalla_20260728_215851.png
+ create mode 100644 projects/soc-operations-lab/docs/images/4-captura-de-pantalla_20260805_091128.png
+ create mode 100644 projects/soc-operations-lab/docs/images/5-captura-de-pantalla_20260805_091405.png
+ create mode 100644 projects/soc-operations-lab/docs/images/6-captura-de-pantalla_20260805_091405.png
+ create mode 100644 projects/soc-operations-lab/docs/images/7-captura-de-pantalla_20260728_220148.png
+ create mode 100644 projects/soc-operations-lab/docs/images/7-captura-de-pantalla_20260805_091405.jpg
+ create mode 100644 projects/soc-operations-lab/docs/images/7-captura-de-pantalla_20260805_091405.png
+ create mode 100644 projects/soc-operations-lab/docs/images/8-captura-de-pantalla_20260728_220314.png
+ create mode 100644 projects/soc-operations-lab/docs/images/8-wazuh-08-05-2026_10_21.jpg
+ create mode 100644 projects/soc-operations-lab/docs/images/9-captura-de-pantalla_20260728_221011.png
+ create mode 100644 projects/soc-operations-lab/docs/images/9-wazuh-08-05-2026_10_21.jpg
+ create mode 100644 projects/soc-operations-lab/docs/images/README.md
+ create mode 100644 projects/soc-operations-lab/docs/images/crear-el-directorio-de-trabajo-sysmon.png
+ create mode 100644 projects/soc-operations-lab/docs/images/descargar-sysmon-microsoft-sysinternals-.png
+ create mode 100644 projects/soc-operations-lab/docs/images/images_index.json
+ create mode 100644 projects/soc-operations-lab/docs/images/paso-2-instalar-sysmon.png
+ create mode 100644 projects/soc-operations-lab/docs/images/verificar-que-sysmon-quedo-instalado.png
+ create mode 100644 projects/soc-operations-lab/docs/images/wazuh-08-05-2026_09_35.jpg
+ create mode 100644 projects/soc-operations-lab/docs/images/wazuh-08-05-2026_09_36.jpg
+ create mode 100644 projects/soc-operations-lab/docs/operations/repository-synchronization.md
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/report.md
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/archive-discovery.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/cardinality/cardinality_report.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/cardinality/raw_selected_events.json
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/cardinality/summary.json
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate-matches.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate-matches.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/sysmon-duplicate-then-new.jsonl
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/sysmon-nonconsecutive-duplicate.jsonl
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/sysmon15.jsonl
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/wfp15.jsonl
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/event-source-discovery.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/failure-20260815-200300/rollback-and-reason.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/final-validation-and-inventory.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/nmap-attack-connect-port22.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/nmap-attack-ports-1-20.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/production_test/collection-sanitized.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/production_test/sysmon-attack-connect-test.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/proposal_cardinality.md
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-195300/rules_1005xx.xml
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/README.md
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/actions.log
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/amend_diff_check.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/analysisd_candidate_test.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/backup_ruleset.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/candidate_sha256.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/cardinality/cardinality_report.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/cardinality/sequence_unique_ports.csv
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/cardinality/summary.json
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/cardinality_report.md
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/final_manager_sanity_sudo.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/git_diff_check.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/git_ls_remote.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/git_push.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/git_remote.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_hits.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_exclusion_hits.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_final_ids.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/current_attack_events_sanitized.jsonl
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/current_relevant_alerts_sanitized.jsonl
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/nmap_1-20.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/nmap_sysmon_tcp_connect_22.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/sysmon_eid3_sanitized.jsonl
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/restart_manager.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/rules_relevant.xml
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/summary.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/tool_bash_syntax.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/tool_pycompile.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-202149/xmllint_candidate.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/actions.log
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/analysisd_candidate_test.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/attack_interface_check.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/backup_ruleset.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/candidate_sha256.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/cardinality/cardinality_report.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/cardinality/sequence_unique_ports.csv
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/cardinality/summary.json
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/cardinality_report.md
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/cardinality_run_summary.md
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/current_alerts_sanitized.jsonl
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/current_attack_events_sanitized.jsonl
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/current_event_order.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/git_ls_remote.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/git_ls_remote_pre_publish.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/logtest_sysmon_15_hits.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/nmap_1-20.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/nmap_sysmon_tcp_connect_22.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/proposal_cardinality.md
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/rules_relevant.xml
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/staged_diff_check.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/tool_bash_syntax.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/tool_pycompile.txt
+ create mode 100644 projects/soc-operations-lab/evidence/cardinality/run-20260815-205438/xmllint_candidate.txt
+ create mode 100644 projects/soc-operations-lab/tools/build_cardinality_candidate.py
+ create mode 100644 projects/soc-operations-lab/tools/generate_logtest_events.py
+ create mode 100644 projects/soc-operations-lab/tools/parse_cardinality.py
+ create mode 100644 projects/soc-operations-lab/tools/validate_and_install_candidate.sh

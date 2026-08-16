@@ -1,0 +1,54 @@
+index	source	classification	reasons
+0	1-Captura de pantalla_20260728_214354.png	publish_candidate	-
+1	10-Captura de pantalla_20260728_221909.png	exclude	credential_term
+2	11-Captura de pantalla_20260728_222046.png	publish_candidate	-
+3	12-Captura de pantalla_20260728_222251.png	publish_candidate	-
+4	13-Captura de pantalla_20260728_222310.png	publish_candidate	-
+5	14-Captura de pantalla_20260728_222605.png	publish_candidate	-
+6	15-Captura de pantalla_20260728_225127.png	publish_candidate	-
+7	16-Captura de pantalla_20260728_225149.png	publish_candidate	-
+8	17-Captura de pantalla_20260728_225346.png	publish_candidate	-
+9	18-Captura de pantalla_20260729_111029.png	exclude	credential_term
+10	19-Captura de pantalla_20260729_111103.png	exclude	credential_term
+11	2-Captura de pantalla_20260728_214732.png	publish_candidate	-
+12	20-Captura de pantalla_20260729_111238.png	publish_candidate	-
+13	21-Captura de pantalla_20260729_123627.png	exclude	credential_term
+14	22-Captura de pantalla_20260729_123627.png	exclude	credential_term
+15	23-Captura de pantalla_20260729_123627.png	publish_candidate	-
+16	24-Captura de pantalla_20260729_123904.png	publish_candidate	-
+17	26-Captura de pantalla_20260729_123904.png	publish_candidate	-
+18	28-Captura de pantalla_20260729_123904.png	publish_candidate	-
+19	29-Captura de pantalla_20260729_123904.png	exclude	credential_term
+20	3-Captura de pantalla_20260728_215737.png	publish_candidate	-
+21	30-Captura de pantalla_20260729_123904.png	publish_candidate	-
+22	31-Captura de pantalla_20260729_123904.png	publish_candidate	-
+23	32-Captura de pantalla_20260729_123904.png	publish_candidate	-
+24	33-Captura de pantalla_20260729_123904.png	publish_candidate	-
+25	34-Captura de pantalla_20260729_123904.png	publish_candidate	-
+26	35-Captura de pantalla_20260729_123904.png	publish_candidate	-
+27	36-Captura de pantalla_20260729_123904.png	publish_candidate	-
+28	4-Captura de pantalla_20260728_215851.png	publish_candidate	-
+29	5-Captura de pantalla_20260728_220012.png	exclude	credential_term
+30	6-Captura de pantalla_20260728_220124.png	exclude	credential_term
+31	7-Captura de pantalla_20260728_220148.png	publish_candidate	-
+32	8-Captura de pantalla_20260728_220314.png	publish_candidate	-
+33	9-Captura de pantalla_20260728_221011.png	publish_candidate	-
+34	1-Wazuh-08-05-2026_09_10.jpg	publish_candidate	-
+35	10-Wazuh-08-05-2026_10_21.jpg	publish_candidate	-
+36	11-Wazuh-08-05-2026_10_21.jpg	publish_candidate	-
+37	2-Captura de pantalla_20260805_091128.png	publish_candidate	-
+38	2-Verificar que Sysmon quedó instalado.png	publish_candidate	-
+39	3-Captura de pantalla_20260805_091128.png	publish_candidate	-
+40	4-Captura de pantalla_20260805_091128.png	publish_candidate	-
+41	5-Captura de pantalla_20260805_091405.png	publish_candidate	-
+42	6-Captura de pantalla_20260805_091405.png	publish_candidate	-
+43	7-Captura de pantalla_20260805_091405.jpg	publish_candidate	-
+44	7-Captura de pantalla_20260805_091405.png	publish_candidate	-
+45	8-Wazuh-08-05-2026_10_21.jpg	publish_candidate	-
+46	9-Wazuh-08-05-2026_10_21.jpg	publish_candidate	-
+47	Crear el directorio de trabajo Sysmon.png	publish_candidate	-
+48	Descargar Sysmon (Microsoft Sysinternals).png	publish_candidate	-
+49	Paso 2 - Instalar Sysmon.png	publish_candidate	-
+50	Verificar que Sysmon quedó instalado.png	publish_candidate	-
+51	Wazuh-08-05-2026_09_35.jpg	publish_candidate	-
+52	Wazuh-08-05-2026_09_36.jpg	publish_candidate	-

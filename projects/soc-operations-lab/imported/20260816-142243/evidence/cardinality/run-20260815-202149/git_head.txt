@@ -1,0 +1,1 @@
+481be25 fix(cardinality): enable direct Sysmon EID 3 base matching, validated 2026-08-15

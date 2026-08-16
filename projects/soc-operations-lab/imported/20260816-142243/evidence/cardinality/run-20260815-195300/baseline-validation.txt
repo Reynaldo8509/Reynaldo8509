@@ -1,0 +1,47 @@
+
+### Baseline XML and rules-engine validation
+/var/ossec/etc/rules/local_rules.xml:54: parser error : Extra content at the end of the document
+<group name="sysmon_eid3,network,windows">
+^
+
+### Rules file framing and helper ID availability
+<!-- Local rules
+==================================================================
+  LOCAL RULES - SOC HOME LAB (Wazuh 4.x)
+  Header repaired without changing functional rules.
+==================================================================
+-->
+
+
+<!-- ============================================================
+     GRUPO: AUTENTICACIÓN Y ESCALADA DE PRIVILEGIOS (Windows)
+     ============================================================ -->
+
+
+<!-- ============================================================
+     GRUPO: DETECCIÓN DE PORT SCAN — FUENTE 2: Sysmon Event ID 3
+     (Network Connection) — endpoint-level, complementa la fuente 1
+     ============================================================ -->
+<!-- General Windows WFP port-scan detection -->
+<group name="windows,firewall,portscan">
+  <rule id="100500" level="6">
+  <rule id="100220" level="0">
+    <decoded_as>json</decoded_as>
+    <field name="win.system.channel">^OpenSSH/Operational$</field>
+    <field name="win.eventdata.payload" type="pcre2">^Failed password for \S+ from [0-9A-Fa-f:.]+ port \d+ ssh2$</field>
+    <description>Windows OpenSSH failed password with source IP in payload</description>
+  </rule>
+  <rule id="100221" level="10" frequency="5" timeframe="120">
+    <if_matched_sid>100220</if_matched_sid>
+    <description>Possible Windows OpenSSH brute force: 5 failed passwords on the same agent in 2 minutes</description>
+    <group>authentication_failed,brute_force,attack,</group>
+    <mitre><id>T1110.001</id><id>T1021.004</id></mitre>
+  </rule>
+  <rule id="100222" level="12" frequency="10" timeframe="120">
+    <if_matched_sid>100220</if_matched_sid>
+    <description>High-confidence Windows OpenSSH brute force: 10 failed passwords on the same agent in 2 minutes</description>
+    <group>authentication_failed,brute_force,attack,</group>
+    <mitre><id>T1110.001</id><id>T1021.004</id></mitre>
+  </rule>
+</group>
+

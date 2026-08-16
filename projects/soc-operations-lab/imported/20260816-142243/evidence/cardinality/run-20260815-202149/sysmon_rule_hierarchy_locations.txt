@@ -1,0 +1,255 @@
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-60001-20260813-0353:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-60001-20260813-0353:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-60001-20260813-0353:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-60001-20260813-0353:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-60001-20260813-0353:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-60001-20260813-0353:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-60001-20260813-0353:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-195300:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-195300:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-195300:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-195300:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-parent-20260813-0415:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-parent-20260813-0415:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-parent-20260813-0415:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-parent-20260813-0415:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-parent-20260813-0415:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-parent-20260813-0415:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-security-parent-20260813-0415:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-live-eventchannel-20260813-0348:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-live-eventchannel-20260813-0348:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-live-eventchannel-20260813-0348:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-live-eventchannel-20260813-0348:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-live-eventchannel-20260813-0348:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-live-eventchannel-20260813-0348:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-live-eventchannel-20260813-0348:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-direct-20260813-0322:263:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-direct-20260813-0322:264:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-direct-20260813-0322:274:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-direct-20260813-0322:275:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-direct-20260813-0322:281:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-direct-20260813-0322:288:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-direct-20260813-0322:295:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-direct-20260813-0322:302:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-200500:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-200500:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-200500:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-200500:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-fields-20260813-0315:263:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-fields-20260813-0315:264:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-fields-20260813-0315:274:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-fields-20260813-0315:275:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-fields-20260813-0315:281:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-fields-20260813-0315:288:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-fields-20260813-0315:295:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-fields-20260813-0315:302:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132542:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132542:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132542:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132542:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132542:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132542:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132542:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-raw-20260813-0352:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-raw-20260813-0352:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-raw-20260813-0352:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-raw-20260813-0352:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-raw-20260813-0352:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-raw-20260813-0352:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-raw-20260813-0352:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-195300:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-195300:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-195300:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-195300:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-json-20260813-0332:266:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-json-20260813-0332:267:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-json-20260813-0332:277:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-json-20260813-0332:286:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-json-20260813-0332:293:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-json-20260813-0332:300:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-json-20260813-0332:307:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-200100:73:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-200100:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-200100:84:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-wfp-parent-20260813-171321:61:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-wfp-parent-20260813-171321:62:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-wfp-parent-20260813-171321:72:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-wfp-parent-20260813-171321:73:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-level6-diagnostic-20260813-180950:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-level6-diagnostic-20260813-180950:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-level6-diagnostic-20260813-180950:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-level6-diagnostic-20260813-180950:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-level6-20260813-183824:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-level6-20260813-183824:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-level6-20260813-183824:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-level6-20260813-183824:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-182819:212:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-182819:213:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-182819:224:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-182819:230:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-182819:236:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-182819:242:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-regexfix-20260813-133243:61:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-regexfix-20260813-133243:62:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-regexfix-20260813-133243:72:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-regexfix-20260813-133243:73:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260812-215407:263:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260812-215407:264:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260812-215407:274:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260812-215407:275:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260812-215407:281:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260812-215407:288:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260812-215407:295:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260812-215407:302:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-wfp-text-20260813-0355:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-wfp-text-20260813-0355:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-wfp-text-20260813-0355:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-wfp-text-20260813-0355:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-wfp-text-20260813-0355:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-wfp-text-20260813-0355:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-wfp-text-20260813-0355:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-wfp-parent-20260813-171243:61:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-wfp-parent-20260813-171243:62:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-wfp-parent-20260813-171243:72:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-wfp-parent-20260813-171243:73:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-20260813-2200:263:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-20260813-2200:264:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-20260813-2200:274:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-20260813-2200:275:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-20260813-2200:281:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-20260813-2200:288:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-20260813-2200:295:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-20260813-2200:302:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-level6-20260813-182607:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-level6-20260813-182607:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-level6-20260813-182607:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-level6-20260813-182607:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-bruteforce-portscan-20260813-213036:263:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-bruteforce-portscan-20260813-213036:264:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-bruteforce-portscan-20260813-213036:274:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-bruteforce-portscan-20260813-213036:275:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-bruteforce-portscan-20260813-213036:281:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-bruteforce-portscan-20260813-213036:288:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-bruteforce-portscan-20260813-213036:295:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-bruteforce-portscan-20260813-213036:302:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132348:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132348:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132348:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132348:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132348:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132348:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132348:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260813-0257:263:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260813-0257:264:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260813-0257:274:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260813-0257:275:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260813-0257:281:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260813-0257:288:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260813-0257:295:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-openssh-bruteforce-fix-20260813-0257:302:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-184430:230:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-184430:231:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-184430:241:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-184430:242:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-184430:248:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-184430:255:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-184430:262:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-184430:269:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-ignore60-final-20260813-191241:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-ignore60-final-20260813-191241:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-ignore60-final-20260813-191241:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-ignore60-final-20260813-191241:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-190626:230:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-190626:231:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-190626:241:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-190626:242:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-190626:248:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-190626:255:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-190626:262:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260812-190626:269:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-200100:73:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-200100:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-200100:84:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132449:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132449:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132449:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132449:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132449:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132449:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132449:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132253:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132253:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132253:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132253:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132253:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132253:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132253:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-base-visible-20260813-0405:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-base-visible-20260813-0405:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-base-visible-20260813-0405:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-base-visible-20260813-0405:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-base-visible-20260813-0405:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-base-visible-20260813-0405:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-base-visible-20260813-0405:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-200500:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-200500:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-200500:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.pretest-20260815-200500:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-level6-production-test-20260813-181128:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-level6-production-test-20260813-181128:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-level6-production-test-20260813-181128:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-level6-production-test-20260813-181128:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-noise-20260813-2133:263:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-noise-20260813-2133:264:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-noise-20260813-2133:274:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-noise-20260813-2133:275:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-noise-20260813-2133:281:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-noise-20260813-2133:288:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-noise-20260813-2133:295:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-noise-20260813-2133:302:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-visible-20260813-0340:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-visible-20260813-0340:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-visible-20260813-0340:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-visible-20260813-0340:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-visible-20260813-0340:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-visible-20260813-0340:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-visible-20260813-0340:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132126:265:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132126:266:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132126:276:  <rule id="100409" level="0">
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132126:284:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132126:291:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132126:298:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-before-portscan-final-20260813-132126:305:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-ignore60-final-20260813-190629:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-ignore60-final-20260813-190629:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-ignore60-final-20260813-190629:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-ignore60-final-20260813-190629:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-202149:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-202149:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-202149:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-202149:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-202149:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-202149:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-final-20260813-162914:61:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-final-20260813-162914:62:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-final-20260813-162914:72:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-portscan-final-20260813-162914:73:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-ignore-test-20260813-185302:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-ignore-test-20260813-185302:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-ignore-test-20260813-185302:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-ignore-test-20260813-185302:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-194748:62:  <rule id="100004" level="12">
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-194748:63:    <if_group>sysmon_event3</if_group>
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-194748:73:  <rule id="100409" level="1">
+/var/ossec/etc/rules/local_rules.xml.bak-20260815-194748:74:    <if_group>sysmon_event3</if_group>
+/var/ossec/ruleset/rules/0810-sysmon_id_3.xml:12:    <if_group>sysmon_event3</if_group>
+/var/ossec/ruleset/rules/0810-sysmon_id_3.xml:43:    <if_group>sysmon_event3</if_group>
+/var/ossec/ruleset/rules/0810-sysmon_id_3.xml:53:    <if_group>sysmon_event3</if_group>
+/var/ossec/ruleset/rules/0810-sysmon_id_3.xml:73:    <if_group>sysmon_event3</if_group>
+/var/ossec/ruleset/rules/0810-sysmon_id_3.xml:84:    <if_group>sysmon_event3</if_group>
+/var/ossec/ruleset/rules/0595-win-sysmon_rules.xml:59:    <group>sysmon_event3,</group>
+/var/ossec/ruleset/rules/0330-sysmon_rules.xml:28:        <group>sysmon_event3,</group>

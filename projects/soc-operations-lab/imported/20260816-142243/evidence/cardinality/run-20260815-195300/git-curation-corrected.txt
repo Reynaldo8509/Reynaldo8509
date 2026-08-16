@@ -1,0 +1,5 @@
+
+### Normalize generated CSV line endings and unstage raw terminal outputs
+Unstaged changes after reset:
+M	evidence/cardinality/run-20260815-195300/cardinality/sequence_unique_ports.csv
+M	tools/parse_cardinality.py

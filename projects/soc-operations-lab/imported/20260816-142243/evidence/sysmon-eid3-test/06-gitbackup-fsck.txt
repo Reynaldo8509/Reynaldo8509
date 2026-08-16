@@ -1,0 +1,9 @@
+
+### /home/reyam/GitBackup/Reynaldo8509.git
+exit=0
+
+### /home/reyam/GitBackup/professional-portfolio.git
+exit=0
+
+### /home/reyam/GitBackup/soc-operations-lab.git
+exit=0

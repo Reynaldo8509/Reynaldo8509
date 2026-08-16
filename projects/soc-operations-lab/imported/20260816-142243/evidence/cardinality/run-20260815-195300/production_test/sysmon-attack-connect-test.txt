@@ -1,0 +1,16 @@
+
+### Authorized ATTACK/LAB TCP-connect check for Sysmon EID 3
+sysmon_connect_test_start_utc=2026-08-16T01:03:39Z
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-15 20:03 -0500
+Nmap scan report for 192.168.56.20
+Host is up (0.0010s latency).
+
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 1 IP address (1 host up) scanned in 4.52 seconds
+
+### Sysmon EID3 ATTACK records after TCP-connect check (sanitized)
+{"timestamp":"2026-08-16T01:03:47.332+0000","source":"192.168.56.1","destination":"192.168.56.20","port":"22","protocol":"tcp","initiated":"false"}
+
+### Sysmon custom alerts after TCP-connect check (sanitized)

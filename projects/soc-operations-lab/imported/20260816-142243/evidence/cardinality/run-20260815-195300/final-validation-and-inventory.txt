@@ -1,0 +1,49 @@
+
+### Final manager validation and safe-artifact inventory
+active
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml
+e9ee3e1de767a0052a45c07040830f5fc265f1311d4f79b11fb118cdc9f4d33b  /home/reyam/GitBackup/cardinality-backups/local_rules.xml.bak-20260815-200500
+archive-discovery.txt	1799 bytes
+baseline-validation.txt	2161 bytes
+candidate-analysisd-validation.txt	2066 bytes
+candidate-build-validation.txt	2357 bytes
+candidate-v2-analysisd-logtest.txt	14042 bytes
+candidate-v2-build-validation.txt	3368 bytes
+candidate-v2-matches.txt	5334 bytes
+cardinality-execution.txt	8485 bytes
+cardinality/cardinality_report.txt	2648 bytes
+cardinality/raw_selected_events.json	30427 bytes
+cardinality/sequence_unique_ports.csv	3173 bytes
+cardinality/summary.json	524 bytes
+decoder_tests/logtest-candidate-matches.txt	4728 bytes
+decoder_tests/logtest-candidate.out	23415 bytes
+decoder_tests/logtest-current-rules-matches.txt	36 bytes
+decoder_tests/logtest-current-rules-root.out	464431 bytes
+decoder_tests/logtest-current-rules.out	540 bytes
+decoder_tests/logtest-duplicate-characterization-matches.txt	9011 bytes
+decoder_tests/logtest-duplicate-characterization.out	10011 bytes
+decoder_tests/logtest-nonconsecutive-duplicate-matches.txt	3305 bytes
+decoder_tests/logtest-nonconsecutive-duplicate.out	8907 bytes
+decoder_tests/sysmon-duplicate-then-new.jsonl	2651 bytes
+decoder_tests/sysmon-nonconsecutive-duplicate.jsonl	2410 bytes
+decoder_tests/sysmon15.jsonl	3615 bytes
+decoder_tests/wfp15.jsonl	3645 bytes
+event-source-discovery.txt	2160 bytes
+failure-20260815-200300/rollback-and-reason.txt	490 bytes
+final-validation-and-inventory.txt	312 bytes
+local_rules.xml.candidate	8811 bytes
+local_rules.xml.candidate-sysmon-minimal	8237 bytes
+local_rules.xml.candidate-v2	9401 bytes
+local_rules.xml.source	8066 bytes
+minimal-candidate-validation.txt	1599 bytes
+nmap-attack-connect-port22.txt	427 bytes
+nmap-attack-ports-1-20.txt	1040 bytes
+production-test-run.txt	1201 bytes
+production_test/collection-sanitized.txt	3811 bytes
+production_test/sysmon-agent-inspection-corrected.txt	2299 bytes
+production_test/sysmon-agent-inspection.txt	7079 bytes
+production_test/sysmon-attack-connect-test.txt	622 bytes
+proposal_cardinality.md	2390 bytes
+rules_1005xx.xml	1528 bytes
+run-20260815-195300.log	603999 bytes
+sysmon-rule-investigation.txt	17430 bytes
