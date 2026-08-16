@@ -1,0 +1,31 @@
+2026-08-15T23:47:01-05:00 start ts=20260815-234701 legacy=<LOCAL_HOME>/soc-operations-lab canonical=<LOCAL_HOME>/Reynaldo8509
+2026-08-15T23:47:01-05:00 gh auth status (sanitized)
+2026-08-15T23:47:01-05:00 legacy git status and branch
+2026-08-15T23:47:01-05:00 legacy remote and canonical status
+2026-08-15T23:47:01-05:00 context copy or alternate search
+2026-08-15T23:47:01-05:00 GitHub profile/repository/workflow inventory
+2026-08-15T23:47:03-05:00 git integrity and remote relationship
+2026-08-15T23:47:04-05:00 enumerate repository files over 1MB in canonical project
+2026-08-15T23:47:05-05:00 check markdown local links and image references in canonical project
+2026-08-15T23:47:05-05:00 check image files and metadata availability
+2026-08-15T23:47:05-05:00 gitleaks availability and sanitized current-tree scan
+2026-08-15T23:47:05-05:00 scan tracked canonical project content for sensitive patterns; report locations only
+2026-08-15T23:47:05-05:00 finish initial collection
+2026-08-15T23:47:24-05:00 repair: move private gitleaks artifact from root home to authorized <LOCAL_HOME>/GitBackup
+2026-08-15T23:47:24-05:00 repair: rerun sensitive-pattern scan with corrected regexes; locations only
+2026-08-15T23:47:24-05:00 repair completed
+2026-08-15T23:48:21-05:00 repair: rerun image/link validation with isolated Python heredoc
+2026-08-15T23:48:21-05:00 images_check_rc=0
+2026-08-15T23:49:10-05:00 generate sanitized summary, actions, and structured full report
+2026-08-15T23:49:10-05:00 report_generation=complete
+2026-08-15T23:49:37-05:00 backup_created=GitBackup/auto-audit-source-pre-sanitization-20260815-234701 before path sanitization
+2026-08-15T23:49:37-05:00 sanitized_absolute_local_paths=yes
+2026-08-15T23:49:37-05:00 post_sanitization_findings=34
+2026-08-15T23:49:50-05:00 post_sanitization_final_findings=0
+2026-08-15T23:50:16-05:00 prepare canonical branch tests/auto-audit-20260815-234701
+2026-08-15T23:50:17-05:00 copied_sanitized_audit_to_canonical_project
+2026-08-15T23:50:21-05:00 precommit_validation diff=0 safety=1 json=0 sensitive=0
+2026-08-15T23:50:50-05:00 security_incident=out_of_scope_scanner_output_quarantined private_backup=GitBackup/secret_leaks_auto-audit-20260815-234701
+2026-08-15T23:50:50-05:00 corrected_publication_safety_rc=0
+2026-08-15T23:51:59-05:00 incident_report_updated
+2026-08-15T23:52:17-05:00 final_validation diff=0 safety=0 json=0 sensitive=0

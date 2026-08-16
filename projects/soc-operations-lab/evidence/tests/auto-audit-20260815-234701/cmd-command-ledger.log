@@ -1,0 +1,19 @@
+2026-08-15T23:47:01-05:00 start ts=20260815-234701 legacy=<LOCAL_HOME>/soc-operations-lab canonical=<LOCAL_HOME>/Reynaldo8509
+2026-08-15T23:47:01-05:00 gh auth status (sanitized)
+2026-08-15T23:47:01-05:00 legacy git status and branch
+2026-08-15T23:47:01-05:00 legacy remote and canonical status
+2026-08-15T23:47:01-05:00 context copy or alternate search
+2026-08-15T23:47:01-05:00 GitHub profile/repository/workflow inventory
+2026-08-15T23:47:03-05:00 git integrity and remote relationship
+2026-08-15T23:47:04-05:00 enumerate repository files over 1MB in canonical project
+2026-08-15T23:47:05-05:00 check markdown local links and image references in canonical project
+2026-08-15T23:47:05-05:00 check image files and metadata availability
+2026-08-15T23:47:05-05:00 gitleaks availability and sanitized current-tree scan
+2026-08-15T23:47:05-05:00 scan tracked canonical project content for sensitive patterns; report locations only
+2026-08-15T23:47:05-05:00 finish initial collection
+2026-08-15T23:47:24-05:00 repair: move private gitleaks artifact from root home to authorized <LOCAL_HOME>/GitBackup
+2026-08-15T23:47:24-05:00 repair: rerun sensitive-pattern scan with corrected regexes; locations only
+2026-08-15T23:47:24-05:00 repair completed
+2026-08-15T23:48:21-05:00 repair: rerun image/link validation with isolated Python heredoc
+2026-08-15T23:48:21-05:00 images_check_rc=0
+2026-08-15T23:49:10-05:00 generate sanitized summary, actions, and structured full report

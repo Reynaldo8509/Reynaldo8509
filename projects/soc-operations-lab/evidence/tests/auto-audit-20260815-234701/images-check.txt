@@ -1,0 +1,5 @@
+checked_local_links=124
+image_links=20
+image_manifest_entries=45
+image_files_present=47
+PASS: no broken local Markdown/HTML links or indexed images
