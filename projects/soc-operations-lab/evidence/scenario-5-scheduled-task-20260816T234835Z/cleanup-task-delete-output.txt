@@ -1,0 +1,1 @@
+SUCCESS: The scheduled task "SOC-HOMELAB-PERSISTENCE-20260816T234835Z" was successfully deleted.
