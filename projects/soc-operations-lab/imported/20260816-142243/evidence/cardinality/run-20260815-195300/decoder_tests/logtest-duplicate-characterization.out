@@ -1,0 +1,252 @@
+
+### Duplicate-port characterization: 9 unique, repeat port 9, then port 10
+
+Starting wazuh-logtest v4.14.7
+Type one log per line
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20001"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20001'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+**Phase 3: Completed filtering (rules).
+	id: '100409'
+	level: '1'
+	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+
+	groups: '['sysmon_eid3', 'network', 'windows']'
+	firedtimes: '1'
+	mail: 'False'
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20002"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20002'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+**Phase 3: Completed filtering (rules).
+	id: '100409'
+	level: '1'
+	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+	groups: '['sysmon_eid3', 'network', 'windows']'
+
+	firedtimes: '2'
+	mail: 'False'
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20003"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20003'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+**Phase 3: Completed filtering (rules).
+	id: '100409'
+	level: '1'
+	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+	groups: '['sysmon_eid3', 'network', 'windows']'
+
+	firedtimes: '3'
+	mail: 'False'
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20004"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20004'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+**Phase 3: Completed filtering (rules).
+	id: '100409'
+	level: '1'
+	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+
+	groups: '['sysmon_eid3', 'network', 'windows']'
+	firedtimes: '4'
+	mail: 'False'
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20005"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20005'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+**Phase 3: Completed filtering (rules).
+	id: '100409'
+	level: '1'
+	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+	groups: '['sysmon_eid3', 'network', 'windows']'
+	firedtimes: '5'
+
+	mail: 'False'
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20006"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20006'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+**Phase 3: Completed filtering (rules).
+	id: '100409'
+	level: '1'
+	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+	groups: '['sysmon_eid3', 'network', 'windows']'
+
+	firedtimes: '6'
+	mail: 'False'
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20007"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20007'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+**Phase 3: Completed filtering (rules).
+	id: '100409'
+
+	level: '1'
+	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+	groups: '['sysmon_eid3', 'network', 'windows']'
+	firedtimes: '7'
+	mail: 'False'
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20008"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20008'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+**Phase 3: Completed filtering (rules).
+	id: '100409'
+	level: '1'
+	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+
+	groups: '['sysmon_eid3', 'network', 'windows']'
+	firedtimes: '8'
+	mail: 'False'
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20009"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20009'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+
+**Phase 3: Completed filtering (rules).
+	id: '100409'
+	level: '1'
+	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+	groups: '['sysmon_eid3', 'network', 'windows']'
+	firedtimes: '9'
+	mail: 'False'
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20009"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20009'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+**Phase 3: Completed filtering (rules).
+	id: '100409'
+	level: '1'
+	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+	groups: '['sysmon_eid3', 'network', 'windows']'
+	firedtimes: '10'
+
+	mail: 'False'
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","eventID":"3","channel":"Microsoft-Windows-Sysmon/Operational"},"eventdata":{"protocol":"tcp","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"20010"}}}'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.destinationIp: '192.168.56.20'
+	win.eventdata.destinationPort: '20010'
+	win.eventdata.protocol: 'tcp'
+	win.eventdata.sourceIp: '192.168.56.1'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.eventID: '3'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+
+**Phase 3: Completed filtering (rules).
+	id: '100420'
+	level: '10'
+	description: 'Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds'
+	groups: '['sysmon_eid3', 'network', 'windowsreconnaissance', 'port_scan', 'attack']'
+	firedtimes: '1'
+	frequency: '10'
+	mail: 'False'
+	mitre.id: '['T1046']'
+	mitre.tactic: '['Discovery']'
+	mitre.technique: '['Network Service Discovery']'
+**Alert to be generated.
+

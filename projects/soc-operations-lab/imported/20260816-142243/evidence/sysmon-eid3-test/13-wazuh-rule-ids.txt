@@ -1,0 +1,3 @@
+(eval):1: can't change option: zle
+(eval):1: can't change option: zle
+ssh: connect to host 192.168.57.10 port 22: No route to host

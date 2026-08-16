@@ -1,0 +1,1052 @@
+evidence/sync/sync-20260816-142243/git-push-sync.txt:1: trailing whitespace.
++remote: 
+evidence/sync/sync-20260816-142243/git-push-sync.txt:2: trailing whitespace.
++remote: Create a pull request for 'sync/20260816-142243' on GitHub by visiting:        
+evidence/sync/sync-20260816-142243/git-push-sync.txt:3: trailing whitespace.
++remote:      https://github.com/Reynaldo8509/Reynaldo8509/pull/new/sync/20260816-142243        
+evidence/sync/sync-20260816-142243/git-push-sync.txt:4: trailing whitespace.
++remote: 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:2: trailing whitespace.
++++lo               UNKNOWN        127.0.0.1/8 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:4: trailing whitespace.
++++enp0s3           UP             10.0.2.3/24 metric 100 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:6: trailing whitespace.
++++enp0s8           UP             192.168.56.10/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:8: trailing whitespace.
++++enp0s9           UP             192.168.57.10/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:10: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:12: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:14: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:16: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:18: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:20: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:22: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:24: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:26: trailing whitespace.
++++event_index  timestamp                   source_ip     destination_ip  protocol  destination_port  is_unique_port_for_session  unique_port_count  event_id  rule_id
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:28: trailing whitespace.
++++1            2026-08-12T22:54:47.865000  192.168.56.1  192.168.56.20   unknown   143               True                        1                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:30: trailing whitespace.
++++2            2026-08-12T22:54:47.866000  192.168.56.1  192.168.56.20   unknown   993               True                        2                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:32: trailing whitespace.
++++3            2026-08-12T22:54:47.879000  192.168.56.1  192.168.56.20   unknown   110               True                        3                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:34: trailing whitespace.
++++4            2026-08-12T22:54:47.895000  192.168.56.1  192.168.56.20   unknown   111               True                        4                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:36: trailing whitespace.
++++5            2026-08-12T22:54:47.911000  192.168.56.1  192.168.56.20   unknown   995               True                        5                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:38: trailing whitespace.
++++6            2026-08-12T22:54:47.927000  192.168.56.1  192.168.56.20   unknown   587               True                        6                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:40: trailing whitespace.
++++7            2026-08-12T22:54:47.943000  192.168.56.1  192.168.56.20   unknown   21                True                        7                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:42: trailing whitespace.
++++8            2026-08-12T22:54:47.958000  192.168.56.1  192.168.56.20   unknown   23                True                        8                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:44: trailing whitespace.
++++9            2026-08-12T22:54:47.990000  192.168.56.1  192.168.56.20   unknown   199               True                        9                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:46: trailing whitespace.
++++10           2026-08-12T22:54:48.038000  192.168.56.1  192.168.56.20   unknown   256               True                        10                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:48: trailing whitespace.
++++11           2026-08-12T22:54:48.054000  192.168.56.1  192.168.56.20   unknown   554               True                        11                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:50: trailing whitespace.
++++12           2026-08-12T22:54:48.087000  192.168.56.1  192.168.56.20   unknown   443               True                        12                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:52: trailing whitespace.
++++13           2026-08-12T22:54:48.104000  192.168.56.1  192.168.56.20   unknown   443               False                       12                 5157      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:54: trailing whitespace.
++++14           2026-08-12T22:54:48.120000  192.168.56.1  192.168.56.20   unknown   25                True                        13                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:56: trailing whitespace.
++++15           2026-08-12T22:54:48.136000  192.168.56.1  192.168.56.20   unknown   113               True                        14                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:58: trailing whitespace.
++++16           2026-08-12T22:54:48.166000  192.168.56.1  192.168.56.20   unknown   53                True                        15                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:60: trailing whitespace.
++++17           2026-08-12T22:54:48.166000  192.168.56.1  192.168.56.20   unknown   80                True                        16                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:62: trailing whitespace.
++++18           2026-08-12T22:54:48.182000  192.168.56.1  192.168.56.20   unknown   889               True                        17                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:64: trailing whitespace.
++++19           2026-08-12T22:54:48.199000  192.168.56.1  192.168.56.20   unknown   419               True                        18                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:66: trailing whitespace.
++++20           2026-08-12T22:54:48.230000  192.168.56.1  192.168.56.20   unknown   485               True                        19                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:68: trailing whitespace.
++++21           2026-08-12T22:54:48.231000  192.168.56.1  192.168.56.20   unknown   622               True                        20                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:70: trailing whitespace.
++++22           2026-08-12T22:54:48.246000  192.168.56.1  192.168.56.20   unknown   268               True                        21                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:72: trailing whitespace.
++++23           2026-08-12T22:54:48.262000  192.168.56.1  192.168.56.20   unknown   286               True                        22                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:74: trailing whitespace.
++++24           2026-08-12T22:54:48.294000  192.168.56.1  192.168.56.20   unknown   321               True                        23                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:76: trailing whitespace.
++++25           2026-08-12T22:54:48.294000  192.168.56.1  192.168.56.20   unknown   679               True                        24                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:78: trailing whitespace.
++++26           2026-08-12T22:54:48.310000  192.168.56.1  192.168.56.20   unknown   226               True                        25                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:80: trailing whitespace.
++++27           2026-08-12T22:54:48.328000  192.168.56.1  192.168.56.20   unknown   173               True                        26                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:82: trailing whitespace.
++++28           2026-08-12T22:54:48.361000  192.168.56.1  192.168.56.20   unknown   184               True                        27                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:84: trailing whitespace.
++++29           2026-08-12T22:54:48.361000  192.168.56.1  192.168.56.20   unknown   811               True                        28                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:86: trailing whitespace.
++++30           2026-08-12T22:54:48.376000  192.168.56.1  192.168.56.20   unknown   773               True                        29                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:88: trailing whitespace.
++++31           2026-08-12T22:54:48.391000  192.168.56.1  192.168.56.20   unknown   266               True                        30                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:90: trailing whitespace.
++++32           2026-08-12T22:54:48.422000  192.168.56.1  192.168.56.20   unknown   436               True                        31                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:92: trailing whitespace.
++++33           2026-08-12T22:54:48.423000  192.168.56.1  192.168.56.20   unknown   74                True                        32                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:94: trailing whitespace.
++++34           2026-08-12T22:54:48.438000  192.168.56.1  192.168.56.20   unknown   787               True                        33                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:96: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:98: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:100: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:102: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:104: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:106: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:108: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:110: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:112: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:114: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:116: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:118: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:120: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:122: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:124: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:126: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:128: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:130: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:132: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:134: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:136: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:138: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:140: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:142: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:144: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:146: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:148: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:150: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:152: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:154: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:156: trailing whitespace.
+++++event_index,timestamp,source_ip,destination_ip,protocol,destination_port,is_unique_port_for_session,unique_port_count,event_id,rule_id
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:158: trailing whitespace.
+++++1,2026-08-12T22:54:47.865000,192.168.56.1,192.168.56.20,unknown,143,True,1,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:160: trailing whitespace.
+++++2,2026-08-12T22:54:47.866000,192.168.56.1,192.168.56.20,unknown,993,True,2,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:162: trailing whitespace.
+++++3,2026-08-12T22:54:47.879000,192.168.56.1,192.168.56.20,unknown,110,True,3,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:164: trailing whitespace.
+++++4,2026-08-12T22:54:47.895000,192.168.56.1,192.168.56.20,unknown,111,True,4,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:166: trailing whitespace.
+++++5,2026-08-12T22:54:47.911000,192.168.56.1,192.168.56.20,unknown,995,True,5,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:168: trailing whitespace.
+++++6,2026-08-12T22:54:47.927000,192.168.56.1,192.168.56.20,unknown,587,True,6,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:170: trailing whitespace.
+++++7,2026-08-12T22:54:47.943000,192.168.56.1,192.168.56.20,unknown,21,True,7,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:172: trailing whitespace.
+++++8,2026-08-12T22:54:47.958000,192.168.56.1,192.168.56.20,unknown,23,True,8,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:174: trailing whitespace.
+++++9,2026-08-12T22:54:47.990000,192.168.56.1,192.168.56.20,unknown,199,True,9,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:176: trailing whitespace.
+++++10,2026-08-12T22:54:48.038000,192.168.56.1,192.168.56.20,unknown,256,True,10,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:178: trailing whitespace.
+++++11,2026-08-12T22:54:48.054000,192.168.56.1,192.168.56.20,unknown,554,True,11,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:180: trailing whitespace.
+++++12,2026-08-12T22:54:48.087000,192.168.56.1,192.168.56.20,unknown,443,True,12,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:182: trailing whitespace.
+++++13,2026-08-12T22:54:48.104000,192.168.56.1,192.168.56.20,unknown,443,False,12,5157,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:184: trailing whitespace.
+++++14,2026-08-12T22:54:48.120000,192.168.56.1,192.168.56.20,unknown,25,True,13,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:186: trailing whitespace.
+++++15,2026-08-12T22:54:48.136000,192.168.56.1,192.168.56.20,unknown,113,True,14,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:188: trailing whitespace.
+++++16,2026-08-12T22:54:48.166000,192.168.56.1,192.168.56.20,unknown,53,True,15,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:190: trailing whitespace.
+++++17,2026-08-12T22:54:48.166000,192.168.56.1,192.168.56.20,unknown,80,True,16,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:192: trailing whitespace.
+++++18,2026-08-12T22:54:48.182000,192.168.56.1,192.168.56.20,unknown,889,True,17,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:194: trailing whitespace.
+++++19,2026-08-12T22:54:48.199000,192.168.56.1,192.168.56.20,unknown,419,True,18,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:196: trailing whitespace.
+++++20,2026-08-12T22:54:48.230000,192.168.56.1,192.168.56.20,unknown,485,True,19,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:198: trailing whitespace.
+++++21,2026-08-12T22:54:48.231000,192.168.56.1,192.168.56.20,unknown,622,True,20,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:200: trailing whitespace.
+++++22,2026-08-12T22:54:48.246000,192.168.56.1,192.168.56.20,unknown,268,True,21,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:202: trailing whitespace.
+++++23,2026-08-12T22:54:48.262000,192.168.56.1,192.168.56.20,unknown,286,True,22,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:204: trailing whitespace.
+++++24,2026-08-12T22:54:48.294000,192.168.56.1,192.168.56.20,unknown,321,True,23,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:206: trailing whitespace.
+++++25,2026-08-12T22:54:48.294000,192.168.56.1,192.168.56.20,unknown,679,True,24,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:208: trailing whitespace.
+++++26,2026-08-12T22:54:48.310000,192.168.56.1,192.168.56.20,unknown,226,True,25,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:210: trailing whitespace.
+++++27,2026-08-12T22:54:48.328000,192.168.56.1,192.168.56.20,unknown,173,True,26,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:212: trailing whitespace.
+++++28,2026-08-12T22:54:48.361000,192.168.56.1,192.168.56.20,unknown,184,True,27,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:214: trailing whitespace.
+++++29,2026-08-12T22:54:48.361000,192.168.56.1,192.168.56.20,unknown,811,True,28,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:216: trailing whitespace.
+++++30,2026-08-12T22:54:48.376000,192.168.56.1,192.168.56.20,unknown,773,True,29,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:218: trailing whitespace.
+++++31,2026-08-12T22:54:48.391000,192.168.56.1,192.168.56.20,unknown,266,True,30,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:220: trailing whitespace.
+++++32,2026-08-12T22:54:48.422000,192.168.56.1,192.168.56.20,unknown,436,True,31,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:222: trailing whitespace.
+++++33,2026-08-12T22:54:48.423000,192.168.56.1,192.168.56.20,unknown,74,True,32,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:224: trailing whitespace.
+++++34,2026-08-12T22:54:48.438000,192.168.56.1,192.168.56.20,unknown,787,True,33,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:226: trailing whitespace.
+++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:228: trailing whitespace.
+++++vboxnet0         UP             192.168.56.1/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:230: trailing whitespace.
+++++** WARNING: connection is not using a post-quantum key exchange algorithm.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:232: trailing whitespace.
+++++** This session may be vulnerable to "store now, decrypt later" attacks.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:234: trailing whitespace.
+++++** The server may need to be upgraded. See https://openssh.com/pq.html
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:236: trailing whitespace.
+++++#< CLIXML
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:238: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:240: trailing whitespace.
+++++Name      Status StartType
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:242: trailing whitespace.
+++++----      ------ ---------
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:244: trailing whitespace.
+++++Sysmon64 Running Automatic
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:246: trailing whitespace.
+++++                          
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:248: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:250: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:252: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:254: trailing whitespace.
+++++TimeCreated          Id SourceIp     DestinationIp DestinationPort Protocol Initiated
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:256: trailing whitespace.
+++++-----------          -- --------     ------------- --------------- -------- ---------
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:258: trailing whitespace.
+++++8/15/2026 8:02:51 PM  3 192.168.57.1 192.168.57.20 22              tcp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:260: trailing whitespace.
+++++8/15/2026 8:01:46 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:262: trailing whitespace.
+++++8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:264: trailing whitespace.
+++++8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:266: trailing whitespace.
+++++8/15/2026 8:01:10 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:268: trailing whitespace.
+++++8/15/2026 8:00:03 PM  3 10.0.2.15    20.184.175.12 443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:270: trailing whitespace.
+++++8/15/2026 7:35:42 PM  3 10.0.2.15    20.42.73.24   443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:272: trailing whitespace.
+++++8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:274: trailing whitespace.
+++++8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:276: trailing whitespace.
+++++8/15/2026 7:31:10 PM  3 10.0.2.15    52.123.247.43 443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:278: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:280: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:282: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:284: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:286: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:288: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:290: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:292: trailing whitespace.
++++vboxnet0         UP             192.168.56.1/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:294: trailing whitespace.
++++** WARNING: connection is not using a post-quantum key exchange algorithm.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:296: trailing whitespace.
++++** This session may be vulnerable to "store now, decrypt later" attacks.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:298: trailing whitespace.
++++** The server may need to be upgraded. See https://openssh.com/pq.html
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:300: trailing whitespace.
++++#< CLIXML
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:302: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:304: trailing whitespace.
++++Name      Status StartType
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:306: trailing whitespace.
++++----      ------ ---------
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:308: trailing whitespace.
++++Sysmon64 Running Automatic
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:310: trailing whitespace.
++++                          
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:312: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:314: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:316: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:318: trailing whitespace.
++++TimeCreated          Id SourceIp     DestinationIp DestinationPort Protocol Initiated
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:320: trailing whitespace.
++++-----------          -- --------     ------------- --------------- -------- ---------
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:322: trailing whitespace.
++++8/15/2026 8:02:51 PM  3 192.168.57.1 192.168.57.20 22              tcp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:324: trailing whitespace.
++++8/15/2026 8:01:46 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:326: trailing whitespace.
++++8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:328: trailing whitespace.
++++8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:330: trailing whitespace.
++++8/15/2026 8:01:10 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:332: trailing whitespace.
++++8/15/2026 8:00:03 PM  3 10.0.2.15    20.184.175.12 443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:334: trailing whitespace.
++++8/15/2026 7:35:42 PM  3 10.0.2.15    20.42.73.24   443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:336: trailing whitespace.
++++8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:338: trailing whitespace.
++++8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:340: trailing whitespace.
++++8/15/2026 7:31:10 PM  3 10.0.2.15    52.123.247.43 443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:342: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:344: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:346: trailing whitespace.
++++** WARNING: connection is not using a post-quantum key exchange algorithm.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:348: trailing whitespace.
++++** This session may be vulnerable to "store now, decrypt later" attacks.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:350: trailing whitespace.
++++** The server may need to be upgraded. See https://openssh.com/pq.html
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:352: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:354: trailing whitespace.
++++Name      Status StartType
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:356: trailing whitespace.
++++----      ------ ---------
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:358: trailing whitespace.
++++Sysmon64 Running Automatic
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:360: trailing whitespace.
++++& : The term '"C:\WINDOWS\\Sysmon64.exe"' is not recognized as the name of a cmdlet, function, script file, or 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:362: trailing whitespace.
++++operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:364: trailing whitespace.
++++again.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:366: trailing whitespace.
++++At line:1 char:100
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:368: trailing whitespace.
+++++ ... Object Name,Status,StartType; & `"$env:windir\\Sysmon64.exe`" -c 2>$n ...
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:370: trailing whitespace.
+++++                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:372: trailing whitespace.
++++    + CategoryInfo          : ObjectNotFound: ("C:\WINDOWS\\Sysmon64.exe":String) [], CommandNotFoundException
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:374: trailing whitespace.
++++    + FullyQualifiedErrorId : CommandNotFoundException
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:376: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:378: trailing whitespace.
++++Get-WinEvent : There is not an event log on the localhost computer that matches 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:380: trailing whitespace.
++++""Microsoft-Windows-Sysmon/Operational"".
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:382: trailing whitespace.
++++At line:1 char:142
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:384: trailing whitespace.
+++++ ... -c 2>$null; Get-WinEvent -LogName `"Microsoft-Windows-Sysmon/Operatio ...
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:386: trailing whitespace.
+++++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:388: trailing whitespace.
++++    + CategoryInfo          : ObjectNotFound: ("Microsoft-Windows-Sysmon/Operational":String) [Get-WinEvent], Exceptio 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:390: trailing whitespace.
++++   n
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:392: trailing whitespace.
++++    + FullyQualifiedErrorId : NoMatchingLogsFound,Microsoft.PowerShell.Commands.GetWinEventCommand
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:394: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:396: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:398: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:400: trailing whitespace.
++++event_index  timestamp                   source_ip     destination_ip  protocol  destination_port  is_unique_port_for_session  unique_port_count  event_id  rule_id
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:402: trailing whitespace.
++++1            2026-08-12T22:54:47.865000  192.168.56.1  192.168.56.20   unknown   143               True                        1                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:404: trailing whitespace.
++++2            2026-08-12T22:54:47.866000  192.168.56.1  192.168.56.20   unknown   993               True                        2                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:406: trailing whitespace.
++++3            2026-08-12T22:54:47.879000  192.168.56.1  192.168.56.20   unknown   110               True                        3                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:408: trailing whitespace.
++++4            2026-08-12T22:54:47.895000  192.168.56.1  192.168.56.20   unknown   111               True                        4                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:410: trailing whitespace.
++++5            2026-08-12T22:54:47.911000  192.168.56.1  192.168.56.20   unknown   995               True                        5                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:412: trailing whitespace.
++++6            2026-08-12T22:54:47.927000  192.168.56.1  192.168.56.20   unknown   587               True                        6                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:414: trailing whitespace.
++++7            2026-08-12T22:54:47.943000  192.168.56.1  192.168.56.20   unknown   21                True                        7                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:416: trailing whitespace.
++++8            2026-08-12T22:54:47.958000  192.168.56.1  192.168.56.20   unknown   23                True                        8                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:418: trailing whitespace.
++++9            2026-08-12T22:54:47.990000  192.168.56.1  192.168.56.20   unknown   199               True                        9                  5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:420: trailing whitespace.
++++10           2026-08-12T22:54:48.038000  192.168.56.1  192.168.56.20   unknown   256               True                        10                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:422: trailing whitespace.
++++11           2026-08-12T22:54:48.054000  192.168.56.1  192.168.56.20   unknown   554               True                        11                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:424: trailing whitespace.
++++12           2026-08-12T22:54:48.087000  192.168.56.1  192.168.56.20   unknown   443               True                        12                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:426: trailing whitespace.
++++13           2026-08-12T22:54:48.104000  192.168.56.1  192.168.56.20   unknown   443               False                       12                 5157      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:428: trailing whitespace.
++++14           2026-08-12T22:54:48.120000  192.168.56.1  192.168.56.20   unknown   25                True                        13                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:430: trailing whitespace.
++++15           2026-08-12T22:54:48.136000  192.168.56.1  192.168.56.20   unknown   113               True                        14                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:432: trailing whitespace.
++++16           2026-08-12T22:54:48.166000  192.168.56.1  192.168.56.20   unknown   53                True                        15                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:434: trailing whitespace.
++++17           2026-08-12T22:54:48.166000  192.168.56.1  192.168.56.20   unknown   80                True                        16                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:436: trailing whitespace.
++++18           2026-08-12T22:54:48.182000  192.168.56.1  192.168.56.20   unknown   889               True                        17                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:438: trailing whitespace.
++++19           2026-08-12T22:54:48.199000  192.168.56.1  192.168.56.20   unknown   419               True                        18                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:440: trailing whitespace.
++++20           2026-08-12T22:54:48.230000  192.168.56.1  192.168.56.20   unknown   485               True                        19                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:442: trailing whitespace.
++++21           2026-08-12T22:54:48.231000  192.168.56.1  192.168.56.20   unknown   622               True                        20                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:444: trailing whitespace.
++++22           2026-08-12T22:54:48.246000  192.168.56.1  192.168.56.20   unknown   268               True                        21                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:446: trailing whitespace.
++++23           2026-08-12T22:54:48.262000  192.168.56.1  192.168.56.20   unknown   286               True                        22                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:448: trailing whitespace.
++++24           2026-08-12T22:54:48.294000  192.168.56.1  192.168.56.20   unknown   321               True                        23                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:450: trailing whitespace.
++++25           2026-08-12T22:54:48.294000  192.168.56.1  192.168.56.20   unknown   679               True                        24                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:452: trailing whitespace.
++++26           2026-08-12T22:54:48.310000  192.168.56.1  192.168.56.20   unknown   226               True                        25                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:454: trailing whitespace.
++++27           2026-08-12T22:54:48.328000  192.168.56.1  192.168.56.20   unknown   173               True                        26                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:456: trailing whitespace.
++++28           2026-08-12T22:54:48.361000  192.168.56.1  192.168.56.20   unknown   184               True                        27                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:458: trailing whitespace.
++++29           2026-08-12T22:54:48.361000  192.168.56.1  192.168.56.20   unknown   811               True                        28                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:460: trailing whitespace.
++++30           2026-08-12T22:54:48.376000  192.168.56.1  192.168.56.20   unknown   773               True                        29                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:462: trailing whitespace.
++++31           2026-08-12T22:54:48.391000  192.168.56.1  192.168.56.20   unknown   266               True                        30                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:464: trailing whitespace.
++++32           2026-08-12T22:54:48.422000  192.168.56.1  192.168.56.20   unknown   436               True                        31                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:466: trailing whitespace.
++++33           2026-08-12T22:54:48.423000  192.168.56.1  192.168.56.20   unknown   74                True                        32                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:468: trailing whitespace.
++++34           2026-08-12T22:54:48.438000  192.168.56.1  192.168.56.20   unknown   787               True                        33                 5152      100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:470: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:472: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:474: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:476: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:478: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:480: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:482: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:484: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:486: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:488: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:490: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:492: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:494: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:496: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:498: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:500: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:502: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:504: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:506: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:508: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:510: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:512: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:514: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:516: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:518: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:520: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:522: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:524: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:526: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:528: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:530: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:532: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:534: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:536: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:538: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:540: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:542: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:544: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:546: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:548: trailing whitespace.
++++vboxnet0         UP             192.168.56.1/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:550: trailing whitespace.
++++** WARNING: connection is not using a post-quantum key exchange algorithm.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:552: trailing whitespace.
++++** This session may be vulnerable to "store now, decrypt later" attacks.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:554: trailing whitespace.
++++** The server may need to be upgraded. See https://openssh.com/pq.html
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:556: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:558: trailing whitespace.
++++Name      Status StartType
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:560: trailing whitespace.
++++----      ------ ---------
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:562: trailing whitespace.
++++Sysmon64 Running Automatic
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:564: trailing whitespace.
++++& : The term '"C:\WINDOWS\\Sysmon64.exe"' is not recognized as the name of a cmdlet, function, script file, or 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:566: trailing whitespace.
++++operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:568: trailing whitespace.
++++again.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:570: trailing whitespace.
++++At line:1 char:100
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:572: trailing whitespace.
+++++ ... Object Name,Status,StartType; & `"$env:windir\\Sysmon64.exe`" -c 2>$n ...
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:574: trailing whitespace.
+++++                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:576: trailing whitespace.
++++    + CategoryInfo          : ObjectNotFound: ("C:\WINDOWS\\Sysmon64.exe":String) [], CommandNotFoundException
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:578: trailing whitespace.
++++    + FullyQualifiedErrorId : CommandNotFoundException
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:580: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:582: trailing whitespace.
++++Get-WinEvent : There is not an event log on the localhost computer that matches 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:584: trailing whitespace.
++++""Microsoft-Windows-Sysmon/Operational"".
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:586: trailing whitespace.
++++At line:1 char:142
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:588: trailing whitespace.
+++++ ... -c 2>$null; Get-WinEvent -LogName `"Microsoft-Windows-Sysmon/Operatio ...
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:590: trailing whitespace.
+++++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:592: trailing whitespace.
++++    + CategoryInfo          : ObjectNotFound: ("Microsoft-Windows-Sysmon/Operational":String) [Get-WinEvent], Exceptio 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:594: trailing whitespace.
++++   n
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:596: trailing whitespace.
++++    + FullyQualifiedErrorId : NoMatchingLogsFound,Microsoft.PowerShell.Commands.GetWinEventCommand
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:598: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:600: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:602: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:604: trailing whitespace.
++++** WARNING: connection is not using a post-quantum key exchange algorithm.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:606: trailing whitespace.
++++** This session may be vulnerable to "store now, decrypt later" attacks.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:608: trailing whitespace.
++++** The server may need to be upgraded. See https://openssh.com/pq.html
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:610: trailing whitespace.
++++#< CLIXML
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:612: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:614: trailing whitespace.
++++Name      Status StartType
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:616: trailing whitespace.
++++----      ------ ---------
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:618: trailing whitespace.
++++Sysmon64 Running Automatic
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:620: trailing whitespace.
++++                          
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:622: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:624: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:626: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:628: trailing whitespace.
++++TimeCreated          Id SourceIp     DestinationIp DestinationPort Protocol Initiated
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:630: trailing whitespace.
++++-----------          -- --------     ------------- --------------- -------- ---------
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:632: trailing whitespace.
++++8/15/2026 8:02:51 PM  3 192.168.57.1 192.168.57.20 22              tcp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:634: trailing whitespace.
++++8/15/2026 8:01:46 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:636: trailing whitespace.
++++8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:638: trailing whitespace.
++++8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:640: trailing whitespace.
++++8/15/2026 8:01:10 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:642: trailing whitespace.
++++8/15/2026 8:00:03 PM  3 10.0.2.15    20.184.175.12 443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:644: trailing whitespace.
++++8/15/2026 7:35:42 PM  3 10.0.2.15    20.42.73.24   443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:646: trailing whitespace.
++++8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:648: trailing whitespace.
++++8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:650: trailing whitespace.
++++8/15/2026 7:31:10 PM  3 10.0.2.15    52.123.247.43 443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:652: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:654: trailing whitespace.
++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:656: trailing whitespace.
+++++event_index,timestamp,source_ip,destination_ip,protocol,destination_port,is_unique_port_for_session,unique_port_count,event_id,rule_id
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:658: trailing whitespace.
+++++1,2026-08-12T22:54:47.865000,192.168.56.1,192.168.56.20,unknown,143,True,1,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:660: trailing whitespace.
+++++2,2026-08-12T22:54:47.866000,192.168.56.1,192.168.56.20,unknown,993,True,2,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:662: trailing whitespace.
+++++3,2026-08-12T22:54:47.879000,192.168.56.1,192.168.56.20,unknown,110,True,3,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:664: trailing whitespace.
+++++4,2026-08-12T22:54:47.895000,192.168.56.1,192.168.56.20,unknown,111,True,4,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:666: trailing whitespace.
+++++5,2026-08-12T22:54:47.911000,192.168.56.1,192.168.56.20,unknown,995,True,5,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:668: trailing whitespace.
+++++6,2026-08-12T22:54:47.927000,192.168.56.1,192.168.56.20,unknown,587,True,6,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:670: trailing whitespace.
+++++7,2026-08-12T22:54:47.943000,192.168.56.1,192.168.56.20,unknown,21,True,7,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:672: trailing whitespace.
+++++8,2026-08-12T22:54:47.958000,192.168.56.1,192.168.56.20,unknown,23,True,8,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:674: trailing whitespace.
+++++9,2026-08-12T22:54:47.990000,192.168.56.1,192.168.56.20,unknown,199,True,9,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:676: trailing whitespace.
+++++10,2026-08-12T22:54:48.038000,192.168.56.1,192.168.56.20,unknown,256,True,10,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:678: trailing whitespace.
+++++11,2026-08-12T22:54:48.054000,192.168.56.1,192.168.56.20,unknown,554,True,11,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:680: trailing whitespace.
+++++12,2026-08-12T22:54:48.087000,192.168.56.1,192.168.56.20,unknown,443,True,12,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:682: trailing whitespace.
+++++13,2026-08-12T22:54:48.104000,192.168.56.1,192.168.56.20,unknown,443,False,12,5157,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:684: trailing whitespace.
+++++14,2026-08-12T22:54:48.120000,192.168.56.1,192.168.56.20,unknown,25,True,13,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:686: trailing whitespace.
+++++15,2026-08-12T22:54:48.136000,192.168.56.1,192.168.56.20,unknown,113,True,14,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:688: trailing whitespace.
+++++16,2026-08-12T22:54:48.166000,192.168.56.1,192.168.56.20,unknown,53,True,15,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:690: trailing whitespace.
+++++17,2026-08-12T22:54:48.166000,192.168.56.1,192.168.56.20,unknown,80,True,16,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:692: trailing whitespace.
+++++18,2026-08-12T22:54:48.182000,192.168.56.1,192.168.56.20,unknown,889,True,17,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:694: trailing whitespace.
+++++19,2026-08-12T22:54:48.199000,192.168.56.1,192.168.56.20,unknown,419,True,18,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:696: trailing whitespace.
+++++20,2026-08-12T22:54:48.230000,192.168.56.1,192.168.56.20,unknown,485,True,19,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:698: trailing whitespace.
+++++21,2026-08-12T22:54:48.231000,192.168.56.1,192.168.56.20,unknown,622,True,20,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:700: trailing whitespace.
+++++22,2026-08-12T22:54:48.246000,192.168.56.1,192.168.56.20,unknown,268,True,21,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:702: trailing whitespace.
+++++23,2026-08-12T22:54:48.262000,192.168.56.1,192.168.56.20,unknown,286,True,22,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:704: trailing whitespace.
+++++24,2026-08-12T22:54:48.294000,192.168.56.1,192.168.56.20,unknown,321,True,23,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:706: trailing whitespace.
+++++25,2026-08-12T22:54:48.294000,192.168.56.1,192.168.56.20,unknown,679,True,24,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:708: trailing whitespace.
+++++26,2026-08-12T22:54:48.310000,192.168.56.1,192.168.56.20,unknown,226,True,25,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:710: trailing whitespace.
+++++27,2026-08-12T22:54:48.328000,192.168.56.1,192.168.56.20,unknown,173,True,26,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:712: trailing whitespace.
+++++28,2026-08-12T22:54:48.361000,192.168.56.1,192.168.56.20,unknown,184,True,27,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:714: trailing whitespace.
+++++29,2026-08-12T22:54:48.361000,192.168.56.1,192.168.56.20,unknown,811,True,28,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:716: trailing whitespace.
+++++30,2026-08-12T22:54:48.376000,192.168.56.1,192.168.56.20,unknown,773,True,29,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:718: trailing whitespace.
+++++31,2026-08-12T22:54:48.391000,192.168.56.1,192.168.56.20,unknown,266,True,30,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:720: trailing whitespace.
+++++32,2026-08-12T22:54:48.422000,192.168.56.1,192.168.56.20,unknown,436,True,31,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:722: trailing whitespace.
+++++33,2026-08-12T22:54:48.423000,192.168.56.1,192.168.56.20,unknown,74,True,32,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:724: trailing whitespace.
+++++34,2026-08-12T22:54:48.438000,192.168.56.1,192.168.56.20,unknown,787,True,33,5152,100509
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:726: trailing whitespace.
+++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:728: trailing whitespace.
+++++vboxnet0         UP             192.168.56.1/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:730: trailing whitespace.
+++++** WARNING: connection is not using a post-quantum key exchange algorithm.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:732: trailing whitespace.
+++++** This session may be vulnerable to "store now, decrypt later" attacks.
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:734: trailing whitespace.
+++++** The server may need to be upgraded. See https://openssh.com/pq.html
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:736: trailing whitespace.
+++++#< CLIXML
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:738: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:740: trailing whitespace.
+++++Name      Status StartType
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:742: trailing whitespace.
+++++----      ------ ---------
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:744: trailing whitespace.
+++++Sysmon64 Running Automatic
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:746: trailing whitespace.
+++++                          
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:748: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:750: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:752: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:754: trailing whitespace.
+++++TimeCreated          Id SourceIp     DestinationIp DestinationPort Protocol Initiated
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:756: trailing whitespace.
+++++-----------          -- --------     ------------- --------------- -------- ---------
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:758: trailing whitespace.
+++++8/15/2026 8:02:51 PM  3 192.168.57.1 192.168.57.20 22              tcp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:760: trailing whitespace.
+++++8/15/2026 8:01:46 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:762: trailing whitespace.
+++++8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:764: trailing whitespace.
+++++8/15/2026 8:01:14 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:766: trailing whitespace.
+++++8/15/2026 8:01:10 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:768: trailing whitespace.
+++++8/15/2026 8:00:03 PM  3 10.0.2.15    20.184.175.12 443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:770: trailing whitespace.
+++++8/15/2026 7:35:42 PM  3 10.0.2.15    20.42.73.24   443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:772: trailing whitespace.
+++++8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.57.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:774: trailing whitespace.
+++++8/15/2026 7:33:49 PM  3 224.0.0.251  192.168.56.1  5353            udp      false    
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:776: trailing whitespace.
+++++8/15/2026 7:31:10 PM  3 10.0.2.15    52.123.247.43 443             tcp      true     
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:778: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:780: trailing whitespace.
+++++
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:782: trailing whitespace.
++++lo               UNKNOWN        127.0.0.1/8 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:784: trailing whitespace.
++++eth0             UP             192.168.18.12/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:786: trailing whitespace.
++++tailscale0       UNKNOWN        100.88.127.85/32 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:788: trailing whitespace.
++++docker0          DOWN           172.17.0.1/16 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:790: trailing whitespace.
++++vboxnet0         UP             192.168.56.1/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:792: trailing whitespace.
++++vboxnet1         UP             192.168.57.1/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:794: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:796: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:798: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:800: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:802: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:804: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:806: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:808: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:810: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:812: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:814: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:816: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:818: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:820: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:822: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:824: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:826: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:828: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:830: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:832: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:834: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:836: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:838: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:840: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:842: trailing whitespace.
++++lo               UNKNOWN        127.0.0.1/8 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:844: trailing whitespace.
++++eth0             UP             192.168.18.12/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:846: trailing whitespace.
++++tailscale0       UNKNOWN        100.88.127.85/32 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:848: trailing whitespace.
++++docker0          DOWN           172.17.0.1/16 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:850: trailing whitespace.
++++vboxnet0         UP             192.168.56.1/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:852: trailing whitespace.
++++vboxnet1         UP             192.168.57.1/24 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:854: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:856: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:858: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:860: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:862: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:864: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:866: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:868: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:870: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:872: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:874: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:876: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:878: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:880: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:882: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:884: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:886: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:888: trailing whitespace.
++++	Trying rule: 70000 -  FreePBX parent 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:890: trailing whitespace.
++++2026-08-15T21:35:08-05:00	RESULT: local=c336974997adf3e7cbcaf9f9cbe4158bac5a874a remote=e8af044464d09e4c817597c43afd382401857cf1 MERGE_CONFLICT=0 WORKTREE_ADD_RC=0 MERGE_RC=0 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:892: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:894: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:896: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:898: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:900: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:902: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:904: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:906: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:908: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:910: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:912: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:914: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:916: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:918: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:920: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:922: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:924: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:926: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:928: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:930: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:932: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:934: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:936: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:938: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:940: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:942: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:944: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:946: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:948: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:950: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:952: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:954: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:956: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:958: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:960: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:962: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:964: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:966: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:968: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:970: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:972: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:974: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:976: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:978: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:980: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:982: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:984: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:986: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:988: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:990: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:992: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:994: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:996: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:998: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1000: trailing whitespace.
++++ 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1002: trailing whitespace.
++++remote: 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1004: trailing whitespace.
++++remote: Create a pull request for 'recovery/soc-operations-lab-20260815-215425' on GitHub by visiting:        
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1006: trailing whitespace.
++++remote:      https://github.com/Reynaldo8509/Reynaldo8509/pull/new/recovery/soc-operations-lab-20260815-215425        
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1008: trailing whitespace.
++++remote: 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1010: trailing whitespace.
++++|\  
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1012: trailing whitespace.
++++|/  
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1014: trailing whitespace.
++++|\  
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1016: trailing whitespace.
++++|/  
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1018: trailing whitespace.
++++|\  
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1020: trailing whitespace.
++++|/  
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1022: trailing whitespace.
++++|\  
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1024: trailing whitespace.
++++|\  
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1026: trailing whitespace.
++++ /  
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1028: trailing whitespace.
++++|/  
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1030: trailing whitespace.
++++ssh: connect to host 192.168.57.10 port 22: No route to host
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1032: trailing whitespace.
++++ssh: connect to host 192.168.57.10 port 22: No route to host
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1034: trailing whitespace.
++++ssh: connect to host 192.168.57.10 port 22: No route to host
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1036: trailing whitespace.
++++ssh: connect to host 192.168.57.10 port 22: No route to host
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1038: trailing whitespace.
++++remote: 
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1040: trailing whitespace.
++++remote: Create a pull request for 'tests/auto-audit-20260815-234701' on GitHub by visiting:        
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1042: trailing whitespace.
++++remote:      https://github.com/Reynaldo8509/Reynaldo8509/pull/new/tests/auto-audit-20260815-234701        
+evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt:1044: trailing whitespace.
++++remote: 

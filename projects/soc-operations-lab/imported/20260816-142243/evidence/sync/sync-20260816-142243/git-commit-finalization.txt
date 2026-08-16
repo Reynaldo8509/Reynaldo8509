@@ -1,0 +1,11 @@
+[sync/20260816-142243 4750888] docs(sync): add PR and finalization record 20260816-142243
+ 9 files changed, 1095 insertions(+)
+ create mode 100644 evidence/sync/sync-20260816-142243/finalization.md
+ create mode 100644 evidence/sync/sync-20260816-142243/gh-auth-status.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/gh-pr-create.log
+ create mode 100644 evidence/sync/sync-20260816-142243/git-commit-summary.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/git-ls-remote-main.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/git-push-sync.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/pr-sync-url.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/sync-evidence-diff-check.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/sync-summary-commit.txt

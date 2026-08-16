@@ -1,0 +1,241 @@
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-194747.log:5:topics: 100500=28, 100501=20, 100502=20, cardinalidad=0, if_matched_sid=38, frequency=47, sysmon=73
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-194747.log:7:topics: 100500=19, 100501=21, 100502=26, cardinalidad=0, if_matched_sid=14, frequency=11, sysmon=30
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-194747.log:36:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-194747.log:44:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate:33:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate:54:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate-sysmon-minimal:33:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate-sysmon-minimal:43:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/report.md:10:- El evento 9 histórico es puerto 199 y deja cardinalidad 9; el evento 10 es
+/home/reyam/soc-operations-lab/evidence/cardinality/report.md:11:  puerto 256 y deja cardinalidad 10. Por ello la afirmación “evento 9 produjo
+/home/reyam/soc-operations-lab/evidence/cardinality/report.md:12:  100501 y evento 10 produjo 100502” no está respaldada por los datos.
+/home/reyam/soc-operations-lab/evidence/cardinality/report.md:13:- Las reglas activas tenían `100501 frequency=10` y `100502 frequency=14`, con
+/home/reyam/soc-operations-lab/evidence/cardinality/report.md:16:- En el test real de 20 puertos, `100501` apareció en el décimo puerto distinto
+/home/reyam/soc-operations-lab/evidence/cardinality/report.md:17:  observado (puerto 7) y `100502` en el decimoquinto (puerto 12). Ambos eventos
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-build-validation.txt:24:   <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.source:33:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.source:43:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-analysisd-validation.txt:20:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-build-validation.txt:25:   <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/docs/portscan-cardinality-analysis.md:36:El historial local describe `100500` como base WFP y `100501`/`100502` como correladores de umbral que comparten `if_matched_sid=100500`. Las pruebas históricas dicen: 10 puertos ATTACK disparan `100501`; 15 disparan `100501` pero no `100502`; aislando `100502`, este sí dispara. El primer correlador consume/reinicia el estado compartido.
+/home/reyam/soc-operations-lab/docs/portscan-cardinality-analysis.md:40:No fue posible confirmar el supuesto “100501 en el evento 9 / 100502 en el 10” con el XML activo. El historial disponible describe 10/15, no 9/10; la diferencia es compatible con “antecedentes previos + evento actual”, pero requiere `wazuh-logtest -v` con reglas activas antes de cambiar nada. El extracto está en `evidence/sysmon-eid3-test/27-counter-history-extracts.txt`; no hay `firedtimes` ni `ossec.log` actuales por el fallo SSH.
+/home/reyam/soc-operations-lab/docs/portscan-cardinality-analysis.md:48:3. Emitir marcas independientes al cruzar exactamente 10 y 15 (`emitted_10`, `emitted_15`); Wazuh las decodifica y alerta como `100501` y `100502`.
+/home/reyam/soc-operations-lab/docs/portscan-cardinality-analysis.md:60:bash ./scripts/replay_events.sh | grep -E '100500|100501|100502|Phase 3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/candidate-wrapped-20260815-202149.xml:34:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/candidate-wrapped-20260815-202149.xml:44:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate-v2:33:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/local_rules.xml.candidate-v2:54:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/rules_relevant.xml:12:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/rules_relevant.xml:20:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/actions.log:14:2026-08-15T20:22:42-05:00	extract rules 100500,100501,100502,100409,100420,100421
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/actions.log:39:2026-08-15T20:26:35-05:00	search local non-private project records for historical 100501/100502 firedtimes evidence
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/local_rules.xml.active-20260815-202149:33:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/local_rules.xml.active-20260815-202149:43:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/production_test/collection-sanitized.txt:31:{"timestamp":"2026-08-16T01:01:48.256+0000","rule_id":"100501","description":"Possible port scan detected via Windows Firewall - 10 different destination ports from same source within 60 seconds","firedtimes":1,"event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"7"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/production_test/collection-sanitized.txt:32:{"timestamp":"2026-08-16T01:01:49.183+0000","rule_id":"100502","description":"High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds","firedtimes":1,"event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"12"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/candidate-20260815-202149.xml:33:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/candidate-20260815-202149.xml:43:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/rules_1005xx.xml:12:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/rules_1005xx.xml:20:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/current_relevant_alerts_sanitized.jsonl:1:{"timestamp":"2026-08-16T01:25:07.773+0000","rule_id":"100501","firedtimes":1,"source":"192.168.56.1","destination":"192.168.56.20","dest_port":"20","protocol":"6","description":"Possible port scan detected via Windows Firewall - 10 different destination ports from same source within 60 seconds"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/current_relevant_alerts_sanitized.jsonl:2:{"timestamp":"2026-08-16T01:25:07.855+0000","rule_id":"100502","firedtimes":1,"source":"192.168.56.1","destination":"192.168.56.20","dest_port":"6","protocol":"6","description":"High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/current_attack_events_sanitized.jsonl:10:{"timestamp":"2026-08-16T01:25:07.773+0000","decoder":"windows_eventchannel","rule_id":"100501","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"20","protocol":"6"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/current_attack_events_sanitized.jsonl:15:{"timestamp":"2026-08-16T01:25:07.855+0000","decoder":"windows_eventchannel","rule_id":"100502","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"6","protocol":"6"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/relevant_alerts_sanitized.jsonl:1:{"timestamp":"2026-08-16T01:01:48.256+0000","rule_id":"100501","firedtimes":1,"source":"192.168.56.1","destination":"192.168.56.20","dest_port":"7","protocol":"6","description":"Possible port scan detected via Windows Firewall - 10 different destination ports from same source within 60 seconds"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/relevant_alerts_sanitized.jsonl:2:{"timestamp":"2026-08-16T01:01:49.183+0000","rule_id":"100502","firedtimes":1,"source":"192.168.56.1","destination":"192.168.56.20","dest_port":"12","protocol":"6","description":"High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/relevant_alerts_sanitized.jsonl:3:{"timestamp":"2026-08-16T01:25:07.773+0000","rule_id":"100501","firedtimes":1,"source":"192.168.56.1","destination":"192.168.56.20","dest_port":"20","protocol":"6","description":"Possible port scan detected via Windows Firewall - 10 different destination ports from same source within 60 seconds"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/relevant_alerts_sanitized.jsonl:4:{"timestamp":"2026-08-16T01:25:07.855+0000","rule_id":"100502","firedtimes":1,"source":"192.168.56.1","destination":"192.168.56.20","dest_port":"6","protocol":"6","description":"High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:9:35:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:21:56:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:33:78:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:45:100:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:57:122:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:69:144:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:81:166:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:93:188:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:105:210:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:117:232:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:130:259:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:142:281:	firedtimes: '11'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:154:303:	firedtimes: '12'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:166:325:	firedtimes: '13'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-matches.txt:179:348:	firedtimes: '14'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:20:### Rules 100500/100501/100502
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:32:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:40:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:51:33:  <rule id="100501" level="10" frequency="10" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:52:43:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9289:   <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9328:  <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9371:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9393:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9415:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9436:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9458:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9480:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9502:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9525:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9547:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9568:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9596:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9618:	firedtimes: '11'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9640:	firedtimes: '12'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9662:	firedtimes: '13'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:9683:	firedtimes: '14'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10076:   <rule id="100502" level="13" frequency="14" timeframe="60" ignore="60">
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10150:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10171:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10193:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10215:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10237:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10259:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10281:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10303:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10325:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10347:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10374:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10396:	firedtimes: '11'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10418:	firedtimes: '12'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10440:	firedtimes: '13'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10463:	firedtimes: '14'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10475:35:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10487:56:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10499:78:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10511:100:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10523:122:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10535:144:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10547:166:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10559:188:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10571:210:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10583:232:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10596:259:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10608:281:	firedtimes: '11'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10620:303:	firedtimes: '12'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10632:325:	firedtimes: '13'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10645:348:	firedtimes: '14'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10757:{"timestamp":"2026-08-16T01:01:48.256+0000","rule_id":"100501","description":"Possible port scan detected via Windows Firewall - 10 different destination ports from same source within 60 seconds","firedtimes":1,"event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"7"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10758:{"timestamp":"2026-08-16T01:01:49.183+0000","rule_id":"100502","description":"High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds","firedtimes":1,"event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"12"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10908:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10930:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10952:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10974:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:10995:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11018:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11040:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11062:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11084:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11105:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11127:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11155:26:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11175:48:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11195:70:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11215:92:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11234:113:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11255:136:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11275:158:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11295:180:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11314:202:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11333:223:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11353:245:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11381:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11402:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11424:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11446:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11468:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11490:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11512:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11535:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11556:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11579:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11594:157:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11617:180:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11638:201:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/run-20260815-195300.log:11661:224:	firedtimes: '10'
+/home/reyam/soc-operations-lab/docs/troubleshooting/wfp-port-scan.md:21:- Correlaciones `100501` y `100502`: throttling `ignore=60`.
+/home/reyam/soc-operations-lab/docs/troubleshooting/wfp-port-scan.md:22:- El umbral `frequency=14` de `100502` es una compensación observada de la interacción entre reglas frequency hermanas; no es cardinalidad exacta.
+/home/reyam/soc-operations-lab/docs/troubleshooting/wfp-port-scan.md:26:La prueba real produjo una alerta `100501` y una `100502`, sin alimentar el detector desde NAT o MANAGEMENT. La telemetría WFP permaneció disponible en archivos.
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:35:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:56:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:78:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:100:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:122:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:144:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:166:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:188:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:210:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:232:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:259:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:281:	firedtimes: '11'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:303:	firedtimes: '12'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:325:	firedtimes: '13'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/candidate-v2-analysisd-logtest.txt:348:	firedtimes: '14'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:19:26:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:39:48:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:59:70:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:79:92:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:98:113:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:119:136:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:139:158:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:159:180:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:178:202:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:197:223:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization-matches.txt:217:245:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate-matches.txt:12:157:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate-matches.txt:35:180:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate-matches.txt:56:201:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate-matches.txt:79:224:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:312:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:623:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:934:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:1245:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:1556:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:1867:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:2178:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:2489:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:2800:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:3112:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:3428:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:3739:	firedtimes: '11'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:4050:	firedtimes: '12'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:4361:	firedtimes: '13'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/logtest_sysmon_15_sudo.out:4672:	firedtimes: '14'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out:26:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out:47:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out:69:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out:91:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out:113:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out:135:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out:157:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out:180:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out:201:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-nonconsecutive-duplicate.out:224:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:26:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:48:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:70:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:91:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:113:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:135:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:157:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:180:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:202:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:223:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:251:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:273:	firedtimes: '11'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:295:	firedtimes: '12'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:317:	firedtimes: '13'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-candidate.out:338:	firedtimes: '14'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:26:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:48:	firedtimes: '2'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:70:	firedtimes: '3'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:92:	firedtimes: '4'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:113:	firedtimes: '5'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:136:	firedtimes: '6'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:158:	firedtimes: '7'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:180:	firedtimes: '8'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:202:	firedtimes: '9'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:223:	firedtimes: '10'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-195300/decoder_tests/logtest-duplicate-characterization.out:245:	firedtimes: '1'
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/attack_events_sanitized.jsonl:11:{"timestamp":"2026-08-16T01:01:48.256+0000","decoder":"windows_eventchannel","rule_id":"100501","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"7","protocol":"6"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/attack_events_sanitized.jsonl:16:{"timestamp":"2026-08-16T01:01:49.183+0000","decoder":"windows_eventchannel","rule_id":"100502","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"12","protocol":"6"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/attack_events_sanitized.jsonl:33:{"timestamp":"2026-08-16T01:25:07.773+0000","decoder":"windows_eventchannel","rule_id":"100501","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"20","protocol":"6"}
+/home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-202149/production_test/attack_events_sanitized.jsonl:38:{"timestamp":"2026-08-16T01:25:07.855+0000","decoder":"windows_eventchannel","rule_id":"100502","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"6","protocol":"6"}

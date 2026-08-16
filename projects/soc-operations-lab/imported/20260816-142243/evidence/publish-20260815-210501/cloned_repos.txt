@@ -1,0 +1,8 @@
+BatteryManager/.git
+Reynaldo8509/.git
+bluedoser/.git
+hikvision-tooling/.git
+lg-tv-tools/.git
+professional-portfolio/.git
+sddm-conf/.git
+soc-operations-lab/.git

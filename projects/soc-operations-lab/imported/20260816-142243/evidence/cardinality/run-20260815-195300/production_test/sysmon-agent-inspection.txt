@@ -1,0 +1,80 @@
+
+### Correctly privileged manager log extraction
+2026/08/15 19:00:08 wazuh-modulesd:osquery: WARNING: W0815 19:00:08.005721  1727 options.cpp:106] The CLI only flag --config_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+2026/08/15 19:00:08 wazuh-modulesd:osquery: WARNING: W0815 19:00:08.005748  1727 options.cpp:106] The CLI only flag --logger_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-packages-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-vulnerabilities-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-system-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-processes-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-ports-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-hotfixes-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-hardware-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-protocols-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-interfaces-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-networks-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:08 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-users-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:09 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-groups-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:09 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-browser-extensions-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:09 indexer-connector: WARNING: IndexerConnector initialization failed for index 'wazuh-states-inventory-services-wazuh-manager', retrying until the connection is successful.
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:09 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:10 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:10 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:10 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:10 indexer-connector: WARNING: Failed to sync agent '000': No available server
+2026/08/15 19:00:35 indexer-connector: WARNING: Failed to sync agent '006': No available server
+2026/08/15 19:00:35 indexer-connector: WARNING: Failed to sync agent '006': No available server
+2026/08/15 19:01:07 indexer-connector: WARNING: Failed to sync agent '006': No available server
+2026/08/15 19:01:07 indexer-connector: WARNING: Failed to sync agent '006': No available server
+2026/08/15 20:01:40 wazuh-modulesd:osquery: WARNING: W0815 20:01:40.646356  7823 options.cpp:106] The CLI only flag --config_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+2026/08/15 20:01:40 wazuh-modulesd:osquery: WARNING: W0815 20:01:40.646381  7823 options.cpp:106] The CLI only flag --logger_plugin set via config file will be ignored, please use a flagfile or pass it to the process at startup
+
+### Windows SSH alias resolution
+user reyam
+hostname winagent
+port 22
+identityfile ~/.ssh/id_rsa
+identityfile ~/.ssh/id_ecdsa
+identityfile ~/.ssh/id_ecdsa_sk
+identityfile ~/.ssh/id_ed25519
+identityfile ~/.ssh/id_ed25519_sk
+user endpointuser
+hostname 192.168.57.20
+port 22
+identityfile /home/reyam/.ssh/id_ed25519
+
+### Windows Sysmon configuration inspection via configured win11 host
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+
+Name      Status StartType
+----      ------ ---------
+Sysmon64 Running Automatic
+& : The term '"C:\WINDOWS\\Sysmon64.exe"' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At line:1 char:100
++ ... Object Name,Status,StartType; & `"$env:windir\\Sysmon64.exe`" -c 2>$n ...
++                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: ("C:\WINDOWS\\Sysmon64.exe":String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+Get-WinEvent : There is not an event log on the localhost computer that matches 
+""Microsoft-Windows-Sysmon/Operational"".
+At line:1 char:142
++ ... -c 2>$null; Get-WinEvent -LogName `"Microsoft-Windows-Sysmon/Operatio ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: ("Microsoft-Windows-Sysmon/Operational":String) [Get-WinEvent], Exceptio 
+   n
+    + FullyQualifiedErrorId : NoMatchingLogsFound,Microsoft.PowerShell.Commands.GetWinEventCommand
+ 
+
+

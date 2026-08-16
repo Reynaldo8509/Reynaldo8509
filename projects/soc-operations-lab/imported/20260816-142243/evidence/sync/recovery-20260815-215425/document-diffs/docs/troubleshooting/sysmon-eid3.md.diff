@@ -1,0 +1,34 @@
+--- cloud/projects/soc-operations-lab/docs/troubleshooting/sysmon-eid3.md
++++ local/docs/troubleshooting/sysmon-eid3.md
+@@ -1,23 +1,23 @@
+-# Sysmon Event ID 3: Validation Gap
++# Sysmon Event ID 3: brecha de validación
+ 
+ ## Problem
+ 
+-A custom chain was configured to correlate Event ID 3 from ATTACK/LAB to Windows, but the reviewed archive does not contain a real event from that flow.
++Se configuró una cadena custom para correlacionar Event ID 3 desde ATTACK/LAB hacia Windows, pero no existe en el archivo revisado un evento real de ese flujo.
+ 
+ ## Evidence
+ 
+-- MANAGEMENT and NAT did generate real EID 3 events.
+-- The official path `60000 -> 60004 -> 61600 -> 61605` was confirmed.
+-- No real EID 3 `192.168.56.1 -> 192.168.56.20` appeared during the review.
++- MANAGEMENT y NAT sí generaron EID 3 reales.
++- La ruta oficial `60000 -> 60004 -> 61600 -> 61605` se confirmó.
++- No apareció `192.168.56.1 -> 192.168.56.20` como EID 3 real durante la revisión.
+ 
+ ## Root cause / current limit
+ 
+-The detector does not have a real ATTACK signal to correlate. It has not been demonstrated whether the absence stems from blocked-connection semantics, additional Sysmon filters, or both factors.
++El detector no dispone de señal ATTACK real para correlacionar. No está demostrado si la ausencia proviene de la semántica de conexiones bloqueadas, de filtros adicionales de Sysmon o de ambos factores.
+ 
+ ## Solution status
+ 
+-No correction was applied. The next phase must generate an authorized ATTACK event and first verify the real rule path. Raising levels or copying the WFP design without this evidence could shadow more-specific official Sysmon rules.
++No se aplicó ninguna corrección. La próxima fase debe generar un evento ATTACK autorizado y verificar primero la ruta de reglas real. Elevar niveles o copiar el diseño WFP sin esta evidencia podría eclipsar reglas oficiales Sysmon más específicas.
+ 
+ ## Lesson learned
+ 
+-The fact that Sysmon is enabled does not demonstrate that it emits the signal required for a specific use case. See the [audit report](../../detection-rules/sysmon-network.md).
++El hecho de que Sysmon esté habilitado no demuestra que emita la señal necesaria para un caso de uso concreto. Consulta [el informe de auditoría](../../detection-rules/sysmon-network.md).

@@ -1,0 +1,12 @@
+[sync/20260816-142243 b72346f] docs(sync): record divergence and safe reconciliation 20260816-142243
+ 10 files changed, 2017 insertions(+)
+ create mode 100644 evidence/sync/sync-20260816-142243/diff-check-exception.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/git-commit-sync.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/merge-result.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/merge-simulation.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/staged-diff-check.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/staging-summary.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/summary-20260816-142243.md
+ create mode 100644 evidence/sync/sync-20260816-142243/sync-commit.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/worktree-add.txt
+ create mode 100644 evidence/sync/sync-20260816-142243/worktree-remove.txt

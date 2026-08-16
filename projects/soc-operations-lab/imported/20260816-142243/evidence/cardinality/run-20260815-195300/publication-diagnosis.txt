@@ -1,0 +1,12 @@
+
+### Publication access diagnosis (read-only)
+origin	https://github.com/Reynaldo8509/soc-operations-lab.git (fetch)
+origin	https://github.com/Reynaldo8509/soc-operations-lab.git (push)
+github.com
+  ✓ Logged in to github.com account Reynaldo8509 (/root/.config/gh/hosts.yml)
+  - Active account: true
+  - Git operations protocol: https
+  - Token: gho_************************************
+  - Token scopes: 'delete_repo', 'gist', 'read:org', 'repo', 'workflow'
+remote: Repository not found.
+fatal: repository 'https://github.com/Reynaldo8509/soc-operations-lab.git/' not found

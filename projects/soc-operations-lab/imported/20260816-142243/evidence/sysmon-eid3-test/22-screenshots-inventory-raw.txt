@@ -1,0 +1,53 @@
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/1-Captura de pantalla_20260728_214354.png	175285	2026-07-28T21:47:24.2332709000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/10-Captura de pantalla_20260728_221909.png	104503	2026-07-28T22:19:23.7161995000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/11-Captura de pantalla_20260728_222046.png	103668	2026-07-28T22:21:02.0714116000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/12-Captura de pantalla_20260728_222251.png	100061	2026-07-28T22:23:03.7299482000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/13-Captura de pantalla_20260728_222310.png	136655	2026-07-28T22:23:22.1490343000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/14-Captura de pantalla_20260728_222605.png	70718	2026-07-28T22:26:19.4014336000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/15-Captura de pantalla_20260728_225127.png	113501	2026-07-28T22:51:42.0867467000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/16-Captura de pantalla_20260728_225149.png	21670	2026-08-14T17:35:51.4018148000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/17-Captura de pantalla_20260728_225346.png	80947	2026-07-28T22:53:58.8402967000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/18-Captura de pantalla_20260729_111029.png	376966	2026-08-14T17:33:22.5217899000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/19-Captura de pantalla_20260729_111103.png	836757	2026-07-29T11:11:21.7917123000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/20-Captura de pantalla_20260729_111238.png	859013	2026-07-29T11:12:52.7975031000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/21-Captura de pantalla_20260729_123627.png	891360	2026-07-29T12:36:40.2217453000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/22-Captura de pantalla_20260729_123627.png	838823	2026-07-29T12:38:15.0742079000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/23-Captura de pantalla_20260729_123627.png	872545	2026-07-29T12:38:50.7993113000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/24-Captura de pantalla_20260729_123904.png	865837	2026-07-29T12:39:20.1224967000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/26-Captura de pantalla_20260729_123904.png	136391	2026-07-29T12:40:59.7779541000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/28-Captura de pantalla_20260729_123904.png	305269	2026-07-29T12:42:57.5954909000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/29-Captura de pantalla_20260729_123904.png	168403	2026-07-29T12:46:09.5630454000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/3-Captura de pantalla_20260728_215737.png	104318	2026-07-28T21:57:51.1086103000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/30-Captura de pantalla_20260729_123904.png	751775	2026-08-05T09:05:23.6053360000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/31-Captura de pantalla_20260729_123904.png	141294	2026-08-14T17:34:26.0236765000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/33-Captura de pantalla_20260729_123904.png	193520	2026-08-07T20:14:33.8547117000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/34-Captura de pantalla_20260729_123904.png	805005	2026-08-07T21:02:21.0591283000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/35-Captura de pantalla_20260729_123904.png	612008	2026-08-14T17:34:02.4803153000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/36-Captura de pantalla_20260729_123904.png	339106	2026-08-14T17:34:51.8985063000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/4-Captura de pantalla_20260728_215851.png	117199	2026-07-28T21:59:04.4436714000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/5-Captura de pantalla_20260728_220012.png	88242	2026-07-28T22:00:25.9218415000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/6-Captura de pantalla_20260728_220124.png	94823	2026-07-28T22:01:37.2362847000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/7-Captura de pantalla_20260728_220148.png	83349	2026-07-28T22:02:02.9000469000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/8-Captura de pantalla_20260728_220314.png	94040	2026-07-28T22:03:31.8994015000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/9-Captura de pantalla_20260728_221011.png	4638340	2026-08-14T18:06:05.7913259000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/1-Wazuh-08-05-2026_09_10.jpg	211290	2026-08-05T09:10:19.1148044000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/10-Wazuh-08-05-2026_10_21.jpg	208379	2026-08-05T10:23:10.7184754000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/11-Wazuh-08-05-2026_10_21.jpg	161213	2026-08-14T17:36:50.6549574000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/2-Captura de pantalla_20260805_091128.png	689828	2026-08-05T09:12:03.9387298000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/2-Verificar que Sysmon quedó instalado.png	198788	2026-08-05T09:28:26.8606229000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/3-Captura de pantalla_20260805_091128.png	325934	2026-08-05T09:12:32.4460292000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/4-Captura de pantalla_20260805_091128.png	309920	2026-08-05T09:13:25.6490211000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/5-Captura de pantalla_20260805_091405.png	329500	2026-08-05T09:14:21.9583526000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/6-Captura de pantalla_20260805_091405.png	125166	2026-08-05T09:15:08.7466916000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/7-Captura de pantalla_20260805_091405.jpg	221499	2026-08-14T17:45:13.7758502000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/7-Captura de pantalla_20260805_091405.png	317300	2026-08-05T09:18:38.4726313000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/8-Wazuh-08-05-2026_10_21.jpg	204446	2026-08-05T10:21:07.1817549000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/9-Wazuh-08-05-2026_10_21.jpg	1847046	2026-08-14T17:43:07.9460665000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Crear el directorio de trabajo Sysmon.png	325752	2026-08-05T09:21:23.3585333000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Descargar Sysmon (Microsoft Sysinternals).png	356582	2026-08-05T09:23:38.5409341000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Paso 2 - Instalar Sysmon.png	134374	2026-08-05T09:25:02.7574358000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Verificar que Sysmon quedó instalado.png	5770	2026-08-05T09:27:18.0736995000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Wazuh-08-05-2026_09_35.jpg	237053	2026-08-14T17:46:05.1549818000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Wazuh-08-05-2026_09_36.jpg	249087	2026-08-14T18:06:06.4196634000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/2-Captura de pantalla_20260728_214732.png	72441	2026-07-28T21:47:48.3925264000
+/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/32-Captura de pantalla_20260729_123904.png	66524	2026-08-06T21:52:47.2981397000

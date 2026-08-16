@@ -1,0 +1,180 @@
+27-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+28-
+29-**Phase 3: Completed filtering (rules).
+30:	id: '100409'
+31-	level: '1'
+32-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+33-	groups: '['sysmon_eid3', 'network', 'windows']'
+34-
+35:	firedtimes: '1'
+36-	mail: 'False'
+37-
+38-**Phase 1: Completed pre-decoding.
+--
+49-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+50-
+51-**Phase 3: Completed filtering (rules).
+52:	id: '100409'
+53-	level: '1'
+54-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+55-	groups: '['sysmon_eid3', 'network', 'windows']'
+56:	firedtimes: '2'
+57-	mail: 'False'
+58-
+59-
+--
+71-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+72-
+73-**Phase 3: Completed filtering (rules).
+74:	id: '100409'
+75-	level: '1'
+76-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+77-	groups: '['sysmon_eid3', 'network', 'windows']'
+78:	firedtimes: '3'
+79-
+80-	mail: 'False'
+81-
+--
+93-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+94-
+95-**Phase 3: Completed filtering (rules).
+96:	id: '100409'
+97-	level: '1'
+98-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+99-	groups: '['sysmon_eid3', 'network', 'windows']'
+100:	firedtimes: '4'
+101-	mail: 'False'
+102-
+103-
+--
+115-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+116-
+117-**Phase 3: Completed filtering (rules).
+118:	id: '100409'
+119-	level: '1'
+120-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+121-	groups: '['sysmon_eid3', 'network', 'windows']'
+122:	firedtimes: '5'
+123-	mail: 'False'
+124-
+125-
+--
+137-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+138-
+139-**Phase 3: Completed filtering (rules).
+140:	id: '100409'
+141-	level: '1'
+142-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+143-	groups: '['sysmon_eid3', 'network', 'windows']'
+144:	firedtimes: '6'
+145-	mail: 'False'
+146-
+147-
+--
+159-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+160-
+161-**Phase 3: Completed filtering (rules).
+162:	id: '100409'
+163-	level: '1'
+164-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+165-	groups: '['sysmon_eid3', 'network', 'windows']'
+166:	firedtimes: '7'
+167-	mail: 'False'
+168-
+169-
+--
+181-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+182-
+183-**Phase 3: Completed filtering (rules).
+184:	id: '100409'
+185-	level: '1'
+186-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+187-	groups: '['sysmon_eid3', 'network', 'windows']'
+188:	firedtimes: '8'
+189-	mail: 'False'
+190-
+191-
+--
+203-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+204-
+205-**Phase 3: Completed filtering (rules).
+206:	id: '100409'
+207-	level: '1'
+208-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+209-	groups: '['sysmon_eid3', 'network', 'windows']'
+210:	firedtimes: '9'
+211-	mail: 'False'
+212-
+213-
+--
+225-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+226-
+227-**Phase 3: Completed filtering (rules).
+228:	id: '100420'
+229-	level: '10'
+230-	description: 'Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds'
+231-	groups: '['sysmon_eid3', 'network', 'windowsreconnaissance', 'port_scan', 'attack']'
+232:	firedtimes: '1'
+233:	frequency: '10'
+234-	mail: 'False'
+235-	mitre.id: '['T1046']'
+236-	mitre.tactic: '['Discovery']'
+--
+252-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+253-
+254-**Phase 3: Completed filtering (rules).
+255:	id: '100409'
+256-	level: '1'
+257-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+258-	groups: '['sysmon_eid3', 'network', 'windows']'
+259:	firedtimes: '10'
+260-	mail: 'False'
+261-
+262-
+--
+274-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+275-
+276-**Phase 3: Completed filtering (rules).
+277:	id: '100409'
+278-	level: '1'
+279-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+280-	groups: '['sysmon_eid3', 'network', 'windows']'
+281:	firedtimes: '11'
+282-	mail: 'False'
+283-
+284-
+--
+296-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+297-
+298-**Phase 3: Completed filtering (rules).
+299:	id: '100409'
+300-	level: '1'
+301-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+302-	groups: '['sysmon_eid3', 'network', 'windows']'
+303:	firedtimes: '12'
+304-
+305-	mail: 'False'
+306-
+--
+318-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+319-
+320-**Phase 3: Completed filtering (rules).
+321:	id: '100409'
+322-	level: '1'
+323-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+324-	groups: '['sysmon_eid3', 'network', 'windows']'
+325:	firedtimes: '13'
+326-
+327-	mail: 'False'
+328-
+--
+340-	win.system.providerName: 'Microsoft-Windows-Sysmon'
+341-
+342-**Phase 3: Completed filtering (rules).
+343:	id: '100409'
+344-	level: '1'
+345-	description: 'Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows'
+346-
+347-	groups: '['sysmon_eid3', 'network', 'windows']'
+348:	firedtimes: '14'
+349-	mail: 'False'

@@ -1,0 +1,3 @@
+status=remediated
+action=quarantined out-of-scope scanner log outside Git
+corrected_check=project-scoped publication safety PASS

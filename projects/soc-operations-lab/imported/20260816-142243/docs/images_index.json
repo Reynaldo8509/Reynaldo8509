@@ -1,0 +1,537 @@
+{
+  "generated_at": "2026-08-16T00:19:44.943105+00:00",
+  "source_directory": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla",
+  "publication_policy": "Only SHA-256 matches to curated, visually reviewed repository screenshots are marked yes. All other images remain non-public pending individual visual review.",
+  "images": [
+    {
+      "filename": "1-Captura de pantalla_20260728_214354.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/1-Captura de pantalla_20260728_214354.png",
+      "size_bytes": 175285,
+      "mtime": "2026-07-29T02:47:24.233271+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "10-Captura de pantalla_20260728_221909.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/10-Captura de pantalla_20260728_221909.png",
+      "size_bytes": 104503,
+      "mtime": "2026-07-29T03:19:23.716199+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "11-Captura de pantalla_20260728_222046.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/11-Captura de pantalla_20260728_222046.png",
+      "size_bytes": 103668,
+      "mtime": "2026-07-29T03:21:02.071412+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "12-Captura de pantalla_20260728_222251.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/12-Captura de pantalla_20260728_222251.png",
+      "size_bytes": 100061,
+      "mtime": "2026-07-29T03:23:03.729948+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "13-Captura de pantalla_20260728_222310.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/13-Captura de pantalla_20260728_222310.png",
+      "size_bytes": 136655,
+      "mtime": "2026-07-29T03:23:22.149034+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "14-Captura de pantalla_20260728_222605.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/14-Captura de pantalla_20260728_222605.png",
+      "size_bytes": 70718,
+      "mtime": "2026-07-29T03:26:19.401434+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "15-Captura de pantalla_20260728_225127.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/15-Captura de pantalla_20260728_225127.png",
+      "size_bytes": 113501,
+      "mtime": "2026-07-29T03:51:42.086747+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "16-Captura de pantalla_20260728_225149.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/16-Captura de pantalla_20260728_225149.png",
+      "size_bytes": 21670,
+      "mtime": "2026-08-14T22:35:51.401815+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "17-Captura de pantalla_20260728_225346.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/17-Captura de pantalla_20260728_225346.png",
+      "size_bytes": 80947,
+      "mtime": "2026-07-29T03:53:58.840297+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "18-Captura de pantalla_20260729_111029.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/18-Captura de pantalla_20260729_111029.png",
+      "size_bytes": 376966,
+      "mtime": "2026-08-14T22:33:22.521790+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "19-Captura de pantalla_20260729_111103.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/19-Captura de pantalla_20260729_111103.png",
+      "size_bytes": 836757,
+      "mtime": "2026-07-29T16:11:21.791712+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "2-Captura de pantalla_20260728_214732.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/2-Captura de pantalla_20260728_214732.png",
+      "size_bytes": 72441,
+      "mtime": "2026-07-29T02:47:48.392526+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "20-Captura de pantalla_20260729_111238.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/20-Captura de pantalla_20260729_111238.png",
+      "size_bytes": 859013,
+      "mtime": "2026-07-29T16:12:52.797503+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "21-Captura de pantalla_20260729_123627.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/21-Captura de pantalla_20260729_123627.png",
+      "size_bytes": 891360,
+      "mtime": "2026-07-29T17:36:40.221745+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "22-Captura de pantalla_20260729_123627.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/22-Captura de pantalla_20260729_123627.png",
+      "size_bytes": 838823,
+      "mtime": "2026-07-29T17:38:15.074208+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "23-Captura de pantalla_20260729_123627.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/23-Captura de pantalla_20260729_123627.png",
+      "size_bytes": 872545,
+      "mtime": "2026-07-29T17:38:50.799311+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "24-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/24-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 865837,
+      "mtime": "2026-07-29T17:39:20.122497+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "26-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/26-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 136391,
+      "mtime": "2026-07-29T17:40:59.777954+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "28-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/28-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 305269,
+      "mtime": "2026-07-29T17:42:57.595491+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "29-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/29-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 168403,
+      "mtime": "2026-07-29T17:46:09.563046+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "3-Captura de pantalla_20260728_215737.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/3-Captura de pantalla_20260728_215737.png",
+      "size_bytes": 104318,
+      "mtime": "2026-07-29T02:57:51.108610+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "30-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/30-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 751775,
+      "mtime": "2026-08-05T14:05:23.605336+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "31-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/31-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 141294,
+      "mtime": "2026-08-14T22:34:26.023676+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "32-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/32-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 66524,
+      "mtime": "2026-08-07T02:52:47.298140+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "33-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/33-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 193520,
+      "mtime": "2026-08-08T01:14:33.854712+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "34-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/34-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 805005,
+      "mtime": "2026-08-08T02:02:21.059128+00:00",
+      "suggested_caption": "Evento WFP de ATTACK/LAB que alimenta la detección.",
+      "publish_permission": "yes",
+      "anonymization_required": "no",
+      "review_basis": "matches SHA-256 of an already reviewed curated repository screenshot"
+    },
+    {
+      "filename": "35-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/35-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 612008,
+      "mtime": "2026-08-14T22:34:02.480315+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "36-Captura de pantalla_20260729_123904.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/36-Captura de pantalla_20260729_123904.png",
+      "size_bytes": 339106,
+      "mtime": "2026-08-14T22:34:51.898506+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "4-Captura de pantalla_20260728_215851.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/4-Captura de pantalla_20260728_215851.png",
+      "size_bytes": 117199,
+      "mtime": "2026-07-29T02:59:04.443671+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "5-Captura de pantalla_20260728_220012.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/5-Captura de pantalla_20260728_220012.png",
+      "size_bytes": 88242,
+      "mtime": "2026-07-29T03:00:25.921841+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "6-Captura de pantalla_20260728_220124.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/6-Captura de pantalla_20260728_220124.png",
+      "size_bytes": 94823,
+      "mtime": "2026-07-29T03:01:37.236285+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "7-Captura de pantalla_20260728_220148.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/7-Captura de pantalla_20260728_220148.png",
+      "size_bytes": 83349,
+      "mtime": "2026-07-29T03:02:02.900047+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "8-Captura de pantalla_20260728_220314.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/8-Captura de pantalla_20260728_220314.png",
+      "size_bytes": 94040,
+      "mtime": "2026-07-29T03:03:31.899401+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "9-Captura de pantalla_20260728_221011.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/9-Captura de pantalla_20260728_221011.png",
+      "size_bytes": 4638340,
+      "mtime": "2026-08-14T23:06:05.791326+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "1-Wazuh-08-05-2026_09_10.jpg",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/1-Wazuh-08-05-2026_09_10.jpg",
+      "size_bytes": 211290,
+      "mtime": "2026-08-05T14:10:19.114805+00:00",
+      "suggested_caption": "Enrolamiento histórico del agente Windows en Wazuh.",
+      "publish_permission": "yes",
+      "anonymization_required": "no",
+      "review_basis": "matches SHA-256 of an already reviewed curated repository screenshot"
+    },
+    {
+      "filename": "10-Wazuh-08-05-2026_10_21.jpg",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/10-Wazuh-08-05-2026_10_21.jpg",
+      "size_bytes": 208379,
+      "mtime": "2026-08-05T15:23:10.718475+00:00",
+      "suggested_caption": "Resumen histórico del endpoint Windows administrado por Wazuh.",
+      "publish_permission": "yes",
+      "anonymization_required": "no",
+      "review_basis": "matches SHA-256 of an already reviewed curated repository screenshot"
+    },
+    {
+      "filename": "11-Wazuh-08-05-2026_10_21.jpg",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/11-Wazuh-08-05-2026_10_21.jpg",
+      "size_bytes": 161213,
+      "mtime": "2026-08-14T22:36:50.654957+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "2-Captura de pantalla_20260805_091128.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/2-Captura de pantalla_20260805_091128.png",
+      "size_bytes": 689828,
+      "mtime": "2026-08-05T14:12:03.938730+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "2-Verificar que Sysmon quedó instalado.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/2-Verificar que Sysmon quedó instalado.png",
+      "size_bytes": 198788,
+      "mtime": "2026-08-05T14:28:26.860623+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "3-Captura de pantalla_20260805_091128.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/3-Captura de pantalla_20260805_091128.png",
+      "size_bytes": 325934,
+      "mtime": "2026-08-05T14:12:32.446029+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "4-Captura de pantalla_20260805_091128.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/4-Captura de pantalla_20260805_091128.png",
+      "size_bytes": 309920,
+      "mtime": "2026-08-05T14:13:25.649021+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "5-Captura de pantalla_20260805_091405.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/5-Captura de pantalla_20260805_091405.png",
+      "size_bytes": 329500,
+      "mtime": "2026-08-05T14:14:21.958353+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "6-Captura de pantalla_20260805_091405.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/6-Captura de pantalla_20260805_091405.png",
+      "size_bytes": 125166,
+      "mtime": "2026-08-05T14:15:08.746692+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "7-Captura de pantalla_20260805_091405.jpg",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/7-Captura de pantalla_20260805_091405.jpg",
+      "size_bytes": 221499,
+      "mtime": "2026-08-14T22:45:13.775850+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "7-Captura de pantalla_20260805_091405.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/7-Captura de pantalla_20260805_091405.png",
+      "size_bytes": 317300,
+      "mtime": "2026-08-05T14:18:38.472631+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "8-Wazuh-08-05-2026_10_21.jpg",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/8-Wazuh-08-05-2026_10_21.jpg",
+      "size_bytes": 204446,
+      "mtime": "2026-08-05T15:21:07.181755+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "9-Wazuh-08-05-2026_10_21.jpg",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/9-Wazuh-08-05-2026_10_21.jpg",
+      "size_bytes": 1847046,
+      "mtime": "2026-08-14T22:43:07.946067+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "Crear el directorio de trabajo Sysmon.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Crear el directorio de trabajo Sysmon.png",
+      "size_bytes": 325752,
+      "mtime": "2026-08-05T14:21:23.358533+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "Descargar Sysmon (Microsoft Sysinternals).png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Descargar Sysmon (Microsoft Sysinternals).png",
+      "size_bytes": 356582,
+      "mtime": "2026-08-05T14:23:38.540934+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "Paso 2 - Instalar Sysmon.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Paso 2 - Instalar Sysmon.png",
+      "size_bytes": 134374,
+      "mtime": "2026-08-05T14:25:02.757436+00:00",
+      "suggested_caption": "Instalación de Sysmon en el endpoint Windows.",
+      "publish_permission": "yes",
+      "anonymization_required": "no",
+      "review_basis": "matches SHA-256 of an already reviewed curated repository screenshot"
+    },
+    {
+      "filename": "Verificar que Sysmon quedó instalado.png",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Verificar que Sysmon quedó instalado.png",
+      "size_bytes": 5770,
+      "mtime": "2026-08-05T14:27:18.073699+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "Wazuh-08-05-2026_09_35.jpg",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Wazuh-08-05-2026_09_35.jpg",
+      "size_bytes": 237053,
+      "mtime": "2026-08-14T22:46:05.154982+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    },
+    {
+      "filename": "Wazuh-08-05-2026_09_36.jpg",
+      "path": "/mnt/DATOS/REY/Ciberseguridad/Proyecto SOC WASU/Capturas de pantalla/Ubuntu/Wazuh/Wazuh-08-05-2026_09_36.jpg",
+      "size_bytes": 249087,
+      "mtime": "2026-08-14T23:06:06.419663+00:00",
+      "suggested_caption": "Captura histórica; requiere revisión visual antes de describir o publicar.",
+      "publish_permission": "no",
+      "anonymization_required": "yes_or_visual_review_required",
+      "review_basis": "not visually re-reviewed in this phase; conservative non-publication"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[cardinality-fix-20260815-195300 028c7e5] cardinality: verified run-20260815-202149 — WFP and Sysmon tests PASS
+ Date: Sat Aug 15 20:30:43 2026 -0500
+ 31 files changed, 594 insertions(+), 1 deletion(-)
+ create mode 100644 evidence/cardinality/run-20260815-202149/README.md
+ create mode 100644 evidence/cardinality/run-20260815-202149/actions.log
+ create mode 100644 evidence/cardinality/run-20260815-202149/amend_diff_check.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/analysisd_candidate_test.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/backup_ruleset.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/candidate_sha256.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/cardinality/cardinality_report.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/cardinality/sequence_unique_ports.csv
+ create mode 100644 evidence/cardinality/run-20260815-202149/cardinality/summary.json
+ create mode 100644 evidence/cardinality/run-20260815-202149/cardinality_report.md
+ create mode 100644 evidence/cardinality/run-20260815-202149/final_manager_sanity_sudo.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/git_diff_check.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/git_ls_remote.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/git_push.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/git_remote.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/logtest_sysmon_15_hits.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/logtest_sysmon_exclusion_hits.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/logtest_sysmon_final_ids.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/production_test/current_attack_events_sanitized.jsonl
+ create mode 100644 evidence/cardinality/run-20260815-202149/production_test/current_relevant_alerts_sanitized.jsonl
+ create mode 100644 evidence/cardinality/run-20260815-202149/production_test/nmap_1-20.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/production_test/nmap_sysmon_tcp_connect_22.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/production_test/sysmon_eid3_sanitized.jsonl
+ create mode 100644 evidence/cardinality/run-20260815-202149/restart_manager.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/rules_relevant.xml
+ create mode 100644 evidence/cardinality/run-20260815-202149/summary.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/tool_bash_syntax.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/tool_pycompile.txt
+ create mode 100644 evidence/cardinality/run-20260815-202149/xmllint_candidate.txt

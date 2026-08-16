@@ -1,0 +1,45 @@
+projects/soc-operations-lab/docs/images/1-captura-de-pantalla_20260728_214354.png:    PNG image data, 1027 x 918, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/1-wazuh-08-05-2026_09_10.jpg:                 JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1920x1997, components 3
+projects/soc-operations-lab/docs/images/10-wazuh-08-05-2026_10_21.jpg:                JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1920x1302, components 3
+projects/soc-operations-lab/docs/images/11-captura-de-pantalla_20260728_222046.png:   PNG image data, 968 x 911, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/11-wazuh-08-05-2026_10_21.jpg:                JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1920x967, components 3
+projects/soc-operations-lab/docs/images/12-captura-de-pantalla_20260728_222251.png:   PNG image data, 974 x 896, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/13-captura-de-pantalla_20260728_222310.png:   PNG image data, 977 x 925, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/14-captura-de-pantalla_20260728_222605.png:   PNG image data, 977 x 965, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/15-captura-de-pantalla_20260728_225127.png:   PNG image data, 1049 x 958, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/16-captura-de-pantalla_20260728_225149.png:   PNG image data, 730 x 373, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/17-captura-de-pantalla_20260728_225346.png:   PNG image data, 1044 x 945, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/2-captura-de-pantalla_20260728_214732.png:    PNG image data, 964 x 898, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/2-captura-de-pantalla_20260805_091128.png:    PNG image data, 1022 x 888, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/2-verificar-que-sysmon-quedo-instalado.png:   PNG image data, 1014 x 949, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/20-captura-de-pantalla_20260729_111238.png:   PNG image data, 791 x 952, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/23-captura-de-pantalla_20260729_123627.png:   PNG image data, 796 x 944, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/24-captura-de-pantalla_20260729_123904.png:   PNG image data, 798 x 957, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/26-captura-de-pantalla_20260729_123904.png:   PNG image data, 1646 x 969, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/28-captura-de-pantalla_20260729_123904.png:   JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, baseline, precision 8, 1920x1376, components 3
+projects/soc-operations-lab/docs/images/3-captura-de-pantalla_20260728_215737.png:    PNG image data, 985 x 897, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/3-captura-de-pantalla_20260805_091128.png:    PNG image data, 1021 x 913, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/30-captura-de-pantalla_20260729_123904.png:   PNG image data, 933 x 749, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/31-captura-de-pantalla_20260729_123904.png:   PNG image data, 815 x 168, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/32-captura-de-pantalla_20260729_123904.png:   PNG image data, 991 x 601, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/33-captura-de-pantalla_20260729_123904.png:   PNG image data, 777 x 938, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/34-captura-de-pantalla_20260729_123904.png:   PNG image data, 820 x 997, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/35-captura-de-pantalla_20260729_123904.png:   PNG image data, 781 x 747, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/36-captura-de-pantalla_20260729_123904.png:   PNG image data, 760 x 901, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/4-captura-de-pantalla_20260728_215851.png:    PNG image data, 984 x 913, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/4-captura-de-pantalla_20260805_091128.png:    PNG image data, 1013 x 911, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/5-captura-de-pantalla_20260805_091405.png:    PNG image data, 1023 x 916, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/6-captura-de-pantalla_20260805_091405.png:    PNG image data, 1917 x 736, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/7-captura-de-pantalla_20260728_220148.png:    PNG image data, 962 x 910, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/7-captura-de-pantalla_20260805_091405.jpg:    JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1920x1395, components 3
+projects/soc-operations-lab/docs/images/7-captura-de-pantalla_20260805_091405.png:    PNG image data, 1026 x 922, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/8-captura-de-pantalla_20260728_220314.png:    PNG image data, 969 x 906, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/8-wazuh-08-05-2026_10_21.jpg:                 JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1920x1222, components 3
+projects/soc-operations-lab/docs/images/9-captura-de-pantalla_20260728_221011.png:    PNG image data, 952 x 2538, 16-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/9-wazuh-08-05-2026_10_21.jpg:                 JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1920x4403, components 3
+projects/soc-operations-lab/docs/images/crear-el-directorio-de-trabajo-sysmon.png:    PNG image data, 1022 x 928, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/descargar-sysmon-microsoft-sysinternals-.png: PNG image data, 1028 x 913, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/paso-2-instalar-sysmon.png:                   PNG image data, 1024 x 492, 8-bit/color RGBA, non-interlaced
+projects/soc-operations-lab/docs/images/verificar-que-sysmon-quedo-instalado.png:     PNG image data, 343 x 94, 8-bit colormap, non-interlaced
+projects/soc-operations-lab/docs/images/wazuh-08-05-2026_09_35.jpg:                   JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 1920x1221, components 3
+projects/soc-operations-lab/docs/images/wazuh-08-05-2026_09_36.jpg:                   JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 952x1410, components 3

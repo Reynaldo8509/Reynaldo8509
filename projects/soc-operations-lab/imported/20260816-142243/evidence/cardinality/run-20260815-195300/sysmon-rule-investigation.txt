@@ -1,0 +1,115 @@
+
+### Sysmon/WFP rule bodies
+  <rule id="100409" level="1">
+    <if_group>sysmon_event3</if_group>
+    <field name="win.eventdata.protocol">^tcp$</field>
+    <field name="win.eventdata.sourceIp">^192\.168\.56\.</field>
+    <field name="win.eventdata.destinationIp">^192\.168\.56\.20$</field>
+    <options>no_log</options>
+    <description>Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows</description>
+  </rule>
+  <rule id="100420" level="10" frequency="10" timeframe="60">
+    <if_matched_sid>100409</if_matched_sid>
+    <same_field>win.eventdata.sourceIp</same_field>
+    <different_field>win.eventdata.destinationPort</different_field>
+    <description>Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds</description>
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>
+  </rule>
+  <rule id="100421" level="13" frequency="15" timeframe="60">
+    <if_matched_sid>100409</if_matched_sid>
+    <same_field>win.eventdata.sourceIp</same_field>
+    <different_field>win.eventdata.destinationPort</different_field>
+    <description>High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds</description>
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>
+  </rule>
+
+### Relevant decoder/rule parents in manager ruleset
+/var/ossec/ruleset/rules/0020-syslog_rules.xml:749:  <rule id="9200" level="0" noalert="1">
+/var/ossec/ruleset/rules/0020-syslog_rules.xml:754:  <rule id="9201" level="0">
+/var/ossec/ruleset/rules/0575-win-base_rules.xml:22:  <rule id="60001" level="0">
+/var/ossec/ruleset/rules/0595-win-sysmon_rules.xml:38:  <rule id="61603" level="0">
+/var/ossec/ruleset/rules/0595-win-sysmon_rules.xml:256:  <rule id="61618" level="12">
+/var/ossec/ruleset/rules/0595-win-sysmon_rules.xml:266:  <rule id="61619" level="0">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:11:  <rule id="92000" level="4">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:21:  <rule id="92001" level="6">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:31:  <rule id="92002" level="6">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:41:  <rule id="92003" level="6">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:51:  <rule id="92004" level="4">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:62:  <rule id="92005" level="4">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:73:  <rule id="92006" level="6">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:84:  <rule id="92007" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:95:  <rule id="92008" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:105:  <rule id="92009" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:115:  <rule id="92010" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:125:  <rule id="92011" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:135:  <rule id="92012" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:145:  <rule id="92013" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:155:  <rule id="92014" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:165:  <rule id="92015" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:175:  <rule id="92016" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:187:  <rule id="92017" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:198:  <rule id="92018" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:209:  <rule id="92019" level="13">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:220:  <rule id="92020" level="6">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:231:  <rule id="92021" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:242:  <rule id="92022" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:253:  <rule id="92023" level="8">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:265:  <rule id="92024" level="14">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:276:  <rule id="92025" level="0">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:287:  <rule id="92026" level="14">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:297:  <rule id="92027" level="4">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:308:  <rule id="92028" level="0">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:319:  <rule id="92029" level="6">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:329:  <rule id="92030" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:340:  <rule id="92031" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:350:  <rule id="92032" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:362:  <rule id="92033" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:373:  <rule id="92034" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:383:  <rule id="92035" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:394:  <rule id="92036" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:405:  <rule id="92037" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:415:  <rule id="92038" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:426:  <rule id="92039" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:436:  <rule id="92040" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:446:  <rule id="92041" level="10">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:457:  <rule id="92042" level="0">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:464:  <rule id="92043" level="10">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:475:  <rule id="92044" level="14">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:485:  <rule id="92045" level="14">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:495:  <rule id="92046" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:506:  <rule id="92047" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:517:  <rule id="92048" level="15">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:528:  <rule id="92049" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:538:  <rule id="92050" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:549:  <rule id="92051" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:561:  <rule id="92052" level="4">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:572:  <rule id="92053" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:582:  <rule id="92054" level="14">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:593:  <rule id="92055" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:603:  <rule id="92056" level="14">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:613:  <rule id="92057" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:624:  <rule id="92058" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:634:  <rule id="92059" level="14">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:645:  <rule id="92060" level="15">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:655:  <rule id="92061" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:668:  <rule id="92062" level="14">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:681:  <rule id="92063" level="6">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:691:  <rule id="92064" level="15">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:702:  <rule id="92065" level="6">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:713:  <rule id="92066" level="4">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:724:  <rule id="92067" level="6">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:734:  <rule id="92068" level="3">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:744:  <rule id="92069" level="0">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:754:  <rule id="92070" level="6">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:765:  <rule id="92071" level="12">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:776:  <rule id="92072" level="4">
+/var/ossec/ruleset/rules/0800-sysmon_id_1.xml:786:  <rule id="92073" level="6">
+
+### Recent Sysmon Event ID 3 archived records (read-only)
+{"timestamp":"2026-08-16T00:30:02.871+0000","rule":null,"source":"10.0.2.15","dest":"4.150.223.111","port":"443","protocol":"tcp","raw":"{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"3\",\"version\":\"5\",\"level\":\"4\",\"task\":\"3\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2026-08-16T00:30:02.2760027Z\",\"eventRecordID\":\"96339\",\"processID\":\"3316\",\"threadID\":\"4744\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"WIN11-ENDPOINT\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Network connection detected:\\r\\nRuleName: technique_id=T1036,technique_name=Masquerading\\r\\nUtcTime: 2026-08-16 00:29:59.205\\r\\nProcessGuid: {0f9bb64c-fd79-6a80-4000-000000002500}\\r\\nProcessId: 3256\\r\\nImage: C:\\\\ProgramData\\\\Microsoft\\\\Windows Defender\\\\Platform\\\\4.18.26070.9-0\\\\MpDefenderCoreService.exe\\r\\nUser: NT AUTHORITY\\\\SYSTEM\\r\\nProtocol: tcp\\r\\nInitiated: true\\r\\nSourceIsIpv6: false\\r\\nSourceIp: 10.0.2.15\\r\\nSourceHostname: -\\r\\nSourcePort: 58138\\r\\nSourcePortName: -\\r\\nDestinationIsIpv6: false\\r\\nDestinationIp: 4.150.223.111\\r\\nDestinationHostname: -\\r\\nDestinationPort: 443\\r\\nDestinationPortName: -\\\"\"},\"eventdata\":{\"ruleName\":\"technique_id=T1036,technique_name=Masquerading\",\"utcTime\":\"2026-08-16 00:29:59.205\",\"processGuid\":\"{0f9bb64c-fd79-6a80-4000-000000002500}\",\"processId\":\"3256\",\"image\":\"C:\\\\\\\\ProgramData\\\\\\\\Microsoft\\\\\\\\Windows Defender\\\\\\\\Platform\\\\\\\\4.18.26070.9-0\\\\\\\\MpDefenderCoreService.exe\",\"user\":\"NT AUTHORITY\\\\\\\\SYSTEM\",\"protocol\":\"tcp\",\"initiated\":\"true\",\"sourceIsIpv6\":\"false\",\"sourceIp\":\"10.0.2.15\",\"sourcePort\":\"58138\",\"destinationIsIpv6\":\"false\",\"destinationIp\":\"4.150.223.111\",\"destinationPort\":\"443\"}}}"}
+{"timestamp":"2026-08-16T00:31:11.136+0000","rule":null,"source":"10.0.2.15","dest":"52.123.247.43","port":"443","protocol":"tcp","raw":"{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"3\",\"version\":\"5\",\"level\":\"4\",\"task\":\"3\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2026-08-16T00:31:10.4973483Z\",\"eventRecordID\":\"96359\",\"processID\":\"3316\",\"threadID\":\"4744\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"WIN11-ENDPOINT\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Network connection detected:\\r\\nRuleName: technique_id=T1036,technique_name=Masquerading\\r\\nUtcTime: 2026-08-16 00:31:07.629\\r\\nProcessGuid: {0f9bb64c-fd79-6a80-4000-000000002500}\\r\\nProcessId: 3256\\r\\nImage: C:\\\\ProgramData\\\\Microsoft\\\\Windows Defender\\\\Platform\\\\4.18.26070.9-0\\\\MpDefenderCoreService.exe\\r\\nUser: NT AUTHORITY\\\\SYSTEM\\r\\nProtocol: tcp\\r\\nInitiated: true\\r\\nSourceIsIpv6: false\\r\\nSourceIp: 10.0.2.15\\r\\nSourceHostname: -\\r\\nSourcePort: 58147\\r\\nSourcePortName: -\\r\\nDestinationIsIpv6: false\\r\\nDestinationIp: 52.123.247.43\\r\\nDestinationHostname: -\\r\\nDestinationPort: 443\\r\\nDestinationPortName: -\\\"\"},\"eventdata\":{\"ruleName\":\"technique_id=T1036,technique_name=Masquerading\",\"utcTime\":\"2026-08-16 00:31:07.629\",\"processGuid\":\"{0f9bb64c-fd79-6a80-4000-000000002500}\",\"processId\":\"3256\",\"image\":\"C:\\\\\\\\ProgramData\\\\\\\\Microsoft\\\\\\\\Windows Defender\\\\\\\\Platform\\\\\\\\4.18.26070.9-0\\\\\\\\MpDefenderCoreService.exe\",\"user\":\"NT AUTHORITY\\\\\\\\SYSTEM\",\"protocol\":\"tcp\",\"initiated\":\"true\",\"sourceIsIpv6\":\"false\",\"sourceIp\":\"10.0.2.15\",\"sourcePort\":\"58147\",\"destinationIsIpv6\":\"false\",\"destinationIp\":\"52.123.247.43\",\"destinationPort\":\"443\"}}}"}
+{"timestamp":"2026-08-16T00:33:50.046+0000","rule":null,"source":"224.0.0.251","dest":"192.168.56.1","port":"5353","protocol":"udp","raw":"{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"3\",\"version\":\"5\",\"level\":\"4\",\"task\":\"3\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2026-08-16T00:33:49.3427465Z\",\"eventRecordID\":\"96422\",\"processID\":\"3316\",\"threadID\":\"4744\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"WIN11-ENDPOINT\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Network connection detected:\\r\\nRuleName: technique_id=T1571,technique_name=Non-Standard Port\\r\\nUtcTime: 2026-08-16 00:33:45.612\\r\\nProcessGuid: {0f9bb64c-fd78-6a80-2900-000000002500}\\r\\nProcessId: 2132\\r\\nImage: C:\\\\Windows\\\\System32\\\\svchost.exe\\r\\nUser: NT AUTHORITY\\\\NETWORK SERVICE\\r\\nProtocol: udp\\r\\nInitiated: false\\r\\nSourceIsIpv6: false\\r\\nSourceIp: 224.0.0.251\\r\\nSourceHostname: -\\r\\nSourcePort: 5353\\r\\nSourcePortName: -\\r\\nDestinationIsIpv6: false\\r\\nDestinationIp: 192.168.56.1\\r\\nDestinationHostname: -\\r\\nDestinationPort: 5353\\r\\nDestinationPortName: -\\\"\"},\"eventdata\":{\"ruleName\":\"technique_id=T1571,technique_name=Non-Standard Port\",\"utcTime\":\"2026-08-16 00:33:45.612\",\"processGuid\":\"{0f9bb64c-fd78-6a80-2900-000000002500}\",\"processId\":\"2132\",\"image\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\svchost.exe\",\"user\":\"NT AUTHORITY\\\\\\\\NETWORK SERVICE\",\"protocol\":\"udp\",\"initiated\":\"false\",\"sourceIsIpv6\":\"false\",\"sourceIp\":\"224.0.0.251\",\"sourcePort\":\"5353\",\"destinationIsIpv6\":\"false\",\"destinationIp\":\"192.168.56.1\",\"destinationPort\":\"5353\"}}}"}
+{"timestamp":"2026-08-16T00:33:50.088+0000","rule":null,"source":"224.0.0.251","dest":"192.168.57.1","port":"5353","protocol":"udp","raw":"{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"3\",\"version\":\"5\",\"level\":\"4\",\"task\":\"3\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2026-08-16T00:33:49.3427748Z\",\"eventRecordID\":\"96423\",\"processID\":\"3316\",\"threadID\":\"4744\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"WIN11-ENDPOINT\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Network connection detected:\\r\\nRuleName: technique_id=T1571,technique_name=Non-Standard Port\\r\\nUtcTime: 2026-08-16 00:33:45.644\\r\\nProcessGuid: {0f9bb64c-fd78-6a80-2900-000000002500}\\r\\nProcessId: 2132\\r\\nImage: C:\\\\Windows\\\\System32\\\\svchost.exe\\r\\nUser: NT AUTHORITY\\\\NETWORK SERVICE\\r\\nProtocol: udp\\r\\nInitiated: false\\r\\nSourceIsIpv6: false\\r\\nSourceIp: 224.0.0.251\\r\\nSourceHostname: -\\r\\nSourcePort: 5353\\r\\nSourcePortName: -\\r\\nDestinationIsIpv6: false\\r\\nDestinationIp: 192.168.57.1\\r\\nDestinationHostname: -\\r\\nDestinationPort: 5353\\r\\nDestinationPortName: -\\\"\"},\"eventdata\":{\"ruleName\":\"technique_id=T1571,technique_name=Non-Standard Port\",\"utcTime\":\"2026-08-16 00:33:45.644\",\"processGuid\":\"{0f9bb64c-fd78-6a80-2900-000000002500}\",\"processId\":\"2132\",\"image\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\svchost.exe\",\"user\":\"NT AUTHORITY\\\\\\\\NETWORK SERVICE\",\"protocol\":\"udp\",\"initiated\":\"false\",\"sourceIsIpv6\":\"false\",\"sourceIp\":\"224.0.0.251\",\"sourcePort\":\"5353\",\"destinationIsIpv6\":\"false\",\"destinationIp\":\"192.168.57.1\",\"destinationPort\":\"5353\"}}}"}
+{"timestamp":"2026-08-16T00:35:43.075+0000","rule":null,"source":"10.0.2.15","dest":"20.42.73.24","port":"443","protocol":"tcp","raw":"{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"3\",\"version\":\"5\",\"level\":\"4\",\"task\":\"3\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2026-08-16T00:35:42.3185836Z\",\"eventRecordID\":\"96445\",\"processID\":\"3316\",\"threadID\":\"4744\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"WIN11-ENDPOINT\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Network connection detected:\\r\\nRuleName: technique_id=T1036,technique_name=Masquerading\\r\\nUtcTime: 2026-08-16 00:35:38.762\\r\\nProcessGuid: {0f9bb64c-fecf-6a80-d001-000000002500}\\r\\nProcessId: 9052\\r\\nImage: C:\\\\Users\\\\endopointuser\\\\AppData\\\\Local\\\\Microsoft\\\\OneDrive\\\\26.134.0713.0007\\\\OneDrive.Sync.Service.exe\\r\\nUser: WIN11-ENDPOINT\\\\endpointuser\\r\\nProtocol: tcp\\r\\nInitiated: true\\r\\nSourceIsIpv6: false\\r\\nSourceIp: 10.0.2.15\\r\\nSourceHostname: -\\r\\nSourcePort: 58171\\r\\nSourcePortName: -\\r\\nDestinationIsIpv6: false\\r\\nDestinationIp: 20.42.73.24\\r\\nDestinationHostname: -\\r\\nDestinationPort: 443\\r\\nDestinationPortName: -\\\"\"},\"eventdata\":{\"ruleName\":\"technique_id=T1036,technique_name=Masquerading\",\"utcTime\":\"2026-08-16 00:35:38.762\",\"processGuid\":\"{0f9bb64c-fecf-6a80-d001-000000002500}\",\"processId\":\"9052\",\"image\":\"C:\\\\\\\\Users\\\\\\\\endopointuser\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Microsoft\\\\\\\\OneDrive\\\\\\\\26.134.0713.0007\\\\\\\\OneDrive.Sync.Service.exe\",\"user\":\"WIN11-ENDPOINT\\\\\\\\endpointuser\",\"protocol\":\"tcp\",\"initiated\":\"true\",\"sourceIsIpv6\":\"false\",\"sourceIp\":\"10.0.2.15\",\"sourcePort\":\"58171\",\"destinationIsIpv6\":\"false\",\"destinationIp\":\"20.42.73.24\",\"destinationPort\":\"443\"}}}"}

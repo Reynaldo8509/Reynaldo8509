@@ -1,0 +1,4 @@
+final_diff_check_rc=0
+final_publication_safety_rc=0
+final_json_rc=0
+final_staged_sensitive_findings=0

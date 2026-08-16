@@ -1,0 +1,23 @@
+# Local environment and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+*.ovpn
+credentials/
+secrets/
+private/
+
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary validation artifacts
+*.tmp
+*.bak
+*.swp

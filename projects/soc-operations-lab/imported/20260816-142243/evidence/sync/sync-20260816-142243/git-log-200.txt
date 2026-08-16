@@ -1,0 +1,105 @@
+* 9298356 (origin/ci/gitleaks-retry-20260816-104419) ci: harden gitleaks download + run (retries + cache)
+*   a20285f (origin/main, origin/HEAD) Improve profile foundations and secret scanning
+|\  
+| * 0170061 (origin/improve/profile-foundations-20260816-102831) ci: fetch history for pull request secret scans
+| * db89490 docs(profile): align detection status and add secret scanning
+|/  
+*   63ff0d0 chore(audit): automated repo & profile audit
+|\  
+| * 0514a14 (origin/tests/auto-audit-20260815-234701) chore(audit): record audit PR publication status
+| * c8f4a7e chore(audit): automated repo & profile audit
+|/  
+*   65284c0 (canonical-main) Recover SOC HomeLab evidence into consolidated portfolio
+|\  
+| * 3dcc0a1 (origin/recovery/soc-operations-lab-20260815-215425) docs(soc): recover validated evidence into consolidated portfolio
+|/  
+* a83bd0f Enhance README with SOC HomeLab project details
+* e0a0fc3 Update README with detection status and coverage details
+* 0b00077 Update README with details on architecture and evidence
+* f50ca2b ci: add portfolio quality checks
+* fd8b628 docs: add selected technical outcomes
+* 0b1cae4 docs: polish certification credential wording
+* 259020c docs: clarify career positioning and portfolio scope
+* e317030 docs: align technical profile with SOC portfolio
+* 05b6ae5 docs: strengthen SOC portfolio landing page
+* 6e880b4 docs: standardize portfolio documentation in English
+* 3be80de docs: finalize portfolio email privacy and SOC HomeLab hero
+* b78a3c5 docs: strengthen SOC portfolio evidence and reproducibility
+* 0225e87 docs: turn HomeLab into a SOC case-study portfolio
+* 76d08ef docs: strengthen SOC case study and recruiter navigation
+* 5b9131e docs: link command reference from setup guide
+* e7e7aec docs: add reproducible command reference
+* d6c8679 docs: add detection engineering index
+* ca6cb2d Update README with architecture diagram and status
+* 25e73af Add image to SOC Operations HomeLab README
+* 0ba7e9a docs: feature SOC HomeLab hero visual
+* 38d9329 fix: replace broken SOC HomeLab hero with render-safe SVG
+* b38d95b docs: add SOC HomeLab visual hero image
+* 9a2fe5c fix: simplify SOC HomeLab architecture SVG rendering
+* 9ff8b19 fix: repair SOC HomeLab architecture SVG
+* 3a67ad3 docs: showcase SOC HomeLab architecture visual
+* 81ce5fd docs: add SOC HomeLab architecture visual
+* 9c86515 docs: refine profile portfolio presentation
+* 81126de Update README.md
+* eeb5fdc Update professional title in README.md
+* a345e00 docs: sharpen profile for Junior SOC recruiting
+* 00aebf3 docs: add verified cybersecurity credentials
+* 0123a1f docs: refine profile and link public Credly profile
+* cd23fc0 docs: update project navigation and portfolio
+*   13caf66 chore: preserve legacy portfolio history
+|\  
+| * 65ac596 Enhance README with cybersecurity project context
+| * 3684f86 Initial commit
+*   10f2fd9 chore: preserve SOC lab source history
+|\  
+* | 98ffe21 feat: consolidate professional portfolio and SOC lab
+* | e66e031 Update README.md
+* | fe7a906 Revise README with professional summary and skills
+* | c84e009 Initial commit
+ /  
+| * c336974 (HEAD -> publish/finalize-evidence-20260815-210501, legacy-local-20260815-215425, backup-local-20260815-214910) docs: record local publish gate status
+| * 17fe734 docs: curate public lab evidence and publish checklist
+| * c8bace2 (publish/finalize-evidence-210501, cardinality-fix-20260815-195300) cardinality: verified run-20260815-205438 — WFP & Sysmon tests
+| * 028c7e5 cardinality: verified run-20260815-202149 — WFP and Sysmon tests PASS
+| * 481be25 fix(cardinality): enable direct Sysmon EID 3 base matching, validated 2026-08-15
+|/  
+* e8af044 (main, backup/pre-evidence-audit-20260814, backup-remote-20260815-214910) docs: add curated SOC lab evidence screenshots
+* 454ffb3 docs: publish SOC home lab architecture and validated detections
+* 89502f8 Auto sync: 2026-04-30 20:06:20
+* 8ed7f54 Auto sync: 2026-04-30 20:04:45
+* 4703086 Test commit with custom message
+* 32bd6a5 .
+* 5d7c47e Prueba de sincronizacion
+* b4b9efe sync
+* da8b152 update
+* 0d15489 Add structure for brute force attack scenario
+* 62ada79 Add screenshots evidence for SOC lab
+* f180440 test credential save
+* 63c02b7 Improve evidence structure for SOC lab (baseline, attacks, logs, screenshots)
+* 3591474 Add initial evidence structure and baseline documentation
+* d14ba71 Add SOC Home Lab Context documentation
+* 87d70e3 Update README with full SOC lab structure
+* aa7161a Add architecture diagram to README
+* 6409d9c Add architecture diagram to README
+* c90c0d6 Add architecture diagram to README
+* a59f7ef Revise README for SOC Home Lab documentationRewrite main README with full lab documentation
+* 8fb9735 Delete architecture/incident-response/README.md
+* 6536a02 Delete architecture/sysmon/README.md
+* 3bd06c1 Update README.md
+* 73e99af Update README.md
+* 2b02623 Update README.md
+* 3675c3c Update README.md
+* 49c16d2 Update README.md
+* e504636 Update brute force detection use case
+* 649c8c1 Delete architecture/detection-rules directory
+* cb12921 Add brute force detection use case
+* 90858ed Add brute force detection use case documentation
+* bd16bb5 Create README for incident response section
+* a078f1c Add README for detection rules
+* 32fc7e0 Add README for Sysmon with collected logs details
+* 44b6a13 Add initial README for Wazuh SIEM platformAdd wazuh section
+* 4a7b00e Improve architecture documentation
+* 8b6d5ab Revise README.md for SOC lab architecture and components
+* 08410ac Improve main README for SOC portfolio
+* 933ad54 Add architecture section
+* 7dd53c7 Initial commit

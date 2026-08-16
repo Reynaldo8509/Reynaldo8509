@@ -1,0 +1,26 @@
+[cardinality-fix-20260815-195300 c8bace2] cardinality: verified run-20260815-205438 — WFP & Sysmon tests
+ 24 files changed, 433 insertions(+)
+ create mode 100644 evidence/cardinality/run-20260815-205438/actions.log
+ create mode 100644 evidence/cardinality/run-20260815-205438/analysisd_candidate_test.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/attack_interface_check.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/backup_ruleset.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/candidate_sha256.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/cardinality/cardinality_report.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/cardinality/sequence_unique_ports.csv
+ create mode 100644 evidence/cardinality/run-20260815-205438/cardinality/summary.json
+ create mode 100644 evidence/cardinality/run-20260815-205438/cardinality_report.md
+ create mode 100644 evidence/cardinality/run-20260815-205438/cardinality_run_summary.md
+ create mode 100644 evidence/cardinality/run-20260815-205438/current_alerts_sanitized.jsonl
+ create mode 100644 evidence/cardinality/run-20260815-205438/current_attack_events_sanitized.jsonl
+ create mode 100644 evidence/cardinality/run-20260815-205438/current_event_order.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/git_ls_remote.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/git_ls_remote_pre_publish.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/logtest_sysmon_15_hits.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/nmap_1-20.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/nmap_sysmon_tcp_connect_22.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/proposal_cardinality.md
+ create mode 100644 evidence/cardinality/run-20260815-205438/rules_relevant.xml
+ create mode 100644 evidence/cardinality/run-20260815-205438/staged_diff_check.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/tool_bash_syntax.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/tool_pycompile.txt
+ create mode 100644 evidence/cardinality/run-20260815-205438/xmllint_candidate.txt

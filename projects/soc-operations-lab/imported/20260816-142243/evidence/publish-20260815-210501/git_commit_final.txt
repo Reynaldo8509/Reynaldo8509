@@ -1,0 +1,6 @@
+[publish/finalize-evidence-20260815-210501 c336974] docs: record local publish gate status
+ 6 files changed, 181 insertions(+), 2 deletions(-)
+ create mode 100644 evidence/publish-20260815-210501/final_origin_gate.txt
+ create mode 100644 evidence/publish-20260815-210501/final_staged_diff_check.txt
+ create mode 100644 evidence/publish-20260815-210501/origin_main_head_diff.txt
+ create mode 100644 evidence/publish-20260815-210501/post_commit_fsck.txt

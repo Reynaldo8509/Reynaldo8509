@@ -1,0 +1,2 @@
+head_is_ancestor_of_recovery=no
+recovery_is_ancestor_of_head=no

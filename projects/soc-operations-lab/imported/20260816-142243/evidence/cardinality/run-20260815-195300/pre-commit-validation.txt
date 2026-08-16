@@ -1,0 +1,35 @@
+
+### Pre-commit verification
+29
+ docs/cardinality-investigation.md                  |   7 +
+ evidence/INDEX.md                                  |  15 +
+ evidence/cardinality/report.md                     |  60 ++
+ .../run-20260815-195300/archive-discovery.txt      |   4 +
+ .../cardinality/cardinality_report.txt             |   8 +
+ .../cardinality/raw_selected_events.json           | 716 +++++++++++++++++++++
+ .../cardinality/sequence_unique_ports.csv          |  35 +
+ .../run-20260815-195300/cardinality/summary.json   |  43 ++
+ .../decoder_tests/logtest-candidate-matches.txt    | 135 ++++
+ .../logtest-duplicate-characterization-matches.txt | 219 +++++++
+ .../logtest-nonconsecutive-duplicate-matches.txt   |  80 +++
+ .../logtest-nonconsecutive-duplicate.out           | 225 +++++++
+ .../decoder_tests/sysmon-duplicate-then-new.jsonl  |  11 +
+ .../sysmon-nonconsecutive-duplicate.jsonl          |  10 +
+ .../decoder_tests/sysmon15.jsonl                   |  15 +
+ .../run-20260815-195300/decoder_tests/wfp15.jsonl  |  15 +
+ .../run-20260815-195300/event-source-discovery.txt |  16 +
+ .../rollback-and-reason.txt                        |   9 +
+ .../final-validation-and-inventory.txt             |  49 ++
+ .../nmap-attack-connect-port22.txt                 |   8 +
+ .../run-20260815-195300/nmap-attack-ports-1-20.txt |  29 +
+ .../production_test/collection-sanitized.txt       |  32 +
+ .../production_test/sysmon-attack-connect-test.txt |  16 +
+ .../run-20260815-195300/proposal_cardinality.md    |  53 ++
+ .../run-20260815-195300/rules_1005xx.xml           |  27 +
+ tools/build_cardinality_candidate.py               |  44 ++
+ tools/generate_logtest_events.py                   |  31 +
+ tools/parse_cardinality.py                         | 122 ++++
+ tools/validate_and_install_candidate.sh            |  30 +
+ 29 files changed, 2064 insertions(+)
+
+### Curated content checks

@@ -1,0 +1,7 @@
+Warning: ICC_Profile deleted. Image colors may be affected - /home/reyam/soc-operations-lab/docs/images/10-wazuh-08-05-2026_10_21.jpg
+Warning: ICC_Profile deleted. Image colors may be affected - /home/reyam/soc-operations-lab/docs/images/1-wazuh-08-05-2026_09_10.jpg
+Warning: ICC_Profile deleted. Image colors may be affected - /home/reyam/soc-operations-lab/docs/images/8-wazuh-08-05-2026_10_21.jpg
+Error: Not a valid PNG (looks more like a JPEG) - /home/reyam/soc-operations-lab/docs/images/28-captura-de-pantalla_20260729_123904.png
+   43 image files updated
+    1 image files unchanged
+    1 files weren't updated due to errors

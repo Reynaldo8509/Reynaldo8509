@@ -1,0 +1,58 @@
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>
+  </rule>
+
+</group>
+
+<group name="sysmon_eid3,network,windows">
+
+  <!-- [FIX] Regla 100003 eliminada: era duplicado exacto de 100410,
+       y ningún otro rule la referenciaba (100004 usa if_group directo,
+       no if_sid 100003). Código muerto. -->
+
+  <!-- IP conocida del atacante (Kali) conectando por SSH: alerta directa,
+       no requiere umbral porque el origen ya es de confianza cero -->
+  <rule id="100004" level="12">
+    <if_group>sysmon_event3</if_group>
+    <field name="win.eventdata.destinationPort">22</field>
+    <field name="win.eventdata.sourceIp">^192\.168\.56\.1$</field>
+    <description>SSH connection from Kali attacker</description>
+    <group>lateral_movement,ssh,attack</group>
+    <mitre>
+      <id>T1021.004</id>
+    </mitre>
+  </rule>
+
+  <rule id="100409" level="1">
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.channel">^Microsoft-Windows-Sysmon/Operational$</field>
+    <field name="win.system.eventID">^3$</field>
+    <field name="win.eventdata.protocol">^tcp$</field>
+    <field name="win.eventdata.sourceIp">^192\.168\.56\.</field>
+    <field name="win.eventdata.destinationIp">^192\.168\.56\.20$</field>
+    <options>no_log</options>
+    <description>Sysmon Event ID 3 port-scan tracking base: Attack/Lab TCP connection to Windows</description>
+  </rule>
+
+
+
+
+
+
+  <rule id="100420" level="10" frequency="10" timeframe="60">
+    <if_matched_sid>100409</if_matched_sid>
+    <same_field>win.eventdata.sourceIp</same_field>
+    <different_field>win.eventdata.destinationPort</different_field>
+    <description>Possible port scan detected via Sysmon Event ID 3 - 10 different destination ports from same source within 60 seconds</description>
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>
+  </rule>
+
+
+  <rule id="100421" level="13" frequency="15" timeframe="60">
+    <if_matched_sid>100409</if_matched_sid>
+    <same_field>win.eventdata.sourceIp</same_field>
+    <different_field>win.eventdata.destinationPort</different_field>
+    <description>High-confidence port scan detected via Sysmon Event ID 3 - 15 different destination ports from same source within 60 seconds</description>
+    <group>reconnaissance,port_scan,attack,</group>
+    <mitre><id>T1046</id></mitre>

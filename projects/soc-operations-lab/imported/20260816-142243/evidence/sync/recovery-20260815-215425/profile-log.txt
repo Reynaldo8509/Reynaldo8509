@@ -1,0 +1,30 @@
+a83bd0f (HEAD -> main) Enhance README with SOC HomeLab project details
+e0a0fc3 Update README with detection status and coverage details
+0b00077 Update README with details on architecture and evidence
+f50ca2b ci: add portfolio quality checks
+fd8b628 docs: add selected technical outcomes
+0b1cae4 docs: polish certification credential wording
+259020c docs: clarify career positioning and portfolio scope
+e317030 docs: align technical profile with SOC portfolio
+05b6ae5 docs: strengthen SOC portfolio landing page
+6e880b4 docs: standardize portfolio documentation in English
+3be80de docs: finalize portfolio email privacy and SOC HomeLab hero
+b78a3c5 docs: strengthen SOC portfolio evidence and reproducibility
+0225e87 docs: turn HomeLab into a SOC case-study portfolio
+76d08ef docs: strengthen SOC case study and recruiter navigation
+5b9131e docs: link command reference from setup guide
+e7e7aec docs: add reproducible command reference
+d6c8679 docs: add detection engineering index
+ca6cb2d Update README with architecture diagram and status
+25e73af Add image to SOC Operations HomeLab README
+0ba7e9a docs: feature SOC HomeLab hero visual
+38d9329 fix: replace broken SOC HomeLab hero with render-safe SVG
+b38d95b docs: add SOC HomeLab visual hero image
+9a2fe5c fix: simplify SOC HomeLab architecture SVG rendering
+9ff8b19 fix: repair SOC HomeLab architecture SVG
+3a67ad3 docs: showcase SOC HomeLab architecture visual
+81ce5fd docs: add SOC HomeLab architecture visual
+9c86515 docs: refine profile portfolio presentation
+81126de Update README.md
+eeb5fdc Update professional title in README.md
+a345e00 docs: sharpen profile for Junior SOC recruiting

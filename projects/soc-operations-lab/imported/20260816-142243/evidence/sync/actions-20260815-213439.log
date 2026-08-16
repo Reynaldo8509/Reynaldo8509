@@ -1,0 +1,12 @@
+sync_dry_run=20260815-213439
+started=2026-08-15T21:34:39-05:00
+2026-08-15T21:34:39-05:00	CMD: git remote -v; git fetch --all --prune; git status; rev-parse; logs
+2026-08-15T21:34:40-05:00	RESULT: fetch_rc=128 origin_main_rc=0
+2026-08-15T21:34:40-05:00	CMD: verify GitBackup .git repositories with git fsck --full
+2026-08-15T21:34:40-05:00	CMD: git bundle create snapshot HEAD origin/main; tar working tree; sha256sum
+2026-08-15T21:34:41-05:00	RESULT: bundle_rc=0 tar_rc=0
+2026-08-15T21:35:07-05:00	CMD: compare origin/main...HEAD; create isolated worktree merge simulation and abort
+2026-08-15T21:35:08-05:00	RESULT: local=c336974997adf3e7cbcaf9f9cbe4158bac5a874a remote=e8af044464d09e4c817597c43afd382401857cf1 MERGE_CONFLICT=0 WORKTREE_ADD_RC=0 MERGE_RC=0 
+2026-08-15T21:35:32-05:00	CMD: classify diff paths; gh auth status sanitized; git remote show origin
+2026-08-15T21:35:33-05:00	RESULT: remote_show_rc=128 classification=CLASSIFICATION=manual_review_recommended
+2026-08-15T21:36:13-05:00	RESULT: DRY RUN complete; no main commit, no merge, no push, no remote branch change
