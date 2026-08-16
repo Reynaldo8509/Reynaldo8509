@@ -1,0 +1,2 @@
+origin	https://github.com/Reynaldo8509/soc-operations-lab.git (fetch)
+origin	https://github.com/Reynaldo8509/soc-operations-lab.git (push)

@@ -1,0 +1,8 @@
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml.bak-202149
+wazuh:wazuh 660 /var/ossec/etc/rules/local_rules.xml
+wazuh:wazuh 660 /var/ossec/etc/rules/local_rules.xml.bak-202149
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /home/reyam/GitBackup/cardinality-backups/local_rules.xml.bak-202149
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /var/ossec/etc/rules/local_rules.xml.bak-20260815-202149
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /home/reyam/GitBackup/cardinality-backups/local_rules.xml.bak-20260815-202149

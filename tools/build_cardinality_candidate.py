@@ -35,7 +35,10 @@ def main() -> int:
     parser.add_argument("candidate", type=Path)
     args = parser.parse_args()
     text = args.source.read_text(encoding="utf-8")
-    text = replace_once(text, OLD_SYSMON, NEW_SYSMON, "Sysmon base")
+    if OLD_SYSMON in text:
+        text = replace_once(text, OLD_SYSMON, NEW_SYSMON, "Sysmon base")
+    elif NEW_SYSMON not in text:
+        raise SystemExit("Sysmon base is neither the legacy nor the corrected form")
     args.candidate.write_text(text, encoding="utf-8")
     return 0
 
