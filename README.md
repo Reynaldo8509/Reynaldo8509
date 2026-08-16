@@ -73,7 +73,7 @@ Wazuh Dashboard
 **Documented controlled validation:** 34 WFP records over 15 raw destination ports, with negative tests on MANAGEMENT and NAT traffic. The correlation rules are **heuristics**, not exact `COUNT(DISTINCT destinationPort)` logic. The repository documents historical `archives.json`/`alerts.json` results but does not publish raw HomeLab logs or direct Dashboard proof.
 
 - **WFP Port Scan:** VALIDATED — documented controlled run
-- **Sysmon Event ID 3:** AUDITED / PENDING VALIDATION
+- **Sysmon Event ID 3:** PARTIALLY VALIDATED — real ATTACK/LAB signal matched the scoped direct rule; multi-port correlation remains replay-validated
 - **Windows authentication / brute force:** TELEMETRY OBSERVED / PENDING DETECTION VALIDATION
 - **YARA:** PENDING VALIDATION
 - **FIM:** CONFIGURED / REVALIDATION PENDING
