@@ -1,0 +1,24 @@
+Gitleaks CI hardening validation
+Timestamp (UTC): 2026-08-16T15:44:19Z
+
+Scope
+- Replaced the action-managed Gitleaks download with a pinned v8.24.3 download.
+- Preserved full Git history at checkout for committed-content scanning.
+- Added a versioned cache key, five download attempts with curl retries/backoff,
+  three scan attempts, failure-only diagnostics, and deduplicated incident creation
+  only after a failed workflow re-run.
+
+Local validation
+- YAML parser: PASS
+- git diff --check: PASS
+- Isolated download/extract/version check without sudo: PASS
+- Sensitive-pattern scan of the verbose curl log: PASS; the log remains local and
+  is intentionally excluded from the commit.
+
+Rollback
+- Restore .github/workflows/portfolio-quality.yml from the dated backup recorded
+  in workflow-backup-sha256.txt, then commit and push that restoration.
+
+Local-only paths
+- Backup: /home/reyam/GitBackup/ci-gitleaks-retry-20260816-104419/
+- Full validation output: evidence/ci-fixes/gitleaks-20260816-104419/
