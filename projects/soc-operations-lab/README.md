@@ -191,6 +191,14 @@ The complete historical installation is not yet claimed as reproducible: the ori
 
 ## Navigation
 
+- [Current controlled exercise architecture](architecture/network-diagram.md)
+- [Port scan detection](detections/port-scan-detection.md)
+- [Encoded PowerShell detection gap](detections/powershell-execution.md)
+- [Suspicious file creation detection](detections/file-creation-activity.md)
+- [Scheduled task persistence detection](detections/persistence-scheduled-task.md)
+- [SOC incident report](reports/incident-report.md)
+- [Candidate custom Wazuh rule](configs/wazuh-rules-custom.xml)
+- [Lab notes and evidence boundaries](docs/lab-notes.md)
 - [Architecture](docs/architecture/README.md)
 - [Reproducible Setup Guide](docs/setup/README.md)
 - [Operations and Reproduction Commands](docs/setup/08-command-reference.md)

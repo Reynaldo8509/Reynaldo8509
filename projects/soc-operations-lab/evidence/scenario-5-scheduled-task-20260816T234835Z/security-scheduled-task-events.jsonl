@@ -1,0 +1,1 @@
+{"Provider":"Microsoft-Windows-Security-Auditing","EventId":4698,"RecordId":696932,"TimeCreatedUtc":"2026-08-16T23:48:36.3485823Z","TaskName":"\\SOC-HOMELAB-PERSISTENCE-20260816T234835Z","SubjectUserName":"endpointuser","SubjectDomainName":"WIN11-ENDPOINT","ClientProcessId":"5896","ParentProcessName":null}
