@@ -1,0 +1,2 @@
+{"timestamp":"2026-08-16T01:56:21.210+0000","rule_id":"100501","firedtimes":2,"source":"192.168.56.1","destination":"192.168.56.20","dest_port":"15","protocol":"6"}
+{"timestamp":"2026-08-16T01:56:21.288+0000","rule_id":"100502","firedtimes":2,"source":"192.168.56.1","destination":"192.168.56.20","dest_port":"1","protocol":"6"}

@@ -1,0 +1,2 @@
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-205438/local_rules.xml.active-20260815-205438
+771b23f687cd2fad835da19d366947f72fcb784bfeefbcb313eabc91eaca4eca  /home/reyam/soc-operations-lab/evidence/cardinality/run-20260815-205438/candidate-20260815-205438.xml
