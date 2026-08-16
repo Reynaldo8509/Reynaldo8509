@@ -1,0 +1,1 @@
+{"timestamp":"2026-08-16T01:27:20.406+0000","decoder":"windows_eventchannel","rule_id":"100004","provider":"Microsoft-Windows-Sysmon","event_id":"3","channel":"Microsoft-Windows-Sysmon/Operational","source":"192.168.56.1","destination":"192.168.56.20","dest_port":"22","protocol":"tcp"}

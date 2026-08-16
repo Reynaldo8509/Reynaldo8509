@@ -1,0 +1,8 @@
+# Nmap 7.99 scan initiated Sat Aug 15 20:03:40 2026 as: /usr/lib/nmap/nmap -Pn -sT --max-retries 0 -T4 -p 22 -oN <LOCAL_HOME>/soc-operations-lab/evidence/cardinality/run-20260815-195300/nmap-attack-connect-port22.txt 192.168.56.20
+Nmap scan report for 192.168.56.20
+Host is up (0.0010s latency).
+
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+# Nmap done at Sat Aug 15 20:03:44 2026 -- 1 IP address (1 host up) scanned in 4.52 seconds

@@ -1,0 +1,32 @@
+
+### Production service status and relevant alerts
+active
+tail: cannot open '/var/ossec/logs/ossec.log' for reading: Permission denied
+
+### Archive WFP events after authorized scan (sanitized fields)
+{"timestamp":"2026-08-16T01:01:48.166+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"2","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:48.170+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"4","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:48.176+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"13","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:48.177+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"15","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:48.177+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"10","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:48.192+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"20","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:48.207+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"8","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:48.224+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"17","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:48.240+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"11","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:48.256+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"7","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:48.272+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"5","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:49.172+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"1","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:49.180+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"9","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:49.182+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"16","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:49.183+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"12","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:49.185+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"6","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:49.187+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"14","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:49.199+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"3","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:49.215+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"18","protocol":"6"}
+{"timestamp":"2026-08-16T01:01:49.231+0000","event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"19","protocol":"6"}
+
+### Archive Sysmon EID3 ATTACK events after authorized scan (sanitized fields)
+
+### Relevant alerts after authorized scan (sanitized fields)
+{"timestamp":"2026-08-16T01:01:48.256+0000","rule_id":"100501","description":"Possible port scan detected via Windows Firewall - 10 different destination ports from same source within 60 seconds","firedtimes":1,"event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"7"}
+{"timestamp":"2026-08-16T01:01:49.183+0000","rule_id":"100502","description":"High-confidence port scan detected via Windows Firewall - 15 different destination ports from same source within 60 seconds","firedtimes":1,"event_id":"5152","source":"192.168.56.1","destination":"192.168.56.20","port":"12"}

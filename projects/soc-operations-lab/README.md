@@ -19,7 +19,7 @@ A reproducible SOC HomeLab built with VirtualBox, Kali Linux, Ubuntu/Wazuh, and 
 | Detection | Status | Available Evidence |
 |---|---|---|
 | WFP Port Scan | **VALIDATED — documented controlled run** | Historical WFP event results, `archives.json`, `alerts.json`, and NAT/MANAGEMENT negative tests; raw HomeLab logs are not published. |
-| Sysmon Network / Event ID 3 | **AUDITED / PENDING VALIDATION** | EID 3 confirmed in MANAGEMENT and NAT; a real ATTACK signal required to validate the detector is missing. |
+| Sysmon Network / Event ID 3 | **PARTIALLY VALIDATED — direct ATTACK/LAB signal** | A controlled ATTACK/LAB TCP connection generated a real EID 3 and matched scoped direct rule `100004`; the 10-port correlation is validated by replay, not by an equivalent live scan. See the [run report](evidence/cardinality/run-20260815-205438/cardinality_report.md). |
 | Windows brute force | **TELEMETRY OBSERVED / PENDING DETECTION VALIDATION** | Sanitized 4625 export available; validated correlation requires a usable source IP and negative controls. |
 | FIM | **CONFIGURED / REVALIDATION PENDING** | Historical test-path noise adjustment; a public package of reproducible evidence is missing. |
 | YARA | **PENDING VALIDATION** | There is insufficient configuration or sanitized evidence to make an operational claim. |
@@ -31,7 +31,7 @@ A reproducible SOC HomeLab built with VirtualBox, Kali Linux, Ubuntu/Wazuh, and 
 | Use case | Telemetry | Main rules | Status | Evidence |
 |---|---|---|---|---|
 | WFP Port Scan | Windows Security 5152/5157 | `100500–100502` | **VALIDATED — documented controlled run** | Documented WFP results and NAT/MANAGEMENT negative tests; raw logs withheld |
-| Sysmon Network | Sysmon Event ID 3 | `100409`, `100420`, `100421` | **AUDITED / PENDING** | Real EID 3 telemetry in MANAGEMENT/NAT; ATTACK source event missing |
+| Sysmon Network | Sysmon Event ID 3 | `100004`, `100409`, `100420`, `100421` | **PARTIALLY VALIDATED** | Real scoped ATTACK/LAB EID 3 matched `100004`; `100420` reached its 10-port threshold in reproducible replay |
 | Windows Brute Force | Windows Security 4625 | `60122` individual-failure telemetry | **TELEMETRY OBSERVED / PENDING** | Sanitized 4625 export; no validated correlation |
 | File Integrity | Wazuh syscheck/FIM | No public rule ID | **REVALIDATION PENDING** | Historical configuration only |
 | YARA | Intended YARA scan results | No public rule ID | **PENDING** | No public end-to-end evidence |
@@ -40,7 +40,7 @@ Detailed rule documents are indexed in the [Detection Engineering directory](det
 
 ## Curated Visual Evidence
 
-The repository includes eight curated technical screenshots covering architecture, Wazuh, WFP, and Sysmon. They are visual evidence of specific layers, not substitutes for log artifacts: the WFP screenshot illustrates ATTACK/LAB telemetry; Sysmon demonstrates endpoint preparation, while EID 3 remains **AUDITED / PENDING VALIDATION**. See the [inventory](evidence/README.md), [evidence matrix](evidence/evidence-matrix.md), and [image catalog](evidence/image-catalog.md) for the scope of each image.
+The repository includes curated technical screenshots covering architecture, Wazuh, WFP, and Sysmon. They are visual evidence of specific layers, not substitutes for log artifacts: the WFP screenshot illustrates ATTACK/LAB telemetry; Sysmon has a real scoped ATTACK/LAB EID 3 validation for direct rule `100004`, while its multi-port correlation remains replay-validated. See the [inventory](evidence/README.md), [evidence matrix](evidence/evidence-matrix.md), [image catalog](docs/images/README.md), and [run report](evidence/cardinality/run-20260815-205438/cardinality_report.md) for scope and limits.
 
 ## Architecture
 <img width="1536" height="1024" alt="Arquitectura" src="https://github.com/user-attachments/assets/5e4c42d1-e02a-42f8-a04b-b21cf6892de3" />

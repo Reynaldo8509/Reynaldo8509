@@ -1,0 +1,13 @@
+PASS WITH ARCHITECTURE LIMITATION
+
+Ruleset candidate equals active ruleset; XML and analysisd validation passed.
+Manager restarted successfully. ATTACK/LAB Nmap 1-20 produced WFP alerts
+100501 (10th distinct port) and 100502 (15th distinct port). Real Sysmon EID 3
+from ATTACK/LAB was detected by the specific SSH rule 100004. Management and
+NAT replay inputs did not match 100409/100420/100421. Exact cardinality remains
+an architecture item: use a session enricher with version validation or the
+recommended SQLite aggregator; do not claim exact COUNT(DISTINCT) from the
+current sibling correlation rules.
+
+Publication is pending: origin/main returned "Repository not found". No remote
+URL or credentials were changed.
