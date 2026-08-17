@@ -1,0 +1,6 @@
+scenario=controlled_encoded_powershell
+marker=SOC-HOMELAB-PS-20260816T234426Z
+started_utc=20260816T234426Z
+command_shape=powershell.exe -NoProfile -EncodedCommand <base64-utf16le>
+finished_utc=20260816T234429Z
+telemetry_collection_utc=20260816T234454Z

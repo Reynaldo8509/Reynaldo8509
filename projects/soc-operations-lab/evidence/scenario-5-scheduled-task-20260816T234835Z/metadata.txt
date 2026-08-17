@@ -1,0 +1,10 @@
+scenario=controlled_scheduled_task
+marker=SOC-HOMELAB-PERSISTENCE-20260816T234835Z
+started_utc=20260816T234835Z
+cleanup_required=yes
+finished_utc=20260816T234836Z
+security_collection_utc=20260816T234848Z
+wazuh_alert_collection_utc=20260816T234909Z
+cleanup_attempt_1=syntax_error_no_action
+cleanup_attempt_2=repaired_successfully
+cleanup_utc=20260816T234944Z

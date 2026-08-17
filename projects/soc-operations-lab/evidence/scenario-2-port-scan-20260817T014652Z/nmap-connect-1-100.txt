@@ -1,0 +1,10 @@
+Controlled validation result (sanitized)
+
+Source: 192.168.56.1 (vboxnet0)
+Target: 192.168.56.20
+Profile: TCP Connect scan of ports 1-100, non-aggressive timing
+
+Result: target reachable; 22/TCP open; the other 99 selected ports filtered.
+Interpretation: only the completed connection to 22/TCP was eligible for
+Sysmon Event ID 3 enrichment. The filtered ports were represented by WFP
+blocked-connection telemetry.

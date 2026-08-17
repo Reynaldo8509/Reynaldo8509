@@ -1,0 +1,8 @@
+scenario=controlled_file_creation
+marker=SOC-HOMELAB-FILE-20260816T234739Z
+started_utc=20260816T234739Z
+paths=resolved_on_endpoint_via_USERPROFILE
+finished_utc=20260816T234740Z
+sysmon_collection_utc=20260816T234752Z
+wazuh_alert_collection_utc=20260816T234811Z
+cleanup_utc=20260816T234944Z

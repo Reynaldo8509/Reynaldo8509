@@ -1,0 +1,8 @@
+SUCCESS: The scheduled task "SOC-HOMELAB-PERSISTENCE-20260816T234835Z" has successfully been created.
+
+Folder: \
+HostName:      WIN11-ENDPOINT
+TaskName:      \SOC-HOMELAB-PERSISTENCE-20260816T234835Z
+Next Run Time: 8/16/2026 6:58:00 PM
+Status:        Ready
+Logon Mode:    Interactive/Background
