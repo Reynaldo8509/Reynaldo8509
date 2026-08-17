@@ -51,6 +51,10 @@ emitted one alert for each configured WFP correlation threshold.
   records for the completed inbound connection to 22/TCP. The source, target,
   timestamps, and field values are preserved in
   [`scenario-2-port-scan-20260817T014652Z`](../evidence/scenario-2-port-scan-20260817T014652Z/).
+- **Latest full validation:** another controlled TCP Connect scan of ports
+  1–100 reconfirmed `100501`, `100502`, and the EID 3 enrichment boundary.
+  The sanitized run is in
+  [`scenario-port-scan-20260817T134200Z`](../evidence/scenario-port-scan-20260817T134200Z/).
 
 ## Timeline
 
@@ -65,6 +69,9 @@ emitted one alert for each configured WFP correlation threshold.
 | 2026-08-17 01:46:52.057 | WFP correlation alert | TCP Connect scan of ports 1–100 triggered `100501`; WFP Event ID 5152 identified source `192.168.56.1`, target `.20`, and the triggering destination port 78. |
 | 2026-08-17 01:46:53.955 | High-confidence WFP alert | The same source-target sequence triggered `100502` at destination port 90. |
 | 2026-08-17 01:46:56.808–.839 | Sysmon enrichment | Sysmon EID 3 recorded two completed inbound TCP connections from `.1` to `.20:22` with `initiated:false`. |
+| 2026-08-17 13:42:34.631 | WFP correlation alert | TCP Connect 1–100 triggered `100501` from `.1` to `.20`; triggering WFP port was 33. |
+| 2026-08-17 13:42:35.494 | High-confidence WFP alert | The same run triggered `100502`; triggering WFP port was 78. |
+| 2026-08-17 13:42:38.544 | Sysmon enrichment | EID 3 recorded the completed inbound TCP connection to the exposed 22/TCP service only. |
 
 ## Analysis
 
