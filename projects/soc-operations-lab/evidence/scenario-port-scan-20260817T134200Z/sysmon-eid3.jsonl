@@ -1,0 +1,2 @@
+{"timestamp":"2026-08-17T13:42:38.544+0000","event_id":"3","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"22","protocol":"tcp","initiated":"false"}
+{"timestamp":"2026-08-17T13:42:38.544+0000","event_id":"3","sourceIp":"192.168.56.1","destinationIp":"192.168.56.20","destinationPort":"22","protocol":"tcp","initiated":"false"}
