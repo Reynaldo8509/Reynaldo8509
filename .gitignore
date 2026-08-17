@@ -10,3 +10,6 @@
 credentials/
 secrets/
 private/
+
+# Local scripts and interpreter cache; intentionally not part of the portfolio.
+tools/
