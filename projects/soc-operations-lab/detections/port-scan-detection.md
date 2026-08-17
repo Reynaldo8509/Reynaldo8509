@@ -46,6 +46,11 @@ emitted one alert for each configured WFP correlation threshold.
   the endpoint, produced 20 unique WFP destination ports. Wazuh emitted
   `100501` at the 10th port and `100502` at the 15th. Sanitized artifacts are
   in [`scenario-2-port-scan-20260817T010730Z`](../evidence/scenario-2-port-scan-20260817T010730Z/).
+- **Cross-source enrichment:** a later TCP Connect scan of ports 1–100
+  generated WFP correlation alerts for the filtered ports and two Sysmon EID 3
+  records for the completed inbound connection to 22/TCP. The source, target,
+  timestamps, and field values are preserved in
+  [`scenario-2-port-scan-20260817T014652Z`](../evidence/scenario-2-port-scan-20260817T014652Z/).
 
 ## Timeline
 
@@ -57,6 +62,9 @@ emitted one alert for each configured WFP correlation threshold.
 | 2026-08-16 23:42:43.928 | High-confidence correlation alert | Wazuh `100502`, level 13, Windows Security 5152, source `192.168.56.1`, destination port `636`. |
 | 2026-08-16 23:42:54 | Manager health confirmed | `wazuh-manager` was active; a privileged, read-only query exported the sanitized alert fields. |
 | 2026-08-17 01:07:30 | Repeatable WFP validation | A TCP 1–20 scan generated `100501` at destination port 6 and `100502` at port 17; both used the same ATTACK/LAB source and endpoint target. |
+| 2026-08-17 01:46:52.057 | WFP correlation alert | TCP Connect scan of ports 1–100 triggered `100501`; WFP Event ID 5152 identified source `192.168.56.1`, target `.20`, and the triggering destination port 78. |
+| 2026-08-17 01:46:53.955 | High-confidence WFP alert | The same source-target sequence triggered `100502` at destination port 90. |
+| 2026-08-17 01:46:56.808–.839 | Sysmon enrichment | Sysmon EID 3 recorded two completed inbound TCP connections from `.1` to `.20:22` with `initiated:false`. |
 
 ## Analysis
 
@@ -72,10 +80,13 @@ WFP records can still affect correlation timing in other traffic patterns, so
 the rules remain triage signals rather than a general-purpose persistent set
 counter. See the forensic reconstruction in the linked historical case study.
 
-Sysmon Event ID 3 is not used for inbound scan correlation on this endpoint:
-the required source/target/port tuples were absent during a controlled test.
-The temporary Sysmon configuration experiment was rolled back. The documented
-decision is in [Sysmon EID 3 inbound port-scan decision](../docs/troubleshooting/sysmon-eid3-inbound-portscan.md).
+Sysmon Event ID 3 enriches this case but is not the port-scan detector. A TCP
+Connect scan produced EID 3 only for the successful connection to the exposed
+SSH service (22/TCP); the 99 filtered ports did not complete connections and
+did not produce the required variety of EID 3 destination ports. Consequently,
+WFP remains the primary detection source, while Sysmon confirms the successful
+connection that may warrant follow-up investigation. The documented boundary
+is in [Sysmon EID 3 inbound port-scan decision](../docs/troubleshooting/sysmon-eid3-inbound-portscan.md).
 
 ## Risk Level
 
@@ -88,8 +99,9 @@ monitoring. **Informational / authorized** in this HomeLab run.
 1. Give the SOC collection role read-only access to the sanitized Wazuh alert
    export (or provide a controlled dashboard query) so that future exercises
    can be confirmed without temporary privileged collection.
-2. Correlate Windows Security 5152/5157 with Sysmon Event ID 3 and firewall
-   telemetry using source, destination, port, and a narrow UTC window.
+2. During triage, correlate Windows Security 5152/5157 with Sysmon Event ID 3
+   using source, destination, port, and a narrow UTC window. Keep WFP as the
+   detection trigger; treat EID 3 as confirmation of completed connections.
 3. Treat `100501`/`100502` as triage signals. For a requirement of exact
    distinct-port cardinality, use the documented external stateful aggregator
    design rather than relying on `different_field`.
