@@ -1,0 +1,1 @@
+{"timestamp":"2026-08-17T13:29:22.101+0000","event_id":"4698","source":"Windows Security","taskName":"\\UpdaterTask","taskAction":"powershell.exe -File %USERPROFILE%\\AppData\\Local\\Temp\\evil.ps1","user":"<LAB_USER>","wazuh_rule":{"id":"60228","level":4,"description":"A scheduled task was created","mitre":"T1053"}}
