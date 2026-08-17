@@ -1,0 +1,14 @@
+# Controlled commands (sanitized)
+
+# Valid encoded PowerShell execution
+powershell.exe -NoProfile -EncodedCommand SQBFAFgAIAAoACcAdwByAGkAdABlAC0AbwB1AHQAcAB1AHQAIAB0AGUAcwB0ACcAKQA=
+# Decoded, benign content: IEX ('write-output test')
+
+# Additional benign process-discovery execution
+powershell.exe -NoProfile -Command "Get-Process | Out-Null"
+
+# IOC written through the endpoint-resolved user profile
+%USERPROFILE%\AppData\Local\Temp\evil.ps1
+
+# Persistence simulation (created and removed during this exercise)
+schtasks.exe /create /tn "UpdaterTask" /tr "powershell.exe -File %USERPROFILE%\AppData\Local\Temp\evil.ps1" /sc onlogon /rl highest
