@@ -42,6 +42,10 @@ emitted one alert for each configured WFP correlation threshold.
 - **Historical validation:** the prior controlled 15-port case is documented
   in [WFP Port Scan Detection](../detection-rules/WFP_PortScan_Detection_Final.md).
   It produced 34 WFP records and one local alert for each correlation rule.
+- **Latest validation:** a controlled scan of TCP ports 1–20, all filtered by
+  the endpoint, produced 20 unique WFP destination ports. Wazuh emitted
+  `100501` at the 10th port and `100502` at the 15th. Sanitized artifacts are
+  in [`scenario-2-port-scan-20260817T010730Z`](../evidence/scenario-2-port-scan-20260817T010730Z/).
 
 ## Timeline
 
@@ -52,6 +56,7 @@ emitted one alert for each configured WFP correlation threshold.
 | 2026-08-16 23:42:43.831 | Correlation alert | Wazuh `100501`, level 10, Windows Security 5152, source `192.168.56.1`, destination port `25`. |
 | 2026-08-16 23:42:43.928 | High-confidence correlation alert | Wazuh `100502`, level 13, Windows Security 5152, source `192.168.56.1`, destination port `636`. |
 | 2026-08-16 23:42:54 | Manager health confirmed | `wazuh-manager` was active; a privileged, read-only query exported the sanitized alert fields. |
+| 2026-08-17 01:07:30 | Repeatable WFP validation | A TCP 1–20 scan generated `100501` at destination port 6 and `100502` at port 17; both used the same ATTACK/LAB source and endpoint target. |
 
 ## Analysis
 
@@ -60,12 +65,17 @@ simulation. In a SOC queue, the same pattern against a non-lab endpoint would
 be suspicious because it enumerates multiple services in seconds and reaches a
 remote-management listener.
 
-The current Wazuh implementation is intentionally a throttled heuristic, not
-an exact distinct-port counter. Its `different_field` comparison does not
-persist a set of unique ports; repeated WFP records can affect correlation
-timing. Therefore, an alert from `100501` or `100502` means a high-volume,
-source-correlated WFP pattern, not proof of exactly 10 or 15 unique ports. See
-the forensic reconstruction in the linked historical case study.
+The current Wazuh implementation is intentionally a throttled correlation
+control. This repeatable validation showed the desired 10- and 15-port alert
+points when the input was one blocked WFP event per selected port. Repeated
+WFP records can still affect correlation timing in other traffic patterns, so
+the rules remain triage signals rather than a general-purpose persistent set
+counter. See the forensic reconstruction in the linked historical case study.
+
+Sysmon Event ID 3 is not used for inbound scan correlation on this endpoint:
+the required source/target/port tuples were absent during a controlled test.
+The temporary Sysmon configuration experiment was rolled back. The documented
+decision is in [Sysmon EID 3 inbound port-scan decision](../docs/troubleshooting/sysmon-eid3-inbound-portscan.md).
 
 ## Risk Level
 

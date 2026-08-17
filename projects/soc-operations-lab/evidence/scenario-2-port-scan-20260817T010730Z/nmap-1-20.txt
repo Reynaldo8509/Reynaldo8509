@@ -1,0 +1,9 @@
+Controlled validation result (sanitized)
+
+Target: 192.168.56.20
+Source interface: vboxnet0 (192.168.56.1)
+Profile: TCP SYN scan of ports 1-20, moderate rate, zero retries
+
+Outcome: target reachable; TCP ports 1-20 reported filtered.
+Purpose: generate Windows Filtering Platform blocked-connection telemetry for
+the multi-port correlation test.
